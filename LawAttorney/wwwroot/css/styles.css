@@ -106,7 +106,7 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     font-family: 'Nunito', Arial, sans-serif; /* Yazı tipini burada belirtin */
-    background-color: #212529;
+    background-color: #ffffff;
 }
 
 hr {
@@ -3628,7 +3628,7 @@ textarea.form-control-lg {
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
     font-size: var(--bs-nav-link-font-size);
     font-weight: var(--bs-nav-link-font-weight);
-    color: #EDD8B9;
+    color: #000;
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 
@@ -4182,7 +4182,6 @@ textarea.form-control-lg {
     background-clip: border-box;
     border: var(--bs-card-border-width) solid var(--bs-card-border-color);
     border-radius: var(--bs-card-border-radius);
-    background-color: #093A34;
 }
 .card > hr {
   margin-right: 0;
@@ -10959,3 +10958,29 @@ footer.footer {
     font-size:22px;
     
 }
+.navbar-nav > li > a {
+    color: #111;
+    border-right: 1px solid #ccc;
+    height: 4px;
+    line-height: 4px;
+}
+.navbar-nav > li:last-child > a {
+    border-right: 0;
+}
+
+.page-border {
+    color:#111;
+    border-top: 1px solid #ccc; /* Top border rengi ve kalınlığı */
+    margin-top: 20px; /* İstediğiniz boşluk miktarı */
+}
+.text-black i:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+.btn-zoom {
+    transition: transform 0.3s;
+}
+
+    .btn-zoom:hover {
+        transform: scale(1.1);
+    }

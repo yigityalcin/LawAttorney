@@ -21,6 +21,10 @@ namespace LawAttorney.Controllers
         {
             return View();
         }
+        public IActionResult Ekibimiz()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

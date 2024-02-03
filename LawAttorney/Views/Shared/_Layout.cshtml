@@ -17,202 +17,196 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="p-0">
-            <nav class="navbar navbar-expand-md mt-1 pt-4 bg-white">
-                <div class="container">
-                    <!-- Toggle button -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-bars"></i>
-                    </button>
-
-                    <!-- Logo -->
-                    <a class="navbar-brand ms-4" href="#">
-                        <img src="~/assets/img/illustrator2.png" alt="Logo" height="120" class="img">
-                    </a>
-
-                    <!-- Menü Sekmeleri -->
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-lg-0 me-lg-5">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Home/Index">Ana Sayfa</a>
+        <div class="container">
+            <nav class="navbar navbar-default navbar-expand-lg mt-1 pt-4 bg-white">
+                <!-- Toggle button -->
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="~/assets/img/illustrator2.png" alt="Logo" height="110" class="img">
+                </a>
+                <!-- Menü Sekmeleri -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-lg-0 me-lg-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Index">Ana Sayfa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Kurumsal">Kurumsal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ekibimiz</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Çalışma Alanları</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Makaleler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">İletişim</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>              
+                <div class="d-md-flex gap-2 col-9 col-md-3 mx-auto">
+                    <button class="btn btn-sm text-white" type="button" style="background-color: #a37e2c;" data-mdb-ripple-init><i class="fas fa-envelope me-2"></i>Mail Gönder</button>
+                    <button class="btn btn-sm text-white" type="button" style="background-color: #093a34;" data-mdb-ripple-init><i class="bi bi-whatsapp me-2"></i>Bilgi Al</button>
+                </div>
+                <!-- Sağdaki Elemanlar ve Dikdörtgen Butonlar -->
+                <div class="d-flex align-items-center me-2">
+                    <!-- Sağdaki Elemanlar -->
+                    <div class="dropdown">
+                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="~/assets/img/russia.png" alt="Lang" height="30" />
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="~/assets/img/united-kingdom.png" alt="Lang" height="30" />
+                                    English
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Home/Kurumsal">Kurumsal</a>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="~/assets/img/russia.png" alt="Lang" height="30" />
+                                    Russian
+                                </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Ekibimiz</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Çalışma Alanları</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Makaleler</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">İletişim/Ulaşım</a>
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <img src="~/assets/img/turkey.png" alt="Lang" height="30" />
+                                    Turkish
+                                </a>
                             </li>
                         </ul>
                     </div>
-                    <div class="d-grid gap-2 col-2 mx-auto me-5">
-                        <button class="btn text-white" type="button" style="background-color: #093a34;" data-mdb-ripple-init><i class="fas fa-person me-2"></i>Danışan Girişi</button>
-                        <button class="btn text-white" type="button" style="background-color: #a37e2c;" data-mdb-ripple-init><i class="bi bi-whatsapp me-2"></i>Bilgi Al</button>
-                    </div>
-
-
-                    <!-- Sağdaki Elemanlar ve Dikdörtgen Butonlar -->
-                    <div class="d-flex align-items-center me-2">
-                        <!-- Sağdaki Elemanlar -->
-                        <div class="dropdown">
-                            <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="~/assets/img/russia.png" alt="Lang" height="30" />
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <img src="~/assets/img/united-kingdom.png" alt="Lang" height="30" />
-                                        English
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <img src="~/assets/img/russia.png" alt="Lang" height="30" />
-                                        Russian
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="#">
-                                        <img src="~/assets/img/turkey.png" alt="Lang" height="30" />
-                                        Turkish
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
+
             </nav>
-            @RenderBody()
-
-            @* FOOTER *@
-            <div class="container-fluid p-0">
-                <footer class="text-center text-lg-start text-black bg-white mt-3 border-bottom">
-                    <!-- Section: Social media -->
-                    <section class="d-flex justify-content-center p-4 bg-white">
-                        <!-- Left -->
-                        <div class="me-lg-5">
-                            <span>Get connected with us on social networks:</span>
-                        </div>
-                        <!-- Right -->
-                        <div class="d-flex justify-content-center">
-                            <a href="#" class="text-black me-4">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="#" class="text-black me-4">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-black me-4">
-                                <i class="fab fa-google"></i>
-                            </a>
-                            <a href="#" class="text-black me-4">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="text-black me-4">
-                                <i class="fab fa-linkedin"></i>
-                            </a>                          
-                        </div>
-                        <!-- Right -->
-                    </section>
-                    <div class="page-border"></div>
-
-                    <!-- Section: Social media -->
-                    <!-- Section: Links  -->
-
-                    <section class="">
-                        <div class="container text-center text-md-start mt-3 p-5">
-                            <!-- Grid row -->
-                            <div class="row mt-3">
-                                <!-- Grid column -->
-                                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                                    <!-- Content -->
-                                    <h6 class="text-uppercase fw-bold">YALCIN'S LAW FIRM</h6>
-                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                        style="width: 60px; background-color: #093A34; height: 2px" />
-                                    <p>
-                                        By making an online appointment with our lawyers, you can make a live video call through our system.
-                                    </p>
-                                </div>
-                                <!-- Grid column -->
-                                <!-- Grid column -->
-                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                                    <!-- Links -->
-                                    <h6 class="text-uppercase fw-bold">QUICK LINKS</h6>
-                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                        style="width: 60px; background-color: #093A34; height: 2px" />
-                                    <p>
-                                        <a href="#!" class="text-black">Attorney Profile</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-black">Practice Areas</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-black">Testimonials</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-black">Contact Us</a>
-                                    </p>
-                                </div>
-                                <!-- Grid column -->
-                                <!-- Grid column -->
-                                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                                    <!-- Links -->
-                                    <h6 class="text-uppercase fw-bold">REACH US</h6>
-                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                        style="width: 60px; background-color: #093A34; height: 2px" />
-                                    <p>
-                                        <a href="#!" class="text-black">
-                                            Official Gazette
-                                        </a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-black">Republic of Turkey Ministry of Justice</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-black">Constitutional Court</a>
-                                    </p>
-                                    <p>
-                                        <a href="#!" class="text-black">Press</a>
-                                    </p>
-                                </div>
-                                <!-- Grid column -->
-                                <!-- Grid column -->
-                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                                    <!-- Links -->
-                                    <h6 class="text-uppercase fw-bold">Contact</h6>
-                                    <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                        style="width: 60px; background-color: #093A34; height: 2px" />
-                                    <p>
-                                        <i class="fas fa-home mr-3"></i> 2021 Richard Jones Road, Suite 150E
-                                        Nashville, TN 37215
-                                    </p>
-                                    <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
-                                    <p><i class="fas fa-phone mr-3"></i> +90 534 346 1030</p>
-                                    <p><i class="fas fa-print mr-3"></i> +01 234 567 89</p>
-                                </div>
-                                <!-- Grid column -->
-                            </div>
-                            <!-- Grid row -->
-                        </div>
-                    </section>
-                    <!-- Section: Links  -->
-                    <!-- Copyright -->
-                    <div class="text-center p-3"
-                         style="background-color: #ffffff">
-                        © 2024 Copyright:
-                        <a class="text-black" href="https://mdbootstrap.com/">Yalcin Law Firm 2024 </a>
+        </div>
+        @RenderBody()
+        @* FOOTER *@
+        <div class="container-fluid p-0">
+            <footer class="text-center text-lg-start text-black bg-white mt-3 border-bottom">
+                <!-- Section: Social media -->
+                <section class="d-flex justify-content-center p-4 bg-white">
+                    <!-- Left -->
+                    <div class="me-lg-5">
+                        <span>Get connected with us on social networks:</span>
                     </div>
-                    <!-- Copyright -->
-                </footer>
-            </div>
+                    <!-- Right -->
+                    <div class="d-flex justify-content-center">
+                        <a href="#" class="text-black me-4">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-black me-4">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-black me-4">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="#" class="text-black me-4">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-black me-4">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <!-- Right -->
+                </section>
+                <div class="page-border"></div>
+
+                <!-- Section: Social media -->
+                <!-- Section: Links  -->
+
+                <section class="">
+                    <div class="container text-center text-md-start mt-3 p-5">
+                        <!-- Grid row -->
+                        <div class="row mt-3">
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                <!-- Content -->
+                                <h6 class="text-uppercase fw-bold">YALCIN'S LAW FIRM</h6>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: #093A34; height: 2px" />
+                                <p>
+                                    By making an online appointment with our lawyers, you can make a live video call through our system.
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+                            <!-- Grid column -->
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <!-- Links -->
+                                <h6 class="text-uppercase fw-bold">QUICK LINKS</h6>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: #093A34; height: 2px" />
+                                <p>
+                                    <a href="#!" class="text-black">Attorney Profile</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-black">Practice Areas</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-black">Testimonials</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-black">Contact Us</a>
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <!-- Links -->
+                                <h6 class="text-uppercase fw-bold">REACH US</h6>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: #093A34; height: 2px" />
+                                <p>
+                                    <a href="#!" class="text-black">
+                                        Official Gazette
+                                    </a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-black">Republic of Turkey Ministry of Justice</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-black">Constitutional Court</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-black">Press</a>
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+                            <!-- Grid column -->
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                <!-- Links -->
+                                <h6 class="text-uppercase fw-bold">Contact</h6>
+                                <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                    style="width: 60px; background-color: #093A34; height: 2px" />
+                                <p>
+                                    <i class="fas fa-home mr-3"></i> 2021 Richard Jones Road, Suite 150E
+                                    Nashville, TN 37215
+                                </p>
+                                <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                                <p><i class="fas fa-phone mr-3"></i> +90 534 346 1030</p>
+                                <p><i class="fas fa-print mr-3"></i> +01 234 567 89</p>
+                            </div>
+                            <!-- Grid column -->
+                        </div>
+                        <!-- Grid row -->
+                    </div>
+                </section>
+                <!-- Section: Links  -->
+                <!-- Copyright -->
+                <div class="text-center p-3"
+                     style="background-color: #ffffff">
+                    © 2024 Copyright:
+                    <a class="text-black" href="https://mdbootstrap.com/">Yalcin Law Firm 2024 </a>
+                </div>
+                <!-- Copyright -->
+            </footer>
         </div>
     </div>
 

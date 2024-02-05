@@ -11042,3 +11042,7 @@ footer.footer {
     .card-title-link:hover {
         color: black;
     }
+.borders {
+    border: 1px solid;
+    color: #edd8ba;
+}

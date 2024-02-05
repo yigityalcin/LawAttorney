@@ -25,6 +25,18 @@ namespace LawAttorney.Controllers
         {
             return View();
         }
+        public IActionResult CalismaAlanlari()
+        {
+            return View();
+        }
+        public IActionResult Makaleler()
+        {
+            return View();
+        }
+        public IActionResult Ýletisim()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

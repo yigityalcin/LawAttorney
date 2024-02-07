@@ -1,22 +1,21 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "CalismaAlanlari";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <body class="container-fluid">
     <!-- Üstteki Kart -->
-    <section class="about-us-section mt-5">
+    <section class="about-us-section">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row">
                 <!-- Üstteki Kart Column -->
                 <div class="col-lg-12">
-                    <div class="card bg-white shadow">
-                        <div class="card-body">
-                            <h2 class="card-title text-center mb-4">Hukuk Alanındaki Çalışma Alanlarımız</h2>
-                            <p class="card-text">
+                    <div class="card-banner shadow" style="background-color:#093A34">
+                        <div class="card-body-banner">
+                            <h2 class="card-title text-white">Çalışma Alanlarımız</h2>
+                            <!-- <p class="card-text">
                                 Hukuk alanındaki çeşitli konularda sunduğumuz hizmetlerle ilgili detaylar burada yer alacak.
-                            </p>
+                            </p> -->
                         </div>
                     </div>
                 </div>
@@ -25,41 +24,95 @@
     </section>
 
     <!-- Hukuk Alanları Kartları -->
-    <section class="mt-5">
+    <section class="mt-4">
         <div class="container">
-            <div class="row">
+            <div class="row" id="workAreas">
                 <!-- Çalışma Alanı Kartı 1 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Ceza Hukuku</h5>
-                            <p class="card-text">Ceza hukuku konularında profesyonel destek alın.</p>
+                <div class="col-md-4 mb-4">
+                    <div class="card-work border">
+                        <div class="card-body-work">
+                            <img src="~/assets/img/CalismaAlanlari/Compensation.png" class="card-img-top" alt="Tazminat Hukuku Icon">
+                            <h5 class="card-title-work text-center mt-4">Tazminat Hukuku</h5>
                         </div>
                     </div>
                 </div>
 
                 <!-- Çalışma Alanı Kartı 2 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">Aile Hukuku</h5>
-                            <p class="card-text">Aile hukuku konularında uzman avukatlarımızdan yardım alın.</p>
+                <div class="col-md-4 mb-4">
+                    <div class="card-work border">
+                        <div class="card-body-work">
+                            <img src="~/assets/img/CalismaAlanlari/Corporate.png" class="card-img-top" alt="Tazminat Hukuku Icon">
+                            <h5 class="card-title-work text-center mt-4">Ticaret ve Şirketler Hukuku</h5>
                         </div>
                     </div>
                 </div>
-
                 <!-- Çalışma Alanı Kartı 3 -->
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title text-center">İş Hukuku</h5>
-                            <p class="card-text">İş hukuku konularında size özel çözümler sunuyoruz.</p>
+                <div class="col-md-4 mb-4">
+                    <div class="card-work border">
+                        <div class="card-body-work">
+                            <img src="~/assets/img/CalismaAlanlari/Criminal.png" class="card-img-top" alt="Tazminat Hukuku Icon">
+                            <h5 class="card-title-work text-center mt-4">Ceza Hukuku</h5>
                         </div>
                     </div>
                 </div>
-
+                <div class="col-md-4 mb-4">
+                    <div class="card-work border">
+                        <div class="card-body-work">
+                            <img src="~/assets/img/CalismaAlanlari/Tax.png" class="card-img-top" alt="Tazminat Hukuku Icon">
+                            <h5 class="card-title-work text-center mt-4">İdare, Vergi ve Gümrük Hukuku</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-work border">
+                        <div class="card-body-work">
+                            <img src="~/assets/img/CalismaAlanlari/Divorce.png" class="card-img-top" alt="Tazminat Hukuku Icon">
+                            <h5 class="card-title-work text-center mt-4">Aile ve Boşanma Hukuku</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-work border">
+                        <div class="card-body-work">
+                            <img src="~/assets/img/CalismaAlanlari/Employment.png" class="card-img-top" alt="Tazminat Hukuku Icon">
+                            <h5 class="card-title-work text-center mt-4">İş Hukuku</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-work border">
+                        <div class="card-body-work">
+                            <img src="~/assets/img/CalismaAlanlari/Execution.png" class="card-img-top" alt="Tazminat Hukuku Icon">
+                            <h5 class="card-title-work text-center mt-4">İcra Hukuku</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card-work border">
+                        <div class="card-body-work">
+                            <img src="~/assets/img/CalismaAlanlari/Inheritance.png" class="card-img-top" alt="Tazminat Hukuku Icon" width="50%">
+                            <h5 class="card-title-work text-center mt-4">Miras Hukuku</h5>
+                        </div>
+                    </div>
+                </div>
                 <!-- Daha Fazla Kart Ekleyebilirsiniz -->
             </div>
         </div>
     </section>
+
+    <script>
+        // // Kartları dinamik olarak yönetmek için Vanilla JavaScript kullanımı
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     // Kartları ekleyebilir veya kaldırabilirsiniz
+        //     var workAreasContainer = document.getElementById('workAreas');
+
+        //     // Örnek olarak bir kart ekleyelim
+        //     var newWorkAreaCard = document.createElement('div');
+        //     newWorkAreaCard.className = 'col-md-4';
+        //     newWorkAreaCard.innerHTML = '<div class="card"><div class="card-body"><h5 class="card-title text-center">Yeni Çalışma Alanı</h5><p class="card-text">Açıklama buraya.</p></div></div>';
+
+        //     // Kartı konteynıra ekleyelim
+        //     workAreasContainer.appendChild(newWorkAreaCard);
+        // });
+    </script>
 </body>

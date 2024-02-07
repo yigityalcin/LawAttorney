@@ -10935,7 +10935,7 @@ footer.footer {
 
 
 /*
-
+    FEATURES ICONS
 */
 
 .features-icons-item {
@@ -11042,7 +11042,164 @@ footer.footer {
     .card-title-link:hover {
         color: black;
     }
+.border-masthead {
+    border: 2px solid;
+    color: #edd8ba;
+}
 .borders {
     border: 1px solid;
-    color: #edd8ba;
+    color: #75a39d;
+}
+
+.footerkk {
+    background-color: rgba(243, 243, 243, 0.5); /* Buradaki 0.8 saydamlığı temsil eder, değeri 0 ile 1 arasında bir değer olmalıdır. */
+    color: #000; /* Yazı rengini ayarlayabilirsiniz, saydam arka plan üzerindeki metni daha iyi okunabilir yapmak için. */
+    font-size:14px;
+}
+
+.card-body {
+    text-align: center; /* İçeriği merkezlemek için */
+    padding: 20px; /* İçeriği kenarlardan uzaklaştırmak için */
+}
+
+.card-img-top {
+    width: 40%; /* Resmin genişliğini ayarlayın */
+    height: 40%;
+    margin: auto; /* Resmi merkezlemek için */
+    display: block; /* Resmi blok element olarak ayarlayın */
+}
+
+.card-work {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .card-work:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        background-color: #093A34;
+    }
+
+        .card-work:hover .card-title-work, .card-work:hover .card-text {
+            color: #fff; /* Kartın üzerine gelindiğinde metin rengini beyaza çevirme */
+        }
+
+.card-title-work, .card-text {
+    transition: color 0.2s;
+}
+
+/*Banner*/
+.card-body-banner {
+    text-align: center; /* İçeriği merkezlemek için */
+    padding: 20px; /* İçeriği kenarlardan uzaklaştırmak için */
+}
+
+
+.card-banner {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.contact-wrap {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+    .contact-wrap h3 {
+        color: #093a34;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .contact-wrap p {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .contact-wrap input,
+    .contact-wrap textarea {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+        .contact-wrap input[type="submit"] {
+            background-color: #093a34;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+            .contact-wrap input[type="submit"]:hover {
+                background-color: #076c58;
+            }
+
+.dbox {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+    .dbox .icon {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        line-height: 60px;
+        position: relative;
+        margin-bottom: 5px;
+        background-color: #093a34;
+        text-align: center;
+    }
+
+        .dbox .icon .fa {
+            font-size: 30px;
+            color: #ffffff;
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    .dbox .text {
+        padding: 20px 0 0 0;
+    }
+
+    .dbox span {
+        display: block;
+        color: #555;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .dbox a,p {
+        font-weight: 700;
+        color: #093a34;
+        text-decoration: none;
+    }   
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background-color: #093a34;
+    margin: 0 auto;
 }

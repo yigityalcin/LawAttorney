@@ -3,6 +3,57 @@
     ViewData["Title"] = "Makaleler";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@{
+    ViewData["Title"] = "Makaleler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
-<h1>Makaleler</h1>
+<div class="container mt-5">
+    <div class="row">
+        <!-- Kategoriler -->
+        <div class="col-md-3 mb-4">
+            <h2>Kategoriler</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#">Ceza Avukatı</a></li>
+                <li class="list-group-item"><a href="#">Tazminat Avukatı</a></li>
+                <li class="list-group-item"><a href="#">Ticaret ve Şirketler Avukatı</a></li>
+                <li class="list-group-item"><a href="#">İdare, Vergi ve Gümrük Avukatı</a></li>
+                <li class="list-group-item"><a href="#">Boşanma Avukatı</a></li>
+                <li class="list-group-item"><a href="#">İş Hukuku Avukatı</a></li>
+                <li class="list-group-item"><a href="#">İcra Avukatı</a></li>
+                <li class="list-group-item"><a href="#">Miras Hukuku Avukatı</a></li>
+                <li class="list-group-item"><a href="#">Güncel Makaleler</a></li>
+                <li class="list-group-item"><a href="#">Avukatlık Ofisi</a></li>
 
+
+
+                <!-- Daha fazla kategori ekleyebilirsiniz -->
+            </ul>
+        </div>
+
+        <!-- Makaleler -->
+        <div class="col-md-9">
+            <h2>En Son Makaleler</h2>
+
+            <!-- Makale 1 -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Yükselen Hayvan Duyarlılığına Kişisel ve Hukuki Bir Bakış Açısı</h5>
+                    <p class="card-text">Makale içeriği buraya gelecek. Kısa bir özet...</p>
+                    <a href="#" class="btn btn-primary">Devamını Oku</a>
+                </div>
+            </div>
+
+            <!-- Makale 2 -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Makale Başlığı 2</h5>
+                    <p class="card-text">Makale içeriği buraya gelecek. Kısa bir özet...</p>
+                    <a href="#" class="btn btn-primary">Devamını Oku</a>
+                </div>
+            </div>
+
+            <!-- Daha fazla makale ekleyebilirsiniz -->
+        </div>
+    </div>
+</div>

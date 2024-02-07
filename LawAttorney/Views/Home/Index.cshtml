@@ -1,20 +1,18 @@
 ﻿<body>
     <!-- Masthead-->
     <div class="container">
-        <header class="masthead">
+        <header class="border-masthead masthead">
             <div id="carouselExample" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="~/assets/img/heralandatecrube.jpg" class="d-block w-100" alt="Second Slide">
-
                     </div>
                     <div class="carousel-item">
                         <img src="~/assets/img/yarımasırfoto.jpg" class="d-block w-100" alt="First Slide">
-
                     </div>
-                    @* <div class="carousel-item">
+                    <!-- <div class="carousel-item">
                         <img src="~/assets/img/ozarka3.jpg" class="d-block w-100" alt="Third Slide">
-                    </div> *@
+                    </div> -->
                 </div>
                 <!-- Sol ok -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -55,17 +53,15 @@
             </div>
         </div>
     </div>
-    <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-append-version="true"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- bootstrap js -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/scripts.js" asp-append-version="true"></script>
     <script>
-        $(document).ready(function () {
-            $('#carouselExample').carousel({
-                interval: 5000, // Otomatik geçiş süresi (3 saniye)
-                pause: "hover" // Fare ile üzerine gelindiğinde otomatik geçişi durdur
+        document.addEventListener('DOMContentLoaded', function () {
+            var carousel = document.getElementById('carouselExample');
+            var carouselInstance = new bootstrap.Carousel(carousel, {
+                interval: 3000, // Otomatik geçiş süresi (5 saniye)
+                pause: 'hover' // Fare ile üzerine gelindiğinde otomatik geçişi durdur
             });
         });
     </script>

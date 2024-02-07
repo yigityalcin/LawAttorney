@@ -1,7 +1,7 @@
 ﻿<body>
     <!-- Masthead-->
     <div class="container">
-        <header class="border-masthead masthead">
+        <div class="border-masthead masthead">
             <div id="carouselExample" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -25,7 +25,7 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-        </header>
+        </div>
     </div>
 
     <!-- Icons Grid-->
@@ -33,36 +33,58 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3 border">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3 border" id="CalismaAlanlari">
                         <div class="features-icons-icon d-flex"><i class="bi-bank m-auto" style="color: #093A34;"></i></div>
-                        <h3 style="color:#093A34;">Services</h3>
+                        <h3 style="color:#093A34;">Hizmetlerimiz</h3>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3 border">
+                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3 border" id="Ekibimiz">
                         <div class="features-icons-icon d-flex"><i class="bi-person m-auto" style="color: #093A34;"></i></div>
-                        <h3 style="color: #093A34;">Our People</h3>
+                        <h3 style="color: #093A34;">Ekibimiz</h3>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-0 mb-lg-3 border">
+                    <div class="features-icons-item mx-auto mb-0 mb-lg-3 border" id="İletisim">
                         <div class="features-icons-icon d-flex"><i class="bi-telephone-fill m-auto" style="color: #093A34;"></i></div>
-                        <h3 style="color: #093A34;">Contact</h3>
+                        <h3 style="color: #093A34;">İletişim</h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/scripts.js" asp-append-version="true"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var carousel = document.getElementById('carouselExample');
-            var carouselInstance = new bootstrap.Carousel(carousel, {
-                interval: 3000, // Otomatik geçiş süresi (5 saniye)
-                pause: 'hover' // Fare ile üzerine gelindiğinde otomatik geçişi durdur
-            });
+            var carouselElement = document.getElementById('carouselExample');
+
+            if (carouselElement) {
+                try {
+                    var carouselInstance = new bootstrap.Carousel(carouselElement, {
+                        interval: 3000, // Otomatik geçiş süresi (3 saniye)
+                        pause: 'hover' // Fare ile üzerine gelindiğinde otomatik geçişi durdur
+                    });
+
+                    console.log('Carousel initialized successfully.');
+                } catch (error) {
+                    console.error('Error initializing carousel:', error.message);
+                }
+            } else {
+                console.error('Carousel element not found.');
+            }
+        });
+        // Vanilla JavaScript ile sayfa yönlendirme
+        document.getElementById('CalismaAlanlari').addEventListener('click', function () {
+            window.location.href = 'CalismaAlanlari'; // Hizmetlerimiz sayfa URL'i
+        });
+
+        document.getElementById('Ekibimiz').addEventListener('click', function () {
+            window.location.href = 'Ekibimiz'; // Ekibimiz sayfa URL'i
+        });
+
+        document.getElementById('İletisim').addEventListener('click', function () {
+            window.location.href = 'İletisim'; // İletişim sayfa URL'i
         });
     </script>
 </body>

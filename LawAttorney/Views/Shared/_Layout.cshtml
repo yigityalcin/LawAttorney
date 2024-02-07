@@ -20,7 +20,7 @@
             <nav class="navbar navbar-default navbar-expand-lg mt-1 pt-4 bg-white">
                 <!-- Toggle button -->
                 <!-- Logo -->
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/Home/Index">
                     <img src="~/assets/img/illustrator2.png" alt="Logo" height="110" class="img">
                 </a>
                 <!-- Menü Sekmeleri -->
@@ -52,12 +52,12 @@
                 </button>
                 <div class="d-md-flex gap-2 col-9 col-md-3 mx-auto">
                     <!-- Vanilla JavaScript ile -->
-                    <button class="btn btn-sm text-white" type="button" style="background-color: #093a34;" id="whatsappButton">
+                    <a href="https://wa.me/%2B905343461030" class="btn btn-sm text-white" style="background-color: #093c34;" target="_blank">
                         <i class="bi bi-whatsapp me-2"></i>Bilgi Al
-                    </button>
-                    <button class="btn btn-sm text-white" type="button" style="background-color: #a37e2c;" id="mailButton">
+                    </a>
+                    <a href="mailto:yigityalciin@hotmail.com" class="btn btn-sm text-white" style="background: linear-gradient(to right, #c79f4a, #e6b95a, #f5c96c);" target="_blank">
                         <i class="fas fa-envelope me-2"></i>Mail Gönder
-                    </button>
+                    </a>
                 </div>
                 <!-- Sağdaki Elemanlar ve Dikdörtgen Butonlar -->
                 <div class="d-flex align-items-center me-2">
@@ -91,11 +91,12 @@
             </nav>
         </div>
         @RenderBody()
-        <div class="container page-border mt-5"></div>
 
         @* FOOTER *@
         <div class="container-fluid p-0">
             <footer class="text-center text-lg-start text-black bg-white">
+                <div class="container page-border mt-0"></div>
+
                 <!-- Section: Social media -->
                 <section class="d-flex justify-content-center p-2 bg-white">
                     <!-- Left -->
@@ -104,21 +105,23 @@
                     </div>
                     <!-- Right -->
                     <div class="d-flex justify-content-center">
-                        <a href="#" class="me-4" style="color:#013a33">
+                        @* <a href="#" class="me-4" style="color:#013a33">
                             <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="me-4" style="color:#013a33">
+                        </a> *@
+                        @* <a href="#" class="me-4" style="color:#013a33">
                             <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="me-4" style="color:#013a33">
+                        </a> *@
+                        @* <a href="#" class="me-4" style="color:#013a33">
                             <i class="fab fa-google"></i>
-                        </a>
-                        <a href="#" class="me-4" style="color:#013a33">
+                        </a> *@
+                        @* <a href="#" class="me-4" style="color:#013a33">
                             <i class="fab fa-instagram"></i>
+                        </a> *@
+                        <a href="https://www.linkedin.com/company/oz-partners/" class="me-4" style="background-color: #093a34; color: white; text-decoration: none; display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 4px;" target="_blank">
+                            <i class="fab fa-linkedin" style="font-size: 16px; margin-right: 8px;"></i>
+                            <span style="font-size: 12px;">Takip Et</span>
                         </a>
-                        <a href="#" class="me-4" style="color:#013a33">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
+
                     </div>
                     <!-- Right -->
                 </section>
@@ -206,7 +209,7 @@
                 <!-- Section: Links  -->
                 <!-- Copyright -->
                 <div class="text-center mt-5"
-                     style="font-size:14px; background-color: #ffffff">
+                     style="font-size:12px; background-color: #ffffff">
                     ©
                     <a class="text-black" href="">1974-2024 Öz&Partners; Avukatlık Ofisi - Tüm Hakları Saklıdır</a>
                 </div>
@@ -220,19 +223,11 @@
     <script src="~/js/scripts.js" asp-append-version="true"></script>
     <!-- Vanilla JavaScript ile olayları ekleme -->
     <script>
-        document.getElementById('mailButton').addEventListener('click', function () {
-            // İlgili olaylar buraya yazılabilir
-        });
-
-        document.getElementById('whatsappButton').addEventListener('click', function () {
-            window.location.href = 'https://wa.me/%2B905343461030';
-        });
-
         // Language dropdown için olay ekleme
         var languageDropdown = document.getElementById('languageDropdown');
         languageDropdown.addEventListener('click', function () {
             // İlgili olaylar buraya yazılabilir
-        });
+        });       
     </script>
 </body>
 </html>

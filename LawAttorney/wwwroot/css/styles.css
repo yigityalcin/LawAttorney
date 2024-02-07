@@ -113,8 +113,8 @@ hr {
   margin: 1rem 0;
   color: inherit;
   border: 0;
-  border-top: 1px solid;
-  opacity: 0.25;
+  /*border-top: 1px solid;
+  opacity: 0.25;*/
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
@@ -10937,30 +10937,67 @@ footer.footer {
 /*
     FEATURES ICONS
 */
-
+.features-icons {
+    padding-bottom: 0px;
+}
 .features-icons-item {
     transition: transform 0.3s;
     text-align: center;
-    overflow: hidden; /* Çerçevenin dışına taşmasını önle */
-    padding: 30px; /* İçeriği çerçeveden uzaklaştır */
-
+    overflow: hidden;
+    padding: 30px;
 }
 
-    .features-icons-item:hover {
-        transform: scale(1.10); /* Ölçeklendirme efekti */
-        transition: transform 0.3s ease-in-out; /* Geçiş süresi ve fonksiyonu */
-    }
+    /*.features-icons-item:hover {
+        transform: scale(1.05);
+        transition: transform 0.1s ease-in-out;
+    }*/
+
+        .features-icons-item:hover .features-icons-icon i,
+        .features-icons-item:hover h3 {
+            color: white;
+        }
 
 .features-icons-button {
     width: 100%;
     margin-top: 10px;
 }
 
-.d-grid button:hover {
-    opacity: 0.7; /* Opaklık efekti, isteğe bağlı olarak ayarlayabilirsiniz */
-    transform: scale(1.05); /* Büyütme efekti, isteğe bağlı olarak ayarlayabilirsiniz */
-    /* Diğer hover özelliklerini buraya ekleyebilirsiniz */
+.features-icons-item:hover {
+    cursor: pointer;
 }
+
+#CalismaAlanlari:hover .features-icons-icon i,
+#CalismaAlanlari:hover h3 {
+    color: white !important;
+}
+
+#Ekibimiz:hover .features-icons-icon i,
+#Ekibimiz:hover h3 {
+    color: white !important;
+}
+
+#İletisim:hover .features-icons-icon i,
+#İletisim:hover h3 {
+    color: white !important;
+}
+
+#CalismaAlanlari:hover {
+    background-color: #edc967;
+}
+
+#Ekibimiz:hover {
+    background-color: #edc967;
+}
+
+#İletisim:hover {
+    background-color: #edc967;
+}
+
+.d-grid button:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
 
 
 .card-text{
@@ -11098,10 +11135,7 @@ footer.footer {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.contact-container {
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
+
 
 .contact-wrap {
     background-color: #f8f9fa;
@@ -11163,7 +11197,7 @@ footer.footer {
     }
 
         .dbox .icon .fa {
-            font-size: 30px;
+            font-size: 20px;
             color: #ffffff;
             position: absolute;
             top: 25px;
@@ -11186,7 +11220,7 @@ footer.footer {
         font-weight: 700;
         color: #093a34;
         text-decoration: none;
-    }   
+    }
 #map {
     width: 100%;
     height: 100%;
@@ -11202,4 +11236,21 @@ footer.footer {
     margin-bottom: 10px;
     background-color: #093a34;
     margin: 0 auto;
+}
+
+.card hr {
+    margin: 0;
+    background-color:#093a34;
+    height:6px;
+    opacity:1;
+}
+.ekip{
+    border:0;
+}
+footer {
+   bottom:0 !important;
+   padding-top:7rem;
+}
+.dropdown-backdrop {
+    position: static;
 }

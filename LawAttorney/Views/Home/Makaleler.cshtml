@@ -1,55 +1,115 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Makaleler";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="container">
-    <div class="row">
-        <!-- Kategoriler -->
-        <div class="col-md-3 mb-4">
-            <h2>Kategoriler</h2>
-            <ul class="list-group">
-                <li class="list-group-item"><a href="#">Ceza Avukatı</a></li>
-                <li class="list-group-item"><a href="#">Tazminat Avukatı</a></li>
-                <li class="list-group-item"><a href="#">Ticaret ve Şirketler Avukatı</a></li>
-                <li class="list-group-item"><a href="#">İdare, Vergi ve Gümrük Avukatı</a></li>
-                <li class="list-group-item"><a href="#">Boşanma Avukatı</a></li>
-                <li class="list-group-item"><a href="#">İş Hukuku Avukatı</a></li>
-                <li class="list-group-item"><a href="#">İcra Avukatı</a></li>
-                <li class="list-group-item"><a href="#">Miras Hukuku Avukatı</a></li>
-                <li class="list-group-item"><a href="#">Güncel Makaleler</a></li>
-                <li class="list-group-item"><a href="#">Avukatlık Ofisi</a></li>
+<style>
+    /* Custom Styles */
+    
 
+    .card {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        color: #000;
+        border-radius: 10px;
+    }
 
+    .card-header {
+        background-color: #f5f5f5;
+        color: #000;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+   
+    .list-group-item {
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        color: #000;
+    }
 
-                <!-- Daha fazla kategori ekleyebilirsiniz -->
-            </ul>
-        </div>
+        .list-group-item a {
+            color: #000;
+            font-weight: bold;
+        }
 
-        <!-- Makaleler -->
-        <div class="col-md-9">
-            <h2>En Son Makaleler</h2>
+            .list-group-item a:hover {
+                text-decoration: none;
+                color: #093a34; /* Green color for hover */
+            }
 
-            <!-- Makale 1 -->
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Yükselen Hayvan Duyarlılığına Kişisel ve Hukuki Bir Bakış Açısı</h5>
-                    <p class="card-text">Makale içeriği buraya gelecek. Kısa bir özet...</p>
-                    <a href="#" class="btn btn-primary">Devamını Oku</a>
+    .btn-primary {
+        background-color: #093a34; /* Green color for buttons */
+        border: 1px solid #093a34;
+    }
+
+        .btn-primary:hover {
+            background-color: #145d35; /* Darker green color for button hover */
+            border: 1px solid #145d35;
+        }
+
+    .latest-articles {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    /* End Custom Styles */
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <!-- Kategoriler -->
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <div class="card-header text-center">
+                            <h2 class="mb-0">Kategoriler</h2>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#" class="text-decoration-none">Ceza Hukuku</a></li>
+                            <li class="list-group-item"><a href="#" class="text-decoration-none">Tazminat Hukuku</a></li>
+                            <li class="list-group-item"><a href="#" class="text-decoration-none">Ticaret ve Şirketler Hukuku</a></li>
+                            <li class="list-group-item"><a href="#" class="text-decoration-none">İdare, Vergi ve Gümrük Hukuku</a></li>
+                            <li class="list-group-item"><a href="#" class="text-decoration-none">Boşanma Hukuku</a></li>
+                            <li class="list-group-item"><a href="#" class="text-decoration-none">İş Hukuku</a></li>
+                            <li class="list-group-item"><a href="#" class="text-decoration-none">İcra Hukuku</a></li>
+                            <li class="list-group-item"><a href="#" class="text-decoration-none">Miras Hukuku</a></li>
+                            <li class="list-group-item"><a href="#" class="text-decoration-none">Güncel Makaleler</a></li>
+                            <li class="list-group-item"><a href="#" class="text-decoration-none">Avukatlık Ofisi</a></li>
+                            <!-- Daha fazla kategori ekleyebilirsiniz -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Makaleler -->
+                <div class="col-md-9">
+                    <div class="latest-articles">
+                        <h2 class="mb-4">En Son Makaleler</h2>
+
+                        <!-- Makale 1 -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Yükselen Hayvan Duyarlılığına Kişisel ve Hukuki Bir Bakış Açısı</h5>
+                                <p class="card-text text-black">Makale içeriği buraya gelecek. Kısa bir özet...</p>
+                                <a href="#" class="btn btn-primary">Devamını Oku</a>
+                            </div>
+                        </div>
+
+                        <!-- Makale 2 -->
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Makale Başlığı 2</h5>
+                                <p class="card-text text-black">Makale içeriği buraya gelecek. Kısa bir özet...</p>
+                                <a href="#" class="btn btn-primary">Devamını Oku</a>
+                            </div>
+                        </div>
+
+                        <!-- Daha fazla makale ekleyebilirsiniz -->
+                    </div>
                 </div>
             </div>
-
-            <!-- Makale 2 -->
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h5 class="card-title">Makale Başlığı 2</h5>
-                    <p class="card-text">Makale içeriği buraya gelecek. Kısa bir özet...</p>
-                    <a href="#" class="btn btn-primary">Devamını Oku</a>
-                </div>
-            </div>
-
-            <!-- Daha fazla makale ekleyebilirsiniz -->
         </div>
     </div>
-</div>
+</body>

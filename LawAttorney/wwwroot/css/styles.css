@@ -5889,7 +5889,7 @@ textarea.form-control-lg {
   text-align: center;
   background: none;
   border: 0;
-  opacity: 0.5;
+  opacity: 0.7;
   transition: opacity 0.15s ease;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -5918,8 +5918,8 @@ textarea.form-control-lg {
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 100% 100%;
@@ -11131,14 +11131,33 @@ footer.footer {
 
 
 /*Banner*/
-.card-body-banner {
-    text-align: center; /* İçeriği merkezlemek için */
-    padding: 20px; /* İçeriği kenarlardan uzaklaştırmak için */
+.card-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7); /* Arkaplan rengi */
+    color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
+    .card-banner:hover {
+        transform: scale(1.02); /* Hover efekti */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-.card-banner {
-    transition: transform 0.2s, box-shadow 0.2s;
+.card-body-banner {
+    text-align: center; /* İçeriği merkezlemek için */
+    padding: 40px; /* İçeriği kenarlardan uzaklaştırmak için */
+}
+
+.card-title-banner {
+    font-size: 2.5em; /* Başlık font boyutu */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-text-banner {
+    font-size: 1.2em; /* Metin font boyutu */
 }
 
 
@@ -11240,7 +11259,7 @@ footer.footer {
     width: 60px;
     border-radius: 50%;
     margin-bottom: 10px;
-    background-color: #093a34;
+    background-color: #ffffff;
     margin: 0 auto;
 }
 
@@ -11260,9 +11279,6 @@ footer {
 .dropdown-backdrop {
     position: static;
 }
-.card-title{
-    font-size:24px;
-}
 
 .notice--success {
     color: #155724;
@@ -11273,4 +11289,203 @@ footer {
     margin-bottom: 1rem;
     border: 1px solid transparent;
     border-radius: .25rem;
+}
+
+.focusedInput {
+    border-color: rgba(9, 58, 52, 0.4);
+    outline: 0;
+    outline: thin dotted \9;
+    -moz-box-shadow: 0 0 8px rgba(9, 58, 52, 0.3);
+    box-shadow: 0 0 8px rgba(9, 58, 52, 0.3) !important;
+}
+
+
+.hero-wrap {
+    width: 100%;
+    height: 100%;
+    position: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+}
+
+    .hero-wrap .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        opacity: .5;
+        background: #000000;
+    }
+
+    .hero-wrap.hero-wrap-2 {
+        height: 600px;
+    }
+
+        .hero-wrap.hero-wrap-2 .overlay {
+            opacity: .6;
+        }
+
+        .hero-wrap.hero-wrap-2 .slider-text {
+            height: 600px;
+        }
+
+.slider-text h1 {
+    font-size: 48px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: 700;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+@media (max-width: 991.98px) {
+    .slider-text h1 {
+        font-size: 40px;
+    }
+}
+
+.slider-text .subheading {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: "Poppins", Arial, sans-serif;
+    font-weight: 600;
+}
+
+.slider-text p {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.8);
+    color: #83b582;
+}
+
+    .slider-text p strong {
+        font-weight: 700;
+    }
+
+        .slider-text p strong a {
+            color: #000000;
+        }
+
+.slider-text .btn-custom {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.slider-text .breadcrumbs {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    z-index: 99;
+}
+
+    .slider-text .breadcrumbs span {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+        .slider-text .breadcrumbs span i {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .slider-text .breadcrumbs span a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+            .slider-text .breadcrumbs span a:hover, .slider-text .breadcrumbs span a:focus {
+                color: #83b582;
+            }
+
+                .slider-text .breadcrumbs span a:hover i, .slider-text .breadcrumbs span a:focus i {
+                    color: #83b582;
+                }
+
+.slider-text .bread {
+    font-weight: 700 !important;
+}
+
+.ftco-section {
+    padding: 7em 0;
+    position: relative;
+}
+
+@media (max-width: 767.98px) {
+    .ftco-section {
+        padding: 6em 0;
+    }
+}
+.practice-area {
+    display: block;
+    padding: 25px;
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 767.98px) {
+    .practice-area {
+        border-left: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+}
+
+.practice-area.border-b {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.practice-area.no-border-l {
+    border-left: none;
+}
+
+.practice-area .icon {
+    margin: 0 auto;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+    .practice-area .icon span {
+        font-size: 50px;
+        color: #83b582;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+.practice-area h3 {
+    font-size: 20px;
+}
+
+    .practice-area h3 a {
+        color: #000000;
+    }
+
+.practice-area:hover .icon, .practice-area:focus .icon {
+    background: #fff;
+}
+
+    .practice-area:hover .icon span, .practice-area:focus .icon span {
+        color: #000000;
+    }
+
+.practice-area h3 {
+    color: #000000;
+    font-weight: 400 !important;
+}
+.ftco-animate {
+    opacity: 0;
+    visibility: hidden;
+}
+.custom-img{
+    height:110px !important;
+    width:1050px !important;
 }

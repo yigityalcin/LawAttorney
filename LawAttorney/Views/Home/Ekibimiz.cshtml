@@ -3,97 +3,99 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<body class="container-fluid">
-    <section class="card-section mb-5">
-        <div class="container">
-            <div class="row">
-                <!-- Üstteki Kart Column -->
-                <div class="col-lg-12">
-                    <div class="card bg-white shadow">
-                        <div class="card-body">
-                            <h2 class="card-title text-center text-black mb-3 border-bottom">Ekibimiz</h2>
-                            <!-- Altta Üç Kişisel Bilgi Kartı -->
-                            <div class="row" id="teamMembers">
-                                <!-- Kartları yönetmek için bir ID ekledik -->
-                                <!-- Kişisel Kart 1 -->
-                                <div class="col-md-4">
-                                    <div class="card ekip">
-                                        <a href="#" class="card-title-link">
-                                            <img src="~/assets/img/avukat-emin-oz.jpg" class="card-img-top" alt="Kişi 1 Fotoğrafı" style="object-fit: cover; width: 100%; height: 300px;">
-                                            <hr />
-                                            <div class="card-body">
-                                                <h5 class="card-title text-center">Avukat Emin Öz</h5>
-                                            </div>
-                                        </a>
+<body>
+    <div class="container-fluid">
+        <section class="card-section mb-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Üstteki Kart Column -->
+                    <div class="col-lg-12">
+                        <div class="card bg-white shadow">
+                            <div class="card-body">
+                                <h2 class="card-title text-center text-black mb-3 border-bottom">Ekibimiz</h2>
+                                <!-- Altta Üç Kişisel Bilgi Kartı -->
+                                <div class="row" id="teamMembers">
+                                    <!-- Kartları yönetmek için bir ID ekledik -->
+                                    <!-- Kişisel Kart 1 -->
+                                    <div class="col-md-4">
+                                        <div class="card ekip">
+                                            <a href="#" class="card-title-link">
+                                                <img src="~/assets/img/avukat-emin-oz.jpg" class="card-img-top" alt="Kişi 1 Fotoğrafı" style="object-fit: cover; width: 100%; height: 300px;">
+                                                <hr />
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">Avukat Emin Öz</h5>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Kişisel Kart 2 -->
+                                    <div class="col-md-4">
+                                        <div class="card ekip">
+                                            <a href="#" class="card-title-link">
+                                                <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top" alt="Kişi 2 Fotoğrafı" style="object-fit: cover; width: 100%; height: 300px;">
+                                                <hr />
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">Avukat Yunus Emre Öz</h5>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Kişisel Kart 3 -->
+                                    <div class="col-md-4">
+                                        <div class="card ekip">
+                                            <a href="#" class="card-title-link">
+                                                <img src="~/assets/img/avukat-kaan-karatas.jpg" class="card-img-top" alt="Kişi 3 Fotoğrafı" style="object-fit: cover; width: 100%; height: 300px;">
+                                                <hr />
+                                                <div class="card-body">
+                                                    <h5 class="card-title text-center">Avukat Kaan Karataş</h5>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <!-- Kişisel Kart 2 -->
-                                <div class="col-md-4">
-                                    <div class="card ekip">
-                                        <a href="#" class="card-title-link">
-                                            <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top" alt="Kişi 2 Fotoğrafı" style="object-fit: cover; width: 100%; height: 300px;">
-                                            <hr />
-                                            <div class="card-body">
-                                                <h5 class="card-title text-center">Avukat Yunus Emre Öz</h5>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <!-- Kişisel Kart 3 -->
-                                <div class="col-md-4">
-                                    <div class="card ekip">
-                                        <a href="#" class="card-title-link">
-                                            <img src="~/assets/img/avukat-kaan-karatas.jpg" class="card-img-top" alt="Kişi 3 Fotoğrafı" style="object-fit: cover; width: 100%; height: 300px;">
-                                            <hr />
-                                            <div class="card-body">
-                                                <h5 class="card-title text-center">Avukat Kaan Karataş</h5>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    @* <!-- Makale Linkleri -->
+        </section>
+    </div>
+    <!-- Makale Linkleri -->
     <h2 class="text-center mt-5 mb-4">
-        <i class="fas fa-newspaper"></i> Son Makaleler
+    <i class="fas fa-newspaper"></i> Son Makaleler
     </h2>
     <div class="container mb-5">
-        <div class="row" id="articleLinks">
-            <!-- Makale linklerini yönetmek için bir ID ekledik -->
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Yükselen Hayvan Duyarlılığına Kişisel ve Hukuki Bir Bakış Açısı</h5>
-                        <a href="#" class="btn text-white btn-zoom" style="background-color:#093a34">Devamını Oku</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Mersin Ceza Avukatı</h5>
-                        <a href="#" class="btn text-white mt-4 btn-zoom" style="background-color:#093a34">Devamını Oku</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Mersin Boşanma Avukatı</h5>
-                        <a href="#" class="btn text-white mt-4 btn-zoom" style="background-color:#093a34">Devamını Oku</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> *@
+    <div class="row" id="articleLinks">
+    <!-- Makale linklerini yönetmek için bir ID ekledik -->
+    <div class="col-md-4">
+    <div class="card">
+    <div class="card-body">
+    <h5 class="card-title">Yükselen Hayvan Duyarlılığına Kişisel ve Hukuki Bir Bakış Açısı</h5>
+    <a href="#" class="btn text-white btn-zoom" style="background-color:#093a34">Devamını Oku</a>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-4">
+    <div class="card">
+    <div class="card-body">
+    <h5 class="card-title">Mersin Ceza Avukatı</h5>
+    <a href="#" class="btn text-white mt-4 btn-zoom" style="background-color:#093a34">Devamını Oku</a>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-4">
+    <div class="card">
+    <div class="card-body">
+    <h5 class="card-title">Mersin Boşanma Avukatı</h5>
+    <a href="#" class="btn text-white mt-4 btn-zoom" style="background-color:#093a34">Devamını Oku</a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
 
     <script>
         // Ekibimiz Kartları için Vanilla JavaScript kullanımı

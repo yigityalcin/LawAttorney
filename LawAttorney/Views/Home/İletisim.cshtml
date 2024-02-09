@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "İletişim";
+    ViewData["Title"] = "İletisim";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -69,7 +69,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="contact-wrap w-100 p-md-5 p-4">
+                                <div class="contact-wrap w-100 p-md-5 p-4 focusedInput">
                                     <h3 class="mb-4">Bize Ulaşın</h3>
                                     <div id="form-message-warning" class="mb-4"></div>
                                     <div id="form-message-success" class="mb-4">
@@ -121,6 +121,7 @@
         </div>
     </section>
 </div>
+<script type="text/javascript" src="~/js/contact-us.js"></script>
 <script src="https://web3forms.com/client/script.js" async defer></script>
 <script>
     const form = document.getElementById('contactForm');
@@ -134,7 +135,5 @@
             alert("Please fill out captcha field")
             return
         }
-    });
-    
+    });  
 </script>
-<script type="text/javascript" src="~/js/contact-us.js"></script>

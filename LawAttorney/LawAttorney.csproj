@@ -29,4 +29,9 @@
     <Folder Include="wwwroot\lib\jquery\dist\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\fonts\.DS_Store" />
+    <None Include="wwwroot\fonts\font\.DS_Store" />
+  </ItemGroup>
+
 </Project>

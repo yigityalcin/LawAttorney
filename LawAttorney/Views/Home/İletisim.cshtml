@@ -3,6 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <div class="container-fluid contact-container">
     <section class="ftco-section">
         <div class="container">
@@ -63,7 +64,7 @@
                             <div class="col-md-6 d-flex">
                                 <div id="map">
                                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12778.58353906125!2d34.6317753!3d36.8030399!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f32c1c8ebebb%3A0x92f37dbbab12a79f!2sAvukat%20Yunus%20Emre%20%C3%96z!5e0!3m2!1str!2str!4v1707275164060!5m2!1str!2str"
-                                            height="620" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="embed-responsive-item">
+                                            height="660" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="embed-responsive-item">
                                     </iframe>
                                 </div>
                             </div>
@@ -72,40 +73,43 @@
                                     <h3 class="mb-4">Bize Ulaşın</h3>
                                     <div id="form-message-warning" class="mb-4"></div>
                                     <div id="form-message-success" class="mb-4">
-                                        Mesajınız gönderildi, teşekkür ederiz!
                                     </div>
-                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                    <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                        <input type="hidden" name="access_key" value="52687894-5bb6-4d63-a348-51a8ec9be94e">
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="label" for="name">Ad Soyad</label>
-                                                    <input type="text" class="form-control" name="name" id="name" placeholder="Adınız">
+                                                    <input type="text" class="form-control" name="name" id="name" placeholder="Adınız" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="label" for="email">Email Adresi</label>
-                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="label" for="subject">Konu</label>
-                                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Konu">
+                                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Konu" required>
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="label" for="#">Mesaj</label>
-                                                    <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Mesajınız"></textarea>
+                                                    <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Mesajınız" required></textarea>
                                                 </div>
                                             </div>
+                                            <div class="h-captcha" data-captcha="true"></div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <input type="submit" value="Mesaj Gönder" class="btn btn-primary">
                                                     <div class="submitting"></div>
                                                 </div>
                                             </div>
+                                            <div id="form-result"></div>
+
                                         </div>
                                     </form>
                                 </div>
@@ -117,3 +121,20 @@
         </div>
     </section>
 </div>
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function (e) {
+
+        const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+
+        if (!hCaptcha) {
+            e.preventDefault();
+            alert("Please fill out captcha field")
+            return
+        }
+    });
+    
+</script>
+<script type="text/javascript" src="~/js/contact-us.js"></script>

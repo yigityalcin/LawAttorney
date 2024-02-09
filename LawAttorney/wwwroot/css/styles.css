@@ -11099,30 +11099,36 @@ footer.footer {
     padding: 20px; /* İçeriği kenarlardan uzaklaştırmak için */
 }
 
-.card-img-top {
-    width: 40%; /* Resmin genişliğini ayarlayın */
-    height: 40%;
-    margin: auto; /* Resmi merkezlemek için */
-    display: block; /* Resmi blok element olarak ayarlayın */
-}
-
 .card-work {
     transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-    .card-work:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        background-color: #093A34;
-    }
+.card-img-top {
+    width: 40px; /* İkon genişliğini ayarlayın */
+    height: auto; /* İkon yüksekliğini ayarlayın */
+}
 
-        .card-work:hover .card-title-work, .card-work:hover .card-text {
-            color: #fff; /* Kartın üzerine gelindiğinde metin rengini beyaza çevirme */
-        }
+.card-title-work {
+    margin-top: 10px; /* Yazı ile ikon arasındaki boşluğu ayarlayın */
+}
+
+.card-work:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #093A34;
+}
+
+    .card-work:hover .card-title-work, .card-work:hover .card-text {
+        color: #fff; /* Kartın üzerine gelindiğinde metin rengini beyaza çevirme */
+    }
 
 .card-title-work, .card-text {
     transition: color 0.2s;
 }
+
 
 /*Banner*/
 .card-body-banner {
@@ -11253,4 +11259,18 @@ footer {
 }
 .dropdown-backdrop {
     position: static;
+}
+.card-title{
+    font-size:24px;
+}
+
+.notice--success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
 }

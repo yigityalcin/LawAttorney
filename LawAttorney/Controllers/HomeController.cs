@@ -17,6 +17,10 @@ namespace LawAttorney.Controllers
         {
             return View();
         }
+        public IActionResult IndexEng()
+        {
+            return View();
+        }
         public IActionResult Kurumsal()
         {
             return View();

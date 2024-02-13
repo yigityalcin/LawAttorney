@@ -13022,6 +13022,7 @@ footer {
     display: block;
     padding: 25px;
     border-left: 1px solid rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease;
 }
 
 @media (max-width: 767.98px) {
@@ -13084,7 +13085,7 @@ footer {
 }
 
 .ftco-animate {
-    opacity: 0;
+    opacity: 0.3;
     visibility: hidden;
 }
 
@@ -13119,4 +13120,57 @@ footer {
 }
     .custom-dropdown-toggle:hover {
         color: #013A33;
+    }
+
+
+/* Additional styles for responsiveness */
+@media (max-width: 767.98px) {
+    .hero-wrap.hero-wrap-2 {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .slider-text h1 {
+        font-size: 32px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .custom-img {
+        height: auto !important;
+        width: 100% !important;
+    }
+}
+
+/* Practice Areas
+
+*/
+.practice-area{
+    padding-bottom: 0px;
+}
+
+.practice-area {
+    transition: transform 0.3s;
+    text-align: center;
+    overflow: hidden;
+    padding: 30px;
+}
+
+    .practice-area:hover .features-icons-icon i,
+    .practice-area:hover h3 {
+        color: white;
+    }
+
+.practice-area-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.practice-area:hover {
+    cursor: pointer;
+}
+.practice-area:hover {
+    background-color: #013A33;
+}
+.practice-area:hover h3 {
+        color: white !important;
     }

@@ -5,41 +5,52 @@
 
 <style>
     /* Custom Styles */
-    
-
     .card {
-        background-color: #fff;
-        border: 1px solid #ddd;
-        color: #000;
+        border: none;
         border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        height: 270px; /* Sabit kart yüksekliği */
+        border: 1px solid #ccc;
     }
 
-    .card-header {
-        background-color: #f5f5f5;
-        color: #000;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-   
-    .list-group-item {
-        background-color: #f5f5f5;
-        border: 1px solid #ddd;
-        color: #000;
-    }
-
-        .list-group-item a {
-            color: #000;
-            font-weight: bold;
+        .card:hover {
+            transform: scale(1.05);
         }
 
-            .list-group-item a:hover {
-                text-decoration: none;
-                color: #093a34; /* Green color for hover */
-            }
+        .card img {
+            object-fit: cover;
+            height: 100px;
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+
+    .card-body {
+        padding: 20px;
+        height: 100%;
+        overflow-y: auto; /* İçerik uzunluğu boyutu aşarsa scrollbar görüntüle */
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .card-date {
+        color: #555;
+        font-size: 0.9rem;
+    }
+
+    .card-text {
+        color: #555;
+        margin-bottom: 15px;
+    }
 
     .btn-primary {
-        background-color: #093a34; /* Green color for buttons */
-        border: 1px solid #093a34;
+        background-color: #013A33; /* Green color for buttons */
+        border: 1px solid #013A33;
+        transition: background-color 0.3s ease;
     }
 
         .btn-primary:hover {
@@ -48,66 +59,142 @@
         }
 
     .latest-articles {
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        padding: 15px;
-        margin-bottom: 20px;
+        margin-top: 20px;
     }
 
     /* End Custom Styles */
 </style>
+
 <body>
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <!-- Kategoriler -->
-                <div class="col-md-3 mb-4">
-                    <div class="card">
-                        <div class="card-header text-center">
-                            <h2 class="mb-0">Kategoriler</h2>
+    <div class="container">
+        <div class="row">
+            <h2 class="mb-4 text-center">En Son Makaleler</h2>
+
+            <div class="col-md-12">
+                <div class="latest-articles">
+                    <!-- Makale 1 -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Yükselen Hayvan Duyarlılığına Kişisel ve Hukuki Bir Bakış Açısı</h5>
+                            <p class="card-date">12 Ocak 2022</p>
+                            <p class="card-text">4 yaşındaki Asiye Ateş’in 2 pitbull cinsi köpeğin saldırısı sonucu ağır şekilde yaralanması, özellikle sokak hayvanlarına karşı uzun yıllardır var olan rahatsız seslerin tekrar yükselmesine sebep oldu.</p>
+                            <a href="#" class="btn btn-primary">Devamını Oku</a>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><a href="#" class="text-decoration-none">Ceza Hukuku</a></li>
-                            <li class="list-group-item"><a href="#" class="text-decoration-none">Tazminat Hukuku</a></li>
-                            <li class="list-group-item"><a href="#" class="text-decoration-none">Ticaret ve Şirketler Hukuku</a></li>
-                            <li class="list-group-item"><a href="#" class="text-decoration-none">İdare, Vergi ve Gümrük Hukuku</a></li>
-                            <li class="list-group-item"><a href="#" class="text-decoration-none">Boşanma Hukuku</a></li>
-                            <li class="list-group-item"><a href="#" class="text-decoration-none">İş Hukuku</a></li>
-                            <li class="list-group-item"><a href="#" class="text-decoration-none">İcra Hukuku</a></li>
-                            <li class="list-group-item"><a href="#" class="text-decoration-none">Miras Hukuku</a></li>
-                            <li class="list-group-item"><a href="#" class="text-decoration-none">Güncel Makaleler</a></li>
-                            <li class="list-group-item"><a href="#" class="text-decoration-none">Avukatlık Ofisi</a></li>
-                            <!-- Daha fazla kategori ekleyebilirsiniz -->
-                        </ul>
                     </div>
+                    <!-- Makale 2 -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Mersin Ceza Avukatı</h5>
+                            <p class="card-date">02 Eylül 2021</p>
+                            <p class="card-text">
+                                Mersin ceza avukatı arayışlarına seçkin kadrosuyla yanıt veren Öz&Partners Avukatlık Ofisi, deneyimli ceza ve ağır ceza avukatlarıyla gerçek ve tüzel müvekkillerini savunmaktadır.
+                                Tüm suç isnatları, cezaî şikâyetler, kovuşturma-soruşturma davaları ve ceza hukukunu ilgilendiren diğer alanlarda danışmanlık ve avukatlık hizmetleri sunmaktadır.
+                            </p>
+                            <a href="#" class="btn btn-primary">Devamını Oku</a>
+                        </div>
+                    </div>
+                    <!-- Daha fazla makale ekleyebilirsiniz -->
                 </div>
-
-                <!-- Makaleler -->
-                <div class="col-md-9">
-                    <div class="latest-articles">
-                        <h2 class="mb-4">En Son Makaleler</h2>
-
-                        <!-- Makale 1 -->
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Yükselen Hayvan Duyarlılığına Kişisel ve Hukuki Bir Bakış Açısı</h5>
-                                <p class="card-text text-black">Makale içeriği buraya gelecek. Kısa bir özet...</p>
-                                <a href="#" class="btn btn-primary">Devamını Oku</a>
-                            </div>
+            </div>
+            <!-- İkinci Makale Kartı -->
+            <div class="col-md-12">
+                <div class="latest-articles">
+                    <!-- Makale 3 -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Mersin Boşanma Avukatı</h5>
+                            <p class="card-date">02 Eylül 2021</p>
+                            <p class="card-text">Mersin boşanma avukatı arayışlarına deneyimli ekibiyle cevap veren Öz&Partners Avukatlık Ofisi, çekişmeli ve anlaşmalı boşanma davalarına yönelik hukuki çözümler sunar. Evliliği yasal olarak sona erdirme aşamasında velayet, nafaka, tazminat, mal rejiminin tasfiyesi gibi tüm konularda hukuki danışmanlık ve dava avukatlığı hizmeti yürütür.</p>
+                            <a href="#" class="btn btn-primary">Devamını Oku</a>
                         </div>
-
-                        <!-- Makale 2 -->
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Makale Başlığı 2</h5>
-                                <p class="card-text text-black">Makale içeriği buraya gelecek. Kısa bir özet...</p>
-                                <a href="#" class="btn btn-primary">Devamını Oku</a>
-                            </div>
-                        </div>
-
-                        <!-- Daha fazla makale ekleyebilirsiniz -->
                     </div>
+                    <!-- Makale 4 -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Mersin Avukatlık Ofisi</h5>
+                            <p class="card-date">02 Eylül 2021</p>
+                            <p class="card-text">Mersin avukatlık ofisi olarak faaliyet gösteren Oz&Partners Hukuk, 1974 yılında kurulmuştur. 50 yıla yakın bir süredir hizmetlerini aynı çizgide sürdüren Oz&Partners Avukatlık Ofisi, başta Mersin'in ileri gelen gerçek ve tüzel kişileri olmak üzere binlerce müvekkile hizmet vermiştir.</p>
+                            <a href="#" class="btn btn-primary">Devamını Oku</a>
+                        </div>
+                    </div>
+                    <!-- Daha fazla makale ekleyebilirsiniz -->
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="latest-articles">
+                    <!-- Makale 1 -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Facebook Whatsapp Soruşturması Hakkında</h5>
+                            <p class="card-date">30 Temmuz 2021</p>
+                            <p class="card-text">Yarı kamusal-yarı özerk denebilecek mahiyette serbest piyasa regülatörü bağımsız idari otoritelerden biri olan Rekabet Kurumu; Whatsapp ve Facebook aleyhine, geride bıraktığımız aylarda kamuoyunun gündemini de yoğun bir şekilde meşgul eden, şirketin kullanıcılara adeta dayattığı yeni gizlilik ve veri kullanımı sözleşmesi dolayısıyla, nihayetinde çok yüksek idari para cezası kesebileceği bir soruşturma açmıştı.</p>
+                            <a href="#" class="btn btn-primary">Devamını Oku</a>
+                        </div>
+                    </div>
+                    <!-- Makale 2 -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Influencer Marketing Düzenlemesi</h5>
+                            <p class="card-date">02 Eylül 2021</p>
+                            <p class="card-text">
+                                Geride bıraktığımız hafta, T.C. Ticaret Bakanlığınca pazarlamanın en güncel ve popüler metodlarından influencer marketing'i ele alıp iç mevzuatta benimsenen tüketici hukuku ile reklam hukuku kural ve ilkelerine uyumlamayı hedefleyen bir kılavuz yayınlandı.
+                            </p>
+                            <a href="#" class="btn btn-primary">Devamını Oku</a>
+                        </div>
+                    </div>
+                    <!-- Daha fazla makale ekleyebilirsiniz -->
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="latest-articles">
+                    <!-- Makale 1 -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Uygulamadaki Tebligat Belirsizliği Birleşen İçtihatla Giderildi</h5>
+                            <p class="card-date">12 Ocak 2022</p>
+                            <p class="card-text"> Yargıtay İçtihadı Birleştirme Büyük Genel Kurulu, 20.11.2020 Tarih, 2019/2 Esas 2020/3 Karar sayılı içtihadı birleştirme kararı, 20.04.2021 tarihinde Resmî Gazetede yayımlanmıştır. Bu kararında uygulama yapan meslektaşlarımızın yıllardır tartıştığı bir hususu görüşen kurul özetle; bilinen adrese yapılan tebligatın iadesi hâlinde, muhatabın adres kayıt sistemindeki adresine Tebligat Kanunu m. 21/2 uyarınca tebligat yapılmasının yeterli olacağı ve öncesinde kayıtlı adresine normal tebligatın yapılmasının aranmaması gerekeceği yönünde oy çokluğu ile karar vermiştir.</p>
+                            <a href="#" class="btn btn-primary">Devamını Oku</a>
+                        </div>
+                    </div>
+                    <!-- Makale 2 -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Sokağa Çıkma Yasakları Anayasaya Aykırıdır</h5>
+                            <p class="card-date">02 Eylül 2021</p>
+                            <p class="card-text">
+                                Tüm Dünya’yı etkisi altına alan COVID-19 küresel salgını, ilk vakanın tespit edildiği Mart 2020’den bu yana ülkemizde de devam etmektedir ve -pek çok Dünya ülkesinde olduğu gibi- Türkiye’de de kamu gücü tarafından, yayılmanın önüne geçmek için başvurulan ilk yöntem sokağa çıkma yasakları olmuştur. Ancak belki sürecin aciliyet ihtiyacı dolayısıyla gözden kaçması, belki de siyasi ve ekonomik saiklerle; sokağa çıkma yasağı kararları pozitif hukuka (yani yürürlükteki hukuki normlara) aykırı olarak alınmıştır.
+                            </p>
+                            <a href="#" class="btn btn-primary">Devamını Oku</a>
+                        </div>
+                    </div>
+                    <!-- Daha fazla makale ekleyebilirsiniz -->
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="latest-articles">
+                    <!-- Makale 1 -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">İstanbul Sözleşmesinin Feshi</h5>
+                            <p class="card-date">12 Ocak 2022</p>
+                            <p class="card-text">Türkiye Cumhuriyeti Devleti, 2021 yılının 19 Mart’ını 20 Mart’a bağlayan gece bir Cumhurbaşkanlığı kararnamesi ile kamuoyunda “İstanbul Sözleşmesi” olarak bilinen, “Kadına Yönelik Şiddet ve Aile İçi Şiddetin Önlenmesi ve Bunlarla Mücadeleye Dair Avrupa Konseyi Sözleşmesi”nden ayrılmıştır.</p>
+                            <a href="#" class="btn btn-primary">Devamını Oku</a>
+                        </div>
+                    </div>
+                    <!-- Makale 2 -->
+                    @* <div class="card mb-4">
+                        <img src="https://placekitten.com/800/401" alt="Makale Resmi" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Mersin Ceza Avukatı</h5>
+                            <p class="card-date">02 Eylül 2021</p>
+                            <p class="card-text">
+                                Mersin ceza avukatı arayışlarına seçkin kadrosuyla yanıt veren Öz&Partners Avukatlık Ofisi, deneyimli ceza ve ağır ceza avukatlarıyla gerçek ve tüzel müvekkillerini savunmaktadır.
+                                Tüm suç isnatları, cezaî şikâyetler, kovuşturma-soruşturma davaları ve ceza hukukunu ilgilendiren diğer alanlarda danışmanlık ve avukatlık hizmetleri sunmaktadır.
+                            </p>
+                            <a href="#" class="btn btn-primary">Devamını Oku</a>
+                        </div>
+                    </div> *@
+                    <!-- Daha fazla makale ekleyebilirsiniz -->
                 </div>
             </div>
         </div>

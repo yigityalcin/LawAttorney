@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,76 +14,75 @@
     <link rel="stylesheet" href="~/LawAttorney.styles.css" asp-append-version="true" />
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="~/assets/flaticon.css">
+    <link rel="stylesheet" href="~/css/animate.css">
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="container">
-            <nav class="navbar navbar-default navbar-expand-lg pt-4 bg-white">
-                <!-- Toggle button -->
+            <nav class="navbar navbar-expand-lg bg-white mb-3">
                 <!-- Logo -->
-                <a class="navbar-brand" href="/Home/Index">
-                    <img src="~/assets/img/illustrator2.png" alt="Logo" height="110" class="img">
+                <a class="navbar-brand ms-4 mt-2" href="/Home/Index">
+                    <img src="~/assets/img/ailogo4.png" alt="Logo" height="100" class="img">
                 </a>
-                <!-- Menü Sekmeleri -->
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menu Tabs -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-lg-0 me-lg-3">
+                    <ul class="navbar-nav ms-auto mb-lg-0 me-lg-1">
                         <li class="nav-item">
                             <a class="nav-link" href="/Home/Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Home/Kurumsal">Corporate</a>
+                            <a class="nav-link" href="/Home/Corporate">Corporate</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Home/Ekibimiz">Our Team</a>
+                            <a class="nav-link" href="/Home/OurTeam">Our Team</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Home/CalismaAlanlari">Practice Areas</a>
+                            <a class="nav-link" href="/Home/WorkAreas">Work Areas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Home/Makaleler">Articles</a>
+                            <a class="nav-link" href="/Home/Articles">Articles</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/Home/İletisim">Contact</a>
+                            <a class="nav-link" href="/Home/Contact">Contact</a>
                         </li>
                     </ul>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="d-md-flex gap-2 col-9 col-md-3 mx-auto">
-                    <!-- Vanilla JavaScript ile -->
-                    <a href="https://wa.me/%2B905343461030" class="btn btn-sm text-white" style="background-color: #093c34;" target="_blank">
-                        <i class="bi bi-whatsapp me-2"></i>Get Info
-                    </a>
-                    <a href="mailto:yigityalciin@hotmail.com" class="btn btn-sm text-white" style="background: linear-gradient(to right, #c79f4a, #e6b95a, #f5c96c);" target="_blank">
-                        <i class="fas fa-envelope me-2"></i>Send Email
-                    </a>
-                </div>
-                <!-- Sağdaki Elemanlar ve Dikdörtgen Butonlar -->
-                <div class="d-flex align-items-center me-2">
-                    <!-- Sağdaki Elemanlar -->
-                    <div class="dropdown" id="languageDropdown">
-                        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img id="selectedFlag" src="~/assets/img/turkey.png" alt="Selected Lang" height="30" />
+                <!-- Right Elements and Rectangular Buttons -->
+                <div class="d-flex align-items-center ms-5">
+                    <!-- Language Selection and Mail Sending Buttons -->
+                    <div class="d-md-flex align-items-center gap-2 ms-5 me-3 order-3">
+                        <!-- <a href="https://wa.me/%2B905343461030" class="btn btn-sm text-white" style="background-color: #093c34;" target="_blank">
+                            <i class="bi bi-whatsapp me-2"></i>Get Info
+                        </a> -->
+                        <a href="/Home/Contact" class="btn btn-sm text-white ms-1" id="mailSendButton" style="background-color: #013A33;">
+                            <i class="fas fa-envelope me-2"></i>Send Mail
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                    </div>
+                    <!-- Language Selection Dropdown -->
+                    <div class="dropdown order-4" id="languageDropdown">
+                        <a class="dropdown-toggle custom-dropdown-toggle" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-end text-black" aria-labelledby="navbarDropdownMenuAvatar">
                             <li>
-                                <a class="dropdown-item" href="/Home/IndexEng" data-lang="united-kingdom">
-                                    <img src="~/assets/img/united-kingdom.png" alt="Lang" height="30" />
+                                <a class="dropdown-item" href="/Home/Index" data-lang="TR">
+                                    Turkish
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="/Home/IndexEng" data-lang="Eng">
                                     English
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="/Home/İletisim" data-lang="russia">
-                                    <img src="~/assets/img/russia.png" alt="Lang" height="30" />
-                                    Russian
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/Home/Index" data-lang="turkey">
-                                    <img src="~/assets/img/turkey.png" alt="Lang" height="30" />
-                                    Turkish
+                                <a class="dropdown-item" href="/Home/Contact" data-lang="Рус">
+                                    Русский
                                 </a>
                             </li>
                         </ul>
@@ -90,102 +90,77 @@
                 </div>
             </nav>
         </div>
-        @RenderBody()
-
-        @* FOOTER *@
-        <div class="container-fluid p-0">
-            <footer class="text-center text-lg-start text-black bg-white">
-                <div class="container page-border mt-0"></div>
-
-                <!-- Section: Social media -->
-                <section class="d-flex justify-content-center p-2 bg-white">
-                    <!-- Left -->
-                    <div class="me-lg-5">
-                        <span>Follow us on social media : </span>
-                    </div>
-                    <!-- Right -->
-                    <div class="d-flex justify-content-center">
-                        @* <a href="#" class="me-4" style="color:#013a33">
-                        <i class="fab fa-facebook"></i>
-                        </a> *@
-                        @* <a href="#" class="me-4" style="color:#013a33">
-                        <i class="fab fa-twitter"></i>
-                        </a> *@
-                        @* <a href="#" class="me-4" style="color:#013a33">
-                        <i class="fab fa-google"></i>
-                        </a> *@
-                        @* <a href="#" class="me-4" style="color:#013a33">
-                        <i class="fab fa-instagram"></i>
-                        </a> *@
-                        <a href="https://www.linkedin.com/company/oz-partners/" class="me-4" style="background-color: #093a34; color: white; text-decoration: none; display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 4px;" target="_blank">
-                            <i class="fab fa-linkedin" style="font-size: 16px; margin-right: 8px;"></i>
-                            <span style="font-size: 12px;">Follow</span>
-                        </a>
-
-                    </div>
-                    <!-- Right -->
-                </section>
-                <div class="container page-border"></div>              
-                <!-- Copyright -->
-                <div class="text-center mt-5"
-                     style="font-size:12px; background-color: #ffffff">
-                    ©
-                    <a class="text-black" href="">1974-2024 Öz&Partners; Law Office - All Rights Reserved</a>
-                </div>
-                <!-- Copyright -->
-            </footer>
-        </div>
     </div>
-
+    @RenderBody()
+    <!-- FOOTER -->
+    <div class="container-fluid p-0">
+        <footer class="text-center text-lg-start text-black bg-white">
+            <div class="container page-border mt-0"></div>
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center p-2 bg-white">
+                <!-- Left -->
+                <div class="me-lg-5">
+                    <span>Our social media accounts: </span>
+                </div>
+                <!-- Right -->
+                <div class="d-flex justify-content-center">
+                    <a href="https://www.linkedin.com/company/oz-partners/" class="me-4" style="background-color: #013A33; color: white; text-decoration: none; display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 4px;" target="_blank">
+                        <i class="fab fa-linkedin" style="font-size: 16px; margin-right: 8px;"></i>
+                        <span style="font-size: 12px;">Follow Us</span>
+                    </a>
+                </div>
+            </section>
+            <div class="container page-border"></div>
+            <!-- Copyright -->
+            <div class="text-center mt-5" style="font-size:12px; background-color: #ffffff">
+                ©
+                <a class="text-black" href="">1974-2024 Öz&Partners; Law Office - All Rights Reserved</a>
+            </div>
+        </footer>
+    </div>
+    </div>
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/scripts.js" asp-append-version="true"></script>
-    <!-- Vanilla JavaScript ile olayları ekleme -->
-    <!-- JavaScript Kodu -->
+    <!-- Add events with Vanilla JavaScript -->
+    <!-- JavaScript Code -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var languageDropdown = document.getElementById('languageDropdown');
 
-            // Önceki dil seçeneğini al
+            // Get the previous language selection
             var selectedLanguage = localStorage.getItem('selectedLanguage');
 
-            // Eğer önceki bir dil seçilmişse, onu aktif hale getir
+            // If a language was previously selected, set it as active
             if (selectedLanguage) {
-                var activeLanguageElement = languageDropdown.querySelector('.dropdown-item[data-lang="' + selectedLanguage + '"]');
+                var activeLanguageElement = languageDropdown.querySelector('.dropdown-toggle');
                 if (activeLanguageElement) {
-                    activeLanguageElement.classList.add('active');
-                    var selectedFlag = document.getElementById('selectedFlag');
-                    selectedFlag.src = '@Url.Content("~/assets/img/")' + selectedLanguage + '.png';
+                    activeLanguageElement.innerHTML = selectedLanguage;
                 }
             }
 
-            // Dil seçeneği tıklandığında
+            // When a language option is clicked
             languageDropdown.addEventListener('click', function (event) {
                 if (event.target.classList.contains('dropdown-item')) {
-                    // Seçilen dilin önceki aktif durumunu kaldır
-                    var previousActiveLanguage = this.querySelector('.dropdown-item.active');
+                    // Remove the previous active state of the selected language
+                    var previousActiveLanguage = this.querySelector('.dropdown-toggle');
                     if (previousActiveLanguage) {
-                        previousActiveLanguage.classList.remove('active');
+                        previousActiveLanguage.innerHTML = event.target.textContent;
                     }
 
-                    // Seçilen dil öğesine aktif durumu ekle
+                    // Add active state to the selected language element
                     var selectedLanguageElement = event.target;
-                    selectedLanguageElement.classList.add('active');
-
-                    // Seçilen dil değerini al
+                    // Get the selected language
                     var selectedLanguage = selectedLanguageElement.getAttribute('data-lang');
-
-                    // Set the selected flag
-                    var selectedFlag = document.getElementById('selectedFlag');
-                    selectedFlag.src = '@Url.Content("~/assets/img/")' + selectedLanguage + '.png';
-
-                    // Seçilen dil bilgisini localStorage'a kaydet
+                    // Set the selected language in the dropdown toggle
+                    this.querySelector('.dropdown-toggle').innerHTML = selectedLanguage;
+                    // Set the selected language in localStorage
                     localStorage.setItem('selectedLanguage', selectedLanguage);
                 }
             });
         });
+
     </script>
-
-
 </body>
+
 </html>

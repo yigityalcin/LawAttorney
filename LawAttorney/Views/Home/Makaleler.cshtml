@@ -10,8 +10,8 @@
         border-radius: 10px;
         overflow: hidden;
         transition: transform 0.3s ease;
-        height: 270px; /* Sabit kart yüksekliği */
         border: 1px solid #ccc;
+        height: auto; /* Kart yüksekliği otomatik ayarlanacak */
     }
 
         .card:hover {
@@ -20,15 +20,13 @@
 
         .card img {
             object-fit: cover;
-            height: 100px;
+            height: 150px; /* Kart resminin yüksekliği ayarlanabilir */
             width: 100%;
             border-bottom: 1px solid #ddd;
         }
 
     .card-body {
         padding: 20px;
-        height: 100%;
-        overflow-y: auto; /* İçerik uzunluğu boyutu aşarsa scrollbar görüntüle */
     }
 
     .card-title {
@@ -48,27 +46,33 @@
     }
 
     .btn-primary {
-        background-color: #013A33; /* Green color for buttons */
+        background-color: #013A33;
         border: 1px solid #013A33;
         transition: background-color 0.3s ease;
     }
 
         .btn-primary:hover {
-            background-color: #145d35; /* Darker green color for button hover */
+            background-color: #145d35;
             border: 1px solid #145d35;
         }
 
     .latest-articles {
         margin-top: 20px;
     }
-
-    /* End Custom Styles */
 </style>
 
 <body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="custom-img mb-5">
+                <img class="custom-img mb-4" src="~/assets/img/CalismaAlanlari/banner900.png" />
+                <span>Makalelerimiz</span>
+            </div>
+        </div>
+    </section>
     <div class="container">
+
         <div class="row">
-            <h2 class="mb-4 text-center">En Son Makaleler</h2>
 
             <div class="col-md-12">
                 <div class="latest-articles">
@@ -183,16 +187,16 @@
                     </div>
                     <!-- Makale 2 -->
                     @* <div class="card mb-4">
-                        <img src="https://placekitten.com/800/401" alt="Makale Resmi" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Mersin Ceza Avukatı</h5>
-                            <p class="card-date">02 Eylül 2021</p>
-                            <p class="card-text">
-                                Mersin ceza avukatı arayışlarına seçkin kadrosuyla yanıt veren Öz&Partners Avukatlık Ofisi, deneyimli ceza ve ağır ceza avukatlarıyla gerçek ve tüzel müvekkillerini savunmaktadır.
-                                Tüm suç isnatları, cezaî şikâyetler, kovuşturma-soruşturma davaları ve ceza hukukunu ilgilendiren diğer alanlarda danışmanlık ve avukatlık hizmetleri sunmaktadır.
-                            </p>
-                            <a href="#" class="btn btn-primary">Devamını Oku</a>
-                        </div>
+                    <img src="https://placekitten.com/800/401" alt="Makale Resmi" class="card-img-top">
+                    <div class="card-body">
+                    <h5 class="card-title">Mersin Ceza Avukatı</h5>
+                    <p class="card-date">02 Eylül 2021</p>
+                    <p class="card-text">
+                    Mersin ceza avukatı arayışlarına seçkin kadrosuyla yanıt veren Öz&Partners Avukatlık Ofisi, deneyimli ceza ve ağır ceza avukatlarıyla gerçek ve tüzel müvekkillerini savunmaktadır.
+                    Tüm suç isnatları, cezaî şikâyetler, kovuşturma-soruşturma davaları ve ceza hukukunu ilgilendiren diğer alanlarda danışmanlık ve avukatlık hizmetleri sunmaktadır.
+                    </p>
+                    <a href="#" class="btn btn-primary">Devamını Oku</a>
+                    </div>
                     </div> *@
                     <!-- Daha fazla makale ekleyebilirsiniz -->
                 </div>

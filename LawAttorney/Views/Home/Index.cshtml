@@ -3,7 +3,7 @@
     <div class="container">
         <div class="border-masthead masthead">
             <div id="carouselExample" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
+                <div class="carousel-inner shadow">
                     <div class="carousel-item active">
                         <img src="~/assets/img/Carousel/Carousel1.png" class="d-block w-100" alt="Second Slide">
                     </div>
@@ -54,6 +54,7 @@
         </div>
     </div>
 
+
     <script src="~/js/scripts.js" asp-append-version="true"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -62,7 +63,7 @@
             if (carouselElement) {
                 try {
                     var carouselInstance = new bootstrap.Carousel(carouselElement, {
-                        interval: 3000, // Otomatik geçiş süresi (3 saniye)
+                        interval: 2000, // Otomatik geçiş süresi (2 saniye)
                         pause: 'hover' // Fare ile üzerine gelindiğinde otomatik geçişi durdur
                     });
 
@@ -74,6 +75,7 @@
                 console.error('Carousel element not found.');
             }
         });
+
         // Vanilla JavaScript ile sayfa yönlendirme
         document.getElementById('CalismaAlanlari').addEventListener('click', function () {
             window.location.href = 'CalismaAlanlari'; // Hizmetlerimiz sayfa URL'i

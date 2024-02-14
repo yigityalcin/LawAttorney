@@ -3,131 +3,172 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<style>
+    /* Custom Styles */
+    .ekip {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: row;
+    }
+
+        .ekip:hover {
+            transform: scale(1.05);
+        }
+
+        .ekip img {
+            object-fit: cover;
+            height: 300px; /* Resmin yüksekliği */
+            width: 200px; /* Resmin genişliği */
+        }
+
+        .ekip .card-body {
+            padding: 20px;
+            flex: 1; /* Kartın içindeki içerik (açıklama, mail) tüm genişliği kaplasın */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ekip .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .ekip .card-bio {
+            color: #555;
+            margin-bottom: 15px;
+            overflow: hidden;
+            text-overflow: ellipsis; /* Metni kırp ve üç nokta ekle */
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Gösterilecek satır sayısı */
+            -webkit-box-orient: vertical;
+        }
+
+        .ekip .card-bio-full {
+            color: #555;
+            display: none; /* Tam metni başlangıçta gizle */
+        }
+
+        .ekip .read-more-btn {
+            cursor: pointer;
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .ekip .card-mail {
+            color: #555;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    /* End Custom Styles */
+</style>
+
 <body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="custom-img mb-5">
+                <img class="custom-img mb-4" src="~/assets/img/CalismaAlanlari/banner900.png" />
+                <span>Ekibimiz</span>
+            </div>
+        </div>
+    </section>
     <div class="container-fluid">
         <section class="card-section mb-5">
             <div class="container">
+                <!-- Kişisel Kart 1 -->
                 <div class="row">
-                    <!-- Üstteki Kart Column -->
-                    <div class="col-lg-12">
-                        <div class="card bg-white shadow">
-                            <div class="card-body">
-                                <h2 class="card-title text-center text-black mb-3 border-bottom">Ekibimiz</h2>
-                                <!-- Altta Üç Kişisel Bilgi Kartı -->
-                                <div class="row" id="teamMembers">
-                                    <!-- Kartları yönetmek için bir ID ekledik -->
-                                    <!-- Kişisel Kart 1 -->
-                                    <div class="col-md-4">
-                                        <div class="card ekip">
-                                            <a href="#" class="card-title-link">
-                                                <img src="~/assets/img/avukat-emin-oz.jpg" class="card-img-top" alt="Kişi 1 Fotoğrafı" style="object-fit: cover; width: 100%; height: 300px;">
-                                                <hr />
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-center">Avukat Emin Öz</h5>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Kişisel Kart 2 -->
-                                    <div class="col-md-4">
-                                        <div class="card ekip">
-                                            <a href="#" class="card-title-link">
-                                                <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top" alt="Kişi 2 Fotoğrafı" style="object-fit: cover; width: 100%; height: 300px;">
-                                                <hr />
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-center">Avukat Yunus Emre Öz</h5>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Kişisel Kart 3 -->
-                                    <div class="col-md-4">
-                                        <div class="card ekip">
-                                            <a href="#" class="card-title-link">
-                                                <img src="~/assets/img/avukat-kaan-karatas.jpg" class="card-img-top" alt="Kişi 3 Fotoğrafı" style="object-fit: cover; width: 100%; height: 300px;">
-                                                <hr />
-                                                <div class="card-body">
-                                                    <h5 class="card-title text-center">Avukat Kaan Karataş</h5>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
+                    <div class="col-md-12">
+                        <div class="card ekip">
+                            <img src="~/assets/img/avukat-emin-oz.jpg" class="card-img-top" alt="Kişi 1 Fotoğrafı">
+                            <a href="#" class="card-title-link">
+                                <div class="card-body">
+                                    <h5 class="card-title">Avukat Emin Öz</h5>
+                                    <p class="card-bio" data-person="emin">
+                                        Öz & Partners’ın kurucusu olan duayen avukat Emin Öz, 1950 yılında Mersin’in Silifke ilçesinde doğmuştur. 1973 yılında İstanbul Üniversitesi Hukuk Fakültesi’nden mezun olup 1974 yılında Mersin’de kendi ofisini kurarak avukatlığa başlamıştır.
+                                        12 Eylül 1980 askeri ihtilali öncesi ve sonrası sayısız siyasi davada vekillik görevi üstlenen Emin Öz, ihtilal sonrası Alparslan Türkeş’in savunmasını yapan avukatlardan biridir.
+                                    </p>
+                                    <p class="card-bio-full" data-person="emin">
+                                        1989 yılında Mersin İl Genel Meclisi üyeliğine seçilmiştir. Bu görev devam ederken 1993 yılında Anavatan Partisi Mersin İl Başkanı seçilmiştir ve 1999 yılına kadar 3 dönem görevini sürdürmüştür. Mersin’den bağımsız milletvekili adayı olarak girdiği 1999 genel seçimlerinde ise yüksek bir oy alarak şehirdeki politik etkinliğini göstermiştir.
+                                        Takip eden yıllarda, 2 dönem Anavatan Partisi MKYK’sında  (Merkez Karar Yönetim Kurulu) görev almıştır. Profesyonel çalışma yaşamının ilk yıllarından itibaren ekonomi ve ticaret dünyasının içinde yer alan Av. Emin Öz, şahsi ticari faaliyetlerinin dışında; başta MESBAŞ (Mersin Serbest Bölgesi’ni işleten şirket) ve MERTAŞ (MTSO, MESİAD ve Mersin Deniz Ticaret Odası gibi meslek odası ve STK’ların ortaklaşa kurdukları şirket) gibi Mersin’in ekonomik ve ticari hayatına yön veren etkili şirketler olmak üzere, birçok ticari şirketin yönetim kurulu başkanlığını yapmıştır. MESİAD (Mersin Sanayici İş Adamları Derneği) istişare kurulu başkan yardımcılığı görevinde bulunmuştur. Mersin Barosu yönetim kurulunda yer almıştır.
+                                        Ayrıca bir dönem Mersin Deniz ve Ticaret Meslek Yüksekokulu’nda hukuk dersleri vermiştir. Meslek hayatının 50. yılına yaklaşan Av. Emin Öz, İngilizce ve Fransızca bilmektedir.
+                                    </p>
+                                    <p class="read-more-btn" onclick="toggleBio('emin'); return false;">Devamını Oku</p>
+                                    <p class="card-mail" onclick="location.href='mailto:eminoz@ozpartnershukuk.com';">
+                                        <i class="fas fa-envelope" style="color: #013a33;"></i> eminoz@ozpartnershukuk.com
+                                    </p>
                                 </div>
-
-                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kişisel Kart 2 -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card ekip">
+                            <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top" alt="Kişi 1 Fotoğrafı">
+                            <a href="#" class="card-title-link">
+                                <div class="card-body">
+                                    <h5 class="card-title">Avukat Yunus Emre Öz</h5>
+                                    <p class="card-bio" data-person="emre">
+                                        1994 yılında Mersin’de doğmuştur. 2009 yılında Gelişim Koleji’nden, 2013 yılında İçel Anadolu Lisesi’nden (İAL) mezun olan Av. Yunus Emre Öz; lisans eğitimini Çağ Üniversitesi Hukuk Fakültesi’nde onur derecesiyle tamamlamıştır. 2018 yılında avukatlık stajını tamamlayarak Öz & Partners’ın ortak avukatlarından olmuştur.
+                                    </p>
+                                    <p class="card-bio-full" data-person="emre">
+                                        2020 yılında ise Dünya’nın önde gelen üniversitelerinden olan King’s College London’dan yüksek lisans kabulü almıştır. Bir dönem bir siyasi partinin Mersin İl Gençlik Kolları Başkanlığı görevini yürüten Öz ileri seviye İngilizce bilmektedir.
+                                    </p>
+                                    <p class="read-more-btn" onclick="toggleBio('emre'); return false;">Devamını Oku</p>
+                                    <p class="card-mail" onclick="location.href='mailto:yunusemreoz@ozpartnershukuk.com';">
+                                        <i class="fas fa-envelope" style="color: #013a33;"></i> yunusemreoz@ozpartnershukuk.com
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- ... Diğer kartlar ... -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card ekip">
+                            <img src="~/assets/img/avukat-kaan-karatas.jpg" class="card-img-top" alt="Kişi 1 Fotoğrafı">
+                            <a href="#" class="card-title-link">
+                                <div class="card-body">
+                                    <h5 class="card-title">Avukat Kaan Karataş</h5>
+                                    <p class="card-bio" data-person="kaan">
+                                        1991 yılında Adana’da doğan Av. Kaan Karataş 2009 yılında Adana Anadolu Lisesi’ni (ALA) bitirmiştir. 2009 yılında yapılan ÖSS’de, Türkiye genelinde ilk 1000 öğrenci arasına giren Karataş 2014 yılında Yeditepe Üniversitesi Hukuk Fakültesi’ni onur derecesiyle bitirmiş ve memleketi olan Mersin’de avukatlık hayatına başlamıştır.
+                                    </p>
+                                    <p class="card-bio-full" data-person="kaan">
+                                        İleri seviyede İngilizce ve orta seviyede Almanca bilmektedir. 2019 yılında Öz & Partners’ın ortak avukatlarından olmuştur.
+                                    </p>
+                                    <p class="read-more-btn" onclick="toggleBio('kaan'); return false;">Devamını Oku</p>
+                                    <p class="card-mail" onclick="location.href='mailto:kaankaratas@ozpartnershukuk.com';">
+                                        <i class="fas fa-envelope" style="color: #013a33;"></i> kaankaratas@ozpartnershukuk.com
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    <!-- Makale Linkleri -->
-    <h2 class="text-center mt-5 mb-4">
-    <i class="fas fa-newspaper"></i> Son Makaleler
-    </h2>
-    <div class="container mb-5">
-    <div class="row" id="articleLinks">
-    <!-- Makale linklerini yönetmek için bir ID ekledik -->
-    <div class="col-md-4">
-    <div class="card">
-    <div class="card-body">
-    <h5 class="card-title">Yükselen Hayvan Duyarlılığına Kişisel ve Hukuki Bir Bakış Açısı</h5>
-    <a href="#" class="btn text-white btn-zoom" style="background-color:#013A33">Devamını Oku</a>
-    </div>
-    </div>
-    </div>
-    <div class="col-md-4">
-    <div class="card">
-    <div class="card-body">
-    <h5 class="card-title">Mersin Ceza Avukatı</h5>
-    <a href="#" class="btn text-white mt-4 btn-zoom" style="background-color:#013A33">Devamını Oku</a>
-    </div>
-    </div>
-    </div>
-    <div class="col-md-4">
-    <div class="card">
-    <div class="card-body">
-    <h5 class="card-title">Mersin Boşanma Avukatı</h5>
-    <a href="#" class="btn text-white mt-4 btn-zoom" style="background-color:#013A33">Devamını Oku</a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
 
     <script>
-        // Ekibimiz Kartları için Vanilla JavaScript kullanımı
-        document.addEventListener('DOMContentLoaded', function () {
-            // Ekibimiz kartlarına tıklama olayları ekleyebilir veya kartları dinamik olarak ekleyebilirsiniz
-            var teamMembersContainer = document.getElementById('teamMembers');
-            teamMembersContainer.addEventListener('click', function (event) {
-                // Tıklanan kartın üzerinde ne yapmak istediğinizi buraya ekleyebilirsiniz
-                // Örneğin, tıklanan kartın adını veya ID'sini alabilir ve ilgili sayfaya yönlendirebilirsiniz
-                var clickedCard = event.target.closest('.card');
-                if (clickedCard) {
-                    // Kartın üzerine tıklandığında yapılacak işlemler buraya gelecek
-                    // Örnek olarak kartın başlığını console'da yazdıralım
-                    var cardTitle = clickedCard.querySelector('.card-title');
-                    if (cardTitle) {
-                        console.log('Tıklanan Kart Başlığı: ' + cardTitle.innerText);
-                    }
-                }
-            });
+        function toggleBio(person) {
+            var bioFull = document.querySelector('.card-bio-full[data-person="' + person + '"]');
 
-            // Makale linkleri için Vanilla JavaScript kullanımı
-            var articleLinksContainer = document.getElementById('articleLinks');
-            articleLinksContainer.addEventListener('click', function (event) {
-                // Tıklanan makale linkinin üzerinde ne yapmak istediğinizi buraya ekleyebilirsiniz
-                // Örneğin, tıklanan linkten makalenin ID'sini veya URL'sini alabilir ve ilgili sayfaya yönlendirebilirsiniz
-                var clickedLink = event.target.closest('.btn-zoom');
-                if (clickedLink) {
-                    // Link üzerine tıklandığında yapılacak işlemler buraya gelecek
-                    // Örnek olarak linkin metnini console'da yazdıralım
-                    console.log('Tıklanan Link: ' + clickedLink.innerText);
+            if (bioFull) {
+                if (bioFull.style.display === 'none' || bioFull.style.display === '') {
+                    bioFull.style.display = 'block';
+                } else {
+                    bioFull.style.display = 'none';
                 }
-            });
-        });
+            } else {
+                console.error('Full Bio element not found for person: ' + person);
+            }
+        }
     </script>
 </body>

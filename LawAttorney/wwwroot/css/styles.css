@@ -12840,7 +12840,7 @@ footer.footer {
 
     .dbox a, p {
         font-weight: 700;
-        color: #013A33;
+        color: #555;
         text-decoration: none;
     }
 
@@ -12866,10 +12866,6 @@ footer.footer {
     background-color: #013A33;
     height: 6px;
     opacity: 1;
-}
-
-.ekip {
-    border: 0;
 }
 
 footer {
@@ -12899,40 +12895,6 @@ footer {
     -moz-box-shadow: 0 0 8px rgba(9, 58, 52, 0.3);
     box-shadow: 0 0 8px rgba(9, 58, 52, 0.3) !important;
 }
-
-
-.hero-wrap {
-    width: 100%;
-    height: 100%;
-    position: inherit;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    position: relative;
-}
-
-    .hero-wrap .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        content: '';
-        opacity: .5;
-        background: #000000;
-    }
-
-    .hero-wrap.hero-wrap-2 {
-        height: 600px;
-    }
-
-        .hero-wrap.hero-wrap-2 .overlay {
-            opacity: .6;
-        }
-
-        .hero-wrap.hero-wrap-2 .slider-text {
-            height: 600px;
-        }
 
 .slider-text h1 {
     font-size: 48px;
@@ -13008,66 +12970,7 @@ footer {
     font-weight: 700 !important;
 }
 
-.ftco-section {
-    position: relative;
-}
 
-@media (max-width: 767.98px) {
-    .ftco-section {
-        padding: 6em 0;
-    }
-}
-
-.practice-area {
-    display: block;
-    padding: 10px; /* Örnek değer, ihtiyaca göre ayarlayın */
-    border: 1px solid #ccc;
-    transition: background-color 0.3s ease;
-}
-
-@media (max-width: 767.98px) {
-    .practice-area {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    }
-}
-
-.practice-area .icon {
-    margin: 0 auto;
-    transition: all 0.3s ease;
-    border-radius: 50%;
-}
-
-    .practice-area .icon span {
-        font-size: 50px;
-        color: #83b582;
-        transition: all 0.3s ease;
-    }
-
-.practice-area h3 {
-    font-size: 20px;
-    color: #000000;
-    font-weight: 400;
-}
-
-    .practice-area h3 a {
-        color: #000000;
-    }
-
-.practice-area:hover .icon,
-.practice-area:focus .icon {
-    background: #fff;
-}
-
-    .practice-area:hover .icon span,
-    .practice-area:focus .icon span {
-        color: #000000;
-    }
-
-
-.ftco-animate {
-    opacity: 0.3;
-    visibility: hidden;
-}
 
 .custom-img {
     height: 110px;
@@ -13205,4 +13108,102 @@ footer {
         margin-left:50px !important;
     }
     
+}
+
+
+/*ÇALIŞMA ALANLARI
+*/.ftco-section {
+    position: relative;
+}
+
+@media (max-width: 767.98px) {
+    .ftco-section {
+        padding: 6em 0;
+    }
+}
+
+.practice-area {
+    display: block;
+    padding: 10px; /* Örnek değer, ihtiyaca göre ayarlayın */
+    border: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 767.98px) {
+    .practice-area {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    }
+}
+
+.practice-area .icon {
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+    .practice-area .icon span {
+        font-size: 50px;
+        color: #83b582;
+        transition: all 0.3s ease;
+    }
+
+.practice-area h3 {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 400;
+}
+
+    .practice-area h3 a {
+        color: #000000;
+    }
+
+.practice-area:hover .icon,
+.practice-area:focus .icon {
+    background: #fff;
+}
+
+    .practice-area:hover .icon span,
+    .practice-area:focus .icon span {
+        color: #000000;
+    }
+
+
+.ftco-animate {
+    opacity: 0.3;
+    visibility: hidden;
+}
+
+/*.img-brand{
+    border: 2px solid #fedba9;
+    border-radius:3px;
+}*/
+
+
+.custom-img h1, .custom-img span {
+    width: 990px;
+    height: 60px;
+    background: #013a33;
+    text-align: center;
+    line-height: 1.4;
+    position: absolute;
+    top: 65px;
+    left: 458px;
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 767px) {
+
+    .custom-img h1, .custom-img span {
+        width: auto;
+        max-width: 900px;
+        left: 50%;
+        position: absolute;
+        margin-left: -450px;
+    }
 }

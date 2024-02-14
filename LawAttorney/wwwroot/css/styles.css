@@ -13020,69 +13020,49 @@ footer {
 
 .practice-area {
     display: block;
-    padding: 25px;
-    border-left: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 10px; /* Örnek değer, ihtiyaca göre ayarlayın */
+    border: 1px solid #ccc;
     transition: background-color 0.3s ease;
 }
 
 @media (max-width: 767.98px) {
     .practice-area {
-        border-left: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     }
 }
 
-.practice-area.border-b {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.practice-area.no-border-l {
-    border-left: none;
-}
-
 .practice-area .icon {
     margin: 0 auto;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
     border-radius: 50%;
 }
 
     .practice-area .icon span {
         font-size: 50px;
         color: #83b582;
-        -moz-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
         transition: all 0.3s ease;
     }
 
 .practice-area h3 {
     font-size: 20px;
+    color: #000000;
+    font-weight: 400;
 }
 
     .practice-area h3 a {
         color: #000000;
     }
 
-.practice-area:hover .icon, .practice-area:focus .icon {
+.practice-area:hover .icon,
+.practice-area:focus .icon {
     background: #fff;
 }
 
-    .practice-area:hover .icon span, .practice-area:focus .icon span {
+    .practice-area:hover .icon span,
+    .practice-area:focus .icon span {
         color: #000000;
     }
 
-.practice-area h3 {
-    color: #000000;
-    font-weight: 400 !important;
-}
 
 .ftco-animate {
     opacity: 0.3;

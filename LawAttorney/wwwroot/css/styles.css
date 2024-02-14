@@ -13090,9 +13090,11 @@ footer {
 }
 
 .custom-img {
-    height: 110px !important;
-    width: 1050px !important;
+    height: 110px;
+    width: 100%;
+    object-fit: cover; /* Resmi konteynera sığdırmak için */
 }
+
 /* Dropdown menüsündeki seçili dilin altındaki stil */
 .dropdown-menu .dropdown-item.active {
     background-color: #013A33 !important; /* Arka plan rengi */
@@ -13174,3 +13176,53 @@ footer {
 .practice-area:hover h3 {
         color: white !important;
     }
+
+/* Mobil ekranlarda çalışacak stil */
+@media (max-width: 991px) {
+    .navbar-nav .nav-item {
+        position: relative;
+        padding-bottom: 10px; /* Alt boşluk */
+        margin-bottom: 10px; /* Alt boşluk */
+
+    }
+
+        .navbar-nav .nav-item:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px; /* Ayraç kalınlığı */
+            background-color: #ccc; /* Ayraç rengi */
+        }
+
+        .navbar-nav .nav-item:last-child:after {
+            display: none; /* Son elemanın altındaki ayraçı gizle */
+        }
+
+    .navbar-default .navbar-nav > li > a {
+        border-right: 0;
+        padding-left: 0;
+        height: auto;
+        border-bottom: 1px solid #ccc; /* Çizgi rengi */
+        transition: border-bottom-color 0.3s ease; /* Geçiş efekti */
+        margin-bottom: 10px; /* Alt boşluk */
+    }
+    .navbar-nav > li:last-child > a {
+        border-right: 1px solid #ccc !important;
+    }
+
+    .navbar-default .navbar-nav > li:hover > a {
+        border-bottom-color: transparent; /* Hover durumunda çizgiyi gizle */
+    }
+
+    .navbar-brand {
+        margin-bottom: 10px; /* Logo ile linkler arasındaki üst boşluk */       
+    }
+    
+    .butonlar {
+        margin-top:10px;
+        margin-left:50px !important;
+    }
+    
+}

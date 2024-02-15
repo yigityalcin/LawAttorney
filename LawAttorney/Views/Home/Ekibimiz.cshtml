@@ -38,32 +38,38 @@
                 text-decoration: none;
             }
 
+            .ekip:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            }
+
         .ekip .card-title {
             width: 100%;
             margin-top: 0 !important;
             color: #000;
-            font-size: 18.72px;
             margin: 0px 0px 30px;
             padding: 0px 0px 4px;
-            text-align: left; /* Sola hizalama eklenmiştir */
-        }
-
-
-
-        .ekip .card-bio {
-            color: #555;
-            margin-bottom: 15px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
+            display: block;
+            font-size: 1.17em;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
         }
 
         .ekip .card-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background-color: #f2f2f2;
+            text-transform: none !important;
+            font-family: IBM Plex Sans,sans-serif !important;
+            font-size: 1em !important;
+            font-weight: 500 !important;
+            margin-top: 0 !important;
+            padding: 0 !important;
+            letter-spacing: .5px;
         }
 
         .ekip .read-more-btn {
@@ -74,12 +80,16 @@
             align-items: center;
             position: relative; /* Önemli: position değeri ekleyin */
             font-size: 16px;
-            text-align:left;
+            text-align: left;
         }
 
 
             .ekip .read-more-btn i {
                 margin-left: 5px; /* Ok ikonu ile metin arasında boşluk bırakmak için */
+            }
+
+            .ekip .read-more-btn:hover {
+               color:#013a33;
             }
 
         .ekip .social-icons {
@@ -90,13 +100,6 @@
         .ekip .social-icon {
             color: #013a33;
             font-size: 20px;
-        }
-
-        .ekip .card-mail {
-            color: #555;
-            text-decoration: underline;
-            cursor: pointer;
-            align-self: center;
         }
 
     /* Modal Header */
@@ -125,7 +128,8 @@
 
     /* Close Button */
     .btn-close {
-        color: #fff;
+        color:#ffffff !important;
+        background-color: #ffffff;
     }
 
     /* Bio İçeriği için Stil */
@@ -181,9 +185,9 @@
                                         <h3 class="card-title ms-1 mb-5">Avukat Emin Öz</h3>
                                     </a>
                                 </div>
-                                <div class="card-footer d-flex justify-content-between">                                
+                                <div class="card-footer d-flex justify-content-between">
                                     <a href="#" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal1">
-                                        Biyografi <i class="social-icon fas fa-arrow-right"></i>
+                                        View Profile <i class="social-icon fas fa-arrow-right"></i>
                                     </a>
                                     <div class="social-icons d-flex">
                                         <a href="mailto:eminoz@ozpartnershukuk.com" class="social-icon">
@@ -191,7 +195,7 @@
                                         </a>
                                         <a href="https://www.facebook.com/aveminoz/" target="_blank" class="social-icon">
                                             <i class="fab fa-facebook" style="font-size:20px;"></i>
-                                        </a>                                                                             
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -207,7 +211,7 @@
                                         <h3 class="card-title ms-1 mb-5">Avukat Yunus Emre Öz</h3>
                                     </a>
                                 </div>
-                                <div class="card-footer d-flex justify-content-between">                                   
+                                <div class="card-footer d-flex justify-content-between">
                                     <a href="#" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal2">
                                         Biyografi <i class="social-icon fas fa-arrow-right"></i>
                                     </a>
@@ -233,7 +237,7 @@
                                         <h3 class="card-title ms-1 mb-5">Avukat Kaan Karataş</h3>
                                     </a>
                                 </div>
-                                <div class="card-footer d-flex justify-content-between">                                   
+                                <div class="card-footer d-flex justify-content-between">
                                     <a href="#" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal3">
                                         Biyografi <i class="social-icon fas fa-arrow-right"></i>
                                     </a>

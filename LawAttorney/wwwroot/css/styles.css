@@ -12421,6 +12421,14 @@ textarea.form-control-lg {
     }
 }
 
+
+
+
+
+
+
+
+
 .features-icons {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -12437,36 +12445,6 @@ textarea.form-control-lg {
             .features-icons .features-icons-item .features-icons-icon i {
                 font-size: 4.5rem;
             }
-/*
-header.masthead {
-  position: relative;
-  background-color: #343a40;
-  background-size: cover;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-}
-header.masthead:before {
-  content: "";
-  position: absolute;
-  background-color: #1c375e;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0.1;
-}
-header.masthead h1, header.masthead .h1 {
-  font-size: 2rem;
-}
-@media (min-width: 768px) {
-  header.masthead {
-    padding-top: 12rem;
-    padding-bottom: 12rem;
-  }
-  header.masthead h1, header.masthead .h1 {
-    font-size: 3rem;
-  }
-}*/
 
 .showcase .showcase-text {
     padding: 3rem;
@@ -12655,17 +12633,6 @@ footer.footer {
     right: 0;
 }
 
-.main-card {
-    background-color: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 0px;
-}
-
-.nested-card {
-    background-color: #013a33;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .card-title-link {
     color: #013a33;
     text-decoration: none;
@@ -12679,18 +12646,6 @@ footer.footer {
     border: 1px solid;
     color: #ccc;
 }
-
-.borders {
-    border: 1px solid;
-    color: #75a39d;
-}
-
-.footerkk {
-    background-color: rgba(243, 243, 243, 0.5); /* Buradaki 0.8 saydamlığı temsil eder, değeri 0 ile 1 arasında bir değer olmalıdır. */
-    color: #000; /* Yazı rengini ayarlayabilirsiniz, saydam arka plan üzerindeki metni daha iyi okunabilir yapmak için. */
-    font-size: 14px;
-}
-
 .card-body {
     text-align: center; /* İçeriği merkezlemek için */
     padding: 20px; /* İçeriği kenarlardan uzaklaştırmak için */
@@ -12725,124 +12680,6 @@ footer.footer {
 .card-title-work, .card-text {
     transition: color 0.2s;
 }
-
-
-/*Banner*/
-.card-banner {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.7); /* Arkaplan rengi */
-    color: #fff;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-    .card-banner:hover {
-        transform: scale(1.02); /* Hover efekti */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-.card-body-banner {
-    text-align: center; /* İçeriği merkezlemek için */
-    padding: 40px; /* İçeriği kenarlardan uzaklaştırmak için */
-}
-
-.card-title-banner {
-    font-size: 2.5em; /* Başlık font boyutu */
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.card-text-banner {
-    font-size: 1.2em; /* Metin font boyutu */
-}
-
-
-
-.contact-wrap {
-    background-color: #f8f9fa;
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 30px;
-}
-
-    .contact-wrap h3 {
-        color: #013A33;
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-
-    .contact-wrap p {
-        font-size: 16px;
-        color: #333;
-        margin-bottom: 10px;
-    }
-
-    .contact-wrap input,
-    .contact-wrap textarea {
-        margin-bottom: 20px;
-        width: 100%;
-    }
-
-        .contact-wrap input[type="submit"] {
-            background-color: #013A33;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-            .contact-wrap input[type="submit"]:hover {
-                background-color: #076c58;
-            }
-
-.dbox {
-    background: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-    .dbox .icon {
-        display: inline-block;
-        width: 60px;
-        height: 60px;
-        border: 1px solid #ddd;
-        border-radius: 50%;
-        line-height: 60px;
-        position: relative;
-        margin-bottom: 5px;
-        background-color: #013A33;
-        text-align: center;
-    }
-
-        .dbox .icon .fa {
-            font-size: 20px;
-            color: #ffffff;
-            position: absolute;
-            top: 25px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-    .dbox .text {
-        padding: 20px 0 0 0;
-    }
-
-    .dbox span {
-        display: block;
-        color: #555;
-        font-size: 14px;
-        margin-top: 5px;
-    }
-
-    .dbox a, p {
-        font-weight: 700;
-        color: #555;
-        text-decoration: none;
-    }
 
 #map {
     width: 100%;
@@ -12896,80 +12733,6 @@ footer {
     box-shadow: 0 0 8px rgba(9, 58, 52, 0.3) !important;
 }
 
-.slider-text h1 {
-    font-size: 48px;
-    color: #fff;
-    line-height: 1.2;
-    font-weight: 700;
-    font-family: "Poppins", Arial, sans-serif;
-}
-
-@media (max-width: 991.98px) {
-    .slider-text h1 {
-        font-size: 40px;
-    }
-}
-
-.slider-text .subheading {
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.9);
-    font-family: "Poppins", Arial, sans-serif;
-    font-weight: 600;
-}
-
-.slider-text p {
-    font-size: 20px;
-    line-height: 1.5;
-    font-weight: 300;
-    color: rgba(0, 0, 0, 0.8);
-    color: #83b582;
-}
-
-    .slider-text p strong {
-        font-weight: 700;
-    }
-
-        .slider-text p strong a {
-            color: #000000;
-        }
-
-.slider-text .btn-custom {
-    font-size: 16px;
-    font-weight: 500;
-    color: #fff;
-}
-
-.slider-text .breadcrumbs {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 20px;
-    z-index: 99;
-}
-
-    .slider-text .breadcrumbs span {
-        color: rgba(255, 255, 255, 0.5);
-    }
-
-        .slider-text .breadcrumbs span i {
-            color: rgba(255, 255, 255, 0.3);
-        }
-
-        .slider-text .breadcrumbs span a {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-            .slider-text .breadcrumbs span a:hover, .slider-text .breadcrumbs span a:focus {
-                color: #83b582;
-            }
-
-                .slider-text .breadcrumbs span a:hover i, .slider-text .breadcrumbs span a:focus i {
-                    color: #83b582;
-                }
-
-.slider-text .bread {
-    font-weight: 700 !important;
-}
-
 /* Dropdown menüsündeki seçili dilin altındaki stil */
 .dropdown-menu .dropdown-item.active {
     background-color: #013A33 !important; /* Arka plan rengi */
@@ -13001,59 +12764,12 @@ footer {
     }
 
 
-/* Additional styles for responsiveness */
-@media (max-width: 767.98px) {
-    .hero-wrap.hero-wrap-2 {
-        height: 300px; /* Adjust height for smaller screens */
-    }
-
-    .slider-text h1 {
-        font-size: 32px; /* Adjust font size for smaller screens */
-    }
-}
-
 @media (max-width: 575.98px) {
     .custom-img {
         height: auto !important;
         width: 100% !important;
     }
 }
-
-/* Practice Areas
-
-*/
-.practice-area {
-    padding-bottom: 0px;
-}
-
-.practice-area {
-    transition: transform 0.3s;
-    text-align: center;
-    overflow: hidden;
-    padding: 30px;
-}
-
-    .practice-area:hover .features-icons-icon i,
-    .practice-area:hover h3 {
-        color: white;
-    }
-
-.practice-area-button {
-    width: 100%;
-    margin-top: 10px;
-}
-
-.practice-area:hover {
-    cursor: pointer;
-}
-
-.practice-area:hover {
-    background-color: #013a33;
-}
-
-    .practice-area:hover h3 {
-        color: white !important;
-    }
 
 /* Mobil ekranlarda çalışacak stil */
 @media (max-width: 991px) {
@@ -13116,61 +12832,10 @@ footer {
     }
 }
 
-.practice-area {
-    display: block;
-    padding: 10px; /* Örnek değer, ihtiyaca göre ayarlayın */
-    border: 1px solid #ccc;
-    transition: background-color 0.3s ease;
-}
-
-@media (max-width: 767.98px) {
-    .practice-area {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    }
-}
-
-.practice-area .icon {
-    margin: 0 auto;
-    transition: all 0.3s ease;
-    border-radius: 50%;
-}
-
-    .practice-area .icon span {
-        font-size: 50px;
-        color: #83b582;
-        transition: all 0.3s ease;
-    }
-
-.practice-area h3 {
-    font-size: 20px;
-    color: #000000;
-    font-weight: 400;
-}
-
-    .practice-area h3 a {
-        color: #000000;
-    }
-
-.practice-area:hover .icon,
-.practice-area:focus .icon {
-    background: #fff;
-}
-
-    .practice-area:hover .icon span,
-    .practice-area:focus .icon span {
-        color: #000000;
-    }
-
-
 .ftco-animate {
     opacity: 0.3;
     visibility: hidden;
 }
-
-/*.img-brand{
-    border: 2px solid #fedba9;
-    border-radius:3px;
-}*/
 
 .custom-img1 h1, .custom-img1 span {
     width: 990px;

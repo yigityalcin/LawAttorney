@@ -12970,14 +12970,6 @@ footer {
     font-weight: 700 !important;
 }
 
-
-
-.custom-img {
-    height: 110px;
-    width: 100%;
-    object-fit: cover; /* Resmi konteynera sığdırmak için */
-}
-
 /* Dropdown menüsündeki seçili dilin altındaki stil */
 .dropdown-menu .dropdown-item.active {
     background-color: #013A33 !important; /* Arka plan rengi */
@@ -13003,6 +12995,7 @@ footer {
     font-weight: bold; /* Kalın yazı tipi */
     /* Diğer isteğe bağlı stil ayarları */
 }
+
     .custom-dropdown-toggle:hover {
         color: #013A33;
     }
@@ -13029,7 +13022,7 @@ footer {
 /* Practice Areas
 
 */
-.practice-area{
+.practice-area {
     padding-bottom: 0px;
 }
 
@@ -13053,10 +13046,12 @@ footer {
 .practice-area:hover {
     cursor: pointer;
 }
+
 .practice-area:hover {
-    background-color: #013A33;
+    background-color: #013a33;
 }
-.practice-area:hover h3 {
+
+    .practice-area:hover h3 {
         color: white !important;
     }
 
@@ -13066,7 +13061,6 @@ footer {
         position: relative;
         padding-bottom: 10px; /* Alt boşluk */
         margin-bottom: 10px; /* Alt boşluk */
-
     }
 
         .navbar-nav .nav-item:after {
@@ -13091,6 +13085,7 @@ footer {
         transition: border-bottom-color 0.3s ease; /* Geçiş efekti */
         margin-bottom: 10px; /* Alt boşluk */
     }
+
     .navbar-nav > li:last-child > a {
         border-right: 1px solid #ccc !important;
     }
@@ -13100,25 +13095,24 @@ footer {
     }
 
     .navbar-brand {
-        margin-bottom: 10px; /* Logo ile linkler arasındaki üst boşluk */       
+        margin-bottom: 10px; /* Logo ile linkler arasındaki üst boşluk */
     }
-    
+
     .butonlar {
-        margin-top:10px;
-        margin-left:50px !important;
+        margin-top: 10px;
+        margin-left: 50px !important;
     }
-    
 }
 
 
 /*ÇALIŞMA ALANLARI
-*/.ftco-section {
+*/ .ftco-section {
     position: relative;
 }
 
 @media (max-width: 767.98px) {
     .ftco-section {
-        padding: 6em 0;
+        padding: 2em 0;
     }
 }
 
@@ -13178,8 +13172,7 @@ footer {
     border-radius:3px;
 }*/
 
-
-.custom-img h1, .custom-img span {
+.custom-img1 h1, .custom-img1 span {
     width: 990px;
     height: 60px;
     background: #013a33;
@@ -13197,13 +13190,128 @@ footer {
     padding: 15px;
 }
 
-@media (max-width: 767px) {
+.custom-img {
+    height: 110px;
+    width: 100%;
+    object-fit: cover; /* Resmi konteynera sığdırmak için */
+}
 
-    .custom-img h1, .custom-img span {
+.custom-img1 {
+    height: 110px;
+    width: 100%;
+    object-fit: cover; /* Resmi konteynera sığdırmak için */
+}
+
+@media (max-width: 767px) {
+    .custom-img1 h1, .custom-img1 span {
+        position: static;
+        top: auto;
+        left: auto;
+        height: auto;
         width: auto;
-        max-width: 900px;
-        left: 50%;
-        position: absolute;
-        margin-left: -450px;
+        margin: 0 10px;
+        line-height: normal;
+        padding: 20px 10px;
     }
 }
+@media (max-width: 767px) {
+    .bosluk {
+        margin-top: 80px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1366px) {
+    .custom-img1 h1, .custom-img1 span {
+        width: 380px;
+        height: 110px;
+        background: #013a33;
+        text-align: center;
+        line-height: 1.4;
+        position: absolute;
+        top: 55px;
+        left: 100px;
+        color: #fff;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:991px) {
+    .custom-img1 h1, .custom-img1 span {
+        width: 380px;
+        height: 110px;
+        background: #013a33;
+        text-align: center;
+        line-height: 1.4;
+        position: absolute;
+        top: 55px;
+        left: 10px;
+        color: #fff;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+
+.c_icon {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    justify-content: left;
+    align-items: center;
+}
+
+.c_icon_img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    background-color: #FFF;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.1);
+}
+
+.calisma a {
+    text-decoration: none;
+}
+
+.c_icon h4 {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0;
+    margin-left: 20px;
+    color: #3d3d3d;
+    transition: color 0.3s; /* Renk geçiş efekti */
+}
+
+.c_icon:hover h4 {
+    color: #013a33;
+}
+
+.c_icon_img img {
+    max-width: 100%; /* Resmi konteynere sığdır */
+    height: auto;
+}
+
+/* Ek olarak, butonun genel stilini düzenlemek için aşağıdaki stil eklenmiştir */
+.c_icon {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s; /* Genişlik değişimini yumuşatmak için efekt eklenmiştir */
+}
+
+    .c_icon:hover {
+        transform: scale(1.05); /* Hover durumunda butonun büyüklüğünü artır */
+    }
+

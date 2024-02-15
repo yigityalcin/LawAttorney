@@ -11,23 +11,19 @@
         overflow: hidden;
         transition: transform 0.3s ease;
         border: 1px solid #ccc;
-        display: flex;
-        flex-direction: row;
+        margin-bottom: 20px;
     }
-
-        .ekip:hover {
-            transform: scale(1.05);
-        }
 
         .ekip img {
             object-fit: cover;
-            height: 300px; /* Resmin yüksekliği */
-            width: 200px; /* Resmin genişliği */
+            height: 300px;
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
 
         .ekip .card-body {
             padding: 20px;
-            flex: 1; /* Kartın içindeki içerik (açıklama, mail) tüm genişliği kaplasın */
             display: flex;
             flex-direction: column;
         }
@@ -39,40 +35,113 @@
             text-align: center;
         }
 
+            .ekip .card-title::after {
+                content: "";
+                display: block;
+                margin: 10px auto;
+                width: 50%;
+                height: 2px;
+                background-color: #013a33;
+            }
+
         .ekip .card-bio {
             color: #555;
             margin-bottom: 15px;
             overflow: hidden;
-            text-overflow: ellipsis; /* Metni kırp ve üç nokta ekle */
+            text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 3; /* Gösterilecek satır sayısı */
+            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
-        }
-
-        .ekip .card-bio-full {
-            color: #555;
-            display: none; /* Tam metni başlangıçta gizle */
         }
 
         .ekip .read-more-btn {
             cursor: pointer;
-            color: #007bff;
-            text-decoration: underline;
+            color: #fff; /* Rengi değiştirildi */
+            background-color: #013a33; /* Arkaplan rengi eklendi */
+            padding: 10px 20px; /* Daha belirgin bir buton boyutu için padding eklendi */
+            border: none;
+            border-radius: 5px; /* Butonun köşelerini yuvarlamak için border-radius eklendi */
+            transition: background-color 0.3s ease; /* Hover efekti için geçiş efekti eklendi */
+            text-decoration: none; /* Alt çizgiyi kaldırmak için text-decoration eklendi */
+            display: inline-block; /* Diğer içeriklerle sıkışmadan yan yana gelmesi için display özelliği eklendi */
+            margin-top: 10px; /* Butonu biraz aşağı kaydırmak için margin eklendi */
         }
+
+            .ekip .read-more-btn:hover {
+                background-color: #007a68; /* Hover olduğunda rengi değiştirmek için başka bir renk eklendi */
+                color: #fff; /* Hover olduğunda metin rengini değiştirmek için eklendi */
+            }
 
         .ekip .card-mail {
             color: #555;
             text-decoration: underline;
             cursor: pointer;
+            align-self: center;
         }
+
+    /* Modal Header */
+    .modal-header {
+        background-color: #013a33;
+        color: #fff;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .modal-title {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+
+    /* Modal Body */
+    .modal-body {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    /* Modal Footer */
+    .modal-footer {
+        border-top: 1px solid #ccc;
+    }
+
+    /* Close Button */
+    .btn-close {
+        color: #fff;
+    }
+
+    /* Bio İçeriği için Stil */
+    .modal-bio-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .modal-bio-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .modal-bio-mail {
+        color: #013a33;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .bio-content {
+        text-align: justify;
+        margin-bottom: 15px; /* Paragraflar arası alt boşluk ekleniyor */
+        margin-top: 0.75em; /* Paragraflar arası üst boşluk ekleniyor */
+    }
     /* End Custom Styles */
 </style>
 
 <body>
     <section class="ftco-section">
         <div class="container">
-            <div class="custom-img mb-5">
-                <img class="custom-img mb-4" src="~/assets/img/CalismaAlanlari/banner900.png" />
+            <div class="custom-img1 mb-5 shadow">
+                <img class="custom-img1 mb-4 img-fluid shadow" src="~/assets/img/CalismaAlanlari/banner900.png" />
                 <span>Ekibimiz</span>
             </div>
         </div>
@@ -80,95 +149,143 @@
     <div class="container-fluid">
         <section class="card-section mb-5">
             <div class="container">
-                <!-- Kişisel Kart 1 -->
+                <!-- Kişisel Kartlar -->
                 <div class="row">
-                    <div class="col-md-12">
+                    <!-- Kart 1 -->
+                    <div class="col-lg-4 col-md-6">
                         <div class="card ekip">
-                            <img src="~/assets/img/avukat-emin-oz.jpg" class="card-img-top" alt="Kişi 1 Fotoğrafı">
-                            <a href="#" class="card-title-link">
-                                <div class="card-body">
-                                    <h5 class="card-title">Avukat Emin Öz</h5>
-                                    <p class="card-bio" data-person="emin">
-                                        Öz & Partners’ın kurucusu olan duayen avukat Emin Öz, 1950 yılında Mersin’in Silifke ilçesinde doğmuştur. 1973 yılında İstanbul Üniversitesi Hukuk Fakültesi’nden mezun olup 1974 yılında Mersin’de kendi ofisini kurarak avukatlığa başlamıştır.
-                                        12 Eylül 1980 askeri ihtilali öncesi ve sonrası sayısız siyasi davada vekillik görevi üstlenen Emin Öz, ihtilal sonrası Alparslan Türkeş’in savunmasını yapan avukatlardan biridir.
-                                    </p>
-                                    <p class="card-bio-full" data-person="emin">
-                                        1989 yılında Mersin İl Genel Meclisi üyeliğine seçilmiştir. Bu görev devam ederken 1993 yılında Anavatan Partisi Mersin İl Başkanı seçilmiştir ve 1999 yılına kadar 3 dönem görevini sürdürmüştür. Mersin’den bağımsız milletvekili adayı olarak girdiği 1999 genel seçimlerinde ise yüksek bir oy alarak şehirdeki politik etkinliğini göstermiştir.
-                                        Takip eden yıllarda, 2 dönem Anavatan Partisi MKYK’sında  (Merkez Karar Yönetim Kurulu) görev almıştır. Profesyonel çalışma yaşamının ilk yıllarından itibaren ekonomi ve ticaret dünyasının içinde yer alan Av. Emin Öz, şahsi ticari faaliyetlerinin dışında; başta MESBAŞ (Mersin Serbest Bölgesi’ni işleten şirket) ve MERTAŞ (MTSO, MESİAD ve Mersin Deniz Ticaret Odası gibi meslek odası ve STK’ların ortaklaşa kurdukları şirket) gibi Mersin’in ekonomik ve ticari hayatına yön veren etkili şirketler olmak üzere, birçok ticari şirketin yönetim kurulu başkanlığını yapmıştır. MESİAD (Mersin Sanayici İş Adamları Derneği) istişare kurulu başkan yardımcılığı görevinde bulunmuştur. Mersin Barosu yönetim kurulunda yer almıştır.
-                                        Ayrıca bir dönem Mersin Deniz ve Ticaret Meslek Yüksekokulu’nda hukuk dersleri vermiştir. Meslek hayatının 50. yılına yaklaşan Av. Emin Öz, İngilizce ve Fransızca bilmektedir.
-                                    </p>
-                                    <p class="read-more-btn" onclick="toggleBio('emin'); return false;">Devamını Oku</p>
-                                    <p class="card-mail" onclick="location.href='mailto:eminoz@ozpartnershukuk.com';">
-                                        <i class="fas fa-envelope" style="color: #013a33;"></i> eminoz@ozpartnershukuk.com
-                                    </p>
-                                </div>
-                            </a>
+                            <img src="~/assets/img/avukat-emin-oz.jpg" class="card-img-top img-fluid" alt="Kişi 1 Fotoğrafı">
+                            <div class="card-body">
+                                <h5 class="card-title">Avukat Emin Öz</h5>
+                                <p class="card-bio">
+                                    <!-- Bio içeriği -->
+                                </p>
+                                <a href="https://www.facebook.com/aveminoz/" target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <p class="card-mail" onclick="location.href='mailto:eminoz@ozpartnershukuk.com';">
+                                    <i class="fas fa-envelope" style="color: #013a33;"></i> eminoz@ozpartnershukuk.com
+                                </p>
+                                <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal1">Biyografi</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Kişisel Kart 2 -->
-                <div class="row">
-                    <div class="col-md-12">
+                    <!-- Kart 2 -->
+                    <div class="col-lg-4 col-md-6">
                         <div class="card ekip">
-                            <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top" alt="Kişi 1 Fotoğrafı">
-                            <a href="#" class="card-title-link">
-                                <div class="card-body">
-                                    <h5 class="card-title">Avukat Yunus Emre Öz</h5>
-                                    <p class="card-bio" data-person="emre">
-                                        1994 yılında Mersin’de doğmuştur. 2009 yılında Gelişim Koleji’nden, 2013 yılında İçel Anadolu Lisesi’nden (İAL) mezun olan Av. Yunus Emre Öz; lisans eğitimini Çağ Üniversitesi Hukuk Fakültesi’nde onur derecesiyle tamamlamıştır. 2018 yılında avukatlık stajını tamamlayarak Öz & Partners’ın ortak avukatlarından olmuştur.
-                                    </p>
-                                    <p class="card-bio-full" data-person="emre">
-                                        2020 yılında ise Dünya’nın önde gelen üniversitelerinden olan King’s College London’dan yüksek lisans kabulü almıştır. Bir dönem bir siyasi partinin Mersin İl Gençlik Kolları Başkanlığı görevini yürüten Öz ileri seviye İngilizce bilmektedir.
-                                    </p>
-                                    <p class="read-more-btn" onclick="toggleBio('emre'); return false;">Devamını Oku</p>
-                                    <p class="card-mail" onclick="location.href='mailto:yunusemreoz@ozpartnershukuk.com';">
-                                        <i class="fas fa-envelope" style="color: #013a33;"></i> yunusemreoz@ozpartnershukuk.com
-                                    </p>
-                                </div>
-                            </a>
+                            <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" alt="Kişi 1 Fotoğrafı">
+                            <div class="card-body">
+                                <h5 class="card-title">Avukat Yunus Emre Öz</h5>
+                                <p class="card-bio">
+                                    <!-- Bio içeriği -->
+                                </p>
+                                <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <p class="card-mail" onclick="location.href='mailto:yunusemreoz@ozpartnershukuk.com';">
+                                    <i class="fas fa-envelope" style="color: #013a33;"></i> yunusemreoz@ozpartnershukuk.com
+                                </p>
+                                <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal2">Biyografi</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- ... Diğer kartlar ... -->
-                <div class="row">
-                    <div class="col-md-12">
+                    <!-- Kart 3 -->
+                    <div class="col-lg-4 col-md-6">
                         <div class="card ekip">
-                            <img src="~/assets/img/avukat-kaan-karatas.jpg" class="card-img-top" alt="Kişi 1 Fotoğrafı">
-                            <a href="#" class="card-title-link">
-                                <div class="card-body">
-                                    <h5 class="card-title">Avukat Kaan Karataş</h5>
-                                    <p class="card-bio" data-person="kaan">
-                                        1991 yılında Adana’da doğan Av. Kaan Karataş 2009 yılında Adana Anadolu Lisesi’ni (ALA) bitirmiştir. 2009 yılında yapılan ÖSS’de, Türkiye genelinde ilk 1000 öğrenci arasına giren Karataş 2014 yılında Yeditepe Üniversitesi Hukuk Fakültesi’ni onur derecesiyle bitirmiş ve memleketi olan Mersin’de avukatlık hayatına başlamıştır.
-                                    </p>
-                                    <p class="card-bio-full" data-person="kaan">
-                                        İleri seviyede İngilizce ve orta seviyede Almanca bilmektedir. 2019 yılında Öz & Partners’ın ortak avukatlarından olmuştur.
-                                    </p>
-                                    <p class="read-more-btn" onclick="toggleBio('kaan'); return false;">Devamını Oku</p>
-                                    <p class="card-mail" onclick="location.href='mailto:kaankaratas@ozpartnershukuk.com';">
-                                        <i class="fas fa-envelope" style="color: #013a33;"></i> kaankaratas@ozpartnershukuk.com
-                                    </p>
-                                </div>
-                            </a>
+                            <img src="~/assets/img/avukat-kaan-karatas.jpg" class="card-img-top img-fluid" alt="Kişi 1 Fotoğrafı">
+                            <div class="card-body">
+                                <h5 class="card-title">Avukat Kaan Karataş</h5>
+                                <p class="card-bio">
+                                    <!-- Bio içeriği -->
+                                </p>
+                                <a href="https://www.linkedin.com/in/kaankarata%C5%9F" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <p class="card-mail" onclick="location.href='mailto:kaankaratas@ozpartnershukuk.com';">
+                                    <i class="fas fa-envelope" style="color: #013a33;"></i> kaankaratas@ozpartnershukuk.com
+                                </p>
+                                <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal3">Biyografi</button>
+                            </div>
                         </div>
                     </div>
+                    <!-- Kart 4, 5, ... -->
                 </div>
             </div>
         </section>
     </div>
+    <!-- Modal 1 -->
+    <div class="modal fade" id="bioModal1" tabindex="-1" aria-labelledby="bioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bioModal1Label">Avukat Emin Öz</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="~/assets/img/avukat-emin-oz.jpg" class="modal-bio-img img-fluid" alt="Kişi 1 Fotoğrafı">
+                    <p class="bio-content">
+                    Öz & Partners’ın kurucusu olan duayen avukat Emin Öz, 1950 yılında Mersin’in Silifke ilçesinde doğmuştur. 1973 yılında İstanbul Üniversitesi Hukuk Fakültesi’nden mezun olup 1974 yılında Mersin’de kendi ofisini kurarak avukatlığa başlamıştır.
+                    12 Eylül 1980 askeri ihtilali öncesi ve sonrası sayısız siyasi davada vekillik görevi üstlenen Emin Öz, ihtilal sonrası Alparslan Türkeş’in savunmasını yapan avukatlardan biridir.
+                    
+                    1989 yılında Mersin İl Genel Meclisi üyeliğine seçilmiştir. Bu görev devam ederken 1993 yılında Anavatan Partisi Mersin İl Başkanı seçilmiştir ve 1999 yılına kadar 3 dönem görevini sürdürmüştür. Mersin’den bağımsız milletvekili adayı olarak girdiği 1999 genel seçimlerinde ise yüksek bir oy alarak şehirdeki politik etkinliğini göstermiştir.
 
-    <script>
-        function toggleBio(person) {
-            var bioFull = document.querySelector('.card-bio-full[data-person="' + person + '"]');
+                    Takip eden yıllarda, 2 dönem Anavatan Partisi MKYK’sında (Merkez Karar Yönetim Kurulu) görev almıştır. Profesyonel çalışma yaşamının ilk yıllarından itibaren ekonomi ve ticaret dünyasının içinde yer alan Av. Emin Öz, şahsi ticari faaliyetlerinin dışında; başta MESBAŞ (Mersin Serbest Bölgesi’ni işleten şirket) ve MERTAŞ (MTSO, MESİAD ve Mersin Deniz Ticaret Odası gibi meslek odası ve STK’ların ortaklaşa kurdukları şirket) gibi Mersin’in ekonomik ve ticari hayatına yön veren etkili şirketler olmak üzere, birçok ticari şirketin yönetim kurulu başkanlığını yapmıştır. MESİAD (Mersin Sanayici İş Adamları Derneği) istişare kurulu başkan yardımcılığı görevinde bulunmuştur. Mersin Barosu yönetim kurulunda yer almıştır.
 
-            if (bioFull) {
-                if (bioFull.style.display === 'none' || bioFull.style.display === '') {
-                    bioFull.style.display = 'block';
-                } else {
-                    bioFull.style.display = 'none';
-                }
-            } else {
-                console.error('Full Bio element not found for person: ' + person);
-            }
-        }
-    </script>
+                    Ayrıca bir dönem Mersin Deniz ve Ticaret Meslek Yüksekokulu’nda hukuk dersleri vermiştir. Meslek hayatının 50. yılına yaklaşan Av. Emin Öz, İngilizce ve Fransızca bilmektedir.
+                    </p>
+                    
+                    <p class="modal-bio-mail" onclick="location.href='mailto:eminoz@ozpartnershukuk.com';">
+                        <i class="fas fa-envelope" style="color: #013a33;"></i> eminoz@ozpartnershukuk.com
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="bioModal2" tabindex="-1" aria-labelledby="bioModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bioModal2Label">Avukat Yunus Emre Öz</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="modal-bio-img img-fluid" alt="Kişi 2 Fotoğrafı">
+                    <p class="bio-content">
+
+                    1994 yılında Mersin’de doğmuştur. 2009 yılında Gelişim Koleji’nden, 2013 yılında İçel Anadolu Lisesi’nden (İAL) mezun olan Av. Yunus Emre Öz; lisans eğitimini Çağ Üniversitesi Hukuk Fakültesi’nde onur derecesiyle tamamlamıştır. 2018 yılında avukatlık stajını tamamlayarak Öz & Partners’ın ortak avukatlarından olmuştur.
+
+                    2020 yılında ise Dünya’nın önde gelen üniversitelerinden olan King’s College London’dan yüksek lisans kabulü almıştır. Bir dönem bir siyasi partinin Mersin İl Gençlik Kolları Başkanlığı görevini yürüten Öz ileri seviye İngilizce bilmektedir.
+                    </p>
+                    <p class="modal-bio-mail" onclick="location.href='mailto:yunusemreoz@ozpartnershukuk.com';">
+                        <i class="fas fa-envelope" style="color: #013a33;"></i> yunusemreoz@ozpartnershukuk.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="bioModal3" tabindex="-1" aria-labelledby="bioModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="bioModal3Label">Avukat Kaan Karataş</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="~/assets/img/avukat-kaan-karatas.jpg" class="modal-bio-img img-fluid" alt="Kişi 3 Fotoğrafı">
+                    <p class="bio-content">
+                    1991 yılında Adana’da doğan Av. Kaan Karataş 2009 yılında Adana Anadolu Lisesi’ni (ALA) bitirmiştir. 2009 yılında yapılan ÖSS’de, Türkiye genelinde ilk 1000 öğrenci arasına giren Karataş 2014 yılında Yeditepe Üniversitesi Hukuk Fakültesi’ni onur derecesiyle bitirmiş ve memleketi olan Mersin’de avukatlık hayatına başlamıştır.
+                    İleri seviyede İngilizce ve orta seviyede Almanca bilmektedir. 2019 yılında Öz & Partners’ın ortak avukatlarından olmuştur.
+                    </p>
+                    <p class="modal-bio-mail" onclick="location.href='mailto:kaankaratas@ozpartnershukuk.com';">
+                        <i class="fas fa-envelope" style="color: #013a33;"></i> kaankaratas@ozpartnershukuk.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>

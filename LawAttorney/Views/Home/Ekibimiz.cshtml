@@ -16,33 +16,39 @@
 
         .ekip img {
             object-fit: cover;
-            height: 300px;
+            position: relative;
             width: 100%;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+            min-height: 220px;
+            max-height: 220px;
         }
 
+
         .ekip .card-body {
-            padding: 20px;
+            position: relative;
+            margin-top: 0;
+            padding: 1rem;
+            flex: 1;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,.05), 0 1px 3px 0 rgba(0,0,0,.1);
+            background: #f2f2f2;
             display: flex;
             flex-direction: column;
         }
 
+            .ekip .card-body a {
+                text-decoration: none;
+            }
+
         .ekip .card-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-align: center;
+            width: 100%;
+            margin-top: 0 !important;
+            color: #000;
+            font-size: 18.72px;
+            margin: 0px 0px 30px;
+            padding: 0px 0px 4px;
+            text-align: left; /* Sola hizalama eklenmiştir */
         }
 
-            .ekip .card-title::after {
-                content: "";
-                display: block;
-                margin: 10px auto;
-                width: 50%;
-                height: 2px;
-                background-color: #013a33;
-            }
+
 
         .ekip .card-bio {
             color: #555;
@@ -54,23 +60,37 @@
             -webkit-box-orient: vertical;
         }
 
-        .ekip .read-more-btn {
-            cursor: pointer;
-            color: #fff; /* Rengi değiştirildi */
-            background-color: #013a33; /* Arkaplan rengi eklendi */
-            padding: 10px 20px; /* Daha belirgin bir buton boyutu için padding eklendi */
-            border: none;
-            border-radius: 5px; /* Butonun köşelerini yuvarlamak için border-radius eklendi */
-            transition: background-color 0.3s ease; /* Hover efekti için geçiş efekti eklendi */
-            text-decoration: none; /* Alt çizgiyi kaldırmak için text-decoration eklendi */
-            display: inline-block; /* Diğer içeriklerle sıkışmadan yan yana gelmesi için display özelliği eklendi */
-            margin-top: 10px; /* Butonu biraz aşağı kaydırmak için margin eklendi */
+        .ekip .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-            .ekip .read-more-btn:hover {
-                background-color: #007a68; /* Hover olduğunda rengi değiştirmek için başka bir renk eklendi */
-                color: #fff; /* Hover olduğunda metin rengini değiştirmek için eklendi */
+        .ekip .read-more-btn {
+            color: #000;
+            text-decoration: underline;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative; /* Önemli: position değeri ekleyin */
+            font-size: 16px;
+            text-align:left;
+        }
+
+
+            .ekip .read-more-btn i {
+                margin-left: 5px; /* Ok ikonu ile metin arasında boşluk bırakmak için */
             }
+
+        .ekip .social-icons {
+            display: flex;
+            gap: 10px; /* İkonlar arasında boşluk bırakmak için */
+        }
+
+        .ekip .social-icon {
+            color: #013a33;
+            font-size: 20px;
+        }
 
         .ekip .card-mail {
             color: #555;
@@ -142,7 +162,7 @@
         <div class="container">
             <div class="custom-img1 mb-5 shadow">
                 <img class="custom-img1 mb-4 img-fluid shadow" src="~/assets/img/CalismaAlanlari/banner900.png" />
-                <span>Ekibimiz</span>
+                <span class="shadow-lg">Ekibimiz</span>
             </div>
         </div>
     </section>
@@ -153,58 +173,79 @@
                 <div class="row">
                     <!-- Kart 1 -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="card ekip">
+                        <div class="card ekip shadow-lg">
                             <img src="~/assets/img/avukat-emin-oz.jpg" class="card-img-top img-fluid" alt="Kişi 1 Fotoğrafı">
                             <div class="card-body">
-                                <h5 class="card-title">Avukat Emin Öz</h5>
-                                <p class="card-bio">
-                                    <!-- Bio içeriği -->
-                                </p>
-                                <a href="https://www.facebook.com/aveminoz/" target="_blank">
-                                    <i class="fab fa-facebook"></i>
-                                </a>
-                                <p class="card-mail" onclick="location.href='mailto:eminoz@ozpartnershukuk.com';">
-                                    <i class="fas fa-envelope" style="color: #013a33;"></i> eminoz@ozpartnershukuk.com
-                                </p>
-                                <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal1">Biyografi</button>
+                                <div>
+                                    <a href="#">
+                                        <h3 class="card-title ms-1 mb-5">Avukat Emin Öz</h3>
+                                    </a>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between">                                
+                                    <a href="#" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal1">
+                                        Biyografi <i class="social-icon fas fa-arrow-right"></i>
+                                    </a>
+                                    <div class="social-icons d-flex">
+                                        <a href="mailto:eminoz@ozpartnershukuk.com" class="social-icon">
+                                            <i class="fas fa-envelope" style="font-size:20px;"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/aveminoz/" target="_blank" class="social-icon">
+                                            <i class="fab fa-facebook" style="font-size:20px;"></i>
+                                        </a>                                                                             
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Kart 2 -->
+                    <!-- Kart 1 -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="card ekip">
-                            <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" alt="Kişi 1 Fotoğrafı">
+                        <div class="card ekip shadow-lg">
+                            <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" alt="Kişi 2 Fotoğrafı">
                             <div class="card-body">
-                                <h5 class="card-title">Avukat Yunus Emre Öz</h5>
-                                <p class="card-bio">
-                                    <!-- Bio içeriği -->
-                                </p>
-                                <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <p class="card-mail" onclick="location.href='mailto:yunusemreoz@ozpartnershukuk.com';">
-                                    <i class="fas fa-envelope" style="color: #013a33;"></i> yunusemreoz@ozpartnershukuk.com
-                                </p>
-                                <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal2">Biyografi</button>
+                                <div>
+                                    <a href="#">
+                                        <h3 class="card-title ms-1 mb-5">Avukat Yunus Emre Öz</h3>
+                                    </a>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between">                                   
+                                    <a href="#" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal2">
+                                        Biyografi <i class="social-icon fas fa-arrow-right"></i>
+                                    </a>
+                                    <div class="social-icons d-flex">
+                                        <a href="mailto:yunusemreoz@ozpartnershukuk.com" class="social-icon">
+                                            <i class="fas fa-envelope" style="font-size:20px;"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank" class="social-icon">
+                                            <i class="fab fa-linkedin" style="font-size:20px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Kart 3 -->
+                    <!-- Kart 1 -->
                     <div class="col-lg-4 col-md-6">
-                        <div class="card ekip">
-                            <img src="~/assets/img/avukat-kaan-karatas.jpg" class="card-img-top img-fluid" alt="Kişi 1 Fotoğrafı">
+                        <div class="card ekip shadow-lg">
+                            <img src="~/assets/img/avukat-kaan-karatas.jpg" class="card-img-top img-fluid" alt="Kişi 3 Fotoğrafı">
                             <div class="card-body">
-                                <h5 class="card-title">Avukat Kaan Karataş</h5>
-                                <p class="card-bio">
-                                    <!-- Bio içeriği -->
-                                </p>
-                                <a href="https://www.linkedin.com/in/kaankarata%C5%9F" target="_blank">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <p class="card-mail" onclick="location.href='mailto:kaankaratas@ozpartnershukuk.com';">
-                                    <i class="fas fa-envelope" style="color: #013a33;"></i> kaankaratas@ozpartnershukuk.com
-                                </p>
-                                <button class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal3">Biyografi</button>
+                                <div>
+                                    <a href="#">
+                                        <h3 class="card-title ms-1 mb-5">Avukat Kaan Karataş</h3>
+                                    </a>
+                                </div>
+                                <div class="card-footer d-flex justify-content-between">                                   
+                                    <a href="#" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal3">
+                                        Biyografi <i class="social-icon fas fa-arrow-right"></i>
+                                    </a>
+                                    <div class="social-icons d-flex">
+                                        <a href="mailto:kaankaratas@ozpartnershukuk.com" class="social-icon">
+                                            <i class="fas fa-envelope" style="font-size:20px;"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/kaankarata%C5%9F" target="_blank" class="social-icon">
+                                            <i class="fab fa-linkedin" style="font-size:20px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -224,16 +265,16 @@
                 <div class="modal-body">
                     <img src="~/assets/img/avukat-emin-oz.jpg" class="modal-bio-img img-fluid" alt="Kişi 1 Fotoğrafı">
                     <p class="bio-content">
-                    Öz & Partners’ın kurucusu olan duayen avukat Emin Öz, 1950 yılında Mersin’in Silifke ilçesinde doğmuştur. 1973 yılında İstanbul Üniversitesi Hukuk Fakültesi’nden mezun olup 1974 yılında Mersin’de kendi ofisini kurarak avukatlığa başlamıştır.
-                    12 Eylül 1980 askeri ihtilali öncesi ve sonrası sayısız siyasi davada vekillik görevi üstlenen Emin Öz, ihtilal sonrası Alparslan Türkeş’in savunmasını yapan avukatlardan biridir.
-                    
-                    1989 yılında Mersin İl Genel Meclisi üyeliğine seçilmiştir. Bu görev devam ederken 1993 yılında Anavatan Partisi Mersin İl Başkanı seçilmiştir ve 1999 yılına kadar 3 dönem görevini sürdürmüştür. Mersin’den bağımsız milletvekili adayı olarak girdiği 1999 genel seçimlerinde ise yüksek bir oy alarak şehirdeki politik etkinliğini göstermiştir.
+                        Öz & Partners’ın kurucusu olan duayen avukat Emin Öz, 1950 yılında Mersin’in Silifke ilçesinde doğmuştur. 1973 yılında İstanbul Üniversitesi Hukuk Fakültesi’nden mezun olup 1974 yılında Mersin’de kendi ofisini kurarak avukatlığa başlamıştır.
+                        12 Eylül 1980 askeri ihtilali öncesi ve sonrası sayısız siyasi davada vekillik görevi üstlenen Emin Öz, ihtilal sonrası Alparslan Türkeş’in savunmasını yapan avukatlardan biridir.
 
-                    Takip eden yıllarda, 2 dönem Anavatan Partisi MKYK’sında (Merkez Karar Yönetim Kurulu) görev almıştır. Profesyonel çalışma yaşamının ilk yıllarından itibaren ekonomi ve ticaret dünyasının içinde yer alan Av. Emin Öz, şahsi ticari faaliyetlerinin dışında; başta MESBAŞ (Mersin Serbest Bölgesi’ni işleten şirket) ve MERTAŞ (MTSO, MESİAD ve Mersin Deniz Ticaret Odası gibi meslek odası ve STK’ların ortaklaşa kurdukları şirket) gibi Mersin’in ekonomik ve ticari hayatına yön veren etkili şirketler olmak üzere, birçok ticari şirketin yönetim kurulu başkanlığını yapmıştır. MESİAD (Mersin Sanayici İş Adamları Derneği) istişare kurulu başkan yardımcılığı görevinde bulunmuştur. Mersin Barosu yönetim kurulunda yer almıştır.
+                        1989 yılında Mersin İl Genel Meclisi üyeliğine seçilmiştir. Bu görev devam ederken 1993 yılında Anavatan Partisi Mersin İl Başkanı seçilmiştir ve 1999 yılına kadar 3 dönem görevini sürdürmüştür. Mersin’den bağımsız milletvekili adayı olarak girdiği 1999 genel seçimlerinde ise yüksek bir oy alarak şehirdeki politik etkinliğini göstermiştir.
 
-                    Ayrıca bir dönem Mersin Deniz ve Ticaret Meslek Yüksekokulu’nda hukuk dersleri vermiştir. Meslek hayatının 50. yılına yaklaşan Av. Emin Öz, İngilizce ve Fransızca bilmektedir.
+                        Takip eden yıllarda, 2 dönem Anavatan Partisi MKYK’sında (Merkez Karar Yönetim Kurulu) görev almıştır. Profesyonel çalışma yaşamının ilk yıllarından itibaren ekonomi ve ticaret dünyasının içinde yer alan Av. Emin Öz, şahsi ticari faaliyetlerinin dışında; başta MESBAŞ (Mersin Serbest Bölgesi’ni işleten şirket) ve MERTAŞ (MTSO, MESİAD ve Mersin Deniz Ticaret Odası gibi meslek odası ve STK’ların ortaklaşa kurdukları şirket) gibi Mersin’in ekonomik ve ticari hayatına yön veren etkili şirketler olmak üzere, birçok ticari şirketin yönetim kurulu başkanlığını yapmıştır. MESİAD (Mersin Sanayici İş Adamları Derneği) istişare kurulu başkan yardımcılığı görevinde bulunmuştur. Mersin Barosu yönetim kurulunda yer almıştır.
+
+                        Ayrıca bir dönem Mersin Deniz ve Ticaret Meslek Yüksekokulu’nda hukuk dersleri vermiştir. Meslek hayatının 50. yılına yaklaşan Av. Emin Öz, İngilizce ve Fransızca bilmektedir.
                     </p>
-                    
+
                     <p class="modal-bio-mail" onclick="location.href='mailto:eminoz@ozpartnershukuk.com';">
                         <i class="fas fa-envelope" style="color: #013a33;"></i> eminoz@ozpartnershukuk.com
                     </p>
@@ -255,9 +296,9 @@
                     <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="modal-bio-img img-fluid" alt="Kişi 2 Fotoğrafı">
                     <p class="bio-content">
 
-                    1994 yılında Mersin’de doğmuştur. 2009 yılında Gelişim Koleji’nden, 2013 yılında İçel Anadolu Lisesi’nden (İAL) mezun olan Av. Yunus Emre Öz; lisans eğitimini Çağ Üniversitesi Hukuk Fakültesi’nde onur derecesiyle tamamlamıştır. 2018 yılında avukatlık stajını tamamlayarak Öz & Partners’ın ortak avukatlarından olmuştur.
+                        1994 yılında Mersin’de doğmuştur. 2009 yılında Gelişim Koleji’nden, 2013 yılında İçel Anadolu Lisesi’nden (İAL) mezun olan Av. Yunus Emre Öz; lisans eğitimini Çağ Üniversitesi Hukuk Fakültesi’nde onur derecesiyle tamamlamıştır. 2018 yılında avukatlık stajını tamamlayarak Öz & Partners’ın ortak avukatlarından olmuştur.
 
-                    2020 yılında ise Dünya’nın önde gelen üniversitelerinden olan King’s College London’dan yüksek lisans kabulü almıştır. Bir dönem bir siyasi partinin Mersin İl Gençlik Kolları Başkanlığı görevini yürüten Öz ileri seviye İngilizce bilmektedir.
+                        2020 yılında ise Dünya’nın önde gelen üniversitelerinden olan King’s College London’dan yüksek lisans kabulü almıştır. Bir dönem bir siyasi partinin Mersin İl Gençlik Kolları Başkanlığı görevini yürüten Öz ileri seviye İngilizce bilmektedir.
                     </p>
                     <p class="modal-bio-mail" onclick="location.href='mailto:yunusemreoz@ozpartnershukuk.com';">
                         <i class="fas fa-envelope" style="color: #013a33;"></i> yunusemreoz@ozpartnershukuk.com
@@ -278,8 +319,8 @@
                 <div class="modal-body">
                     <img src="~/assets/img/avukat-kaan-karatas.jpg" class="modal-bio-img img-fluid" alt="Kişi 3 Fotoğrafı">
                     <p class="bio-content">
-                    1991 yılında Adana’da doğan Av. Kaan Karataş 2009 yılında Adana Anadolu Lisesi’ni (ALA) bitirmiştir. 2009 yılında yapılan ÖSS’de, Türkiye genelinde ilk 1000 öğrenci arasına giren Karataş 2014 yılında Yeditepe Üniversitesi Hukuk Fakültesi’ni onur derecesiyle bitirmiş ve memleketi olan Mersin’de avukatlık hayatına başlamıştır.
-                    İleri seviyede İngilizce ve orta seviyede Almanca bilmektedir. 2019 yılında Öz & Partners’ın ortak avukatlarından olmuştur.
+                        1991 yılında Adana’da doğan Av. Kaan Karataş 2009 yılında Adana Anadolu Lisesi’ni (ALA) bitirmiştir. 2009 yılında yapılan ÖSS’de, Türkiye genelinde ilk 1000 öğrenci arasına giren Karataş 2014 yılında Yeditepe Üniversitesi Hukuk Fakültesi’ni onur derecesiyle bitirmiş ve memleketi olan Mersin’de avukatlık hayatına başlamıştır.
+                        İleri seviyede İngilizce ve orta seviyede Almanca bilmektedir. 2019 yılında Öz & Partners’ın ortak avukatlarından olmuştur.
                     </p>
                     <p class="modal-bio-mail" onclick="location.href='mailto:kaankaratas@ozpartnershukuk.com';">
                         <i class="fas fa-envelope" style="color: #013a33;"></i> kaankaratas@ozpartnershukuk.com

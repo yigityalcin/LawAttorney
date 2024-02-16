@@ -29,7 +29,7 @@
             padding: 1rem;
             flex: 1;
             box-shadow: 0 1px 2px 0 rgba(0,0,0,.05), 0 1px 3px 0 rgba(0,0,0,.1);
-            background: #f2f2f2;
+            background: #ffffff;
             display: flex;
             flex-direction: column;
         }
@@ -38,10 +38,10 @@
                 text-decoration: none;
             }
 
-            .ekip:hover {
-                transform: scale(1.05);
-                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            }
+        .ekip:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
 
         .ekip .card-title {
             width: 100%;
@@ -62,14 +62,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #f2f2f2;
+            background-color: #ffffff !important;
             text-transform: none !important;
-            font-family: IBM Plex Sans,sans-serif !important;
             font-size: 1em !important;
-            font-weight: 500 !important;
+            font-weight: 600 !important;
             margin-top: 0 !important;
             padding: 0 !important;
             letter-spacing: .5px;
+            border-top: 2px solid #ccc !important;
         }
 
         .ekip .read-more-btn {
@@ -79,7 +79,7 @@
             display: flex;
             align-items: center;
             position: relative; /* Önemli: position değeri ekleyin */
-            font-size: 16px;
+            font-size: 12px;
             text-align: left;
         }
 
@@ -89,7 +89,7 @@
             }
 
             .ekip .read-more-btn:hover {
-               color:#013a33;
+                color: #013a33;
             }
 
         .ekip .social-icons {
@@ -128,7 +128,7 @@
 
     /* Close Button */
     .btn-close {
-        color:#ffffff !important;
+        color: #ffffff !important;
         background-color: #ffffff;
     }
 
@@ -165,12 +165,18 @@
     <section class="ftco-section">
         <div class="container">
             <div class="custom-img1 mb-5 shadow">
-                <img class="custom-img1 mb-4 img-fluid shadow" src="~/assets/img/CalismaAlanlari/banner900.png" />
-                <span class="shadow-lg">Ekibimiz</span>
+                <img class="custom-img1 mb-4 shadow" src="~/assets/img/CalismaAlanlari/banner900.png" />
+                <span>Ekibimiz</span>
             </div>
         </div>
+        <div class="container mb-5">
+            <ol class="breadcrumb border-1 border-bottom" style="border-color:#013a33 !important;">
+                <li class="breadcrumb-item"><a href="Index">Anasayfa</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Ekibimiz</li>
+            </ol>
+        </div>
     </section>
-    <div class="container-fluid">
+    <div class="container-fluid mt-2">
         <section class="card-section mb-5">
             <div class="container">
                 <!-- Kişisel Kartlar -->
@@ -181,13 +187,13 @@
                             <img src="~/assets/img/avukat-emin-oz.jpg" class="card-img-top img-fluid" alt="Kişi 1 Fotoğrafı">
                             <div class="card-body">
                                 <div>
-                                    <a href="#">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal1">
                                         <h3 class="card-title ms-1 mb-5">Avukat Emin Öz</h3>
                                     </a>
                                 </div>
-                                <div class="card-footer d-flex justify-content-between">
+                                <div class="card-footer d-flex justify-content-between border-4">
                                     <a href="#" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal1">
-                                        View Profile <i class="social-icon fas fa-arrow-right"></i>
+                                        Özgeçmiş <i class="social-icon fas fa-arrow-right"></i>
                                     </a>
                                     <div class="social-icons d-flex">
                                         <a href="mailto:eminoz@ozpartnershukuk.com" class="social-icon">
@@ -207,13 +213,13 @@
                             <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" alt="Kişi 2 Fotoğrafı">
                             <div class="card-body">
                                 <div>
-                                    <a href="#">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
                                         <h3 class="card-title ms-1 mb-5">Avukat Yunus Emre Öz</h3>
                                     </a>
                                 </div>
                                 <div class="card-footer d-flex justify-content-between">
                                     <a href="#" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal2">
-                                        Biyografi <i class="social-icon fas fa-arrow-right"></i>
+                                        Özgeçmiş <i class="social-icon fas fa-arrow-right"></i>
                                     </a>
                                     <div class="social-icons d-flex">
                                         <a href="mailto:yunusemreoz@ozpartnershukuk.com" class="social-icon">
@@ -233,13 +239,13 @@
                             <img src="~/assets/img/avukat-kaan-karatas.jpg" class="card-img-top img-fluid" alt="Kişi 3 Fotoğrafı">
                             <div class="card-body">
                                 <div>
-                                    <a href="#">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal3">
                                         <h3 class="card-title ms-1 mb-5">Avukat Kaan Karataş</h3>
                                     </a>
                                 </div>
                                 <div class="card-footer d-flex justify-content-between">
                                     <a href="#" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal3">
-                                        Biyografi <i class="social-icon fas fa-arrow-right"></i>
+                                        Özgeçmiş <i class="social-icon fas fa-arrow-right"></i>
                                     </a>
                                     <div class="social-icons d-flex">
                                         <a href="mailto:kaankaratas@ozpartnershukuk.com" class="social-icon">
@@ -271,13 +277,17 @@
                     <p class="bio-content">
                         Öz & Partners’ın kurucusu olan duayen avukat Emin Öz, 1950 yılında Mersin’in Silifke ilçesinde doğmuştur. 1973 yılında İstanbul Üniversitesi Hukuk Fakültesi’nden mezun olup 1974 yılında Mersin’de kendi ofisini kurarak avukatlığa başlamıştır.
                         12 Eylül 1980 askeri ihtilali öncesi ve sonrası sayısız siyasi davada vekillik görevi üstlenen Emin Öz, ihtilal sonrası Alparslan Türkeş’in savunmasını yapan avukatlardan biridir.
-
+                    </p>
+                    <p>
                         1989 yılında Mersin İl Genel Meclisi üyeliğine seçilmiştir. Bu görev devam ederken 1993 yılında Anavatan Partisi Mersin İl Başkanı seçilmiştir ve 1999 yılına kadar 3 dönem görevini sürdürmüştür. Mersin’den bağımsız milletvekili adayı olarak girdiği 1999 genel seçimlerinde ise yüksek bir oy alarak şehirdeki politik etkinliğini göstermiştir.
-
+                    </p>
+                    <p>
                         Takip eden yıllarda, 2 dönem Anavatan Partisi MKYK’sında (Merkez Karar Yönetim Kurulu) görev almıştır. Profesyonel çalışma yaşamının ilk yıllarından itibaren ekonomi ve ticaret dünyasının içinde yer alan Av. Emin Öz, şahsi ticari faaliyetlerinin dışında; başta MESBAŞ (Mersin Serbest Bölgesi’ni işleten şirket) ve MERTAŞ (MTSO, MESİAD ve Mersin Deniz Ticaret Odası gibi meslek odası ve STK’ların ortaklaşa kurdukları şirket) gibi Mersin’in ekonomik ve ticari hayatına yön veren etkili şirketler olmak üzere, birçok ticari şirketin yönetim kurulu başkanlığını yapmıştır. MESİAD (Mersin Sanayici İş Adamları Derneği) istişare kurulu başkan yardımcılığı görevinde bulunmuştur. Mersin Barosu yönetim kurulunda yer almıştır.
-
+                    </p>
+                    <p>
                         Ayrıca bir dönem Mersin Deniz ve Ticaret Meslek Yüksekokulu’nda hukuk dersleri vermiştir. Meslek hayatının 50. yılına yaklaşan Av. Emin Öz, İngilizce ve Fransızca bilmektedir.
                     </p>
+
 
                     <p class="modal-bio-mail" onclick="location.href='mailto:eminoz@ozpartnershukuk.com';">
                         <i class="fas fa-envelope" style="color: #013a33;"></i> eminoz@ozpartnershukuk.com
@@ -301,7 +311,9 @@
                     <p class="bio-content">
 
                         1994 yılında Mersin’de doğmuştur. 2009 yılında Gelişim Koleji’nden, 2013 yılında İçel Anadolu Lisesi’nden (İAL) mezun olan Av. Yunus Emre Öz; lisans eğitimini Çağ Üniversitesi Hukuk Fakültesi’nde onur derecesiyle tamamlamıştır. 2018 yılında avukatlık stajını tamamlayarak Öz & Partners’ın ortak avukatlarından olmuştur.
+                    </p>
 
+                    <p>
                         2020 yılında ise Dünya’nın önde gelen üniversitelerinden olan King’s College London’dan yüksek lisans kabulü almıştır. Bir dönem bir siyasi partinin Mersin İl Gençlik Kolları Başkanlığı görevini yürüten Öz ileri seviye İngilizce bilmektedir.
                     </p>
                     <p class="modal-bio-mail" onclick="location.href='mailto:yunusemreoz@ozpartnershukuk.com';">
@@ -324,6 +336,8 @@
                     <img src="~/assets/img/avukat-kaan-karatas.jpg" class="modal-bio-img img-fluid" alt="Kişi 3 Fotoğrafı">
                     <p class="bio-content">
                         1991 yılında Adana’da doğan Av. Kaan Karataş 2009 yılında Adana Anadolu Lisesi’ni (ALA) bitirmiştir. 2009 yılında yapılan ÖSS’de, Türkiye genelinde ilk 1000 öğrenci arasına giren Karataş 2014 yılında Yeditepe Üniversitesi Hukuk Fakültesi’ni onur derecesiyle bitirmiş ve memleketi olan Mersin’de avukatlık hayatına başlamıştır.
+                    </p>
+                    <p>
                         İleri seviyede İngilizce ve orta seviyede Almanca bilmektedir. 2019 yılında Öz & Partners’ın ortak avukatlarından olmuştur.
                     </p>
                     <p class="modal-bio-mail" onclick="location.href='mailto:kaankaratas@ozpartnershukuk.com';">

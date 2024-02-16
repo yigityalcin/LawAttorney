@@ -5026,6 +5026,10 @@ textarea.form-control-lg {
     background-color: var(--bs-breadcrumb-bg);
     border-radius: var(--bs-breadcrumb-border-radius);
 }
+    .breadcrumb a {
+        color: #6c757d !important;
+        text-decoration:none !important;
+    }
 
 .breadcrumb-item + .breadcrumb-item {
     padding-left: var(--bs-breadcrumb-item-padding-x);
@@ -5035,11 +5039,11 @@ textarea.form-control-lg {
         float: left;
         padding-right: var(--bs-breadcrumb-item-padding-x);
         color: var(--bs-breadcrumb-divider-color);
-        content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+        content: var(--bs-breadcrumb-divider, ">") /* rtl: var(--bs-breadcrumb-divider, "/") */;
     }
 
 .breadcrumb-item.active {
-    color: var(--bs-breadcrumb-item-active-color);
+    color: #013a33;
 }
 
 .pagination {
@@ -12980,3 +12984,48 @@ footer {
         transform: scale(1.05); /* Hover durumunda butonun büyüklüğünü artır */
     }
 
+
+.dbox {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+    .dbox .icon {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        line-height: 60px;
+        position: relative;
+        margin-bottom: 5px;
+        background-color: #013A33;
+        text-align: center;
+    }
+
+        .dbox .icon .fa {
+            font-size: 20px;
+            color: #ffffff;
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    .dbox .text {
+        padding: 20px 0 0 0;
+    }
+
+    .dbox span {
+        display: block;
+        color: #555;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .dbox a, p {
+        font-weight: 700;
+        color: #555;
+        text-decoration: none;
+    }

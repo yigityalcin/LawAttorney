@@ -12835,14 +12835,14 @@ footer {
 }
 
 .custom-img1 h1, .custom-img1 span {
-    width: 990px;
+    width: 89%;
     height: 60px;
     background: #013a33;
     text-align: center;
     line-height: 1.4;
     position: absolute;
     top: 65px;
-    left: 55px;
+    left: 5%;
     color: #fff;
     font-size: 30px;
     display: flex;
@@ -12865,22 +12865,6 @@ footer {
     object-fit: cover; /* Resmi konteynera sığdırmak için */
     position:relative;
 
-}
-
-@media (max-width: 767px) {
-    .custom-img1 h1, .custom-img1 span {
-        position: static;
-        top: auto;
-        left: auto;
-        height: auto;
-        width: auto;
-        margin: -25px 10px;
-        line-height: normal;
-        padding: 20px 10px;
-    }
-    .bosluk {
-        margin-top: 80px;
-    }
 }
 
 .c_icon {
@@ -13036,4 +13020,22 @@ ul {
 
 .butonlar-lang:hover {
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.mailButton {
+    background: #013a33;
+    border-color: #013a33;
+    min-width: 125px;
+    background: #013a33;
+    color: #fff;
+    border: 1px solid #013a33;
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    padding: 0 12px;
+    text-decoration: none;
+    margin-right: 12px;
+    text-align: center;
+    min-width: 145px;
+    background-color: #013a33;
 }

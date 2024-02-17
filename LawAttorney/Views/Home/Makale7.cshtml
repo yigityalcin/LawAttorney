@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Makale7";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -27,13 +26,17 @@
         margin: 0 0 10px;
         text-align: justify;
     }
+
+    .article-content a {
+        color: #013a33;
+    }
     /* Custom Styles */
     .ekip {
         border: none;
         border-radius: 10px;
         overflow: hidden;
         /*         transition: transform 0.3s ease;
-     */ border: 1px solid #ccc;
+         */ border: 1px solid #ccc;
         margin-bottom: 20px;
     }
 
@@ -62,9 +65,9 @@
             }
 
         /* .ekip:hover {
-                transform: scale(1.05);
-                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            } */
+                    transform: scale(1.05);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                } */
 
         .ekip .card-title {
             width: 100%;
@@ -146,19 +149,19 @@
         <div class="row">
             <div class="col-xl-3">
                 <div class="card ekip">
-                    <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" alt="Kişi 2 Fotoğrafı">
+                    <img src="~/assets/img/avukat-kaan-karatas.jpg" class="card-img-top img-fluid" alt="Kişi 3 Fotoğrafı">
                     <div class="card-body">
                         <div>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
-                                <h3 class="card-title ms-1 mb-5">Avukat Yunus Emre Öz</h3>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal3">
+                                <h3 class="card-title ms-1 mb-5">Avukat Kaan Karataş</h3>
                             </a>
                         </div>
-                        <div class="card-footer d-flex justify-content-center">
+                        <div class="card-footer d-flex justify-content-center">                          
                             <div class="social-icons d-flex">
-                                <a href="mailto:yunusemreoz@ozpartnershukuk.com" class="social-icon">
+                                <a href="mailto:kaankaratas@ozpartnershukuk.com" class="social-icon">
                                     <i class="fas fa-envelope" style="font-size:20px;"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank" class="social-icon">
+                                <a href="https://www.linkedin.com/in/kaankarata%C5%9F" target="_blank" class="social-icon">
                                     <i class="fab fa-linkedin" style="font-size:20px;"></i>
                                 </a>
                             </div>
@@ -167,64 +170,52 @@
                 </div>
             </div>
             <div class="col-sm-12 col-xl-9 article">
-                <h1 class="article-header" style="color: #013a33; font-weight: bold;">Yükselen Hayvan Duyarlılığına Kişisel ve Hukuki Bir Bakış Açısı</h1>
+                <h1 class="article-header" style="color: #013a33; font-weight: bold;">Uygulamadaki Tebligat Belirsizliği Birleşen İçtihatla Giderildi</h1>
                 <hr />
-                <p class="article-date" style="color: black; font-size: 13px;">Tarih: 27.12.21</p>
+                <p class="article-date" style="color: black; font-size: 13px;">Tarih: 8 Temmuz 2021</p>
                 <div class="article-content">
                     <ol class="article-content-header" style="list-style-type: upper-alpha;">
                         <li><strong>Giriş</strong></li>
                     </ol>
                     <p>
-                        4 yaşındaki Asiye Ateş’in 2 pitbull cinsi köpeğin saldırısı sonucu ağır şekilde yaralanması, özellikle sokak hayvanlarına karşı uzun yıllardır var olan rahatsız seslerin tekrar yükselmesine sebep oldu. Meselenin gündemde kendine yer edinmesi bana; uzun süredir -deyim yerindeyse- zihnimde çevirmekte olduğum, toplumdaki hayvan sevgisinin son yıllarda fark edilir şekilde artmasının nedenleri ve Temmuz 2021’de yürürlüğe giren kanunla hayvan hakları alanında getirilen yenilikler gibi hususlar hakkında; amatörü olduğum diğer sosyal bilimler yönünden görece öznel ve kişisel, profesyonel alanım hukuk perspektifinden ise nesnel değerlendirmeler yapma fırsatı sundu.<br />
-                        &nbsp;
+                        Yargıtay İçtihadı Birleştirme Büyük Genel Kurulu, 20.11.2020 Tarih, 2019/2 Esas 2020/3 Karar sayılı içtihadı birleştirme kararı, 20.04.2021 tarihinde Resmî Gazetede yayımlanmıştır. Bu kararında uygulama yapan meslektaşlarımızın yıllardır tartıştığı bir hususu görüşen kurul özetle; bilinen adrese yapılan tebligatın iadesi hâlinde, muhatabın adres kayıt sistemindeki adresine Tebligat Kanunu m. 21/2 uyarınca tebligat yapılmasının yeterli olacağı ve öncesinde kayıtlı adresine normal tebligatın yapılmasının aranmaması gerekeceği yönünde oy çokluğu ile karar vermiştir.
                     </p>
 
                     <ol class="article-content-header" style="list-style-type: upper-alpha;" start="2">
-                        <li><strong>Tarihsel Sosyo-Ekonomi</strong></li>
+                        <li><strong>"Bilinen Adres" Kavramı</strong></li>
                     </ol>
                     <p>
-                        Ortaya koyup doktrinize ettiği fikirler bütününü şahsen benimsememekle birlikte, düşünür ve ekonomist Karl Marx’ın şu meşhur görüşünü göz ardı edebilmek mümkün değildir: <strong>“Altyapı üstyapıyı belirler.”</strong> Yani üstyapı olarak adlandırılan inanç, yaşayış, kültür, siyaset, hukuk gibi değerler; altyapıyı oluşturan ekonomik ilişkilerin bir sonucudur. Ekonomik düzen ne şekilde tecelli ederse; üstyapıya ait olan manevi değerler, toplumun yönetilme biçimi, toplumsal kurallar, ahlak anlayışı ve daha nicesi onu takip eder ve ona göre şekillenir.<br />
-                        Ekonomik bir faaliyet olup en basit haliyle bitkileri ve hayvanları belli alanlarda yoğunlaştırarak, çeşitli yöntemlerle bunlardan ekonomik değer elde etmek olarak tanımlanabilecek tarım, insanoğlunun yeryüzünde var olduğu günden bu yana sürdürdüğü bir uğraş değildi. Günümüzden yaklaşık 10-12 bin yıl önce gerçekleştiği düşünülen ve avcı-toplayıcı yaşam tarzına son veren <strong>“tarım devrimi”</strong>yle birlikte öğrenilip yaygın olarak gerçekleştirilir oldu. Bu tarihsel gelişmeyle bitkiler ve hayvanlar, insanlar tarafından üzerinden geçim temin edilen ekonomik girdiler, üretim araçları haline getirildiler. Özellikle yazının konusu olan hayvanları ele almak gerekirse; sistematik olarak çiftleştirilerek sayıları artırıldı, belli yöntemlerle sütleri ve etleri çoğaltıldı, bir değirmeni çalıştırmak için ya da yine bir tarım unsuru olan tarlaları sürmek için enerji kaynağı yapıldı veya taşıma ve ulaşım vasıtası edildiler. Yani insanın hayvanla ilişkisi, hayatta kalabilmek için bu canlıların ekonomik meta olarak kullanılmalarından ibaret bir vaziyet aldı.<a href="#_ftn1" name="_ftnref1" title="">[1]</a><br />
-                        Yakın tarihe kadar tarım toplumlarında yaşadık. 17 ve 18. yüzyıllarda başta buhar makinesi olmak üzere üretime yarayan icatların ortaya çıkması, tarımın dışında yeni bir ekonomik model ortaya çıkardı. Makineler sayesinde insanoğlu, hammaddeleri işleyerek katma değerli ve kar marjı oldukça yüksek ekonomik çıktılar elde edebilir hale geldi. Bu sansasyonel dönüşümün adı ise <strong>“sanayi devrimi”</strong>ydi. Devrim, hızla şehirleşmeyi beraberinde getirdi. Çok uzun yıllardır baskın şekilde kırsal lehine seyreden kırsal/kentsel nüfus oranı kentsel nüfus lehine radikal şekilde değişmeye başladı. Geniş kitleler tıpkı karınlarını doyurmak için bir bal damlasının etrafında toplaşan karıncalar gibi kırsaldan (ve dolayısıyla kalabalık şekilde yaşamlarını sürdürdükleri geniş ailelerden/sülalelerden) ayrılarak çekirdek aile yaşamı sürdürülecek büyük şehirlere göç etti.<a href="#_ftn2" name="_ftnref2" title="">[2]</a>) Zaman içerisinde meslekler çeşitlendi, toplumların büyük kısmı tarımla geçimini sürdürenlerden oluşmaktayken bu denge de hizmet sektöründe çalışanlar lehine değişti.<br />
-                        Hayvanlar açısından bakıldığında ise onların yaşantısında meydana gelen değişiklikler de en az insanlar için olduğu kadar devrimsel nitelikteydi. Çünkü bu yeni düzende, insanların büyük kısmı artık hayatını sürdürebilmek için her türlü zorluğa ve eziyete katlanması gerekecek küçük/büyükbaş hayvana, at ya da eşeğe veya sürüyü koruması gereken köpeklere değil; fabrikalara, iş makinelerine, kamyonlara, bilgisayarlara, algoritmalara bel bağlamıştı. Yani hayvanların insanlar için ekonomik kalem olma vasfı oldukça zayıfladı, ancak sonlanmadı, şekil değiştirerek bambaşka bir yönüyle tekrar güçlendi. Halen içinde yaşamakta olduğumuz sanayi toplumu kendi aile ve insan tipini oluşturdu. Kırsalda geniş aileler, sülaleler, uzak-yakın akrabalar, herkesin birbirini bildiği köy halkı içindeki kabalık yaşam; yerini çocuklarını şehir dışına okumaya gönderen aileler ve büyük şehirde ailesinden uzakta, öğrenci evinde kalan gençlerden, henüz evlenmediğinden ya da boşanmış olduğundan yalnız yaşayanlardan, çocukları yuvadan ayrılıp bağımsız yaşantısını kurmuş, kendi yaşları kemale ermiş ihtiyarlardan, evlenmiş ve biyolojik saatleri çoktan gelmiş olmasına rağmen çocuk sahibi olmaya henüz sıcak bakmayan çiftlerden, kısaca “kalabalıklar içerisindeki yalnızlık” klişesine hayat veren insanlardan oluşan bir toplum yaşantısına bıraktı. <em>(Bir an durup düşündüğünüzde örneklerin etrafınızda ve sizin hayatınızda da yer tuttuğunu fark edeceksiniz.)</em><br />
-                        &nbsp;Sanayi toplumunun doğurduğu bu yeni aile ve insan tipi yalnızlıklarını gidermek için özellikle -zaten tarih boyunca iyi-kötü bir bağı olan- evcil hayvanlara yeni bir rol yükledi. Başta kediler, köpekler, kuşlar olmak üzere evcil hayvanlar çok sayıda insan için adeta bir yoldaş, hayat arkadaşı, &nbsp;yakın dost, akraba ya da ailenin bir üyesi oldu.
+                        Kararda “bilinen adres” kavramı üzerinde özellikle durulmuştur. “Bilinen adres” kavramı; adres kayıt sistemindeki adresten farklı, sübjektif bir ifade içerdiğinden ve incelenen içtihadı birleştirme kararında kritik rol oynadığından bu noktada incelemesinde fayda görüyoruz. “Bilinen adres” (en sade ifadesiyle); gerek muhatabın bildirimi, gerekse tebligat çıkartacak kişi veya makamın araştırması neticesinde ortaya çıkacak adresi ifade etmektedir ve 7201 sayılı Tebligat Kanunun 10. maddesine göre tebligatın öncelikle muhatabın bu adresine yapılması gerekmektedir. (Yani ilgili kişinin hukuki ilişkinin diğer taraflarına bildirdiği adres, Tebligat Kanunu 10. madde hükmüne göre önceliklidir) Örnekle daha anlaşılır kılmak gerekirse Yargıtay, kişinin borçlu olduğu senede yazdığı adresi “bilinen adres” olarak vasıflandırmıştır ve tebligat çıkarmak için öncelikle bu adresin tercih edilmesi gereğini belirtmiştir. “Bilinen adres”in kapsamı ise Türk Medeni Kanunu’ndaki yerleşim yeri ve AKS’ye kayıtlı adresten daha geniştir ve tespitinde tebligatı çıkartacak makamın araştırmasından evvel muhatabın bildirimi dikkate alınmalıdır. Ancak ve ancak karşı taraftan böyle bir bildirim yoksa “bilinen adres” araştırması yapılıp araştırma sonunda ortaya çıkan bu adrese tebligat çıkarılabileceği öğretide kabul edilmektedir.  Yargıtay İBK gerekçesinde “terditli tebligat” ifadesini kullanmaktadır. Öte yandan ilgili kişiye adresinden daha sık bulunduğu ve zamanının büyük kısmını harcadığı gerekçesiyle bilinen adresinden farklı yerde tebligat yapılabilmesi de yine 10. madde açık hükmü ile ilgilinin rızasına tâbi kılınmıştır.
                     </p>
 
                     <ol class="article-content-header" style="list-style-type: upper-alpha;" start="3">
-                        <li><strong>Hukukla Kesişim Noktası</strong></li>
+                        <li><strong>Uygulamadaki Yanlış</strong></li>
                     </ol>
                     <p>
-                        Konusu insan, amacı ve yöntemi kurallar vasıtasıyla toplumu düzenlemek olan hukuk bilimini; -Türkçe karşılığı, adı üzerinde “toplumbilimi” olan- sosyolojiden ve ekonomiden vareste<a href="#_ftn3" name="_ftnref3" title="">[3]</a> düşünmek ve ele almak mümkün değildir.<br />
-                        Birey ve toplumun yaşantısı, değer yargıları, önemli addettikleri şeyler değişip dönüştükçe hukukun bunlara atfettiği kıymet, ayırdığı alan ve bağladığı sonuç da değişiklik gösterir.<br />
-                        Toplumdaki karşılığı geçim sağlayan bir ekonomik değer olmaktan çıkıp beraber aynı çatı altında yaşanılan yoldaş, hayat arkadaşı,&nbsp; yakın dost, akraba ya da ailenin bir üyesi konumuma gelen hayvan, artık yeni vasfına yaraşır bir statüde ele alınmalı ve kamusal yaşamda muamele görmeliydi. Aksi durum toplum vicdanını yaralanmasına sebep olurdu.<a href="#_ftn4" name="_ftnref4" title="">[4]</a><br />
-                        İşte bu sebeplerle Dünya’da hayvan hakları zaman içinde hukuk kurallarıyla korunası bir değer mertebesine erişti. Ülkemizde ise 2004 yılında 5199 sayılı Hayvanları Koruma Kanunu, çok yakın geçmişte ise 7332 sayılı kanunla söz konusu kanunda yapılan değişiklikler bu uğurda atılmış somut adımlar olmuştur.<br />
-                        &nbsp;
+                        Bilinen adreste borçlunun bulunamaması yahut adresin tebligata elverişli olmaması durumunda uygulamada MERNİS adresine normal tebligat çıkartılması gerekeceği, özellikle de icra daireleri tarafından sıklıkla dile getirilmekteydi. Lakin 7201 sayılı Tebligat Kanununda 6099 sayılı kanunla yapılan değişiklik gerekçesiyle bu uygulamanın hatalı olduğu -özellikle de avukat meslektaşlarımız tarafından- sıkça dile getirilmekteydi. Çünkü bilinen adrese çıkartılan ve iade gelen tebligatın ertesinde ilgilinin MERNİS adresine -ikinci tebligatta da şahsın bulunamaması durumunda- 2 defa olmak üzere toplamda 3 kere tebligat çıkartılması gerekecekti.
                     </p>
 
                     <ol class="article-content-header" style="list-style-type: upper-alpha;" start="4">
-                        <li><strong>Yeni Kanunun Getirdikleri</strong></li>
+                        <li><strong>Anayasal Haklar ve Muhalefet Şehri</strong></li>
                     </ol>
                     <p>
-                        Hayvan haklarının kapsamının genişletilmesi ve cezaların daha caydırıcı seviyelere çekilmesi, kamuoyu ve sivil toplumda uzun yıllardır yüksek sesle dile getirilmekteydi. Ancak refah ülkesi olmayan (ve her geçen gün bu standarttan biraz daha uzaklaşan) ve son yıllarda ciddi istikrarsızlıklar yaşayan Türkiye’nin yönetim kadroları tarafından bu ses -her daim daha öncelikli ve kritik sorunları olduğundan- duymazlığa verilmekteydi. Nihayet geç de olsa, 14 Temmuz 2021 tarihinde yürürlüğe giren 7332 sayılı değişiklik kanunu ile 5199 sayılı Hayvan Haklarını Koruma Kanununda dikkate değer değişiklikler yapılmıştır. Şöyle ki:<br />
-                        <strong>D.1.</strong> Son derece önemli addedilebilecek bir kazanım olarak hayvanlara “işkence yapmak veya acımasız ve zalimce muamelede bulunmak” fiilleri ile “cinsel saldırıda bulunmak veya tecavüz etmek” fiillerine ilk defa hapis cezası öngörülmüştür. Değişikliğe kadar söz konusu fiiller suç değil kabahat olarak işlem görmekteydi ve ihlal gerçekleştirenlere hakim karşısına çıkmadan basit idari para cezaları verilmekteydi. Hapis cezası istisnai olarak ancak ve ancak, hayvan sahipli olduğunda ve bu fiiller neticesinde hayvanın işe yaramaz hale gelmesi ya da değerinin azalması şartları bir arada bulunduğunda TCK m.151/2’de hüküm altına alınmış “mala zarar verme” suçu üzerinden mümkün olabiliyordu. Söz konusu değişiklikle beraber ise artık sahiplik, mali/bedeni zarar görme şartları aranmadan altı aydan üç yıla kadar hapis cezası ile yargılanacak ve cinsel saldırıda bulunmak veya tecavüz etmek hallerinde hapis cezasının yanında adli para cezası ile cezalandırılacaktır.<br />
-                        &nbsp;<br />
-                        <strong>D.2.</strong> Özellikle veterinerlerin karşılaştığı bir durum olan, hayvanın hediye olarak verildiği ya da satın alıp hevesi geçmiş sahipleri tarafından tedavi için bırakılıp bir daha teslim alınmaması şeklinde sıkça gerçekleşen ev hayvanını terk etmek fiili, &nbsp;ilk defa cezalandırılmakta ancak bir suç olarak ele alınmamış olduğundan hapis cezası değil, idari para cezası ile cezalandırılması öngörülmektedir.<br />
-                        <strong>D.3. </strong>Kanunun yürürlük tarihinden itibaren yeni sirk ve yunus parkı açılamayacaktır. Ancak hukuk devletinin bir gereği olan hukuk güvenliğine uygun olarak işletmecilerin kazanılmış haklarının korunması için mevcut sirk ve yunus parklarına 10 yıl daha faaliyet izni verilmiştir. Bu hakka karşın kapanacakları güne kadar geçecek 10 yılda eksilen hayvanlarının yerine yenilerinin konması da yasaklanmıştır.<br />
-                        <strong>D.4.</strong> Ev hayvanın sahibinin borcu dolayısıyla haczedilemeyeceğine ilişkin mevcut maddenin kapsamı genişletilerek uygulama alanı artırılmıştır.<br />
-                        &nbsp;
+                        İçtihadı birleştirme kararı veren hakimlerin büyük çoğunluğunca bilinen adrese çıkartılan tebligatın sonuca ulaşmaması durumunda başkaca bir araştırma yapılmasına gerek olmadığı, MERNİS adresinin varsayım (faraziye) şeklinde tebliğ adresi olarak kabul edileceği değerlendirmesi yapılırken karşıt görüşte bilinen adresin suiistimal edilerek kasten iade edilecek şekilde tebligat çıkartılması ve ertesinde Tebligat Kanunu m. 21/2 gereğince tebligat yapılarak “hukuki dinlenilme” ve “adil yargılanma” haklarının ihlal edilmesinin önünün açılacağı fikri ortaya konmuştur. Bu tehlikeye karşı hukuki başvuru yollarının olduğu, HMK m.95’te hüküm altına alınmış “Eski Hale Getirme” ve İİK m.65’te “Gecikmiş İtiraz” müesseseleriyle tebligat muhatabının mazeretini iletebileceği ve bu cihetle, bilinen adrese çıkartılan tebligattaki usulsüzlüğün Yargıtay önüne geldiğinde bozma sebebi olarak kabul edileceği ifade edilmiştir.
+                    </p>
+                    <p>
+                        Dahası, yine İBK gerekçesinde 3 aşamalı tebligatın adil yargılanma hakkını ihlal etmeyeceği; aksi yöndeki yorumun kanun koyucunun m.21/2 iradesine aykırı olacağı ifade edilmiştir. Kurul, Tebligat Kanunu ve Yönetmeliğinin amacı tebliğin muhataba en kısa şekilde yapılması ve tebligat konusu hakkında bilgilendirilmesini sağlamak olduğunu, bu nedenle Kanun ve Yönetmelik hükümlerinin en ufak ayrıntısına kadar uygulanması gerektiği, mevzuat hükümlerine uygun şekilde yapılmayan tebligatın geçerli olarak kabul edilemeyeceği, bilinen adresten iade dönen tebligattan sonra AKS adresine normal tebligat yapılması gibi bir yöntemin mevzuatta öngörülmediği gerekçesiyle adil yargılanma hakkı ihlali olmayacağı kabul edilmiştir.
                     </p>
 
                     <ol class="article-content-header" style="list-style-type: upper-alpha;" start="5">
-                        <li><strong>Sonuç ve Değerlendirme</strong></li>
+                        <li><strong>Değerlendirme</strong></li>
                     </ol>
                     <p>
-                        Aslına bakıldığında, bir önceki alt başlıkta listelenmiş değişikliklerle geride bırakılan mevzuat; doğru şekilde okuyabilen için tam olarak yazı boyunca izah edilen fikirlerle paralel şekilde tarım toplumunun hayvanı ticari ürün olarak ele alışının hukuk alanındaki net bir tezahürüydü. Yeni düzenlemeler ise ruhunu ve kökenini güncel yaşam biçiminden almış, bununla örtüşür şekilde hayvanın eşya olarak görüldüğü ve buna göre muamele edildiği anlayışı terk etmiştir. Hayvanı insanın yoldaşı, hayat arkadaşı, ailesinin bireyi olarak kabul edildiği bir statüye yaklaştırmıştır. Yani ekonomik dengeler önce yaşam tarzını, bundan sonra da hukuk kurallarını değiştirmiştir. Yani altyapı, yeni üstyapıyı belirlemiştir.<br />
+                        Kararın içeriğinde, yukarıda zikredilen “adil yargılanma” ve bu kapsamdaki “hukuki dinlenilme” hakkı gerekçeleriyle karşıt görüşler yazılmıştır. Lakin YİBGK’nun oy çokluğu ile verdiği kararın, bilinen adresinde bulunmayan ve güncel adresini muhataplarına bildirmeyen gerçek kişilerle ve tebligatı yapmaya çalışan merci arasındaki sorumluluk ve külfet dengesini gözetmesi açısından isabetli olduğu ve tebellüğden imtina eden yahut sürüncemede bırakan şahıslara daha kısa zamanda tebligat yapılmasını sağlayacağı görüşündeyiz.
                     </p>
                 </div>
 
                 <hr />
-                <p class="article-author">Av. Yunus Emre Öz</p>
-                <p class="article-date">27.12.21</p>
+                <p class="article-author">Av. Kaan Karataş</p>
+                <p class="article-date">8 Temmuz 2021</p>
             </div>
         </div>
     </div>

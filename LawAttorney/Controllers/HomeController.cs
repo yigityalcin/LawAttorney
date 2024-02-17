@@ -37,6 +37,42 @@ namespace LawAttorney.Controllers
         {
             return View();
         }
+        public IActionResult Makale1()
+        {
+            return View();
+        }
+        public IActionResult Makale2()
+        {
+            return View();
+        }
+        public IActionResult Makale3()
+        {
+            return View();
+        }
+        public IActionResult Makale4()
+        {
+            return View();
+        }
+        public IActionResult Makale5()
+        {
+            return View();
+        }
+        public IActionResult Makale6()
+        {
+            return View();
+        }
+        public IActionResult Makale7()
+        {
+            return View();
+        }
+        public IActionResult Makale8()
+        {
+            return View();
+        }
+        public IActionResult Makale9()
+        {
+            return View();
+        }
         public IActionResult Ýletisim()
         {
             return View();

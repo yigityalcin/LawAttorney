@@ -1,0 +1,377 @@
+﻿@{
+    ViewData["Title"] = "Makale4";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .article-header {
+        font-size: 21px;
+        margin: 10px 0;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
+
+    .article-content-header {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.1;
+        color: #111111;
+        text-decoration: none !important;
+    }
+
+    .article-content p {
+        color: #111111;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.65;
+        margin: 0 0 10px;
+        text-align: justify;
+    }
+
+    /* Custom Styles */
+    .ekip {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        /*         transition: transform 0.3s ease;
+                     */ border: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+
+        .ekip img {
+            object-fit: cover;
+            position: relative;
+            width: 100%;
+            min-height: 220px;
+            max-height: 220px;
+        }
+
+
+        .ekip .card-body {
+            position: relative;
+            margin-top: 0;
+            padding: 1rem;
+            flex: 1;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,.05), 0 1px 3px 0 rgba(0,0,0,.1);
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .ekip .card-body a {
+                text-decoration: none;
+            }
+
+        /* .ekip:hover {
+                                transform: scale(1.05);
+                                box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                            } */
+
+        .ekip .card-title {
+            width: 100%;
+            margin-top: 0 !important;
+            color: #000;
+            margin: 0px 0px 30px;
+            padding: 0px 0px 4px;
+            display: block;
+            font-size: 1.17em;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .ekip .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff !important;
+            text-transform: none !important;
+            font-size: 1em !important;
+            font-weight: 600 !important;
+            margin-top: 0 !important;
+            padding: 10px 0 0 0 !important;
+            letter-spacing: .5px;
+            border-top: 2px solid #ccc !important;
+        }
+
+        .ekip .read-more-btn {
+            color: #000;
+            text-decoration: underline;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative; /* Önemli: position değeri ekleyin */
+            font-size: 12px;
+            text-align: left;
+        }
+
+
+            .ekip .read-more-btn i {
+                margin-left: 5px; /* Ok ikonu ile metin arasında boşluk bırakmak için */
+            }
+
+            .ekip .read-more-btn:hover {
+                color: #013a33;
+            }
+
+        .ekip .social-icons {
+            display: flex;
+            gap: 10px; /* İkonlar arasında boşluk bırakmak için */
+        }
+
+        .ekip .social-icon {
+            color: #013a33;
+            font-size: 20px;
+        }
+</style>
+
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="custom-img1 mb-5 shadow">
+                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/banner900.png" />
+                <span>Makaleler</span>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <ol class="breadcrumb border-1 border-bottom" style="border-color:#013a33 !important;">
+                <li class="breadcrumb-item"><a href="Index">Anasayfa</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Makaleler</li>
+            </ol>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3">
+                <div class="card ekip">
+                    <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" alt="Kişi 2 Fotoğrafı">
+                    <div class="card-body">
+                        <div>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
+                                <h3 class="card-title ms-1 mb-5">Avukat Yunus Emre Öz</h3>
+                            </a>
+                        </div>
+                        <div class="card-footer d-flex justify-content-center">
+                            <div class="social-icons d-flex">
+                                <a href="mailto:yunusemreoz@ozpartnershukuk.com" class="social-icon">
+                                    <i class="fas fa-envelope" style="font-size:20px;"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank" class="social-icon">
+                                    <i class="fab fa-linkedin" style="font-size:20px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-9 article">
+                <h1 class="article-header" style="color: #013a33; font-weight: bold;">Mersin Avukatlık Ofisi</h1>
+                <hr />
+                <p class="article-date" style="color: black; font-size: 13px;">Tarih: 09.01.2021</p>
+                <div class="article-content">
+                    <p>
+                        <strong>Mersin avukatlık ofisi</strong> olarak faaliyet gösteren Oz&amp;Partners Hukuk, 1974 yılında kurulmuştur. 50 yıla yakın bir süredir hizmetlerini aynı çizgide sürdüren Oz&amp;Partners Avukatlık Ofisi, başta Mersin'in ileri gelen gerçek ve tüzel kişileri olmak üzere binlerce müvekkile hizmet vermiştir.
+                    </p>
+                    <p>
+                        Av. Emin Öz tarafından kurulmuş olan hukuk büromuz, faaliyete geçtiği günden bu yana müvekkil odaklı anlayışıyla hizmetlerini sürdürmektedir.
+                        ‘Mesleki sır’, ‘etik ilkeler’ ve ‘üstün kalite’ doğrultusunda varlık gösteren Öz&amp;Partners Avukatlık Ofisi, yetkin hukukçu kadrosuyla Mersin’in en prestijli hukuk büroları arasındadır.
+                        Müvekkillerine ihtiyaçları ve çağın gerekleri çerçevesinde somut ve etkili hukuki çözümler sunan <strong>Mersin avukatlık bürosu</strong>, bu alanda gerekli tüm akademik bilgi ve becerilere haiz tecrübeli ekibiyle hizmet vermektedir.
+                    </p>
+                    <p>
+                        Aile ve boşanma, tazminat, miras ve gayrimenkul hukukuna yönelik sorunlarda destek sağlayan Mersin hukuk bürosu; Ticaret ve Şirketler Hukuku, İş Hukuku, Ceza Hukuku, İcra Hukuku, İdare, Vergi ve Gümrük Hukuku alanlarında da tüm prosedürlerde hukuki destek sağlamaktadır.
+                    </p>
+                    <p>
+                        Kurumsal danışmanlık hizmeti de veren <strong>Mersin avukatlık ofisi</strong>, sorunları hukuk prensiplerine bağlı kalarak çözümleme ve koruyucu hukuk mekanizmasına göre hareket etme prensibini benimsemiştir.
+                        Modern gereklilikleri yakından takip eden Öz&amp;Partners Avukatlık Ofisi; en avantajlı, hızlı, pratik ve analitik çözümlerle hukuki ve stratejik ortağınız olmaya hazırdır.
+
+                    </p>
+
+                    <h2>En İyi Mersin Avukatlık Bürosu</h2>
+                    <p>
+                        Ülkemizin en saygın ve köklü hukuk bürolarının başında gelen <a href="https://web.archive.org/web/20220521095530/https://ozpartnershukuk.com/">Öz&amp;Partners Avukatlık Ofisi</a> yerel ve uluslararası sektörlerde varlık gösteren tüm müvekkillerine kapsamlı hukuki danışmanlık hizmeti verir.
+                        Ortaya çıkan ihtilafların hem yetkili mahkemeler nezdinde hem de yerel ve uluslararası tahkim yoluyla çözümünde etkin rol üstlenir.
+                        Danışman doçent, danışman profesör, yardımcı personel, avukat ve danışman avukatlarıyla hizmet sunan <strong>Mersin’in en iyi hukuk bürosu</strong>, alanındaki seçkin isimleri bünyesinde bulundurmaktadır.
+                    </p>
+                    <p>
+                        Yaklaşık 50 yıllık tecrübesinin gücünü verdiği hizmetlere yansıtan Öz&amp;Partners Avukatlık Ofisi’nin pörtföyü pek çok yerli ve yabancı yatırımcıyı da kapsamaktadır.
+                        Çalışma alanlarına göre çeşitli departmanlara ayrılan avukatlık ofisi, <strong>Mersin’in en iyi avukatlık bürosu</strong> olarak ilk tercihler arasındaki yerini korumaktadır.
+                        Farklı hukuk alanlarında uzman seçkin kadrosu ve dünya dinamizmini ortaya koyan güçlü müvekkil ağıyla <strong>Mersin avukat</strong> bürosu arayışlarına en iyi şekilde yanıt vermektedir.
+                    </p>
+
+                    <h3>Misyonumuz&amp;Vizyonumuz</h3>
+                    <p>
+                        <ul style="list-style-type:square;">
+                            <li>Müvekkillerimizin çıkarlarını kendi başarılarımızın önünde tutarak, çağın değişen gereksinimlerine doğru, adil, etkin ve güncel yanıtlar vermek.</li>
+                            <li>Hukuki problemleri anayasa, kanunlar, yönetmelikler, tüzük, mahkeme uygulamaları, Yargıtay-Danıştay kararlarında meydana gelen değişiklikler ve gelişmeler ışığında çözüme kavuşturmak.</li>
+                            <li>Hukuki süreçlerin sıkı takipçisi olmak, prosedürleri en yüksek kalitede yönetmek.</li>
+                            <li>Vicdan, hak ve adalet ölçütleri kapsamında, temel hak ve özgürlükleri göz önüne alarak çalışmak.</li>
+                            <li>hukukun üstünlüğünü hâkim kılmak amacıyla hukuk devleti anlayışına <strong>Mersin’in en iyi avukatlık ofisi</strong> ünvanıyla hizmet etmek.</li>
+                            <li>Yaşamın her alanında adaletin gerçekleşmesini sağlama gâyesiyle avukatlık mesleğini bilgi, bilim ve akıl önderliğinde icra etmek.</li>
+                            <li>Daima çözüm ve güven odaklı profesyonel hizmet sunmak.</li>
+                            <li>Vekil-müvekkil arasında gizlilik, karşılıklı güven ve insana saygı ilkeleri üzerine temellendirilen ofisimiz <strong>Mersin avukatlık büroları</strong> içerisindeki saygın yerini korumaya kararlıdır.</li>
+                        </ul>
+                    </p>
+
+                    <h3>Mersin Avukatlık Bürosu Faaliyet Alanları</h3>
+                    <p>
+                        Müvekkillerini ve Türk hukukunu hakkıyla temsil etmek ve sorunları hukuka uygun uzlaşma yöntemleriyle çözüme kavuşturmak için hizmet veren <strong>Mersin hukuk bürosu</strong>, ihtiyaç ve taleplere en doğru biçimde ve en kısa zamanda cevap vermeyi ilke edinmiştir. Proaktif bir anlayışla çalışan Öz&amp;Partners Avukatlık Ofisi hizmetlerini söz verdiği şartlarda ve zamanında sunar. Müvekkillerine eşitlik, onur, nezaket, saygı ve adalet kuralları çerçevesinde yaklaşır. Gerçekleştirdiği faaliyetlerle ilgili sonuçları ve gelişmeleri müvekkillerine şeffaf bir şekilde iletilir. Çalıştığı kişi ve kuruluşların özel bilgilerini muhafaza etmeye, gizliliklerini korumaya özen gösterir. <strong>Mersin hukuk büroları</strong> arasında üstünlüğünü kanıtlayan Öz&amp;Partners Avukatlık Ofisi, aşağıdaki alanlarda faaliyet göstermektedir:
+                    </p>
+
+                    <h3>Miras Hukuku</h3>
+                    <p>
+                        En iyi <strong>Mersin avukatları</strong> ile hizmet veren Öz&amp;Partners Avukatlık Ofisi, miras hukukunu ilgilendiren tüm konularda danışmanlık ve dava takip hizmeti vermektedir. Bunlardan bazıları şöyledir:
+
+                        <ul style="list-style-type:square;">
+                            <li>Ölüme bağlı tasarrufun iptali davası açılması</li>
+                            <li>Miras taksim sözleşmeleri ve dava takibi</li>
+                            <li>Mirasçılık belgesinin iptalini isteme</li>
+                            <li>Tereke tespiti</li>
+                            <li>Muris muvazaası davaları</li>
+                            <li>Tenkis davaları</li>
+                            <li>Mirasın reddi davaları ve miras red işlemleri</li>
+                            <li>Veraset ilamı alma</li>
+                            <li>Vasiyetname düzenleme, vasiyetname iptali</li>
+                            <li>Saklı paya ilişkin davalar</li>
+                            <li>Mirasçıdan mal kaçırma davaları</li>
+                            <li>Miras intikal işlemleri</li>
+                            <li>Ölünceye kadar bakma sözleşmesi</li>
+                        </ul>
+                    </p>
+
+                    <h3>İcra Hukuku</h3>
+                    <p>
+                        <strong>Mersin avukatlık ofisleri</strong> içinde haklı bir üne sahip olan Öz&amp;Partners, icra ve iflas hukuku alanında da nitelikli hizmet sunmaktadır. Bu kapsamda gerçekleştirilen işlemlerden bir kısmı şu şekildedir:
+                        <ul style="list-style-type:square;">
+                            <li>Yedieminliği suistimal davaları </li>
+                            <li>Tüm icra takiplerinin hazırlanması ve işlemlerin takip edilmesi</li>
+                            <li>Borca ve takibe itiraz işlemleri</li>
+                            <li>Haciz işlemleri</li>
+                            <li>İtirazın kaldırılması davaları</li>
+                            <li>•İtirazın iptali davaları</li>
+                            <li>İstirdat davaları</li>
+                            <li>Menfi tespit davaları</li>
+                            <li>Kiralanan taşınmazların tahliyesi davaları</li>
+                            <li>Bono, senet ve çek tahsili</li>
+                            <li>Karşılıksız çek davaları</li>
+                            <li>İhtiyati haciz kararı alınması</li>
+                            <li>İflasın ertelenmesi davaları</li>
+                            <li>İflas hukuku işlemleri</li>
+                        </ul>
+                    </p>
+
+                    <h3>İş Hukuku</h3>
+                    <p>
+                        Dürüst çalışma ilkelerine uymayı ve üstün iş ahlâkını düstur edinen <strong>Mersin avukatlık ofisi</strong> Öz&amp;Partners, iş hukuku çerçevesinde şu hizmetleri verir:
+                        <ul style="list-style-type:square;">
+                            <li>Ekonomik sebepler, performans düşüklüğü ve benzeri haklı nedenlerle iş sözleşmesinin feshi halleri</li>
+                            <li>Sözleşme yapılarının oluşturulması</li>
+                            <li>İşveren ve çalışanların haklarının korunmasına yönelik danışmanlık</li>
+                            <li>İşçi ve işyeri güvenliğine ilişkin danışmanlık</li>
+                            <li>Kötü niyet ve mobing tazminat davaları</li>
+                            <li>İş akdinin feshi sebebiyle açılan davalar</li>
+                            <li>Meslek hastalığının tespit edilmesi ve bu hususta açılacak tazminat davaları</li>
+                            <li>İşçilerin iş görmezlik, yaralanma ve ölüm hallerine ilişkin davalar</li>
+                            <li>İhbar ve kıdem Tazminatı davaları</li>
+                            <li>Hizmet tespiti davaları</li>
+                            <li>İşe iade davaları</li>
+                        </ul>
+                    </p>
+
+                    <h3>Aile ve Boşanma Hukuku</h3>
+                    <p>
+                        Müvekkillerinin gereksinimlerine odaklanan, en tatminkâr ve hızlı çözümleri, mesleğin haysiyet ve onuruyla bağdaşacak şekilde sunan <strong>Mersin avukatlık bürosu</strong> Öz&amp;Partners, aile ve boşanma alanlarında şu faaliyetleri yürütür:
+
+                        <ul style="list-style-type:square;">
+                            <li>Yasal danışmanlık, kayyım, Vesayet konularında hukuki destek</li>
+                            <li>Başka bir ülkede yaşayan Türk vatandaşlarının yurt dışı mahkemelerinden aldığı boşanma kararlarının tanınması ve tenfizi davaları</li>
+                            <li>Evlilik sözleşmelerinin hazırlanması</li>
+                            <li>Vasiyetname iptal davaları</li>
+                            <li>Vasiyetname düzenlenmesi</li>
+                            <li>Babalık davaları ve nesebin reddi davaları</li>
+                            <li>Uluslararası boyutta çocuk kaçırma davaları</li>
+                            <li>Evlenmenin hükümsüzlüğü</li>
+                            <li>Soy bağına ilişkin davalar</li>
+                            <li>Aile konutu şerhi davaları</li>
+                            <li>Evlat edinme davaları</li>
+                            <li>Nafaka davaları</li>
+                            <li>Velayet davaları</li>
+                            <li>Mal paylaşımı davaları</li>
+                            <li>Boşanmadan kaynaklı maddi ve manevi tazminat davaları</li>
+                            <li>Anlaşmalı boşanma davaları</li>
+                            <li>Çekişmeli boşanma davaları</li>
+                        </ul>
+                    </p>
+
+                    <h3>İdare, Vergi ve Gümrük Hukuku</h3>
+                    <p>
+                        Her türlü meseleyi hakkaniyete ve adalete uygun olarak çözüme kavuşturmayı ilke edinen Öz&amp;Partners Avukatlık Ofisi hukuki değerlerin izinde yürümektedir. Disiplin, üst düzey iletişim, inovasyon, ekip çalışması, sorumluluk, doğruluk ve dürüstlük ilkelerini benimseyen Mersin avukatlık ofisinin gümrük, vergi ve idare hukuku alanındaki hizmetleri şöyledir:
+
+                        <ul style="list-style-type:square;">
+                            <li>Kamu ihalelerine katılım</li>
+                            <li>İdari sözleşmeleri hazırlama, yorumlama ve denetlenme</li>
+                            <li>Kamu ihale şartnamelerini hazırlama ve denetleme</li>
+                            <li>İdari işlemlerde gereken evrakları düzenleme ve denetleme</li>
+                            <li>İdari dilekçeleri düzenleme ve hazırlama</li>
+                        </ul>
+                    </p>
+                    <p>
+                        <ul style="list-style-type:square;">
+                            <li>İdari dilekçeleri denetleme</li>
+                            <li>Disiplin cezalarının iptali davaları</li>
+                            <li>Belediye cezalarına karşı açılan davalar</li>
+                            <li>Askeri İdare ve Yüksek İdare Mahkemesi davaları</li>
+                            <li>İmar hukuku davaları</li>
+                            <li>İdarenin sorumluluğu ve tazminat davaları</li>
+                            <li>İdari para cezası, ihale ve tam yargı davaları</li>
+                            <li>Vergi Daireleri tarafından tesis edilen para cezalarına, idari işlemlere, vergi suç ve cezalarına yönelik davalar</li>
+                            <li>Vergi uyuşmazlıkları</li>
+                            <li>Vergi cezası, ödeme emirleri, usulsüzlük, gümrük cezaları, vergi ziyaı ile ilgili davalar</li>
+                        </ul>
+                    </p>
+
+                    <h3>Ceza Hukuku</h3>
+                    <p>
+                        Tüm hukuki uyuşmazlıkları uzman kadrosuyla başarılı bir şekilde ortadan kaldıran <strong>Mersin avukatlık ofisi</strong> Öz&amp;Partners, ceza hukuku kapsamında şu hizmetleri vermektedir:
+                        <ul style="list-style-type:square;">
+                            <li>İnfaz hesaplama</li>
+                            <li>Şüpheli müdafiliği ve müşteki vekilliği</li>
+                            <li>Ceza evinde tutuklu ve hükümlü olanlara hukuki bilgilendirme yapmak</li>
+                            <li>Temyiz dilekçesi hazırlaama ve başvuru yapma</li>
+                            <li>Tutuklama ve takipsizlik kararlarına itiraz etme</li>
+                            <li>Türk Ceza Kanunu'nda ve diğer mevzuatta bulunan suçlar çerçevesinde müdafilik ya da vekillik yapma</li>
+                            <li>Ağır, Asliye ve Sulh Ceza Mahkemelerinde sanık müdafi ve müşteki vekili olunması</li>
+                            <li>Şikâyet dilekçesi ve eklerini hazırlama</li>
+                        </ul>
+                    </p>
+
+                    <h3>Ticaret ve Şirketler Hukuku</h3>
+                    <p>
+                        Ticari alacak davaları, ticari sözleşmeler, danışmanlık, yabancı ve ulusal şirket kuruluşu, tazminat davaları, şirket devralmaları ve şirket birleşmeleri bu kapsamda yer alır.
+                        Satım, franchising, distribütörlük, mal alım, hissedarlık ve acente sözleşmelerinden, iş akitlerinden kaynaklı davalar da yine <strong>Mersin avukatlık bürosu</strong> hizmet alanlarına dâhildir.
+
+                    </p>
+
+                    <h3>Tazminat Hukuku</h3>
+                    <p>
+                        Çeşitli sözleşmelerden ve trafik kazalarından doğan maddi ve manevi tazminat hakları bu hizmetin muhtevasında yer alır. Tüm gerçek ve tüzel kişi&amp;kurumlara açılacak tazminat davalarında Öz&amp;Partners Avukatlık Ofisi’nin <strong>en iyi Mersin avukatları</strong> müvekkilin menfaatlerini gözeterek en başarılı sonucu almayı hedefler.
+
+                    </p>
+
+                    <h3>Mersin Avukatlık Ücret Tarifesi</h3>
+                    <p>
+                        Bu tarife her büronun uygulamaları, bağlı olduğu birlik ve baro tarafından belirlenir. Bu noktada Türkiye Barolar Birliği’nin belirlediği asgarî ücret tarifeleri esas alınır.
+                        Avukatlık ücretleri her şehirdeki barolara, avukatlara ve davaların niteliğine göre değişir. Örneğin tazminat davasıyla boşanma davasındaki <strong>Mersin avukat masrafı</strong> elbette aynı olmayacaktır.
+                        Avukatlık serbest bir meslek olduğundan avukatlar alacakları ücretleri kendileri takdir eder. <strong>Mersin avukat ücreti</strong> belirlenirken harcanacak zaman ve emek, yapılacak işlemler göz önünde bulundurulur.
+                        Öte yandan ödenecek harç ve diğer giderler avukatlık ücretinden ayrı tutulur. <strong>Mersin avukatlık ücret tarifesi</strong> hakkında ilgili detaylı bilgi için Öz&amp;Partners Avukatlık Ofisi ile irtibata geçmeniz mümkündür.
+                    </p>
+                </div>
+
+                <hr />
+                <p class="article-author">Av. Yunus Emre Öz</p>
+                <p class="article-date">02 Eylül 2021</p>
+            </div>
+        </div>
+    </div>
+</body>

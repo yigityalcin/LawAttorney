@@ -1,0 +1,231 @@
+﻿@{
+    ViewData["Title"] = "Makale1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .article-header {
+        font-size: 21px;
+        margin: 10px 0;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
+
+    .article-content-header {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.1;
+        color: #111111;
+        text-decoration: none !important;
+    }
+
+    .article-content p {
+        color: #111111;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.65;
+        margin: 0 0 10px;
+        text-align: justify;
+    }
+    /* Custom Styles */
+    .ekip {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+/*         transition: transform 0.3s ease;
+ */        border: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+
+        .ekip img {
+            object-fit: cover;
+            position: relative;
+            width: 100%;
+            min-height: 220px;
+            max-height: 220px;
+        }
+
+
+        .ekip .card-body {
+            position: relative;
+            margin-top: 0;
+            padding: 1rem;
+            flex: 1;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,.05), 0 1px 3px 0 rgba(0,0,0,.1);
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .ekip .card-body a {
+                text-decoration: none;
+            }
+
+        /* .ekip:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        } */
+
+        .ekip .card-title {
+            width: 100%;
+            margin-top: 0 !important;
+            color: #000;
+            margin: 0px 0px 30px;
+            padding: 0px 0px 4px;
+            display: block;
+            font-size: 1.17em;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .ekip .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff !important;
+            text-transform: none !important;
+            font-size: 1em !important;
+            font-weight: 600 !important;
+            margin-top: 0 !important;
+            padding: 10px 0 0 0 !important;
+            letter-spacing: .5px;
+            border-top: 2px solid #ccc !important;
+        }
+
+        .ekip .read-more-btn {
+            color: #000;
+            text-decoration: underline;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative; /* Önemli: position değeri ekleyin */
+            font-size: 12px;
+            text-align: left;
+        }
+
+
+            .ekip .read-more-btn i {
+                margin-left: 5px; /* Ok ikonu ile metin arasında boşluk bırakmak için */
+            }
+
+            .ekip .read-more-btn:hover {
+                color: #013a33;
+            }
+
+        .ekip .social-icons {
+            display: flex;
+            gap: 10px; /* İkonlar arasında boşluk bırakmak için */
+        }
+
+        .ekip .social-icon {
+            color: #013a33;
+            font-size: 20px;
+        }
+</style>
+
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="custom-img1 mb-5 shadow">
+                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/banner900.png" />
+                <span>Makaleler</span>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <ol class="breadcrumb border-1 border-bottom" style="border-color:#013a33 !important;">
+                <li class="breadcrumb-item"><a href="Index">Anasayfa</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Makaleler</li>
+            </ol>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3">
+                <div class="card ekip">
+                    <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" alt="Kişi 2 Fotoğrafı">
+                    <div class="card-body">
+                        <div>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
+                                <h3 class="card-title ms-1 mb-5">Avukat Yunus Emre Öz</h3>
+                            </a>
+                        </div>
+                        <div class="card-footer d-flex justify-content-center">                           
+                            <div class="social-icons d-flex">
+                                <a href="mailto:yunusemreoz@ozpartnershukuk.com" class="social-icon">
+                                    <i class="fas fa-envelope" style="font-size:20px;"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank" class="social-icon">
+                                    <i class="fab fa-linkedin" style="font-size:20px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-9 article">
+                <h1 class="article-header" style="color: #013a33; font-weight: bold;">Yükselen Hayvan Duyarlılığına Kişisel ve Hukuki Bir Bakış Açısı</h1>
+                <hr />
+                <p class="article-date" style="color: black; font-size: 13px;">Tarih: 27.12.2021</p>
+                <div class="article-content">
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;">
+                        <li><strong>Giriş</strong></li>
+                    </ol>
+                    <p>
+                        4 yaşındaki Asiye Ateş’in 2 pitbull cinsi köpeğin saldırısı sonucu ağır şekilde yaralanması, özellikle sokak hayvanlarına karşı uzun yıllardır var olan rahatsız seslerin tekrar yükselmesine sebep oldu. Meselenin gündemde kendine yer edinmesi bana; uzun süredir -deyim yerindeyse- zihnimde çevirmekte olduğum, toplumdaki hayvan sevgisinin son yıllarda fark edilir şekilde artmasının nedenleri ve Temmuz 2021’de yürürlüğe giren kanunla hayvan hakları alanında getirilen yenilikler gibi hususlar hakkında; amatörü olduğum diğer sosyal bilimler yönünden görece öznel ve kişisel, profesyonel alanım hukuk perspektifinden ise nesnel değerlendirmeler yapma fırsatı sundu.<br />
+                        &nbsp;
+                    </p>
+
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;" start="2">
+                        <li><strong>Tarihsel Sosyo-Ekonomi</strong></li>
+                    </ol>
+                    <p>
+                        Ortaya koyup doktrinize ettiği fikirler bütününü şahsen benimsememekle birlikte, düşünür ve ekonomist Karl Marx’ın şu meşhur görüşünü göz ardı edebilmek mümkün değildir: <strong>“Altyapı üstyapıyı belirler.”</strong> Yani üstyapı olarak adlandırılan inanç, yaşayış, kültür, siyaset, hukuk gibi değerler; altyapıyı oluşturan ekonomik ilişkilerin bir sonucudur. Ekonomik düzen ne şekilde tecelli ederse; üstyapıya ait olan manevi değerler, toplumun yönetilme biçimi, toplumsal kurallar, ahlak anlayışı ve daha nicesi onu takip eder ve ona göre şekillenir.<br />
+                        Ekonomik bir faaliyet olup en basit haliyle bitkileri ve hayvanları belli alanlarda yoğunlaştırarak, çeşitli yöntemlerle bunlardan ekonomik değer elde etmek olarak tanımlanabilecek tarım, insanoğlunun yeryüzünde var olduğu günden bu yana sürdürdüğü bir uğraş değildi. Günümüzden yaklaşık 10-12 bin yıl önce gerçekleştiği düşünülen ve avcı-toplayıcı yaşam tarzına son veren <strong>“tarım devrimi”</strong>yle birlikte öğrenilip yaygın olarak gerçekleştirilir oldu. Bu tarihsel gelişmeyle bitkiler ve hayvanlar, insanlar tarafından üzerinden geçim temin edilen ekonomik girdiler, üretim araçları haline getirildiler. Özellikle yazının konusu olan hayvanları ele almak gerekirse; sistematik olarak çiftleştirilerek sayıları artırıldı, belli yöntemlerle sütleri ve etleri çoğaltıldı, bir değirmeni çalıştırmak için ya da yine bir tarım unsuru olan tarlaları sürmek için enerji kaynağı yapıldı veya taşıma ve ulaşım vasıtası edildiler. Yani insanın hayvanla ilişkisi, hayatta kalabilmek için bu canlıların ekonomik meta olarak kullanılmalarından ibaret bir vaziyet aldı.<a href="#_ftn1" name="_ftnref1" title="">[1]</a><br />
+                        Yakın tarihe kadar tarım toplumlarında yaşadık. 17 ve 18. yüzyıllarda başta buhar makinesi olmak üzere üretime yarayan icatların ortaya çıkması, tarımın dışında yeni bir ekonomik model ortaya çıkardı. Makineler sayesinde insanoğlu, hammaddeleri işleyerek katma değerli ve kar marjı oldukça yüksek ekonomik çıktılar elde edebilir hale geldi. Bu sansasyonel dönüşümün adı ise <strong>“sanayi devrimi”</strong>ydi. Devrim, hızla şehirleşmeyi beraberinde getirdi. Çok uzun yıllardır baskın şekilde kırsal lehine seyreden kırsal/kentsel nüfus oranı kentsel nüfus lehine radikal şekilde değişmeye başladı. Geniş kitleler tıpkı karınlarını doyurmak için bir bal damlasının etrafında toplaşan karıncalar gibi kırsaldan (ve dolayısıyla kalabalık şekilde yaşamlarını sürdürdükleri geniş ailelerden/sülalelerden) ayrılarak çekirdek aile yaşamı sürdürülecek büyük şehirlere göç etti.<a href="#_ftn2" name="_ftnref2" title="">[2]</a>) Zaman içerisinde meslekler çeşitlendi, toplumların büyük kısmı tarımla geçimini sürdürenlerden oluşmaktayken bu denge de hizmet sektöründe çalışanlar lehine değişti.<br />
+                        Hayvanlar açısından bakıldığında ise onların yaşantısında meydana gelen değişiklikler de en az insanlar için olduğu kadar devrimsel nitelikteydi. Çünkü bu yeni düzende, insanların büyük kısmı artık hayatını sürdürebilmek için her türlü zorluğa ve eziyete katlanması gerekecek küçük/büyükbaş hayvana, at ya da eşeğe veya sürüyü koruması gereken köpeklere değil; fabrikalara, iş makinelerine, kamyonlara, bilgisayarlara, algoritmalara bel bağlamıştı. Yani hayvanların insanlar için ekonomik kalem olma vasfı oldukça zayıfladı, ancak sonlanmadı, şekil değiştirerek bambaşka bir yönüyle tekrar güçlendi. Halen içinde yaşamakta olduğumuz sanayi toplumu kendi aile ve insan tipini oluşturdu. Kırsalda geniş aileler, sülaleler, uzak-yakın akrabalar, herkesin birbirini bildiği köy halkı içindeki kabalık yaşam; yerini çocuklarını şehir dışına okumaya gönderen aileler ve büyük şehirde ailesinden uzakta, öğrenci evinde kalan gençlerden, henüz evlenmediğinden ya da boşanmış olduğundan yalnız yaşayanlardan, çocukları yuvadan ayrılıp bağımsız yaşantısını kurmuş, kendi yaşları kemale ermiş ihtiyarlardan, evlenmiş ve biyolojik saatleri çoktan gelmiş olmasına rağmen çocuk sahibi olmaya henüz sıcak bakmayan çiftlerden, kısaca “kalabalıklar içerisindeki yalnızlık” klişesine hayat veren insanlardan oluşan bir toplum yaşantısına bıraktı. <em>(Bir an durup düşündüğünüzde örneklerin etrafınızda ve sizin hayatınızda da yer tuttuğunu fark edeceksiniz.)</em><br />
+                        &nbsp;Sanayi toplumunun doğurduğu bu yeni aile ve insan tipi yalnızlıklarını gidermek için özellikle -zaten tarih boyunca iyi-kötü bir bağı olan- evcil hayvanlara yeni bir rol yükledi. Başta kediler, köpekler, kuşlar olmak üzere evcil hayvanlar çok sayıda insan için adeta bir yoldaş, hayat arkadaşı, &nbsp;yakın dost, akraba ya da ailenin bir üyesi oldu.
+                    </p>
+
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;" start="3">
+                        <li><strong>Hukukla Kesişim Noktası</strong></li>
+                    </ol>
+                    <p>
+                        Konusu insan, amacı ve yöntemi kurallar vasıtasıyla toplumu düzenlemek olan hukuk bilimini; -Türkçe karşılığı, adı üzerinde “toplumbilimi” olan- sosyolojiden ve ekonomiden vareste<a href="#_ftn3" name="_ftnref3" title="">[3]</a> düşünmek ve ele almak mümkün değildir.<br />
+                        Birey ve toplumun yaşantısı, değer yargıları, önemli addettikleri şeyler değişip dönüştükçe hukukun bunlara atfettiği kıymet, ayırdığı alan ve bağladığı sonuç da değişiklik gösterir.<br />
+                        Toplumdaki karşılığı geçim sağlayan bir ekonomik değer olmaktan çıkıp beraber aynı çatı altında yaşanılan yoldaş, hayat arkadaşı,&nbsp; yakın dost, akraba ya da ailenin bir üyesi konumuma gelen hayvan, artık yeni vasfına yaraşır bir statüde ele alınmalı ve kamusal yaşamda muamele görmeliydi. Aksi durum toplum vicdanını yaralanmasına sebep olurdu.<a href="#_ftn4" name="_ftnref4" title="">[4]</a><br />
+                        İşte bu sebeplerle Dünya’da hayvan hakları zaman içinde hukuk kurallarıyla korunası bir değer mertebesine erişti. Ülkemizde ise 2004 yılında 5199 sayılı Hayvanları Koruma Kanunu, çok yakın geçmişte ise 7332 sayılı kanunla söz konusu kanunda yapılan değişiklikler bu uğurda atılmış somut adımlar olmuştur.<br />
+                        &nbsp;
+                    </p>
+
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;" start="4">
+                        <li><strong>Yeni Kanunun Getirdikleri</strong></li>
+                    </ol>
+                    <p>
+                        Hayvan haklarının kapsamının genişletilmesi ve cezaların daha caydırıcı seviyelere çekilmesi, kamuoyu ve sivil toplumda uzun yıllardır yüksek sesle dile getirilmekteydi. Ancak refah ülkesi olmayan (ve her geçen gün bu standarttan biraz daha uzaklaşan) ve son yıllarda ciddi istikrarsızlıklar yaşayan Türkiye’nin yönetim kadroları tarafından bu ses -her daim daha öncelikli ve kritik sorunları olduğundan- duymazlığa verilmekteydi. Nihayet geç de olsa, 14 Temmuz 2021 tarihinde yürürlüğe giren 7332 sayılı değişiklik kanunu ile 5199 sayılı Hayvan Haklarını Koruma Kanununda dikkate değer değişiklikler yapılmıştır. Şöyle ki:<br />
+                        <strong>D.1.</strong> Son derece önemli addedilebilecek bir kazanım olarak hayvanlara “işkence yapmak veya acımasız ve zalimce muamelede bulunmak” fiilleri ile “cinsel saldırıda bulunmak veya tecavüz etmek” fiillerine ilk defa hapis cezası öngörülmüştür. Değişikliğe kadar söz konusu fiiller suç değil kabahat olarak işlem görmekteydi ve ihlal gerçekleştirenlere hakim karşısına çıkmadan basit idari para cezaları verilmekteydi. Hapis cezası istisnai olarak ancak ve ancak, hayvan sahipli olduğunda ve bu fiiller neticesinde hayvanın işe yaramaz hale gelmesi ya da değerinin azalması şartları bir arada bulunduğunda TCK m.151/2’de hüküm altına alınmış “mala zarar verme” suçu üzerinden mümkün olabiliyordu. Söz konusu değişiklikle beraber ise artık sahiplik, mali/bedeni zarar görme şartları aranmadan altı aydan üç yıla kadar hapis cezası ile yargılanacak ve cinsel saldırıda bulunmak veya tecavüz etmek hallerinde hapis cezasının yanında adli para cezası ile cezalandırılacaktır.<br />
+                        &nbsp;<br />
+                        <strong>D.2.</strong> Özellikle veterinerlerin karşılaştığı bir durum olan, hayvanın hediye olarak verildiği ya da satın alıp hevesi geçmiş sahipleri tarafından tedavi için bırakılıp bir daha teslim alınmaması şeklinde sıkça gerçekleşen ev hayvanını terk etmek fiili, &nbsp;ilk defa cezalandırılmakta ancak bir suç olarak ele alınmamış olduğundan hapis cezası değil, idari para cezası ile cezalandırılması öngörülmektedir.<br />
+                        <strong>D.3. </strong>Kanunun yürürlük tarihinden itibaren yeni sirk ve yunus parkı açılamayacaktır. Ancak hukuk devletinin bir gereği olan hukuk güvenliğine uygun olarak işletmecilerin kazanılmış haklarının korunması için mevcut sirk ve yunus parklarına 10 yıl daha faaliyet izni verilmiştir. Bu hakka karşın kapanacakları güne kadar geçecek 10 yılda eksilen hayvanlarının yerine yenilerinin konması da yasaklanmıştır.<br />
+                        <strong>D.4.</strong> Ev hayvanın sahibinin borcu dolayısıyla haczedilemeyeceğine ilişkin mevcut maddenin kapsamı genişletilerek uygulama alanı artırılmıştır.<br />
+                        &nbsp;
+                    </p>
+
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;" start="5">
+                        <li><strong>Sonuç ve Değerlendirme</strong></li>
+                    </ol>
+                    <p>
+                        Aslına bakıldığında, bir önceki alt başlıkta listelenmiş değişikliklerle geride bırakılan mevzuat; doğru şekilde okuyabilen için tam olarak yazı boyunca izah edilen fikirlerle paralel şekilde tarım toplumunun hayvanı ticari ürün olarak ele alışının hukuk alanındaki net bir tezahürüydü. Yeni düzenlemeler ise ruhunu ve kökenini güncel yaşam biçiminden almış, bununla örtüşür şekilde hayvanın eşya olarak görüldüğü ve buna göre muamele edildiği anlayışı terk etmiştir. Hayvanı insanın yoldaşı, hayat arkadaşı, ailesinin bireyi olarak kabul edildiği bir statüye yaklaştırmıştır. Yani ekonomik dengeler önce yaşam tarzını, bundan sonra da hukuk kurallarını değiştirmiştir. Yani altyapı, yeni üstyapıyı belirlemiştir.<br />
+                    </p>
+                </div>
+
+                <hr />
+                <p class="article-author">Av. Yunus Emre Öz</p>
+                <p class="article-date">27.12.21</p>
+            </div>
+        </div>
+    </div>
+</body>

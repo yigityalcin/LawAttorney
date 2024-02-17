@@ -13039,3 +13039,10 @@ ul {
     min-width: 145px;
     background-color: #013a33;
 }
+
+.info-bar {
+    background-color: #013a33;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+}

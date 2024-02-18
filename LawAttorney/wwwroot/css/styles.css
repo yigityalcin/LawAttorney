@@ -12570,16 +12570,18 @@ footer.footer {
     transform: scale(1.05);
 }
 
-.navbar-nav > li > a {
+/*nav link ayraç
+*//*.navbar-nav > li > a {
     color: #111;
     border-right: 1px solid #ccc;
     height: 4px;
     line-height: 4px;
+    padding:0px;
 }
 
 .navbar-nav > li:last-child > a {
     border-right: 0;
-}
+}*/
 
 .page-border {
     color: #111;
@@ -12786,6 +12788,7 @@ footer {
             background-color: #ccc; /* Ayraç rengi */
         }
 
+
         .navbar-nav .nav-item:last-child:after {
             display: none; /* Son elemanın altındaki ayraçı gizle */
         }
@@ -12842,7 +12845,7 @@ footer {
     line-height: 1.4;
     position: absolute;
     top: 65px;
-    left: 5%;
+    left: 7%;
     color: #fff;
     font-size: 30px;
     display: flex;
@@ -13044,5 +13047,17 @@ ul {
     background-color: #013a33;
     color: white;
     padding: 10px 0;
-    font-size: 14px;
+    font-size: 12px;
+
+}
+    .info-bar span {
+        margin-right: 100px; /* İstediğiniz boşluğu ayarlayabilirsiniz */
+    }
+
+.navbar-nav li {
+    padding: 0 10px; /* İstediğiniz kadar padding ekleyebilirsiniz */
+}
+
+.navbar-nav a {
+    letter-spacing: 1px; /* İstediğiniz kadar genişletme yapabilirsiniz */
 }

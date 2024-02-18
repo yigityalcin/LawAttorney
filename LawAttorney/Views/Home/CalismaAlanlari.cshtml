@@ -3,15 +3,15 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
-        .c_icon {
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out;
-        }
+    .c_icon {
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
 
         .c_icon:hover {
             transform: scale(1.05);
-        }      
-    </style>
+        }
+</style>
 <body>
     <!-- Practice Areas Section -->
     <section class="ftco-section">
@@ -32,7 +32,7 @@
         <div class="container calisma">
             <div class="row justify-content-center">
                 <!-- Tazminat Hukuku -->
-                <div class="col-6">
+                <div class="col-lg-6 col-sm-12">
                     <div class="col-md-12">
                         <div class="c_icon shadow" onclick="toggleText('tazminat')">
                             <div class="c_icon_img">
@@ -95,11 +95,13 @@
                             <h4>İdare, Vergi ve Gümrük Hukuku</h4>
                         </div>
                         <div class="c_icon_text" style="text-align:justify; display:none;" id="vergiText">
-                            Vatandaşların devletle olan münasebetinden kaynaklanan dolayısıyla karşı tarafın devlet olduğu bu alanlarda müvekkilin güçlü kamu otoritesine karşı hak kaybına uğramaması için etkin bir hukuki destek alması gerekmektedir. Söz konusu branşlar; hukukun diğer alanlarından ayrılan, özel bilgi gerektiren ve ancak ehil uygulayıcıların başarılı sonuç alabileceği alanlar olma özelliğini göstermektedir.
+                            <p>
+                                Vatandaşların devletle olan münasebetinden kaynaklanan dolayısıyla karşı tarafın devlet olduğu bu alanlarda müvekkilin güçlü kamu otoritesine karşı hak kaybına uğramaması için etkin bir hukuki destek alması gerekmektedir. Söz konusu branşlar; hukukun diğer alanlarından ayrılan, özel bilgi gerektiren ve ancak ehil uygulayıcıların başarılı sonuç alabileceği alanlar olma özelliğini göstermektedir.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-sm-12">
                     <!-- Aile ve Boşanma Hukuku -->
                     <div class="col-md-12">
                         <div class="c_icon shadow" onclick="toggleText('aile')">

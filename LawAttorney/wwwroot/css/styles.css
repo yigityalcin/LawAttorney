@@ -13068,3 +13068,22 @@ ul {
 .navbar-nav a {
     letter-spacing: 1px; /* İstediğiniz kadar genişletme yapabilirsiniz */
 }
+
+.carousel-img {
+    width: 89%;
+    margin:auto;
+}
+.navbar-nav .nav-item {
+    transition: background-color 0.3s, color 0.3s, opacity 0.1s;
+}
+
+    .navbar-nav .nav-item:hover {
+        background-color: #f0f0f0;
+        color: #fff;
+    }
+
+.sosyal {
+    font-weight: 700;
+    color: #555;
+    text-decoration: none;
+}

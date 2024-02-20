@@ -3,7 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <body>
-    <section class="ftco-section">
+    <section class="ftco-section-contact">
         <div class="container">
             <div class="custom-img1 mb-5 shadow">
                 <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/banner900.png" />
@@ -11,28 +11,28 @@
             </div>
         </div>
         <div class="container mb-5">
-            <ol class="breadcrumb border-1 border-bottom" style="border-color:#013a33 !important;">
+            <ol class="breadcrumb border-1 border-bottom">
                 <li class="breadcrumb-item"><a href="Index">Anasayfa</a></li>
                 <li class="breadcrumb-item active" aria-current="page">İletişim</li>
             </ol>
         </div>
     </section>
     <div class="container-fluid contact-container">
-        <section class="ftco-section">
+        <section class="ftco-section-contact">
             <div class="container">
                 <div class="row mb-0 shadow mb-4">
-                    <div class="col-md-3">
-                        <div class="dbox w-100 text-center">
+                    <div class="col-sm-3 col-lg-3">
+                        <div class="dbox w-100 text-center mt-lg-3">
                             <div class="icon d-flex align-items-center justify-content-center shadow-lg">
                                 <span class="fa fa-phone"></span>
                             </div>
                             <div class="text">
-                                <p><span>Telefon Numarası:</span> <a href="">0532 499 1974</a></p>
+                                <p><span>Telefon Numarası:</span>0532 499 1974</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="dbox w-100 text-center">
+                    <div class="col-sm-3 col-lg-3 border-start">
+                        <div class="dbox w-100 text-center mt-lg-3">
                             <div class="icon d-flex align-items-center justify-content-center shadow-lg">
                                 <span class="fa fa-paper-plane"></span>
                             </div>
@@ -41,23 +41,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="dbox w-100 text-center">
+                    <div class="col-sm-3 col-lg-3 border-start">
+                        <div class="dbox w-100 text-center mt-lg-3">
                             <div class="icon d-flex align-items-center justify-content-center shadow-lg">
                                 <span class="fa fa-clock"></span>
                             </div>
                             <div class="text">
                                 <p>
                                     <span>Çalışma Saatleri:</span>
-                                    <span>Hafta İçi: 09:00 - 18:00</span>
-                                    <span>Cumartesi: 09:00 - 18:00</span>
-                                    <span>Pazar: Kapalı</span>
+                                    <span>Hafta İçi: 09:00 - 17:00</span>
+                                    <span>Hafta Sonu: Kapalı</span>
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="dbox w-100 text-center">
+                    <div class="col-sm-3 col-lg-3 border-start">
+                        <div class="dbox w-100 text-center mt-lg-3">
                             <div class="icon d-flex align-items-center justify-content-center shadow-lg">
                                 <span class="fa fa-map-marker"></span>
                             </div>
@@ -73,17 +72,17 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-md-12">
+                    <div class="col-sm-12">
                         <div class="wrapper">
                             <div class="row mb-0">
-                                <div class="col-md-6 d-flex">
+                                <div class="col-sm-6 d-flex">
                                     <div id="map">
                                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12778.58353906125!2d34.6317753!3d36.8030399!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f32c1c8ebebb%3A0x92f37dbbab12a79f!2sAvukat%20Yunus%20Emre%20%C3%96z!5e0!3m2!1str!2str!4v1707275164060!5m2!1str!2str"
-                                                height="600" style="width: 100%; border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="embed-responsive-item">
+                                                height="628" style="width: 100%; border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="embed-responsive-item">
                                         </iframe>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-sm-6">
                                     <div class="contact-wrap w-100 p-md-5 p-4 focusedInput">
                                         <h3 class="">Bize Ulaşın</h3>
                                         <h6 class="mb-4"><p>Hızlı İletişim Formu</p></h6>
@@ -94,25 +93,25 @@
                                         <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" name="contactForm" class="contactForm">
                                             <input type="hidden" name="access_key" value="52687894-5bb6-4d63-a348-51a8ec9be94e">
                                             <div class="row">
-                                                <div class="col-md-6">
+                                                <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label class="label" for="name">Ad Soyad</label>
                                                         <input type="text" class="form-control" name="name" id="name" placeholder="Adınız" required>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-sm-6">
                                                     <div class="form-group">
                                                         <label class="label" for="email">Email Adresi</label>
                                                         <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
+                                                <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <label class="label" for="subject">Konu</label>
                                                         <input type="text" class="form-control" name="subject" id="subject" placeholder="Konu" required>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
+                                                <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <label class="label" for="#">Mesaj</label>
                                                         <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Mesajınız" required></textarea>

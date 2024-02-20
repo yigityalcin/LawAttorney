@@ -6501,6 +6501,11 @@ textarea.form-control-lg {
 .carousel {
     position: relative;
 }
+@media(max-width:767px) {
+    .carousel{
+        display:none;
+    }
+}
 
     .carousel.pointer-event {
         touch-action: pan-y;
@@ -12997,49 +13002,6 @@ footer {
     font-weight:500 !important;
 }*/
 
-ul {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    list-style-type: none;
-}
-
-    ul li {
-        padding: 6px 0;
-    }
-
-        ul li a {
-            position: relative;
-            display: block;
-            padding: 4px 0;
-            color: #ecf0f1;
-            text-decoration: none;
-            transition: 0.5s;
-        }
-
-            ul li a::after {
-                position: absolute;
-                content: "";
-                top: 75%;
-                left: 0;
-                width: 100%;
-                height: 3px;
-                background: #edd8b9;
-                transform: scaleX(0);
-                transform-origin: right;
-                transition: transform 0.5s;
-            }
-
-            ul li a:hover {
-                color: #95a5a6;
-            }
-
-                ul li a:hover::after {
-                    transform: scaleX(1);
-                    transform-origin: left;
-                }
-
-
 .butonlar-lang:hover {
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1), inset 0 0 0 20px rgba(0, 0, 0, 0.1);
 }
@@ -13154,3 +13116,58 @@ ul {
 
 /* DENEMELER MOBİLE*/
 
+@media (max-width: 767px) {
+    .navbar-toggler {
+        border: none;
+        background: transparent;
+        font-size: 24px;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #013A33;
+        padding-top: 80px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;      
+    }
+
+        .navbar-collapse a {
+            padding: 15px;
+            font-size: 18px;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            transition: 0.3s;
+        }
+
+            .navbar-collapse a:hover {
+                background-color: #fff;
+                color: #013A33;
+            }
+
+    .navbar-toggler.active {
+        background-color: #fff;
+        color: #013A33;
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-toggler:focus + .navbar-collapse {
+        opacity: 1;
+        visibility: visible;
+    }
+}

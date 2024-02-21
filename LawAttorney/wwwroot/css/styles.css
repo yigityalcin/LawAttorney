@@ -3887,6 +3887,7 @@ textarea.form-control-lg {
 
 .dropdown-menu.show {
     display: block;
+    padding:0;
 }
 
 .dropdown-header {
@@ -4267,7 +4268,7 @@ textarea.form-control-lg {
     padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
     font-size: var(--bs-navbar-toggler-font-size);
     line-height: 1;
-    color: var(--bs-navbar-color);
+    color: #fff;
     background-color: transparent;
     border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
     border-radius: var(--bs-navbar-toggler-border-radius);
@@ -5021,7 +5022,7 @@ textarea.form-control-lg {
     flex-wrap: wrap;
     padding: var(--bs-breadcrumb-padding-y) var(--bs-breadcrumb-padding-x);
     margin-bottom: var(--bs-breadcrumb-margin-bottom);
-    font-size: var(--bs-breadcrumb-font-size);
+    font-size: 14px;
     list-style: none;
     background-color: var(--bs-breadcrumb-bg);
     border-radius: var(--bs-breadcrumb-border-radius);
@@ -5051,6 +5052,8 @@ textarea.form-control-lg {
 
 .breadcrumb-item.active {
     color: #013a33;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .pagination {
@@ -6501,15 +6504,16 @@ textarea.form-control-lg {
 .carousel {
     position: relative;
 }
+
 @media(max-width:767px) {
-    .carousel{
-        display:none;
+    .carousel {
+        display: none;
     }
 }
 
-    .carousel.pointer-event {
-        touch-action: pan-y;
-    }
+.carousel.pointer-event {
+    touch-action: pan-y;
+}
 
 .carousel-inner {
     position: relative;
@@ -12456,7 +12460,7 @@ textarea.form-control-lg {
 }
 
     .features-icons .features-icons-item {
-        max-width: 20rem;
+        max-width: 18rem;
     }
 
         .features-icons .features-icons-item .features-icons-icon {
@@ -12543,7 +12547,7 @@ footer.footer {
 
     .features-icons-item:hover .features-icons-icon i,
     .features-icons-item:hover h3 {
-        color: white;
+        color: #edd8b9 !important;
     }
 
 .features-icons-button {
@@ -12557,17 +12561,17 @@ footer.footer {
 
 #CalismaAlanlari:hover .features-icons-icon i,
 #CalismaAlanlari:hover h3 {
-    color: white !important;
+    color: #edd8b9 !important;
 }
 
 #Ekibimiz:hover .features-icons-icon i,
 #Ekibimiz:hover h3 {
-    color: white !important;
+    color: #edd8b9 !important;
 }
 
 #İletisim:hover .features-icons-icon i,
 #İletisim:hover h3 {
-    color: white !important;
+    color: #edd8b9 !important;
 }
 
 #CalismaAlanlari:hover {
@@ -12700,7 +12704,6 @@ footer.footer {
 
 #map {
     width: 100%;
-    height: 100%;
 }
 
 @media (max-width: 767px) {
@@ -12796,54 +12799,42 @@ footer {
 }
 
 /* Mobil ekranlarda çalışacak stil */
-@media (max-width: 991px) {
+@media (max-width: 767px) {
+    .navbar-nav{
+        border-top:1px solid #ccc;
+    }
     .navbar-nav .nav-item {
         position: relative;
-        padding-bottom: 10px; /* Alt boşluk */
+        padding-bottom: 3px; /* Alt boşluk */
         margin-bottom: 10px; /* Alt boşluk */
     }
 
-        .navbar-nav .nav-item:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 1px; /* Ayraç kalınlığı */
-            background-color: #ccc; /* Ayraç rengi */
-        }
-
-
-        .navbar-nav .nav-item:last-child:after {
-            display: none; /* Son elemanın altındaki ayraçı gizle */
-        }
-
-    .navbar-default .navbar-nav > li > a {
-        border-right: 0;
-        padding-left: 0;
-        height: auto;
-        border-bottom: 1px solid #ccc; /* Çizgi rengi */
-        transition: border-bottom-color 0.3s ease; /* Geçiş efekti */
-        margin-bottom: 10px; /* Alt boşluk */
+    .navbar-nav li {
+        border-bottom: 1px solid #ccc;
+        width: 100%;
     }
 
-    .navbar-nav > li:last-child > a {
-        border-right: 1px solid #ccc !important;
-    }
-
-    .navbar-default .navbar-nav > li:hover > a {
-        border-bottom-color: transparent; /* Hover durumunda çizgiyi gizle */
-    }
-
-    .navbar-brand {
-        margin-bottom: 10px; /* Logo ile linkler arasındaki üst boşluk */
-    }
-
-    .butonlar {
+    .navbar-nav .nav-item:first-child {
         margin-top: 10px;
-        margin-left: 50px !important;
+    }
+
+    .navbar-nav #langMobile {
+        margin-bottom: 0; /* Son elemanın altındaki boşluğu kaldır */
+        border-bottom: none;
+    }
+
+    .navbar-nav > li > a {
+        padding: 5px; /* Yeterli iç boşluk */
+        border-radius: 5px; /* Köşe yuvarlama */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Geçiş efekti */
+        margin-right: 5px; /* Sağ boşluk */
+    }
+
+    .img-brand {
+        margin-bottom: 10px;
     }
 }
+
 
 
 /*ÇALIŞMA ALANLARI
@@ -13010,10 +13001,9 @@ footer {
     background: #013a33;
     border-color: #013a33;
     min-width: 125px;
-    background: #013a33;
     color: #fff;
     border: 1px solid #013a33;
-    border-radius: 4px;
+    border-radius: 6px;
     height: 28px;
     line-height: 28px;
     font-size: 12px;
@@ -13023,17 +13013,24 @@ footer {
     text-align: center;
     min-width: 145px;
     background-color: #013a33;
+    transition: transform 0.3s ease; /* Geçiş efekti eklendi */
 }
+
+    .mailButton:hover {
+        color: #edd8b9;
+        transform: scale(1.05); /* Butonun 1.1 katına çıkmasını sağlar, isteğe bağlı olarak ayarlanabilir */
+    }
+
 
 .info-bar {
     background-color: #013a33;
-    color: #fff;
+    color: #edd8b9;
     padding: 10px 0;
     font-size: 12px;
 }
 
-    .info-bar span {
-        margin-left: 7px;
+    .info-bar a {
+        color: #edd8b9;
     }
 
 
@@ -13093,6 +13090,7 @@ footer {
     padding: 15px;
     font-size: 18px;
     cursor: pointer;
+    z-index: 1000;
 }
 
     .mobile-chat-button:hover {
@@ -13113,61 +13111,129 @@ footer {
     }
 }
 
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    list-style-type: none;
+}
 
-/* DENEMELER MOBİLE*/
-
-@media (max-width: 767px) {
-    .navbar-toggler {
-        border: none;
-        background: transparent;
-        font-size: 24px;
+    ul li {
+        padding: 6px 0;
     }
 
-    .navbar-collapse {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #013A33;
-        padding-top: 80px;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: 0.3s;
-        z-index: 1000;
-        opacity: 0;
-        visibility: hidden;      
-    }
-
-        .navbar-collapse a {
-            padding: 15px;
-            font-size: 18px;
-            color: #fff;
-            text-decoration: none;
+        ul li a {
+            position: relative;
             display: block;
-            transition: 0.3s;
+            padding: 4px 0;
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: 0.5s;
         }
 
-            .navbar-collapse a:hover {
-                background-color: #fff;
-                color: #013A33;
+            ul li a::after {
+                position: absolute;
+                content: "";
+                top: 75%;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background: #edd8b9;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.8s;
             }
 
-    .navbar-toggler.active {
-        background-color: #fff;
-        color: #013A33;
+            ul li a:hover {
+                color: #95a5a6;
+            }
+
+                ul li a:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
+
+@media (max-width: 767px) {
+    .img-brand {
+        text-align: center; /* Brand'i ortala */
     }
 
-    .navbar-nav {
-        display: flex;
-        flex-direction: column;
+    .mobileNavbar {
+        position: sticky !important;
+        top: 0;
+        background-color: #ffffff; /* Sticky olduğunda arka plan rengi, kendi sitenize uygun olarak değiştirin */
+        z-index: 1000 !important; /* Diğer elemanların üzerinde olmasını sağlar */
+        border-bottom: 1px solid #ccc;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
 
-    .navbar-toggler:focus + .navbar-collapse {
-        opacity: 1;
-        visibility: visible;
+    #languageDropdown {
+        display: none; /* Ekran genişliği 767 pikselden küçükse dropdown'u gizle */
     }
+
+    #langMobile {
+        border-right: none !important;
+        letter-spacing: 5px !important;
+        text-decoration: underline;
+    }
+
+    .kurumsal-foto{
+        display:none;
+    }
+}
+
+
+@media (min-width:767px) {
+
+    #langMobile .nav-link {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .mobile-carousel {
+        display: none;
+    }
+}
+
+/* Mobil cihazlar için özel carousel stilini tanımla */
+@media only screen and (max-width: 767px) {
+    /* Carousel container'ını tam ekran yap */
+    #carouselExampleFade {
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+    }
+
+        /* Carousel item'larına özel stiller */
+        #carouselExampleFade .carousel-item {
+            display: block;
+            position: relative;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+            /* Aktif olan carousel item'ını göster */
+            #carouselExampleFade .carousel-item.active {
+                opacity: 1;
+            }
+
+        /* Carousel indicator'ları için stiller */
+        #carouselExampleFade .carousel-indicators {
+            display: none;
+        }
+
+        /* Sol ve sağ kontrol butonları için stiller */
+        #carouselExampleFade .carousel-control-prev,
+        #carouselExampleFade .carousel-control-next {
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+        }
 }

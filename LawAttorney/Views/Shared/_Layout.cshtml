@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - LawAttorney</title>
     <link rel="icon" type="image/x-icon" href="~/assets/favicon.ico" />
+
+    @* <link rel="alternate" hreflang="tr" href="https://www.esin.av.tr/tr-legal-services/">
+
+    <!-- İngilizce sayfa -->
+    <link rel="alternate" hreflang="en" href="https://www.esin.av.tr/en-legal-services/">
+
+    <!-- Rusça sayfa -->
+    <link rel="alternate" hreflang="ru" href="https://www.esin.av.tr/ru-legal-services/">
+
+    <!-- Varsayılan sayfa (diğer diller dışında bir dilde görüntülenirse) -->
+    <link rel="alternate" hreflang="x-default" href="https://www.esin.av.tr/legal-services/"> *@
+
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -19,10 +31,10 @@
 </head>
 
 <body>
-    <div>
+    <div class="mobileNavbar">
         <div class="col-xl-12 info-bar text-center">
             <span class="span-phone"><i class="fas fa-phone"></i> Telefon: (532) 499-1974</span>
-            <span class="span-mail"><i class="fas fa-envelope"></i> Email: <a class="span-mail1 text-white" href="mailto:info@ozpartnershukuk.com">info@ozpartnershukuk.com</a></span>
+            <span class="span-mail"><i class="fas fa-envelope"></i> Email: <a class="span-mail1" href="mailto:info@ozpartnershukuk.com">info@ozpartnershukuk.com</a></span>
             <span class="span-hours me-2"><i class="fas fa-clock"></i> Çalışma Saatleri: Pazartesi - Cuma, 09:00 - 17:00</span>
         </div>
         <div class="container">
@@ -32,31 +44,34 @@
                         <a class="navbar-brand ms-lg-4 mt-2" href="/Home/Index">
                             <img src="~/assets/img/Logo/MainLogo.png" alt="Logo" height="80" class="img-brand">
                         </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </div>
                     <div class="col-lg-9 col-sm-12">
                         <div class="d-flex justify-content-end mb-lg-4">
                             <div class="d-flex butonlar align-items-center me-lg-4">
-                                <div class="d-sm-flex butonlar-mail align-items-center">
-                                    <button href="" class="text-white ms-1 mailButton" id="mailGonderButton">
+                                <div class="d-sm-flex butonlar-mail align-items-center shadow-lg">
+                                    <button href="" class="ms-1 mailButton" id="mailGonderButton">
                                         <i class="fas fa-envelope me-lg-2"></i>Hızlı İletişim
                                     </button>
                                 </div>
                                 <div class="dropdown" id="languageDropdown">
                                     <a class="btn btn-sm butonlar-lang dropdown-toggle custom-dropdown-toggle border shadow" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     </a>
-                                    <ul class="dropdown-menu dropdown-menu-end text-black" aria-labelledby="navbarDropdownMenuAvatar">
-                                        <li>
-                                            <a class="dropdown-item" href="/Home/Index" data-lang="TR">
+                                    <ul class="dropdown-menu dropdown-menu-end text-black" aria-labelledby="navbarDropdownMenuAvatar" style="">
+                                        <li class="border-bottom">
+                                            <a class="dropdown-item text-center" href="/Home/Index" data-lang="TR">
                                                 Türkçe
                                             </a>
                                         </li>
-                                        <li>
-                                            <a class="dropdown-item" href="/Home/IndexEng" data-lang="ENG">
+                                        <li class="border-bottom">
+                                            <a class="dropdown-item text-center" href="/Home/IndexEng" data-lang="ENG">
                                                 English
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item" href="/Home/İletisim" data-lang="Рус.">
+                                            <a class="dropdown-item text-center" href="/Home/İletisim" data-lang="Рус.">
                                                 Русский
                                             </a>
                                         </li>
@@ -64,9 +79,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                       
                         <!-- Menu Tabs -->
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav">
@@ -88,6 +101,19 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="/Home/İletisim">İletişim</a>
                                 </li>
+                                <li class="d-flex justify-content-center" id="langMobile">
+                                    <a role="menuitem" tabindex="-1" class="nav-link p-2" href="/Home/Index">
+                                        <i class="bi bi-translate me-2"></i>
+                                        Türkçe
+                                    </a>
+                                    <a role="menuitem" tabindex="-1" class="nav-link p-2" href="/Home/IndexEng">
+                                        English
+                                    </a>
+                                    <a role="menuitem" tabindex="-1" class="nav-link p-2" href="/Home/Ekibimiz">
+                                        Русский
+                                    </a>
+                                </li>
+
                             </ul>
                         </div>
                     </div>

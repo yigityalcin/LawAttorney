@@ -44,22 +44,22 @@
 
 
     <!-- Icons Grid-->
-    <div class="features-icons text-center  bg-white">
+    <div class="features-icons text-center bg-white">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
                     <div class="features-icons-item mx-auto mb-lg-5 mb-lg-0 mb-lg-3 border shadow" id="CalismaAlanlari">
                         <div class="features-icons-icon d-flex"><i class="bi-bank m-auto" style="color: #013A33;"></i></div>
                         <h3 style="color:#013A33;">Hizmetlerimiz</h3>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
                     <div class="features-icons-item mx-auto mb-lg-5 mb-lg-0 mb-lg-3 border shadow" id="Ekibimiz">
                         <div class="features-icons-icon d-flex"><i class="bi-person m-auto" style="color: #013A33;"></i></div>
                         <h3 style="color: #013A33;">Ekibimiz</h3>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
                     <div class="features-icons-item mx-auto mb-lg-0 mb-lg-3 border shadow" id="İletisim">
                         <div class="features-icons-icon d-flex"><i class="bi-telephone-fill m-auto" style="color: #013A33;"></i></div>
                         <h3 style="color: #013A33;">İletişim</h3>
@@ -92,15 +92,15 @@
         });
         // Vanilla JavaScript ile sayfa yönlendirme
         document.getElementById('CalismaAlanlari').addEventListener('click', function () {
-            window.location.href = 'CalismaAlanlari'; // Hizmetlerimiz sayfa URL'i
+            window.location.href = '/Home/CalismaAlanlari'; // Hizmetlerimiz sayfa URL'i
         });
 
         document.getElementById('Ekibimiz').addEventListener('click', function () {
-            window.location.href = 'Ekibimiz'; // Ekibimiz sayfa URL'i
+            window.location.href = '/Home/Ekibimiz'; // Ekibimiz sayfa URL'i
         });
 
         document.getElementById('İletisim').addEventListener('click', function () {
-            window.location.href = 'İletisim'; // İletişim sayfa URL'i
+            window.location.href = '/Home/İletisim'; // İletişim sayfa URL'i
         });
     </script>
 </body>

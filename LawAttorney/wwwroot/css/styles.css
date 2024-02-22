@@ -6505,12 +6505,6 @@ textarea.form-control-lg {
     position: relative;
 }
 
-@media(max-width:767px) {
-    .carousel {
-        display: none;
-    }
-}
-
 .carousel.pointer-event {
     touch-action: pan-y;
 }
@@ -12446,14 +12440,6 @@ textarea.form-control-lg {
     }
 }
 
-
-
-
-
-
-
-
-
 .features-icons {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -13060,17 +13046,6 @@ footer {
     object-fit: cover;
 }
 
-
-@media (max-width: 767px) {
-    .carousel-img {
-        display: none !important; /*carousel hidden*/
-        max-height: 300px; /* Mobilde daha küçük bir yükseklik belirle */
-        min-width: 100%; /* Genişliği %100 yap */
-        height: auto; /* Otomatik yükseklik ayarı, oranları korur */
-        left: 0;
-    }
-}
-
 .sosyal {
     font-weight: 700;
     color: #555;
@@ -13181,6 +13156,11 @@ ul {
     .kurumsal-foto{
         display:none;
     }
+    .carousel-img {
+        height: 200px; /* Mobilde daha küçük bir yükseklik belirle */
+        width: 100%; /* Genişliği %100 yap */
+        left: 0;
+    }
 }
 
 
@@ -13189,51 +13169,4 @@ ul {
     #langMobile .nav-link {
         display: none;
     }
-}
-
-@media only screen and (min-width: 768px) {
-    .mobile-carousel {
-        display: none;
-    }
-}
-
-/* Mobil cihazlar için özel carousel stilini tanımla */
-@media only screen and (max-width: 767px) {
-    /* Carousel container'ını tam ekran yap */
-    #carouselExampleFade {
-        width: 100%;
-        margin: 0;
-        overflow: hidden;
-    }
-
-        /* Carousel item'larına özel stiller */
-        #carouselExampleFade .carousel-item {
-            display: block;
-            position: relative;
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-            /* Aktif olan carousel item'ını göster */
-            #carouselExampleFade .carousel-item.active {
-                opacity: 1;
-            }
-
-        /* Carousel indicator'ları için stiller */
-        #carouselExampleFade .carousel-indicators {
-            display: none;
-        }
-
-        /* Sol ve sağ kontrol butonları için stiller */
-        #carouselExampleFade .carousel-control-prev,
-        #carouselExampleFade .carousel-control-next {
-            display: block;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-        }
 }

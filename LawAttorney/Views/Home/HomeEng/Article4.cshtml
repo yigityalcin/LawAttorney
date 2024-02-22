@@ -1,0 +1,277 @@
+﻿@{
+    ViewData["Title"] = "Article4";
+    Layout = "~/Views/Shared/_LayoutEng.cshtml";
+}
+<style>
+    .article-header {
+        font-size: 21px;
+        margin: 10px 0;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
+
+    .article-content-header {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.1;
+        color: #111111;
+        text-decoration: none !important;
+    }
+
+    .article-content p {
+        color: #111111;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.65;
+        margin: 0 0 10px;
+        text-align: justify;
+    }
+
+    .article-content a {
+        color: #013a33;
+    }
+    /* Custom Styles */
+    .ekip {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        /*         transition: transform 0.3s ease;
+         */ border: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+
+        .ekip img {
+            object-fit: cover;
+            position: relative;
+            width: 100%;
+            min-height: 220px;
+            max-height: 220px;
+        }
+
+
+        .ekip .card-body {
+            position: relative;
+            margin-top: 0;
+            padding: 1rem;
+            flex: 1;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,.05), 0 1px 3px 0 rgba(0,0,0,.1);
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .ekip .card-body a {
+                text-decoration: none;
+            }
+
+        /* .ekip:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                } */
+
+        .ekip .card-title {
+            width: 100%;
+            margin-top: 0 !important;
+            color: #000;
+            margin: 0px 0px 30px;
+            padding: 0px 0px 4px;
+            display: block;
+            font-size: 1.17em;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .ekip .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff !important;
+            text-transform: none !important;
+            font-size: 1em !important;
+            font-weight: 600 !important;
+            margin-top: 0 !important;
+            padding: 10px 0 0 0 !important;
+            letter-spacing: .5px;
+            border-top: 2px solid #ccc !important;
+        }
+
+        .ekip .read-more-btn {
+            color: #000;
+            text-decoration: underline;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative; /* Önemli: position değeri ekleyin */
+            font-size: 12px;
+            text-align: left;
+        }
+
+
+            .ekip .read-more-btn i {
+                margin-left: 5px; /* Ok ikonu ile metin arasında boşluk bırakmak için */
+            }
+
+            .ekip .read-more-btn:hover {
+                color: #013a33;
+            }
+
+        .ekip .social-icons {
+            display: flex;
+            gap: 10px; /* İkonlar arasında boşluk bırakmak için */
+        }
+
+        .ekip .social-icon {
+            color: #013a33;
+            font-size: 20px;
+        }
+</style>
+
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="custom-img1 mb-5 shadow">
+                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/banner900.png" />
+                <span>Articles</span>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <ol class="breadcrumb border-1 border-bottom" style="border-color:#013a33 !important;">
+                <li class="breadcrumb-item"><a href="Index">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Articles</li>
+            </ol>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3">
+                <div class="card ekip">
+                    <img src="~/assets/img/avukat-emin-oz.jpg" class="card-img-top img-fluid" alt="Person 1 Photo">
+                    <div class="card-body">
+                        <div>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal1">
+                                <h3 class="card-title ms-1 mb-5">Attorney Emin Öz</h3>
+                            </a>
+                        </div>
+                        <div class="card-footer d-flex justify-content-center border-4">
+                            <div class="social-icons d-flex">
+                                <a href="mailto:eminoz@ozpartnershukuk.com" class="social-icon">
+                                    <i class="fas fa-envelope" style="font-size:20px;"></i>
+                                </a>
+                                <a href="https://www.facebook.com/aveminoz/" target="_blank" class="social-icon">
+                                    <i class="fab fa-facebook" style="font-size:20px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-9 article">
+                <h1 class="article-header" style="color: #013a33; font-weight: bold;">Mersin Law Office</h1>
+                <hr />
+                <p class="article-date" style="color: black; font-size: 13px;">Date: September 2, 2021</p>
+                <div class="article-content">
+                    <p>
+                        <strong>Mersin Law Office</strong>, operating as Oz&amp;Partners Law, was established in 1974. Providing services consistently for nearly 50 years, Oz&amp;Partners Law Office has served thousands of clients, including prominent individuals and entities in Mersin.
+                    </p>
+                    <p>
+                        Founded by Attorney Emin Öz, our law firm has been providing client-focused services since its inception. Oz&amp;Partners Law Office stands among Mersin's prestigious law firms with a commitment to professional secrecy, ethical principles, and superior quality.
+                        Offering concrete and effective legal solutions tailored to the needs of clients and the requirements of the era, the <strong>Mersin law firm</strong> serves with its experienced team possessing all the necessary academic knowledge and skills in family and divorce, compensation, inheritance, and real estate law.
+                    </p>
+                    <p>
+                        The Mersin law office provides support in family and divorce, compensation, inheritance, and real estate law issues, as well as legal assistance in Commercial and Corporate Law, Labor Law, Criminal Law, Execution Law, Administration, Tax, and Customs Law.
+                    </p>
+                    <p>
+                        Providing corporate consultancy services, the <strong>Mersin law office</strong> adheres to the principles of resolving issues in accordance with legal principles and acting according to the protective legal mechanism.
+                        Keeping up with modern requirements, Oz&amp;Partners Law Office is ready to be your legal and strategic partner with the most advantageous, fast, practical, and analytical solutions.
+                    </p>
+
+                    <h2>Best Mersin Law Firm</h2>
+                    <p>
+                        One of the most respected and established law firms in our country, <a href="https://web.archive.org/web/20220521095530/https://ozpartnershukuk.com/">Oz&amp;Partners Law Office</a>, provides comprehensive legal consultancy services to clients in local and international sectors. It plays an effective role in resolving disputes both in competent courts and through local and international arbitration.
+                        Providing services with associate professors, professors, assistant personnel, lawyers, and consultant lawyers, <strong>Mersin's best law firm</strong> includes distinguished names in the field.
+                    </p>
+                    <p>
+                        Reflecting the strength of its nearly 50 years of experience in its services, Oz&amp;Partners Law Office's portfolio includes many domestic and foreign investors. Divided into various departments according to working areas, the law firm maintains its position as the first choice among <strong>Mersin law firms</strong> with its expert team in different areas of law and a strong client network reflecting global dynamics.
+                    </p>
+
+                    <h3>Our Mission & Vision</h3>
+                    <p>
+                        <ul style="list-style-type:square;">
+                            <li>Putting the interests of our clients ahead of our successes by providing accurate, fair, efficient, and up-to-date responses to the changing needs of the era.</li>
+                            <li>Resolving legal problems in line with changes and developments in the constitution, laws, regulations, statutes, court practices, and decisions of the Supreme Court-Council of State.</li>
+                            <li>Being a strict follower of legal processes and managing procedures at the highest quality.</li>
+                            <li>Working in line with conscience, rights, and justice criteria, considering fundamental rights and freedoms.</li>
+                            <li>Serving with the title of <strong>Mersin's best law office</strong> to establish the rule of law and promote the superiority of law.</li>
+                            <li>Practicing the legal profession with knowledge, science, and intelligence to ensure justice in every aspect of life.</li>
+                            <li>Providing professional services focused on solutions and trust.</li>
+                            <li>Our office, grounded on principles of confidentiality, mutual trust, and respect for human beings, is determined to maintain its prestigious position among <strong>Mersin law offices</strong>.</li>
+                        </ul>
+                    </p>
+
+                    <h3>Mersin Law Office Practice Areas</h3>
+                    <p>
+                        The <strong>Mersin law office</strong> aims to respond to needs and requests accurately and promptly, representing its clients and Turkish law with due regard. Working with a proactive approach, Oz&amp;Partners Law Office delivers its services under the promised conditions and timelines. The firm approaches its clients with equality, dignity, courtesy, respect, and within the rules of justice. It transparently communicates the results and developments of its activities to its clients. The law firm is committed to preserving the privacy of private information of individuals and institutions it works with. Proving its superiority among <strong>Mersin law offices</strong>, Oz&amp;Partners Law Office operates in the following areas:
+                    </p>
+
+                    <h4>Family and Divorce Law</h4>
+                    <p>
+                        Providing legal consultancy services on divorce, alimonyens matters and representing clients in legal proceedings, Oz&amp;Partners Law Office helps its clients to successfully conclude legal processes and obtain their rights.
+                    </p>
+
+                    <h4>Compensation Law</h4>
+                    <p>
+                        Representing clients in compensation cases arising from traffic accidents, workplace accidents, medical malpractice, and other similar situations, the law firm pursues the compensation claims of its clients effectively.
+                    </p>
+
+                    <h4>Inheritance Law</h4>
+                    <p>
+                        Offering legal services related to inheritance, such as wills and inheritance disputes, Oz&amp;Partners Law Office helps clients protect their inheritance rights! The law firm provides consultancy and representation services in inheritance cases. It helps clients to prepare wills
+                    </p>
+
+                    <h4>Real Estate Law</hissedarı</h4>
+                    <p>
+                        Oz&amp;Partners Law Office, providing legal support for real estate transactions, assists its clients in resolving legal issues related to real estate. The law firm ensures that its clients' real estate transactions are in compliance with the law and protects their rights.
+                    </p>
+
+                    <h4>Commercial and Corporate Law</hainlik</h4>
+                    <p>
+                        Providing legal consultancy and representation services in commercial and corporate law matters, the Mersin law firm helps clients navigate the complexities of business laws and regulations. It aims to protect the legal interests of businesses and promote their success.
+                    </p>
+
+                    <h4>Labor Law</h4>
+                    <p>
+                        Representing both employers and employees, Oz&amp;Partners Law Office offers legal services in labor law matters. The law firm helps clients understand their rights and obligations, resolves labor disputes, and ensures compliance with labor laws.
+                    </p>
+
+                    <h4>Criminal Law</h4>
+                    <p>
+                        Defending the rights of individuals accused of criminal offenses, the law firm provides legal representation in criminal cases. It aims to ensure a fair legal process and protect the rights of the accused in accordance with the principles of justice.
+                    </p>
+
+                    <h4>Execution Law</h4>
+                    <p>
+                        Assisting clients in matters related to execution law, Oz&amp;Partners Law Office represents them in enforcement proceedings. The law firm helps clients navigate the execution process and protects their rights in enforcement matters.
+                    </p>
+
+                    <h4>Administrative, Tax, and Customs Law</h4>
+                    <p>
+                        Providing legal services in administrative, tax, and customs law, the Mersin law firm assists clients in dealing with government authorities and ensures compliance with regulations. It aims to protect clients' rights and interests in administrative and fiscal matters.
+                    </p>
+                    <p>
+                        As <strong>Mersin's best law firm</strong>, Oz&amp;Partners Law Office is dedicated to providing high-quality legal services in various practice areas. With its experienced team of lawyers and commitment to client satisfaction, the law firm continues to be a trusted legal partner for individuals and businesses in Mersin and beyond.
+                    </p>
+
+                    <h3>Contact Oz&amp;Partners Law Office</h3>
+                    <p>
+                        If you need legal assistance or consultation in Mersin, Oz&amp;Partners Law Office is here to help. Feel free to <a href="https://web.archive.org/web/20220521095530/https://ozpartnershukuk.com/contact">contact</a> the law firm for professional and reliable legal services. Whether you have questions about family law, compensation, inheritance, real estate, commercial law, labor law, criminal law, execution law, or administrative and tax law, the experienced team at Oz&amp;Partners Law Office is ready to assist you. Trust Mersin's best law firm for all your legal needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+

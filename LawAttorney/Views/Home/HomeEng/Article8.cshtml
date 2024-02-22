@@ -1,0 +1,238 @@
+﻿@{
+    ViewData["Title"] = "Article8";
+    Layout = "~/Views/Shared/_LayoutEng.cshtml";
+}
+
+<style>
+    .article-header {
+        font-size: 21px;
+        margin: 10px 0;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
+
+    .article-content-header {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.1;
+        color: #111111;
+        text-decoration: none !important;
+    }
+
+    .article-content p {
+        color: #111111;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.65;
+        margin: 0 0 10px;
+        text-align: justify;
+    }
+
+    .article-content a {
+        color: #013a33;
+    }
+    /* Custom Styles */
+    .ekip {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        /*         transition: transform 0.3s ease;
+         */ border: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+
+        .ekip img {
+            object-fit: cover;
+            position: relative;
+            width: 100%;
+            min-height: 220px;
+            max-height: 220px;
+        }
+
+
+        .ekip .card-body {
+            position: relative;
+            margin-top: 0;
+            padding: 1rem;
+            flex: 1;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,.05), 0 1px 3px 0 rgba(0,0,0,.1);
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .ekip .card-body a {
+                text-decoration: none;
+            }
+
+        /* .ekip:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                } */
+
+        .ekip .card-title {
+            width: 100%;
+            margin-top: 0 !important;
+            color: #000;
+            margin: 0px 0px 30px;
+            padding: 0px 0px 4px;
+            display: block;
+            font-size: 1.17em;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .ekip .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff !important;
+            text-transform: none !important;
+            font-size: 1em !important;
+            font-weight: 600 !important;
+            margin-top: 0 !important;
+            padding: 10px 0 0 0 !important;
+            letter-spacing: .5px;
+            border-top: 2px solid #ccc !important;
+        }
+
+        .ekip .read-more-btn {
+            color: #000;
+            text-decoration: underline;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative; /* Önemli: position değeri ekleyin */
+            font-size: 12px;
+            text-align: left;
+        }
+
+
+            .ekip .read-more-btn i {
+                margin-left: 5px; /* Ok ikonu ile metin arasında boşluk bırakmak için */
+            }
+
+            .ekip .read-more-btn:hover {
+                color: #013a33;
+            }
+
+        .ekip .social-icons {
+            display: flex;
+            gap: 10px; /* İkonlar arasında boşluk bırakmak için */
+        }
+
+        .ekip .social-icon {
+            color: #013a33;
+            font-size: 20px;
+        }
+</style>
+
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="custom-img1 mb-5 shadow">
+                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/banner900.png" />
+                <span>Articles</span>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <ol class="breadcrumb border-1 border-bottom" style="border-color:#013a33 !important;">
+                <li class="breadcrumb-item"><a href="Index">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Articles</li>
+            </ol>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3">
+                <div class="card ekip">
+                    <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" alt="Person 2 Photo">
+                    <div class="card-body">
+                        <div>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
+                                <h3 class="card-title ms-1 mb-5">Attorney Yunus Emre Öz</h3>
+                            </a>
+                        </div>
+                        <div class="card-footer d-flex justify-content-center">
+                            <div class="social-icons d-flex">
+                                <a href="mailto:yunusemreoz@ozpartnershukuk.com" class="social-icon">
+                                    <i class="fas fa-envelope" style="font-size:20px;"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank" class="social-icon">
+                                    <i class="fab fa-linkedin" style="font-size:20px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-9 article">
+                <h1 class="article-header" style="color: #013a33; font-weight: bold;">Curfews are Unconstitutional</h1>
+                <hr />
+                <p class="article-date" style="color: black; font-size: 13px;">Date: July 8, 2021</p>
+                <div class="article-content">
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;">
+                        <li><strong>Introduction</strong></li>
+                    </ol>
+                    <p>
+                        The global COVID-19 pandemic, which has affected the entire world, has been ongoing in our country since the first case was detected in March 2020. In Turkey, as in many countries, the initial method adopted by public authorities to prevent the spread was curfews. However, perhaps due to the urgency of the process or for political and economic reasons, curfew decisions were made contrary to positive law (existing legal norms).
+                    </p>
+                    <p>
+                        This article, conceived during one curfew and completed on another curfew day, will evaluate curfews, which concern us all, from a legal perspective, avoiding overly academic or technical language.
+                    </p>
+
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;" start="2">
+                        <li><strong>Constitution - Fundamental Rights and Freedoms</strong></li>
+                    </ol>
+                    <p>
+                        Fundamental rights and freedoms, gained through the struggles between the governed and the governing throughout history, are essential rights that are "personal, inviolable, inalienable, and irrevocable," simply by being human. From the perspective of rulers, they are concessions granted to the governed. In the modern world of today, these fundamental rights and freedoms are enshrined in constitutional texts, which are social contracts between the state and society, outlining when, to what extent, and in what manner rulers can intervene or limit them, and these are also safeguarded in constitutional texts.
+                    </p>
+
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;" start="3">
+                        <li><strong>Systematics for Protecting Fundamental Rights and Freedoms</strong></li>
+                    </ol>
+                    <p>
+                        For legal professionals who may have left law school without practical application or who have forgotten relevant courses taught at the faculty, to make the matter more understandable: in this context, it is beneficial to talk about the system of fundamental rights and freedoms in the Turkish Republic Constitution from 1982:
+                        Articles 17 to 74 of the current Constitution of the Republic of Turkey, dating back to 1982, protect indispensable fundamental rights and freedoms such as inviolability of residence, freedom of thought and expression, the right to education, and property rights for all of us. Article 13 of the Constitution establishes the conditions and procedures for the state, exercising public power, to limit these fundamental rights and freedoms, thereby specifying the systematics and ensuring that arbitrary and unlawful practices are prevented, aiming for the effective use of these rights in the real world beyond the paper. It should be noted that this article, within the framework of the harmonization process with the European Union, underwent constitutional amendments in 2001 under the title of law and human rights. With additional and temporary provisions, more than 200 articles and over 20,000 words in the Constitution, the concept of "contagious disease" is mentioned only in Article 119. It can be concluded that the will of the constitution maker is oriented towards addressing the measures and actions to be taken against a dangerous epidemic within the framework of the extraordinary regime.
+                    </p>
+
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;" start="4">
+                        <li><strong>Constitutional Dimension of the Ban</strong></li>
+                    </ol>
+                    <p>
+                        In its simplest definition, freedom of movement is the ability to move freely from one place to another or not to be prevented from going somewhere. At first glance, this seemingly trivial freedom is protected as a fundamental right under Article 23 of the Constitution of the Republic of Turkey, titled "Freedom of settlement and travel." Curfews restrict freedom of movement, a fundamental right and freedom mentioned in the constitution. Therefore, the decisions and implementation of curfew are subject to the secure systematics explained above. To make the abstract explanations clearer and more concrete, I progress through the Constitution article text:
+                        “<strong>V. Freedom of settlement and travel</strong>
+                        <strong>Article 23–</strong> Everyone has the right to freedom of settlement and travel.
+                        …
+                        Freedom of travel can be restricted by law for the purpose of preventing the investigation and prosecution of a crime;
+                        ”
+                        When the above explanations of the limitation system are considered together with the article text, it will be understood that freedom of movement can only be restricted if two essential situations arise: "preventing the investigation and prosecution of a crime" or "preventing the commission of a crime." It is abundantly clear that the global Covid-19 pandemic, which necessitates restricting freedom of movement to prevent its spread, has no relationship whatsoever with the issues of "investigation and prosecution of a crime" or "preventing the commission of a crime." Although the preservation of "public health" finds a place as a limiting reason in the texts of other 6 fundamental rights and freedoms in the article text of the constitution, it is not a reason to restrict freedom of movement. In other words, the constitutional systematics for limiting fundamental rights and freedoms do not allow for the decision and implementation of curfews.
+                    </p>
+
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;" start="5">
+                        <li><strong>The Main Procedure to Follow</strong></li>
+                    </ol>
+                    <p>
+                        However, the fact that the constitutional systematics for limiting fundamental rights and freedoms do not allow the implementation of curfews does not mean that the universal constitutional law experience, which has as its main goal and function to regulate the interaction of individuals, society, and the state, is indifferent to the fact of the epidemic that humanity has faced in prehistoric times when settled life began. On the contrary, legal history, constitutional law literature, and the current Constitution of the Republic of Turkey, with thousands of years of experience, have been able to anticipate the conditions and needs created by the epidemic and develop institutions that can respond to them. One of these institutions is the "State of Emergency."
+                        The state of emergency is a temporary form of administration where the balance of rights between the authority and the citizen is shifted in favor of the state due to the inadequacy of ordinary operations and powers during narrow passages such as war, severe economic crisis, mobilization, the danger of the country's division, dangerous epidemic disease, etc. Article 119 of the Constitution of the Republic of Turkey from 1982, titled "State of emergency administration," allows the ruler, who holds public power, to switch to the state of emergency administration in cases of war, mobilization, danger of the country's division, severe economic crisis, natural disasters, and dangerous epidemic diseases (with additional and temporary articles, it is the only place in the Constitution where the concept of "contagious disease" is mentioned. In this respect, it can be concluded that the will of the constitution maker is towards realizing the measures and struggle against a dangerous epidemic within the framework of the extraordinary regime.) When the state of emergency administration is initiated, the 3-fold guarantee in Article 13 of the Constitution, as explained above, can be temporarily disabled until the narrow passage is abandoned. Because Article 15, codified under the same section as Article 13 of the Constitution, titled "Suspension of the exercise of fundamental rights and freedoms," seemingly passes the ball with Article 119, allowing for the partial or complete suspension of fundamental rights and freedoms or the taking of measures contrary to constitutional guarantees in the state of emergency administration.
+                        This is the procedure that must be followed to decide and implement curfews.
+                    </p>
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;" start="6">
+                        <li><strong>Conclusion</strong></li>
+                    </ol>
+                    <p>
+                        The implementation of curfews over the past year clearly violates the supreme rule, the Constitution, without the need for exceptional legal knowledge. In the principle of the rule of law, which means that the ruler, like the ruled, is bound by rules and principles, the legitimacy of the actions and transactions of public power comes from and is based on legal rules. Without a basis, such actions or transactions cannot be carried out. Accepting otherwise will result in the emergence of personal, arbitrary, unpredictable, and disproportionate rules. However, it should be emphasized that although the curfews criticized throughout the article have produced positive results in controlling the spread of the pandemic, reaching the same positive outcome using legal instruments is not only a requirement of being a rule of law but also a necessity to be among the leading civilized nations in the world.
+                    </p>
+                </div>
+                <hr />
+                <p class="article-author">Attorney Yunus Emre Öz</p>
+                <p class="article-date">July 8, 2021</p>
+            </div>
+        </div>
+    </div>
+</body>
+

@@ -1,0 +1,295 @@
+﻿@{
+    ViewData["Title"] = "Articles";
+    Layout = "~/Views/Shared/_LayoutEng.cshtml";
+}
+
+<style>
+    /* Custom Styles */
+    .esin-grid-item {
+        margin-bottom: 30px;
+    }
+
+        .esin-grid-item a {
+            text-decoration: none;
+            color: #333; /* Kart içindeki link rengi */
+        }
+
+    .grid-item-wrapper-padding {
+        top: 0;
+        position: relative;
+        color: #000;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, .1);
+        transition: all .4s;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .grid-item-wrapper {
+        border: 1px solid #013a33;
+        padding: 15px;
+        transition: all .4s;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+        .grid-item-wrapper:hover {
+            transform: scale(1.05);
+        }
+
+    .grid-item-info {
+        display: flex;
+        flex-direction: column;
+        height: 250px;
+    }
+
+    .esin-grid-item .grid-item-date {
+        font-weight: 700;
+    }
+
+    .grid-item-heading {
+        color: #013a33;
+        font-size: 18px;
+        line-height: 1.3;
+        margin-bottom: 10px; /* Yeni eklenen satır */
+        margin-top: 10px;
+    }
+
+    .grid-item-category {
+        background: #013a33;
+        color: #fff;
+        text-align: center;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .excerpt {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 6; /* Burada 3 satıra kadar excerpt gösterilecek şekilde ayarladım, ihtiyacınıza göre arttırabilirsiniz */
+        -webkit-box-orient: vertical;
+        margin-bottom: 20px;
+    }
+
+    .sub-content p {
+        line-height: 1.65;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .sub-content {
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #111;
+    }
+
+</style>
+
+<body>
+    <section class="ftco-section">
+        <div class="container">
+            <div class="custom-img1 mb-5 shadow">
+                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/banner900.png" alt="Banner Image" />
+                <span>Articles</span>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <ol class="breadcrumb border-1 border-bottom">
+                <li class="breadcrumb-item"><a href="Index">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Articles</li>
+            </ol>
+        </div>
+    </section>
+    <div class="container sub-content mt-2">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 esin-grid-item">
+                <a href="Article1">
+                    <div class="grid-item-wrapper-padding shadow">
+                        <div class="grid-item-wrapper">
+                            <div class="grid-item-info">
+                                <div class="grid-item-date">
+                                    12/01/2022
+                                </div>
+                                <h2 class="grid-item-heading">A Personal and Legal Perspective on the Rise of Animal Sensitivity</h2>
+                                <div class="excerpt">
+                                    <p>The severe injury of 4-year-old Asiye Ateş as a result of an attack by 2 pit bulls has reignited long-standing concerns about street animals. […]</p>
+                                </div>
+                            </div>
+                            <a href="Article1" class="grid-item-category text-white">Read More...</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 esin-grid-item">
+                <a href="Article2">
+                    <div class="grid-item-wrapper-padding shadow">
+                        <div class="grid-item-wrapper">
+                            <div class="grid-item-info">
+                                <div class="grid-item-date">
+                                    02/09/2021
+                                </div>
+                                <h2 class="grid-item-heading">
+                                    Criminal Lawyer in Mersin
+                                </h2>
+                                <div class="excerpt">
+                                    <p>Oz&Partners Law Office, which responds to the search for a distinguished criminal lawyer in Mersin with its experienced criminal and heavy criminal lawyers, provides consultancy and attorney services in all areas related to criminal complaints, prosecution-investigation cases, and other areas related to criminal law.</p>
+                                </div>
+                            </div>
+                            <a href="Article2" class="grid-item-category text-white">Read More...</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 esin-grid-item">
+                <a href="Article3">
+                    <div class="grid-item-wrapper-padding shadow">
+                        <div class="grid-item-wrapper">
+                            <div class="grid-item-info">
+                                <div class="grid-item-date">
+                                    02/09/2021
+                                </div>
+                                <h2 class="grid-item-heading">
+                                    Divorce Lawyer in Mersin
+                                </h2>
+                                <div class="excerpt">
+                                    <p>Oz&Partners Law Office, responding to the search for an experienced team for divorce lawyers in Mersin, provides legal solutions for contested and uncontested divorce cases. In the process of legally ending the marriage, it offers legal consultancy and litigation services on issues such as custody, alimony, compensation, and settlement of the matrimonial property regime.</p>
+                                </div>
+                            </div>
+                            <a href="Article3" class="grid-item-category text-white">Read More...</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 esin-grid-item">
+                <a href="Article4">
+                    <div class="grid-item-wrapper-padding shadow">
+                        <div class="grid-item-wrapper">
+                            <div class="grid-item-info">
+                                <div class="grid-item-date">
+                                    02/09/2021
+                                </div>
+                                <h2 class="grid-item-heading">
+                                    Mersin Law Office
+                                </h2>
+                                <div class="excerpt">
+                                    <p>Oz&Partners Law, operating as a law office in Mersin, was established in 1974. For nearly 50 years, Oz&Partners Law Office has provided services to individuals and legal entities, especially prominent ones in Mersin. […]</p>
+                                </div>
+                            </div>
+                            <a href="Article4" class="grid-item-category text-white">Read More...</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Article 5 -->
+            <div class="col-12 col-md-6 col-lg-4 esin-grid-item">
+                <a href="Article5">
+                    <div class="grid-item-wrapper-padding shadow">
+                        <div class="grid-item-wrapper">
+                            <div class="grid-item-info">
+                                <div class="grid-item-date">
+                                    30/07/2021
+                                </div>
+                                <h2 class="grid-item-heading">
+                                    Investigation into Facebook WhatsApp
+                                </h2>
+                                <div class="excerpt">
+                                    <p>The Competition Authority, one of the independent administrative authorities that can be considered semi-public and semi-autonomous, opened an investigation against WhatsApp and Facebook. This investigation has been a hot topic in the public agenda for the past months due to the new privacy and data usage agreement imposed by the company on users. […]</p>
+                                </div>
+                            </div>
+                            <a href="Article5" class="grid-item-category text-white">Read More...</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Article 6 -->
+            <div class="col-12 col-md-6 col-lg-4 esin-grid-item">
+                <a href="Article6">
+                    <div class="grid-item-wrapper-padding shadow">
+                        <div class="grid-item-wrapper">
+                            <div class="grid-item-info">
+                                <div class="grid-item-date">
+                                    30/07/2021
+                                </div>
+                                <h2 class="grid-item-heading">
+                                    Influencer Marketing Regulation
+                                </h2>
+                                <div class="excerpt">
+                                    <p>Last week, the Ministry of Commerce of the Republic of Turkey published a guide aiming to align influencer marketing, one of the most current and popular marketing methods, with consumer law and advertising law principles adopted in the domestic legislation. […]</p>
+                                </div>
+                            </div>
+                            <a href="Article6" class="grid-item-category text-white">Read More...</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Article 7 -->
+            <div class="col-12 col-md-6 col-lg-4 esin-grid-item">
+                <a href="Article7">
+                    <div class="grid-item-wrapper-padding shadow">
+                        <div class="grid-item-wrapper">
+                            <div class="grid-item-info">
+                                <div class="grid-item-date">
+                                    08/07/2021
+                                </div>
+                                <h2 class="grid-item-heading">Resolution of Uncertainty in Notifications in Practice with United Jurisprudence</h2>
+                                <div class="excerpt">
+                                    <p>The Grand General Assembly of the Court of Cassation, with its united jurisprudence decision numbered 2019/2 Main 2020/3 Decision, published in the Official Gazette on 20.04.2021, resolved an issue that colleagues who have been practicing for years have been debating. In summary, the assembly decided by majority vote that when the notification to the known address is returned, it is sufficient to make the notification to the address in the address registration system in accordance with Article 21/2 of the Notification Law, and it is not necessary to make the normal notification to the registered address before. […]</p>
+                                </div>
+                            </div>
+                            <a href="Article7" class="grid-item-category text-white">Read More...</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Article 8 -->
+            <div class="col-12 col-md-6 col-lg-4 esin-grid-item">
+                <a href="Article8">
+                    <div class="grid-item-wrapper-padding shadow">
+                        <div class="grid-item-wrapper">
+                            <div class="grid-item-info">
+                                <div class="grid-item-date">
+                                    08/07/2021
+                                </div>
+                                <h2 class="grid-item-heading">Curfews Are Unconstitutional</h2>
+                                <div class="excerpt">
+                                    <p>The global COVID-19 pandemic, which has affected the whole world, has been ongoing in our country since March 2020, when the first case was detected. Like many countries in the world, the first method applied by the public authority in Turkey to prevent the spread was curfews. However, perhaps due to the urgency of the process, or perhaps due to political and economic reasons, curfew decisions were made contrary to positive law (i.e., existing legal norms). […]</p>
+                                </div>
+                            </div>
+                            <a href="Article8" class="grid-item-category text-white">Read More...</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Article 9 -->
+            <div class="col-12 col-md-6 col-lg-4 esin-grid-item">
+                <a href="Article9">
+                    <div class="grid-item-wrapper-padding shadow">
+                        <div class="grid-item-wrapper">
+                            <div class="grid-item-info">
+                                <div class="grid-item-date">
+                                    08/07/2021
+                                </div>
+                                <h2 class="grid-item-heading">
+                                    Termination of the Istanbul Convention
+                                </h2>
+                                <div class="excerpt">
+                                    <p>The Republic of Turkey, on the night of March 19, 2021, separated from the "Istanbul Convention," officially known as the "Council of Europe Convention on Preventing and Combating Violence Against Women and Domestic Violence," with a presidential decree. […]</p>
+                                </div>
+                            </div>
+                            <a href="Article9" class="grid-item-category text-white">Read More...</a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>

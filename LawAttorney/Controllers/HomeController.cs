@@ -19,7 +19,7 @@ namespace LawAttorney.Controllers
         }
         public IActionResult IndexEng()
         {
-            return View();
+            return View("HomeEng/IndexEng");
         }
         public IActionResult Kurumsal()
         {
@@ -76,7 +76,63 @@ namespace LawAttorney.Controllers
         public IActionResult Ýletisim()
         {
             return View();
-        }  
+        }     
+        public IActionResult Corporate()
+        {
+            return View("HomeEng/Corporate");
+        }
+        public IActionResult OurTeam()
+        {
+            return View("HomeEng/OurTeam");
+        }
+        public IActionResult PracticeAreas()
+        {
+            return View("HomeEng/PracticeAreas");
+        }
+        public IActionResult Articles()
+        {
+            return View("HomeEng/Articles");
+        }
+        public IActionResult Article1()
+        {
+            return View("HomeEng/Article1");
+        }
+        public IActionResult Article2()
+        {
+            return View("HomeEng/Article2");
+        }
+        public IActionResult Article3()
+        {
+            return View("HomeEng/Article3");
+        }
+        public IActionResult Article4()
+        {
+            return View("HomeEng/Article4");
+        }
+        public IActionResult Article5()
+        {
+            return View("HomeEng/Article5");
+        }
+        public IActionResult Article6()
+        {
+            return View("HomeEng/Article6");
+        }
+        public IActionResult Article7()
+        {
+            return View("HomeEng/Article7");
+        }
+        public IActionResult Article8()
+        {
+            return View("HomeEng/Article8");
+        }
+        public IActionResult Article9()
+        {
+            return View("HomeEng/Article9");
+        }
+        public IActionResult Contact()
+        {
+            return View("HomeEng/Contact");
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

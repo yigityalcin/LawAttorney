@@ -6,9 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - LawAttorney</title>
     <link rel="icon" type="image/x-icon" href="~/assets/favicon.ico" />
+
+    @* <link rel="alternate" hreflang="tr" href="https://www.esin.av.tr/tr-legal-services/">
+
+    <!-- İngilizce sayfa -->
+    <link rel="alternate" hreflang="en" href="https://www.esin.av.tr/en-legal-services/">
+
+    <!-- Rusça sayfa -->
+    <link rel="alternate" hreflang="ru" href="https://www.esin.av.tr/ru-legal-services/">
+
+    <!-- Varsayılan sayfa (diğer diller dışında bir dilde görüntülenirse) -->
+    <link rel="alternate" hreflang="x-default" href="https://www.esin.av.tr/legal-services/"> *@
+
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LawAttorney.styles.css" asp-append-version="true" />
@@ -19,94 +31,112 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="mobileNavbar">
+        <div class="col-xl-12 info-bar text-center">
+            <span class="span-phone"><i class="fas fa-phone"></i> Phone: (532) 499-1974</span>
+            <span class="span-mail"><i class="fas fa-envelope"></i> Email: <a class="span-mail1" href="mailto:info@ozpartnershukuk.com">info@ozpartnershukuk.com</a></span>
+            <span class="span-hours me-2"><i class="fas fa-clock"></i> Working Hours: Monday - Friday, 09:00 - 17:00</span>
+        </div>
         <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white mb-3">
-                <!-- Logo -->
-                <a class="navbar-brand ms-4 mt-2" href="/Home/Index">
-                    <img src="~/assets/img/Logo/ailogo4.png" alt="Logo" height="100" class="img">
-                </a>
-                <!-- Toggle button -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!-- Menu Tabs -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-lg-0 me-lg-1">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Home/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Home/Corporate">Corporate</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Home/OurTeam">Our Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Home/WorkAreas">Work Areas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Home/Articles">Articles</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/Home/Contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Right Elements and Rectangular Buttons -->
-                <div class="d-flex align-items-center ms-5">
-                    <!-- Language Selection and Mail Sending Buttons -->
-                    <div class="d-md-flex align-items-center gap-2 ms-5 me-3 order-3">
-                        <!-- <a href="https://wa.me/%2B905343461030" class="btn btn-sm text-white" style="background-color: #093c34;" target="_blank">
-                            <i class="bi bi-whatsapp me-2"></i>Get Info
-                        </a> -->
-                        <a href="/Home/Contact" class="btn btn-sm text-white ms-1" id="mailSendButton" style="background-color: #013A33;">
-                            <i class="fas fa-envelope me-2"></i>Send Mail
+            <nav class="navbar navbar-expand-xl d-lg-block">
+                <div class="row mb-lg-3">
+                    <div class="col-lg-3 mt-lg-3 col-sm-12">
+                        <a class="navbar-brand ms-lg-4 mt-2" href="/Home/IndexEng">
+                            <img src="~/assets/img/Logo/MainLogo.png" alt="Logo" height="80" class="img-brand">
                         </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
                     </div>
-                    <!-- Language Selection Dropdown -->
-                    <div class="dropdown order-4" id="languageDropdown">
-                        <a class="dropdown-toggle custom-dropdown-toggle" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        </a>
+                    <div class="col-lg-9 col-sm-12">
+                        <div class="d-flex justify-content-end mb-lg-4">
+                            <div class="d-flex butonlar align-items-center me-lg-4">
+                                <div class="d-sm-flex butonlar-mail align-items-center shadow-lg">
+                                    <button href="" class="ms-1 mailButton" id="mailGonderButton">
+                                        <i class="fas fa-envelope me-lg-2"></i>Quick Contact
+                                    </button>
+                                </div>
+                                <div class="dropdown" id="languageDropdown">
+                                    <a class="btn btn-sm butonlar-lang dropdown-toggle custom-dropdown-toggle border shadow" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end text-black" aria-labelledby="navbarDropdownMenuAvatar" style="">
+                                        <li class="border-bottom">
+                                            <a class="dropdown-item text-center" href="/Home/Index" data-lang="TR">
+                                                Türkçe
+                                            </a>
+                                        </li>
+                                        <li class="border-bottom">
+                                            <a class="dropdown-item text-center" href="/HomeEng/IndexEng" data-lang="ENG">
+                                                English
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item text-center" href="/Home/Contact" data-lang="Рус.">
+                                                Русский
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                        <ul class="dropdown-menu dropdown-menu-end text-black" aria-labelledby="navbarDropdownMenuAvatar">
-                            <li>
-                                <a class="dropdown-item" href="/Home/Index" data-lang="TR">
-                                    Turkish
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/Home/IndexEng" data-lang="Eng">
-                                    English
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/Home/Contact" data-lang="Рус">
-                                    Русский
-                                </a>
-                            </li>
-                        </ul>
+                        <!-- Menu Tabs -->
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Home/IndexEng">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Home/Corporate">Corporate</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Home/OurTeam">Our Team</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Home/PracticeAreas">Practice Areas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Home/Articles">Articles</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Home/Contact">Contact</a>
+                                </li>
+                                <li class="d-flex justify-content-center" id="langMobile">
+                                    <a role="menuitem" tabindex="-1" class="nav-link p-2" href="/Home/Index">
+                                        <i class="bi bi-translate me-2"></i>
+                                        Türkçe
+                                    </a>
+                                    <a role="menuitem" tabindex="-1" class="nav-link p-2" href="/Home/IndexEng">
+                                        English
+                                    </a>
+                                    <a role="menuitem" tabindex="-1" class="nav-link p-2" href="/Home/OurTeam">
+                                        Русский
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </nav>
         </div>
     </div>
+    <button class="mobile-chat-button" id="mobileChatButton">
+        <i class="fas fa-comments"></i>
+    </button>
     @RenderBody()
     <!-- FOOTER -->
-    <div class="container-fluid p-0">
+    <div class="container-fluid">
         <footer class="text-center text-lg-start text-black bg-white">
-            <div class="container page-border mt-0"></div>
-            <!-- Section: Social media -->
+            <div class="container page-border mt-lg-0"></div>
             <section class="d-flex justify-content-center p-2 bg-white">
-                <!-- Left -->
-                <div class="me-lg-5">
-                    <span>Our social media accounts: </span>
+                <div class="sosyal me-lg-2">
+                    <span>Follow us on social media: </span>
                 </div>
-                <!-- Right -->
                 <div class="d-flex justify-content-center">
-                    <a href="https://www.linkedin.com/company/oz-partners/" class="me-4" style="background-color: #013A33; color: white; text-decoration: none; display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 4px;" target="_blank">
+                    <a href="https://www.linkedin.com/company/oz-partners/" class="me-lg-4" style="background-color: #013A33; color: white; text-decoration: none; display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 4px;" target="_blank">
                         <i class="fab fa-linkedin" style="font-size: 16px; margin-right: 8px;"></i>
-                        <span style="font-size: 12px;">Follow Us</span>
+                        <span style="font-size: 12px;">Follow</span>
                     </a>
                 </div>
             </section>
@@ -114,52 +144,20 @@
             <!-- Copyright -->
             <div class="text-center mt-5" style="font-size:12px; background-color: #ffffff">
                 ©
-                <a class="text-black" href="">1974-2024 Öz&Partners; Law Office - All Rights Reserved</a>
+                <a class="sosyal" href="">1974-2024 Öz&Partners; Law Office - All Rights Reserved</a>
             </div>
         </footer>
     </div>
-    </div>
-    <!-- bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="~/js/scripts.js" asp-append-version="true"></script>
-    <!-- Add events with Vanilla JavaScript -->
-    <!-- JavaScript Code -->
+    <script src="~/js/language.js" asp-append-version="true"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var languageDropdown = document.getElementById('languageDropdown');
-
-            // Get the previous language selection
-            var selectedLanguage = localStorage.getItem('selectedLanguage');
-
-            // If a language was previously selected, set it as active
-            if (selectedLanguage) {
-                var activeLanguageElement = languageDropdown.querySelector('.dropdown-toggle');
-                if (activeLanguageElement) {
-                    activeLanguageElement.innerHTML = selectedLanguage;
-                }
-            }
-
-            // When a language option is clicked
-            languageDropdown.addEventListener('click', function (event) {
-                if (event.target.classList.contains('dropdown-item')) {
-                    // Remove the previous active state of the selected language
-                    var previousActiveLanguage = this.querySelector('.dropdown-toggle');
-                    if (previousActiveLanguage) {
-                        previousActiveLanguage.innerHTML = event.target.textContent;
-                    }
-
-                    // Add active state to the selected language element
-                    var selectedLanguageElement = event.target;
-                    // Get the selected language
-                    var selectedLanguage = selectedLanguageElement.getAttribute('data-lang');
-                    // Set the selected language in the dropdown toggle
-                    this.querySelector('.dropdown-toggle').innerHTML = selectedLanguage;
-                    // Set the selected language in localStorage
-                    localStorage.setItem('selectedLanguage', selectedLanguage);
-                }
-            });
+        document.getElementById("mailGonderButton").addEventListener("click", function () {
+            window.location.href = "/Home/Contact#name";
         });
-
+        document.getElementById("mobileChatButton").addEventListener("click", function () {
+            window.location.href = "/Home/Contact#contactForm";
+        });
     </script>
 </body>
 

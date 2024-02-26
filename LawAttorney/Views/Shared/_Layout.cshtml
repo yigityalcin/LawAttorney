@@ -7,7 +7,7 @@
     <title>@ViewData["Title"] - LawAttorney</title>
     <link rel="icon" type="image/x-icon" href="~/assets/favicon.ico" />
 
-    @* <link rel="alternate" hreflang="tr" href="https://www.esin.av.tr/tr-legal-services/">
+    <link rel="alternate" hreflang="tr" href="https://www.esin.av.tr/tr-legal-services/">
 
     <!-- İngilizce sayfa -->
     <link rel="alternate" hreflang="en" href="https://www.esin.av.tr/en-legal-services/">
@@ -16,7 +16,7 @@
     <link rel="alternate" hreflang="ru" href="https://www.esin.av.tr/ru-legal-services/">
 
     <!-- Varsayılan sayfa (diğer diller dışında bir dilde görüntülenirse) -->
-    <link rel="alternate" hreflang="x-default" href="https://www.esin.av.tr/legal-services/"> *@
+    <link rel="alternate" hreflang="x-default" href="https://www.esin.av.tr/legal-services/">
 
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
@@ -51,22 +51,23 @@
                     <div class="col-lg-9 col-sm-12">
                         <div class="d-flex justify-content-end mb-lg-4">
                             <div class="d-flex butonlar align-items-center me-lg-4">
-                                <div class="d-sm-flex butonlar-mail align-items-center shadow-lg">
+                                <div class="d-sm-flex butonlar-mail align-items-center">
                                     <button href="" class="ms-1 mailButton" id="mailGonderButton">
                                         <i class="fas fa-envelope me-lg-2"></i>Hızlı İletişim
                                     </button>
                                 </div>
                                 <div class="dropdown" id="languageDropdown">
                                     <a class="btn btn-sm butonlar-lang dropdown-toggle custom-dropdown-toggle border shadow" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i id="languageIcon" class="fas fa-globe"></i>
                                     </a>
-                                    <ul class="dropdown-menu dropdown-menu-end text-black" aria-labelledby="navbarDropdownMenuAvatar" style="">
+                                    <ul class="dropdown-menu dropdown-menu-end text-black" aria-labelledby="navbarDropdownMenuAvatar">
                                         <li class="border-bottom">
                                             <a class="dropdown-item text-center" href="/Home/Index" data-lang="TR">
                                                 Türkçe
                                             </a>
                                         </li>
                                         <li class="border-bottom">
-                                            <a class="dropdown-item text-center" href="/Home/IndexEng" data-lang="EN">
+                                            <a class="dropdown-item text-center" href="/Home/IndexEng" data-lang="ENG">
                                                 English
                                             </a>
                                         </li>
@@ -77,6 +78,7 @@
                                         </li>
                                     </ul>
                                 </div>
+
                             </div>
                         </div>
                        

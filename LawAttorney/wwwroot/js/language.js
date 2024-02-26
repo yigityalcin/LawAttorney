@@ -1,5 +1,6 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
     var languageDropdown = document.getElementById('languageDropdown');
+    var languageIcon = document.getElementById('languageIcon');
 
     // Önceki dil seçeneğini al
     var selectedLanguage = localStorage.getItem('selectedLanguage');
@@ -8,7 +9,7 @@
     if (selectedLanguage) {
         var activeLanguageElement = languageDropdown.querySelector('.dropdown-toggle');
         if (activeLanguageElement) {
-            activeLanguageElement.innerHTML = selectedLanguage;
+            activeLanguageElement.innerHTML = '<i class="fas fa-globe"></i>';
         }
     }
 
@@ -18,7 +19,7 @@
             // Seçilen dilin önceki aktif durumunu kaldır
             var previousActiveLanguage = this.querySelector('.dropdown-toggle');
             if (previousActiveLanguage) {
-                previousActiveLanguage.innerHTML = event.target.textContent;
+                previousActiveLanguage.innerHTML = '<i class="fas fa-globe"></i>';
             }
 
             // Seçilen dil öğesine aktif durumu ekle
@@ -26,7 +27,7 @@
             // Seçilen dil değerini al
             var selectedLanguage = selectedLanguageElement.getAttribute('data-lang');
             // Set the selected language in the dropdown toggle
-            this.querySelector('.dropdown-toggle').innerHTML = selectedLanguage;
+            this.querySelector('.dropdown-toggle').innerHTML = '<i class="fas fa-globe"></i>';
             // Set the selected language in localStorage
             localStorage.setItem('selectedLanguage', selectedLanguage);
         }

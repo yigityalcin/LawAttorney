@@ -67,7 +67,7 @@
                                                         <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Ваше сообщение" required></textarea>
                                                     </div>
                                                 </div>
-                                                <div class="h-captcha mt-2 mb-2" data-captcha="true"></div>
+                                                <div class="g-recaptcha" data-sitekey="6LfQRoEpAAAAADsMN7HE34TC-bEqxTJ2ph7RWgxc"></div>
                                                 <div class="col-md-12">
                                                     <div class="form-group">
                                                         <input type="submit" value="Отправить сообщение" class="btn" style="background-color:#013a33 !important; color:white;">
@@ -138,19 +138,11 @@
         </section>
     </div>
     <script type="text/javascript" src="~/js/contact-us.js"></script>
-    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+            async defer>
+    </script>
     <script>
         const form = document.getElementById('contactForm');
-
-        form.addEventListener('submit', function (e) {
-
-            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
-
-            if (!hCaptcha) {
-                e.preventDefault();
-                alert("Пожалуйста, заполните поле капчи")
-                return
-            }
-        });
     </script>
 </body>

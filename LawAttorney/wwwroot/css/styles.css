@@ -3595,7 +3595,7 @@ textarea.form-control-lg {
 
 .dropdown-menu {
     --bs-dropdown-zindex: 1000;
-    --bs-dropdown-min-width: 10rem;
+    --bs-dropdown-min-width: 123px;
     --bs-dropdown-padding-x: 0;
     --bs-dropdown-padding-y: 0.5rem;
     --bs-dropdown-spacer: 0.125rem;
@@ -3887,7 +3887,7 @@ textarea.form-control-lg {
 
 .dropdown-menu.show {
     display: block;
-    padding:0;
+    padding: 0;
 }
 
 .dropdown-header {
@@ -5036,6 +5036,11 @@ textarea.form-control-lg {
 
 .breadcrumb a {
     color: #6c757d !important;
+    text-decoration: none !important;
+}
+
+.breadcrumb li > a {
+    color: #013a33 !important;
     text-decoration: none !important;
 }
 
@@ -6505,9 +6510,9 @@ textarea.form-control-lg {
     position: relative;
 }
 
-.carousel.pointer-event {
-    touch-action: pan-y;
-}
+    .carousel.pointer-event {
+        touch-action: pan-y;
+    }
 
 .carousel-inner {
     position: relative;
@@ -12755,7 +12760,6 @@ footer {
 /* Dropdown menüsündeki dil seçenekleri için özel stil */
 .dropdown-menu .dropdown-item {
     /* İsteğe bağlı: Genel stil ayarları */
-    padding: 10px !important; /* Padding ayarı */
     transition: background-color 0.3s ease !important; /* Geçiş efekti */
 }
 
@@ -12786,9 +12790,9 @@ footer {
 
 /* Mobil ekranlarda çalışacak stil */
 @media (max-width: 767px) {
-    .navbar-nav{
+    /*.navbar-nav{
         border-top:1px solid #ccc;
-    }
+    }*/
     .navbar-nav .nav-item {
         position: relative;
         padding-bottom: 3px; /* Alt boşluk */
@@ -12832,6 +12836,7 @@ footer {
     .ftco-section {
         padding: 2em 0;
     }
+
     .ftco-section-contact {
         padding-top: 2em;
     }
@@ -13141,9 +13146,9 @@ ul {
         top: 0;
         background-color: #ffffff; /* Sticky olduğunda arka plan rengi, kendi sitenize uygun olarak değiştirin */
         z-index: 1000 !important; /* Diğer elemanların üzerinde olmasını sağlar */
-        border-bottom: 1px solid #ccc;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+        border-bottom: 1px solid #013A33;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
     }
 
     #languageDropdown {
@@ -13156,13 +13161,15 @@ ul {
         text-decoration: underline;
     }
 
-    .kurumsal-foto{
-        display:none;
+    .kurumsal-foto {
+        display: none;
     }
+
     .carousel-img {
         height: 200px; /* Mobilde daha küçük bir yükseklik belirle */
         width: 100%; /* Genişliği %100 yap */
         left: 0;
+        margin-top: 20px;
     }
 }
 

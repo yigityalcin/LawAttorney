@@ -21,6 +21,10 @@ namespace LawAttorney.Controllers
         {
             return View("HomeEng/IndexEng");
         }
+        public IActionResult IndexRu()
+        {
+            return View("HomeRu/IndexRu");
+        }
         public IActionResult Kurumsal()
         {
             return View();
@@ -132,6 +136,63 @@ namespace LawAttorney.Controllers
         public IActionResult Contact()
         {
             return View("HomeEng/Contact");
+        }
+
+        public IActionResult CorporateRu()
+        {
+            return View("HomeRu/CorporateRu");
+        }
+        public IActionResult OurTeamRu()
+        {
+            return View("HomeRu/OurTeamRu");
+        }
+        public IActionResult PracticeAreasRu()
+        {
+            return View("HomeRu/PracticeAreasRu");
+        }
+        public IActionResult ArticlesRu()
+        {
+            return View("HomeRu/ArticlesRu");
+        }
+        public IActionResult Article1Ru()
+        {
+            return View("HomeRu/Article1Ru");
+        }
+        public IActionResult Article2Ru()
+        {
+            return View("HomeRu/Article2Ru");
+        }
+        public IActionResult Article3Ru()
+        {
+            return View("HomeRu/Article3Ru");
+        }
+        public IActionResult Article4Ru()
+        {
+            return View("HomeRu/Article4Ru");
+        }
+        public IActionResult Article5Ru()
+        {
+            return View("HomeRu/Article5Ru");
+        }
+        public IActionResult Article6Ru()
+        {
+            return View("HomeRu/Article6Ru");
+        }
+        public IActionResult Article7Ru()
+        {
+            return View("HomeRu/Article7Ru");
+        }
+        public IActionResult Article8Ru()
+        {
+            return View("HomeRu/Article8Ru");
+        }
+        public IActionResult Article9Ru()
+        {
+            return View("HomeRu/Article9Ru");
+        }
+        public IActionResult ContactRu()
+        {
+            return View("HomeRu/ContactRu");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

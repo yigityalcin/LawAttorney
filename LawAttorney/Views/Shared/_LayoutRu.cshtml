@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="tr">
+<html lang="ru">
 
 <head>
     <meta charset="utf-8" />
@@ -7,15 +7,15 @@
     <title>@ViewData["Title"] - LawAttorney</title>
     <link rel="icon" type="image/x-icon" href="~/assets/favicon.ico" />
 
-    <link rel="alternate" hreflang="tr" href="Index">
-
-    <!-- İngilizce sayfa -->
     <link rel="alternate" hreflang="en" href="IndexEng">
 
-    <!-- Rusça sayfa -->
+    <!-- Turkish Page -->
+    <link rel="alternate" hreflang="tr" href="Index">
+
+    <!-- Russian Page -->
     <link rel="alternate" hreflang="ru" href="IndexRu">
 
-    <!-- Varsayılan sayfa (diğer diller dışında bir dilde görüntülenirse) -->
+    <!-- Default Page (if displayed in a language other than Turkish or Russian) -->
     <link rel="alternate" hreflang="x-default" href="Index">
 
     <!-- Bootstrap icons-->
@@ -33,16 +33,16 @@
 <body>
     <div class="mobileNavbar">
         <div class="col-xl-12 info-bar text-center">
-            <span class="span-phone"><i class="fas fa-phone"></i> Telefon: (532) 499 1974</span>
-            <span class="span-mail"><i class="fas fa-envelope"></i> Email: <a class="span-mail1" href="mailto:info@ozpartnershukuk.com">info@ozpartnershukuk.com</a></span>
-            <span class="span-hours me-2"><i class="fas fa-clock"></i> Çalışma Saatleri: Pazartesi - Cuma, 09:00 - 17:00</span>
+            <span class="span-phone"><i class="fas fa-phone"></i> Телефон: (532) 499 1974</span>
+            <span class="span-mail"><i class="fas fa-envelope"></i> Электронная почта: <a class="span-mail1" href="mailto:info@ozpartnershukuk.com">info@ozpartnershukuk.com</a></span>
+            <span class="span-hours me-2"><i class="fas fa-clock"></i> Время работы: Понедельник - Пятница, 09:00 - 17:00</span>
         </div>
         <div class="container">
             <nav class="navbar navbar-expand-xl d-lg-block">
                 <div class="row mb-lg-3">
                     <div class="col-lg-3 mt-lg-3 col-sm-12">
-                        <a class="navbar-brand ms-lg-4 mt-2" href="/Home/Index">
-                            <img src="~/assets/img/Logo/MainLogo.png" alt="Logo" height="80" class="img-brand">
+                        <a class="navbar-brand ms-lg-4 mt-2" href="/Home/IndexRu">
+                            <img src="~/assets/img/Logo/MainLogo.png" alt="Логотип" height="80" class="img-brand">
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -53,7 +53,7 @@
                             <div class="d-flex butonlar align-items-center me-lg-4">
                                 <div class="d-sm-flex butonlar-mail align-items-center">
                                     <button href="" class="ms-1 mailButton" id="mailGonderButton">
-                                        <i class="fas fa-envelope me-lg-2"></i>Hızlı İletişim
+                                        <i class="fas fa-envelope me-lg-2"></i>Быстрый контакт
                                     </button>
                                 </div>
                                 <div class="dropdown" id="languageDropdown">
@@ -73,36 +73,34 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="dropdown-item text-center" href="/Home/IndexRu" data-lang="Рус.">
+                                            <a class="dropdown-item text-center" href="/Home/IndexRu" data-lang="RU">
                                                 Русский
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
-
                             </div>
                         </div>
-                       
-                        <!-- Menu Tabs -->
+                        <!-- Меню вкладок -->
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Home/Index">Ana Sayfa</a>
+                                    <a class="nav-link" href="/Home/IndexRu">Главная</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Home/Kurumsal">Kurumsal</a>
+                                    <a class="nav-link" href="/Home/CorporateRu">Корпоративные</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Home/Ekibimiz">Ekibimiz</a>
+                                    <a class="nav-link" href="/Home/OurTeamRu">Наша команда</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Home/CalismaAlanlari">Çalışma Alanları</a>
+                                    <a class="nav-link" href="/Home/PracticeAreasRu">Области практики</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Home/Makaleler">Makaleler</a>
+                                    <a class="nav-link" href="/Home/ArticlesRu">Статьи</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Home/İletisim">İletişim</a>
+                                    <a class="nav-link" href="/Home/ContactRu">Контакты</a>
                                 </li>
                                 <li class="d-flex justify-content-center" id="langMobile">
                                     <a role="menuitem" tabindex="-1" class="nav-link p-2" href="/Home/Index">
@@ -116,7 +114,6 @@
                                         Русский
                                     </a>
                                 </li>
-
                             </ul>
                         </div>
                     </div>
@@ -128,26 +125,26 @@
         <i class="fas fa-comments"></i>
     </button>
     @RenderBody()
-    <!-- FOOTER -->
+    <!-- ПОДВАЛ -->
     <div class="container-fluid">
         <footer class="text-center text-lg-start text-black bg-white">
             <div class="container page-border mt-lg-0"></div>
             <section class="d-flex justify-content-center p-2 bg-white">
                 <div class="sosyal me-lg-2">
-                    <span>Sosyal medya hesaplarımız : </span>
+                    <span>Подписывайтесь на нас в социальных сетях: </span>
                 </div>
                 <div class="d-flex justify-content-center">
                     <a href="https://www.linkedin.com/company/oz-partners/" class="me-4" style="background-color: #013A33; color: white; text-decoration: none; display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 4px;" target="_blank">
                         <i class="fab fa-linkedin" style="font-size: 16px; margin-right: 8px;"></i>
-                        <span style="font-size: 12px;">Takip Et</span>
+                        <span style="font-size: 12px;">Подписаться</span>
                     </a>
                 </div>
             </section>
             <div class="container page-border"></div>
-            <!-- Copyright -->
+            <!-- Авторские права -->
             <div class="text-center mt-5" style="font-size:12px; background-color: #ffffff">
                 ©
-                <a class="sosyal" href="">1974-2024 Öz&Partners; Avukatlık Ofisi - Tüm Hakları Saklıdır</a>
+                <a class="sosyal" href="">1974-2024 Юридическая фирма Öz&Partners; - Все права защищены</a>
             </div>
         </footer>
     </div>
@@ -156,10 +153,10 @@
     <script src="~/js/language.js" asp-append-version="true"></script>
     <script>
         document.getElementById("mailGonderButton").addEventListener("click", function () {
-            window.location.href = "/Home/İletisim#name";
+            window.location.href = "/Home/ContactRu#name";
         });
         document.getElementById("mobileChatButton").addEventListener("click", function () {
-            window.location.href = "/Home/İletisim#contactForm";
+            window.location.href = "/Home/ContactRu#contactForm";
         });
     </script>
 </body>

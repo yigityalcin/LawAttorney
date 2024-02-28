@@ -40,8 +40,7 @@
                                         <div id="form-message-warning" class="mb-4"></div>
                                         <div id="form-message-success" class="mb-4">
                                         </div>
-                                        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm" name="contactForm" class="contactForm">
-                                            <input type="hidden" name="access_key" value="52687894-5bb6-4d63-a348-51a8ec9be94e">
+                                        <form id="contactForm" name="contactForm" class="contactForm">
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
@@ -68,13 +67,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="g-recaptcha" data-sitekey="6LfQRoEpAAAAADsMN7HE34TC-bEqxTJ2ph7RWgxc"></div>
-                                                <div class="col-md-12">
+                                                <div class="col-sm-12">
                                                     <div class="form-group">
                                                         <input type="submit" value="Отправить сообщение" class="btn" style="background-color:#013a33 !important; color:white;">
                                                         <div class="submitting"></div>
                                                     </div>
                                                 </div>
-                                                <div id="form-result"></div>
+                                                <div id="success-message" style="display: none; color: green;">Form submitted successfully!</div>
                                             </div>
                                         </form>
                                     </div>
@@ -137,12 +136,7 @@
             </div>
         </section>
     </div>
-    <script type="text/javascript" src="~/js/contact-us.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-            async defer>
-    </script>
+    <script type="text/javascript" src="~/js/contact-us-ru.js"></script>
     <script>
-        const form = document.getElementById('contactForm');
     </script>
 </body>

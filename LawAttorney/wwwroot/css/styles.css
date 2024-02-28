@@ -13,12 +13,7 @@
 html {
     /*zoom: 80%;*/
 }
-@media only screen and (min-width: 11in) and (max-width: 17in) {
-    /* Bu alana istediğiniz stil ve düzen ayarlamalarını ekleyebilirsiniz */
-    html {
-        zoom: 90%;
-    }
-}
+
 
 :root {
     --bs-blue: #0d6efd;
@@ -13196,8 +13191,5 @@ ul {
     /* Buraya istediğiniz stil ve düzen ayarlamalarını ekleyebilirsiniz */
     .carousel-img {
         height: 350px;
-    }
-    html {
-        zoom: 80%;
-    }
+    }   
 }

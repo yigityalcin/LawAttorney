@@ -6702,13 +6702,12 @@ textarea.form-control-lg {
 
 .carousel-caption {
     position: absolute;
-    right: 15%;
-    bottom: 1.25rem;
-    left: 15%;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    color: #fff;
-    text-align: right;
+    bottom: 0;
+    left: 77%;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
 }
 
     .carousel-caption span {
@@ -6720,28 +6719,13 @@ textarea.form-control-lg {
     .carousel-caption {
         position: absolute;
         bottom: 0;
-        left: 0;
-        right: 0;
+        left:68%;
         padding: 5px;
-        background: rgba(1, 58, 51, 0.8);
         color: white;
         text-align: center;
         font-size: 12px;
     }
-    .carousel-indicators {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 2;
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-        margin-right: 15%;
-        margin-bottom: 1rem;
-        margin-left: 15%;
-        list-style: none;
-    }
+    
 }
 
 

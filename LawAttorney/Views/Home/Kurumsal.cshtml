@@ -2,11 +2,111 @@
     ViewData["Title"] = "Kurumsal";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<style>  
+    /* Custom Styles */
+    .ekip {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        /*         transition: transform 0.3s ease;
+                                 */ border: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+
+        .ekip img {
+            object-fit: cover;
+            position: relative;
+            width: 100%;
+            max-height: 220px;
+            object-position: 50% 50%; /* Orta konumda odaklanmasını sağlar */
+        }
+
+
+
+        .ekip .card-body {
+            position: relative;
+            margin-top: 0;
+            padding: 1rem;
+            flex: 1;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,.05), 0 1px 3px 0 rgba(0,0,0,.1);
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .ekip .card-body a {
+                text-decoration: none;
+            }
+
+        /* .ekip:hover {
+                                            transform: scale(1.05);
+                                            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                                        } */
+
+        .ekip .card-title {
+            width: 100%;
+            margin-top: 0 !important;
+            color: #000;
+            margin: 0px 0px 30px;
+            padding: 0px 0px 4px;
+            display: block;
+            font-size: 1.17em;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .ekip .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff !important;
+            text-transform: none !important;
+            font-size: 1em !important;
+            font-weight: 600 !important;
+            margin-top: 0 !important;
+            padding: 10px 0 0 0 !important;
+            letter-spacing: .5px;
+            border-top: 2px solid #ccc !important;
+        }
+
+        .ekip .read-more-btn {
+            color: #000;
+            text-decoration: underline;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative; /* Önemli: position değeri ekleyin */
+            font-size: 12px;
+            text-align: left;
+        }
+
+
+            .ekip .read-more-btn i {
+                margin-left: 5px; /* Ok ikonu ile metin arasında boşluk bırakmak için */
+            }
+
+            .ekip .read-more-btn:hover {
+                color: #093a33;
+            }
+
+        .ekip .social-icons {
+            display: flex;
+            gap: 10px; /* İkonlar arasında boşluk bırakmak için */
+        }
+
+        .ekip .social-icon {
+            color: #093a33;
+            font-size: 20px;
+        }
+</style>
 <body>
     <section class="ftco-section">
         <div class="container">
             <div class="custom-img1 mb-5 shadow">
-                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/banner900.png" />
+                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/bannerNew.png" />
                 <span>Kurumsal</span>
             </div>
         </div>
@@ -18,68 +118,50 @@
         </div>
     </section>
     <div class="container-fluid">
-
-        <!-- Kurumsal Bilgi -->
-        <div class="about-us-section">
-            <div class="container">
-                <div class="row align-items-center">
-                    <!-- Image Column -->
-                    <div class="col-lg-6">
-                        <img src="~/assets/img/kurumsal1.jpg" class="kurumsal-foto img-fluid rounded shadow" style="object-fit: cover; width: 100%; height: 523px;" alt="About Us Image">
-                    </div>
-                    <!-- Text Column -->
-                    <div class="col-lg-6">
-                        <div class="card bg-white shadow">
-                            <div class="card-body">
-                                <p class="card-text" style="text-align:justify;">
-                                    1974 yılında Av. Emin Öz tarafından kurulan avukatlık ofisi 50 yıla yakın süredir faaliyet göstermekte olup bu süre zarfında başta Mersin’in önde gelen gerçek ve tüzel kişileri olmak üzere binlerle ölçülen bir müvekkil portföyünün vekilliğini üstlenmiştir.
-                                </p>
-                                <p class="card-text" style="text-align:justify;">
-                                    2018 yılında Av. Yunus Emre Öz ve 2019 yılında Av. Kaan Karataş ekibe katılmış olup yarım asırdır oluşturulan bilgi ve tecrübe 2. kuşağa aktarılmıştır. Böylece; sadece Mersin’in değil, bölgenin en uzun süredir hizmet vermekte olan, tanınmış ve saygın hukuk bürolarından Öz & Partners Avukatlık Ofisi bu konumunu daha da sağlamlaştırmıştır.
-                                </p>
-                                <p class="card-text" style="text-align:justify;">
-                                    Müvekkile karşı şeffaflık, kamu idareleriyle güçlü iletişim, disiplinli ve bilimsel çalışma ile kısa sürede etkili sonuç alma prensiplerini odağına alan Öz & Partners Avukatlık Ofisi; müvekkillerinin hukuki sorunlarını mümkün olan en lehe şekilde çözümlemeyi hedeflemektedir.
-                                </p>
-                                <p class="card-text" style="text-align:justify;">
-                                    Mersin merkezli olan <b><i>Öz & Partners Avukatlık Ofisi;</i></b> Türkiye’nin pek çok yerindeki müvekkiline, hukukun pek çok alanındaki sorunlarının çözümünde profesyonel hizmet sağlamaktadır.
-                                </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="card ekip">
+                        <img src="~/assets/img/Logo/Logo.png" alt="Kişi 2 Fotoğrafı">
+                        <div class="card-body">
+                            <div>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
+                                    <h3 class="card-title ms-1 mb-5">
+                                        "Öz & Partners Avukatlık Sitesi'ne hoş geldiniz."
+                                    </h3>
+                                </a>
+                            </div>
+                            <div class="card-footer d-flex justify-content-center">
+                                <div class="social-icons d-flex">
+                                    <a href="mailto:info@ozpartnershukuk.com" class="social-icon">
+                                        <i class="fas fa-envelope" style="font-size:20px;"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/oz-partners/" target="_blank" class="social-icon">
+                                        <i class="fab fa-linkedin" style="font-size:20px;"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- Makale Linkleri -->
-        <div class="container">
-            <h2 class="text-center mt-5 mb-4 border-bottom" style="font-size:30px;">
-                <i class="fas fa-newspaper"></i> Son Makaleler
-            </h2>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="card shadow">
+                <div class="col-sm-12 col-lg-9 article">
+                    <div class="card bg-white shadow">
                         <div class="card-body">
-                            <h5 class="card-title">Yükselen Hayvan Duyarlılığına Kişisel ve Hukuki Bir Bakış Açısı</h5>
-                            <a href="Makale1" class="btn text-white btn-zoom" style="background-color:#013A33">Devamını Oku</a>
+                            <p class="card-text" style="text-align:justify;">
+                                1974 yılında Av. Emin Öz tarafından kurulan avukatlık ofisi 50 yıla yakın süredir faaliyet göstermekte olup bu süre zarfında başta Mersin’in önde gelen gerçek ve tüzel kişileri olmak üzere binlerle ölçülen bir müvekkil portföyünün vekilliğini üstlenmiştir.
+                            </p>
+                            <p class="card-text" style="text-align:justify;">
+                                2018 yılında Av. Yunus Emre Öz ve 2019 yılında Av. Kaan Karataş ekibe katılmış olup yarım asırdır oluşturulan bilgi ve tecrübe 2. kuşağa aktarılmıştır. Böylece; sadece Mersin’in değil, bölgenin en uzun süredir hizmet vermekte olan, tanınmış ve saygın hukuk bürolarından Öz & Partners Avukatlık Ofisi bu konumunu daha da sağlamlaştırmıştır.
+                            </p>
+                            <p class="card-text" style="text-align:justify;">
+                                Müvekkile karşı şeffaflık, kamu idareleriyle güçlü iletişim, disiplinli ve bilimsel çalışma ile kısa sürede etkili sonuç alma prensiplerini odağına alan Öz & Partners Avukatlık Ofisi; müvekkillerinin hukuki sorunlarını mümkün olan en lehe şekilde çözümlemeyi hedeflemektedir.
+                            </p>
+                            <p class="card-text" style="text-align:justify;">
+                                Mersin merkezli olan <b><i>Öz & Partners Avukatlık Ofisi;</i></b> Türkiye’nin pek çok yerindeki müvekkiline, hukukun pek çok alanındaki sorunlarının çözümünde profesyonel hizmet sağlamaktadır.
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="card shadow">
-                        <div class="card-body">
-                            <h5 class="card-title">Mersin Ceza Avukatı</h5>
-                            <a href="Makale2" class="btn text-white mt-4 btn-zoom" style="background-color:#013A33">Devamını Oku</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card">
-                        <div class="card-body shadow">
-                            <h5 class="card-title">Mersin Boşanma Avukatı</h5>
-                            <a href="Makale3" class="btn text-white mt-4 btn-zoom" style="background-color:#013A33">Devamını Oku</a>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>

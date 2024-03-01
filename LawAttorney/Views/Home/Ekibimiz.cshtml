@@ -50,7 +50,7 @@
             font-size: 18px;
             line-height: 28px;
             margin: 0;
-            font-weight:700;
+            font-weight: 700;
         }
 
         .ekip .card-footer {
@@ -84,29 +84,37 @@
             }
 
             .ekip .read-more-btn:hover {
-                color: #013a33;
+                color: #093a33;
             }
 
         .ekip .social-icons {
             display: flex;
             gap: 10px; /* İkonlar arasında boşluk bırakmak için */
         }
+    /* Social Icons */
+    .social-icon {
+        color: #093a33; /* İstenen renk */
+        font-size: 20px;
+    }
 
-        .ekip .social-icon {
-            color: #013a33;
-            font-size: 20px;
+        .social-icon:hover {
+            color: #093a33; /* İstenen renk */
         }
+
 
     /* Modal Header */
     .modal-header {
-        background-color: #013a33;
+        background-color: #093a33;
         color: #fff;
         border-bottom: 1px solid #ccc;
     }
 
     .modal-title {
-        font-size: 1.8rem;
+        font-size: 2.5rem;
         font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Daha okunabilir bir yazı tipi ekledik */
+        text-transform: uppercase; /* Tüm harfleri büyük harfe çevir */
+        letter-spacing: 1px; /* Harfler arasındaki boşluğu artır */
     }
 
     /* Modal Body */
@@ -142,7 +150,7 @@
     }
 
     .modal-bio-mail {
-        color: #013a33;
+        color: #093a33;
         text-decoration: underline;
         cursor: pointer;
         margin-top: 10px;
@@ -153,14 +161,27 @@
         margin-bottom: 15px; /* Paragraflar arası alt boşluk ekleniyor */
         margin-top: 0.75em; /* Paragraflar arası üst boşluk ekleniyor */
     }
-    /* End Custom Styles */
-</style>
+
+    .card-subtitle {
+        font-size: 13px; /* Daha küçük font boyutu */
+        color: #666; /* Soft bir gri renk */
+    }
+
+    .ekip img {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+    }
+
+    .ekip:hover img {
+        filter: grayscale(0%);
+    }
+    </style>
 
 <body>
     <section class="ftco-section">
         <div class="container">
             <div class="custom-img1 mb-5 shadow">
-                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/banner900.png" />
+                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/bannerNew.png" />
                 <span>Ekibimiz</span>
             </div>
         </div>
@@ -186,17 +207,13 @@
                             <div class="card-body">
                                 <div>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal1">
-                                        <h3 class="card-title ms-1 mb-5">Avukat Emin Öz</h3>
+                                        <h3 class="card-title ms-1">Av. Emin Öz</h3>
+                                        <p class="card-subtitle mb-5">Kurucu Ortak</p>
+
                                     </a>
                                 </div>
-                                <div class="card-footer d-flex justify-content-between border-4">
-                                    <a href="#" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal1">
-                                        Özgeçmiş <i class="social-icon fas fa-arrow-right"></i>
-                                    </a>
+                                <div class="card-footer d-flex justify-content-center border-4">
                                     <div class="social-icons d-flex">
-                                        <a href="mailto:eminoz@ozpartnershukuk.com" class="social-icon">
-                                            <i class="fas fa-envelope" style="font-size:20px;"></i>
-                                        </a>
                                         <a href="https://www.facebook.com/aveminoz/" target="_blank" class="social-icon">
                                             <i class="fab fa-facebook" style="font-size:20px;"></i>
                                         </a>
@@ -215,13 +232,12 @@
                             <div class="card-body">
                                 <div>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
-                                        <h3 class="card-title ms-1 mb-5">Avukat Yunus Emre Öz</h3>
+                                        <h3 class="card-title ms-1">Av. Yunus Emre Öz</h3>
+                                        <p class="card-subtitle mb-5">Partner Avukat</p>
+
                                     </a>
                                 </div>
-                                <div class="card-footer d-flex justify-content-between">
-                                    <a href="#" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal2">
-                                        Özgeçmiş <i class="social-icon fas fa-arrow-right"></i>
-                                    </a>
+                                <div class="card-footer d-flex justify-content-center">
                                     <div class="social-icons d-flex">
                                         <a href="mailto:yunusemreoz@ozpartnershukuk.com" class="social-icon">
                                             <i class="fas fa-envelope" style="font-size:20px;"></i>
@@ -244,13 +260,12 @@
                             <div class="card-body">
                                 <div>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal3">
-                                        <h3 class="card-title ms-1 mb-5">Avukat Kaan Karataş</h3>
+                                        <h3 class="card-title ms-1">Av. Kaan Karataş</h3>
+                                        <p class="card-subtitle mb-5">Partner Avukat</p>
+
                                     </a>
                                 </div>
-                                <div class="card-footer d-flex justify-content-between">
-                                    <a href="#" class="read-more-btn" data-bs-toggle="modal" data-bs-target="#bioModal3">
-                                        Özgeçmiş <i class="social-icon fas fa-arrow-right"></i>
-                                    </a>
+                                <div class="card-footer d-flex justify-content-center">
                                     <div class="social-icons d-flex">
                                         <a href="mailto:kaankaratas@ozpartnershukuk.com" class="social-icon">
                                             <i class="fas fa-envelope" style="font-size:20px;"></i>
@@ -273,7 +288,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="bioModal1Label">Avukat Emin Öz</h5>
+                    <h5 class="modal-title" id="bioModal1Label">Av. Emin Öz</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -291,23 +306,22 @@
                     <p>
                         Ayrıca bir dönem Mersin Deniz ve Ticaret Meslek Yüksekokulu’nda hukuk dersleri vermiştir. Meslek hayatının 50. yılına yaklaşan Av. Emin Öz, İngilizce ve Fransızca bilmektedir.
                     </p>
-
-
-                    <p class="modal-bio-mail" onclick="location.href='mailto:eminoz@ozpartnershukuk.com';">
-                        <i class="fas fa-envelope" style="color: #013a33;"></i> eminoz@ozpartnershukuk.com
-                    </p>
+                    <div class="d-flex justify-content-center">
+                        <a href="https://www.facebook.com/aveminoz/" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook" style="font-size:20px;"></i>
+                        </a>
+                    </div>
 
                 </div>
             </div>
         </div>
     </div>
-
     <!-- Modal 2 -->
     <div class="modal fade" id="bioModal2" tabindex="-1" aria-labelledby="bioModal2Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="bioModal2Label">Avukat Yunus Emre Öz</h5>
+                    <h5 class="modal-title" id="bioModal2Label">Av. Yunus Emre Öz</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -317,13 +331,18 @@
                         1994 yılında Mersin’de doğmuştur. 2009 yılında Gelişim Koleji’nden, 2013 yılında İçel Anadolu Lisesi’nden (İAL) mezun olan Av. Yunus Emre Öz; lisans eğitimini Çağ Üniversitesi Hukuk Fakültesi’nde onur derecesiyle bitirmiştir. 2018 yılında avukatlık stajını tamamlayarak Öz & Partners’ın ortak avukatlarından olmuştur.
 
                     </p>
-
                     <p>
                         2020 yılında ise Dünya’nın önde gelen üniversitelerinden olan King’s College London’dan yüksek lisans kabulü almıştır. T.C. Adalet Bakanlığı Arabulucular Sicili’ne 38270 sicil numarasıyla kayıtlı Arabulucu olmasının yanında 2022 yılından bu yana Türk Kızılayı’na sözlü ve yazılı olarak hukuki danışmanlık vermektedir. Bir dönem bir siyasi partinin Mersin İl Gençlik Kolları Başkanlığı görevini yürüten Öz, ileri seviye İngilizce bilmektedir.
                     </p>
-                    <p class="modal-bio-mail" onclick="location.href='mailto:yunusemreoz@ozpartnershukuk.com';">
-                        <i class="fas fa-envelope" style="color: #013a33;"></i> yunusemreoz@ozpartnershukuk.com
-                    </p>
+                    <div class="d-flex justify-content-center">
+                        <a href="mailto:yunusemreoz@ozpartnershukuk.com" target="_blank" class="me-3 social-icon">
+                            <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin" style="font-size: 20px;"></i>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -334,7 +353,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="bioModal3Label">Avukat Kaan Karataş</h5>
+                    <h5 class="modal-title" id="bioModal3Label">Av. Kaan Karataş</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -345,11 +364,18 @@
                     <p>
                         İleri seviyede İngilizce ve orta seviyede Almanca bilmektedir. 2019 yılında Öz & Partners’ın ortak avukatlarından olmuştur.
                     </p>
-                    <p class="modal-bio-mail" onclick="location.href='mailto:kaankaratas@ozpartnershukuk.com';">
-                        <i class="fas fa-envelope" style="color: #013a33;"></i> kaankaratas@ozpartnershukuk.com
-                    </p>
+                    <div class="d-flex justify-content-center">
+                        <a href="mailto:kaankaratas@ozpartnershukuk.com" target="_blank" class="me-3 social-icon">
+                            <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kaankarata%C5%9F" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin" style="font-size: 20px;"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script></script>
 </body>
+

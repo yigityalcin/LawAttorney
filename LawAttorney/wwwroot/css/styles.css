@@ -12,6 +12,31 @@
  */
 html {
     /*zoom: 80%;*/
+
+}
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url(../fonts/CaviarDreams.ttf) format('truetype');
+    /* Regular (Normal) varyasyonu için tanım */
+}
+
+@font-face {
+    font-family: 'Caviar Dreams Bold';
+    src: url(../fonts/CaviarDreams_Bold.ttf) format('truetype');
+    /* Bold (Kalın) varyasyonu için tanım */
+}
+
+@font-face {
+    font-family: 'Caviar Dreams Bold Italic';
+    src: url(../fonts/CaviarDreams_BoldItalic.ttf) format('truetype');
+    /* Italic (Eğik) varyasyonu için tanım */
+}
+
+@font-face {
+    font-family: 'Caviar Dreams Italic';
+    src: url(../fonts/CaviarDreams_Italic.ttf) format('truetype');
+    /* Italic (Eğik) varyasyonu için tanım */
 }
 
 
@@ -107,8 +132,8 @@ body {
     background-color: var(--bs-body-bg);
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    font-family: 'Nunito', Arial, sans-serif; /* Yazı tipini burada belirtin */
-    background-color: #ffffff;
+    font-family: 'Caviar Dreams Bold', sans-serif; /* Yazı tipini burada belirtin */
+    background-color: #fff;
 }
 
 hr {
@@ -4050,8 +4075,8 @@ textarea.form-control-lg {
 .nav-link {
     display: block;
     padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-    font-size: 14px;
-    font-weight: normal; /* Kalın yazı için 'bold' kullanabilirsiniz. */
+    font-size: 13px;
+    font-weight: bold; /* Kalın yazı için 'bold' kullanabilirsiniz. */
     color: #edd8b9;
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
@@ -6700,20 +6725,21 @@ textarea.form-control-lg {
     opacity: 1;
 }
 
-.carousel-caption {
+.carousel-inner .carousel-item {
+    position: relative;
+}
+
+.carousel-caption,
+.carousel-caption span {
     position: absolute;
-    bottom: 0;
+    bottom: 90%;
     left: 77%;
     padding: 5px;
     color: white;
     text-align: center;
     font-size: 14px;
+    z-index: 2;
 }
-
-    .carousel-caption span {
-        color: #fff;
-        font-weight: 700;
-    }
 /* Daha küçük ekranlarda (mobil) için stil */
 @media (max-width: 767px) {
     .carousel-caption {
@@ -6726,6 +6752,36 @@ textarea.form-control-lg {
         font-size: 12px;
     }
 }
+
+.carousel-captionWelcome {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    padding: 20px;
+    color: #fff;
+    background: linear-gradient(to right, rgba(9, 58, 51, 0.9), rgba(0, 92, 83, 0.9)); /* Geçişli renkler ve opacity */
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 10px; /* İsteğe bağlı: Köşe yuvarlama */
+    opacity: 0; /* Sayfa yüklendiğinde görünmez olacak */
+    animation: fadeIn 1s forwards; /* 1 saniyelik fade-in animasyonu */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.carousel-captionWelcome:hover {
+    background: linear-gradient(to right, rgba(0, 92, 83, 0.8), rgba(9, 58, 51, 0.8)); /* Hover durumunda geçişli renkler ve opacity */
+}
+
+
 
 
 .carousel-dark .carousel-control-prev-icon,
@@ -12518,12 +12574,11 @@ footer.footer {
 */
 
 .features-icons {
-    padding-top: 3rem;
     padding-bottom: 3rem;
 }
 
 .features-icons-item {
-    width: 90%;
+    width: 100%;
     background: #fff;
     line-height: 1.5;
     text-align: center;
@@ -12558,17 +12613,26 @@ footer.footer {
 }
 
 #CalismaAlanlari {
-    border: 1px solid #10665a;
+    border: 1px solid;
+    border-image: linear-gradient(to right, #093a33, #10665a);
+    border-image-slice: 1;
     color: #10665a;
 }
+
 #Ekibimiz {
-    border: 1px solid #0c5046;
-    color: #0c5046;
+    border: 1px solid;
+    border-image: linear-gradient(to right, #093a33, #10665a);
+    border-image-slice: 1;
+    color: #10665a;
 }
+
 #İletisim {
-    border: 1px solid #093a33;
-    color: #093a33;
+    border: 1px solid;
+    border-image: linear-gradient(to right, #093a33, #10665a);
+    border-image-slice: 1;
+    color: #10665a;
 }
+
 #CalismaAlanlari:hover .features-icons-icon i,
 #CalismaAlanlari:hover h3 {
     color: #fff !important;
@@ -12603,14 +12667,16 @@ footer.footer {
 
 /* nav link ayraç */
 .navbar-nav .nav-item {
-    border-right: 1px solid #edd8b9;
-    height: 12px;
-    line-height: 0px; /* line-height değeri height değeri ile aynı olmalı */
+    border-right: 1px solid #686868;
+    height: 14px;
+    line-height: 1px;
 }
 
-    .navbar-nav .nav-item:last-child {
-        border-right: 0 !important;
+    .navbar-nav .nav-item:last-child,
+    .navbar-nav .nav-item:nth-last-child(2) {
+        border-right: none !important;
     }
+
 
 .page-border {
     color: #111;
@@ -12635,11 +12701,7 @@ footer.footer {
 
 
 .container {
-    max-width: 1100px;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: 1000px;
     margin: 0 auto; /* Sayfayı ortalar */
 }
 
@@ -13034,15 +13096,15 @@ footer {
 
 
 .info-bar {
-    background-color: #053730;
+    background-color: #edd8b9; /*#053730;*/
     border-bottom: 1px solid #edd8b9;
-    color: #edd8b9;
+    color: #093a33;
     padding: 10px 0;
     font-size: 12px;
 }
 
     .info-bar a {
-        color: #edd8b9;
+        color: #093a33;
     }
 
 
@@ -13054,7 +13116,7 @@ footer {
 }
 
 .info-bar span {
-    margin-right: 100px; /* İstediğiniz boşluğu ayarlayabilirsiniz */
+    margin-right: 50px; /* İstediğiniz boşluğu ayarlayabilirsiniz */
 }
 
 .navbar-nav li {
@@ -13066,7 +13128,7 @@ footer {
 }
 
 .carousel-img {
-    width: 89%;
+    width: 100%;
     height: 500px;
     margin: auto;
     object-fit: cover;
@@ -13135,7 +13197,7 @@ ul {
             ul li a::after {
                 position: absolute;
                 content: "";
-                top: 75%;
+                top: 100%;
                 left: 0;
                 width: 100%;
                 height: 3px;
@@ -13215,31 +13277,39 @@ ul {
 
 .custom-navbar-fluid {
     background-color: #093a33;
-    height: 140px !important;
 }
 
 
 .lang-select .btn {
-    background: #fff;
+    background: #f3f3f3;
     border-radius: 0;
-    border: 1px solid #ccc;
-    height: 28px;
-    line-height: 28px;
-    min-width: 89px;
+    height: 21px;
+    line-height: 21px;
+    min-width: 83px;
     padding: 0;
     font-size: 13px;
-    color: #898989;
+    color: #000;
     margin-right: -1px;
 }
+
 .lang-select .dropdown-menu {
     top: 27px;
-    min-width: 89px;
+    min-width: 83px;
     text-align: center;
     margin: 0;
     font-size: 13px;
-    border-radius: 0;
-    border: 1px solid #707070;
+    border-radius: 4px;
+    border: 1px solid #f3f3f3;
     box-shadow: none;
     right: -1px;
     padding: 2px 0;
+    background-color: #f3f3f3; /* Dropdown arka plan rengi */
 }
+
+.lang-select .dropdown-item {
+    color: #000; /* Dropdown içindeki metin rengi */
+}
+
+    .lang-select .dropdown-item:hover {
+        background-color: #092622; /* Dropdown içindeki öğelerin üzerine gelindiğindeki arka plan rengi */
+    }

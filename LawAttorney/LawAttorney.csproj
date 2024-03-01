@@ -31,4 +31,11 @@
 		<None Include="wwwroot\fonts\font\.DS_Store" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Content Update="wwwroot\assets\img\Logo\Logo.png">
+	    <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+	    <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+	  </Content>
+	</ItemGroup>
+
 </Project>

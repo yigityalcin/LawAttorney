@@ -1,10 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] Öz & Partners Avukatlık Ofisi | Oz&Partners; Hukuk</title>
+    <title>@ViewData["Title"] Öz & Partners Avukatlık Ofisi | Hukuki Danışmanlık ve Dava Hizmetleri</title>
     <link rel="apple-touch-icon" sizes="180x180" href="~/assets/img/BrowserIcons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="~/assets/img/BrowserIcons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="~/assets/img/BrowserIcons/favicon-16x16.png">
@@ -12,6 +11,13 @@
     <link rel="mask-icon" href="~/assets/img/BrowserIcons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="Hukuk, Avukat, Hukuki Hizmetler, Dava, Ceza Avukatı, Tazminat Hukuku" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Öz & Partners Avukatlık Ofisi, hukuki danışmanlık, dava hizmetleri ve tazminat hukuku konularında uzmanlaşmıştır. Profesyonel çözümler için bize başvurun." />
+    <meta property="og:title" content="@ViewData["Title"] Öz & Partners Avukatlık Ofisi | Hukuki Danışmanlık ve Dava Hizmetleri" />
+    <meta property="og:description" content="Öz & Partners Avukatlık Ofisi, hukuki danışmanlık, dava hizmetleri ve tazminat hukuku konularında uzmanlaşmıştır. Profesyonel çözümler için bize başvurun." />
+    <meta property="og:url" content="https://www.ozpartnershukuk.com" />
+    <meta property="og:type" content="website" />
 
     <link rel="alternate" hreflang="tr" href="/Home/Index">
     <!-- İngilizce sayfa -->
@@ -19,7 +25,7 @@
     <!-- Rusça sayfa -->
     <link rel="alternate" hreflang="ru" href="/Home/IndexRu">
     <!-- Varsayılan sayfa (diğer diller dışında bir dilde görüntülenirse) -->
-    <link rel="alternate" hreflang="x-default" href="/Home/Index">
+    <link rel="alternate" hreflang="x-default" href="/Home/IndexEng">
 
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
@@ -27,6 +33,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LawAttorney.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="~/assets/flaticon.css">
@@ -36,22 +46,18 @@
 <body>
     <div class="mobileNavbar">
         <div class="row">
-            <div class="col-xl-3 info-bar text-center">
+            <div class="col-lg-3 info-bar text-center">
             </div>
-            <div class="col-xl-6 info-bar text-center">
-                <span class="span-phone ms-5"><i class="fas fa-phone"></i> Telefon: (532) 499 1974</span>
+            <div class="col-lg-6 info-bar d-flex justify-content-between align-items-center">
+                <span class="span-phone"><i class="fas fa-phone"></i> Telefon: (532) 499 1974</span>
 
                 <span class="span-mail"><i class="fas fa-envelope"></i> Email: <a class="span-mail1" href="mailto:info@ozpartnershukuk.com">info@ozpartnershukuk.com</a></span>
                 <span class="span-hours"><i class="fas fa-clock"></i> Çalışma Saatleri: Pazartesi - Cuma, 09:00 - 17:00</span>
-                
-            </div>
-
-            <div class="col-xl-3 info-bar text-start">
-                <div class="dropdown lang-select me-1">
-                    <button class="btn btn-sm dropdown-toggle custom-dropdown-toggle border shadow" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="dropdown lang-select">
+                    <button class="btn dropdown-toggle" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <span id="languageText">Türkçe</span>
                     </button>
-                    <ul class="dropdown-menu text-black" aria-labelledby="navbarDropdownMenuAvatar">
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuAvatar">
                         <li class="border-bottom">
                             <a class="dropdown-item text-center" href="/Home/Index" data-lang="TR">
                                 Türkçe
@@ -68,7 +74,9 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </span>
+            </div>
+            <div class="col-lg-3 info-bar text-center">
             </div>
         </div>
     </div>
@@ -125,7 +133,6 @@
                 </div>
             </nav>
         </div>
-    </div>
     </div>
     <button class="mobile-chat-button" id="mobileChatButton">
         <i class="fas fa-comments"></i>

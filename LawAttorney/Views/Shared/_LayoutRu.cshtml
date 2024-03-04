@@ -4,19 +4,29 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - LawAttorney</title>
-    <link rel="icon" type="image/x-icon" href="~/assets/favicon.ico" />
+    <title>@ViewData["Title"] Офис адвокатов "Юз и Партнерс" | Юридические консультации и судебные услуги</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="~/assets/img/BrowserIcons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/assets/img/BrowserIcons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/assets/img/BrowserIcons/favicon-16x16.png">
+    <link rel="manifest" href="~/assets/img/BrowserIcons/site.webmanifest">
+    <link rel="mask-icon" href="~/assets/img/BrowserIcons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="keywords" content="Право, Адвокат, Юридические услуги, Суд, Адвокат по уголовным делам, Трудовое право" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Öz & Partners Avukatlık Ofisi, hukuki danışmanlık, dava hizmetleri ve tazminat hukuku konularında uzmanlaşmıştır. Profesyonel çözümler için bize başvurun." />
+    <meta property="og:title" content="@ViewData["Title"] Адвокатское бюро 'Юз и Партнерс' | Юридические консультации и судебные услуги" />
+    <meta property="og:description" content="Адвокатское бюро 'Юз и Партнерс' специализируется на юридических консультациях, судебных услугах и трудовом праве. Обратитесь к нам за профессиональными решениями." />
+    <meta property="og:url" content="https://www.ozpartnershukuk.com" />
+    <meta property="og:type" content="website" />
 
-    <link rel="alternate" hreflang="en" href="IndexEng">
-
-    <!-- Turkish Page -->
-    <link rel="alternate" hreflang="tr" href="Index">
-
-    <!-- Russian Page -->
-    <link rel="alternate" hreflang="ru" href="IndexRu">
-
-    <!-- Default Page (if displayed in a language other than Turkish or Russian) -->
-    <link rel="alternate" hreflang="x-default" href="Index">
+    <link rel="alternate" hreflang="tr" href="/Anasayfa">
+    <!-- İngilizce sayfa -->
+    <link rel="alternate" hreflang="en" href="/en/HomePage">
+    <!-- Rusça sayfa -->
+    <link rel="alternate" hreflang="ru" href="/ru/HomePageRu">
+    <!-- Varsayılan sayfa (diğer diller dışında bir dilde görüntülenirse) -->
+    <link rel="alternate" hreflang="x-default" href="/en/HomePage">
 
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
@@ -24,6 +34,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LawAttorney.styles.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="~/assets/flaticon.css">
@@ -32,93 +46,89 @@
 
 <body>
     <div class="mobileNavbar">
-        <div class="col-xl-12 info-bar text-center">
-            <span class="span-phone"><i class="fas fa-phone"></i> Телефон: (532) 499 1974</span>
-            <span class="span-mail"><i class="fas fa-envelope"></i> Электронная почта: <a class="span-mail1" href="mailto:info@ozpartnershukuk.com">info@ozpartnershukuk.com</a></span>
-            <span class="span-hours me-2"><i class="fas fa-clock"></i> Время работы: Понедельник - Пятница, 09:00 - 17:00</span>
-        </div>
-        <div class="container">
-            <nav class="navbar navbar-expand-xl d-lg-block">
-                <div class="row mb-lg-3">
-                    <div class="col-lg-3 mt-lg-3 col-sm-12">
-                        <a class="navbar-brand ms-lg-4 mt-2" href="/Home/IndexRu">
-                            <img src="~/assets/img/Logo/MainLogo.png" alt="Логотип" height="80" class="img-brand">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+        <div class="row">
+            <div class="info-bar">
+                <div class="col-lg-12 d-flex justify-content-center align-items-center">
+                    <span class="span-phone"><i class="fas fa-phone"></i> Телефон: (532) 499 1974</span>
+                    <span class="span-mail"><i class="fas fa-envelope"></i> Электронная почта: <a class="span-mail1" href="mailto:info@ozpartnershukuk.com">info@ozpartnershukuk.com</a></span>
+                    <span class="span-hours"><i class="fas fa-clock"></i> Время работы: Понедельник - Пятница, 09:00 - 17:00</span>
+                    <span class="dropdown lang-select py-1">
+                        <button class="btn dropdown-toggle" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span id="languageText">Türkçe</span>
                         </button>
-                    </div>
-                    <div class="col-lg-9 col-sm-12">
-                        <div class="d-flex justify-content-end mb-lg-3 mt-lg-2">
-                            <div class="d-flex butonlar align-items-center me-lg-4">
-                                <div class="d-sm-flex butonlar-mail align-items-center">
-                                    <button href="" class="ms-1 mailButton" id="mailGonderButton">
-                                        <i class="fas fa-envelope me-lg-2"></i>Быстрый контакт
-                                    </button>
-                                </div>
-                                <div class="dropdown" id="languageDropdown">
-                                    <a class="btn btn-sm butonlar-lang dropdown-toggle custom-dropdown-toggle border shadow" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i id="languageIcon" class="fas fa-globe"></i>
-                                    </a>
-
-                                    <ul class="dropdown-menu text-black" aria-labelledby="navbarDropdownMenuAvatar">
-                                        <li class="border-bottom">
-                                            <a class="dropdown-item text-center" href="/Home/Index" data-lang="TR">
-                                                Türkçe
-                                            </a>
-                                        </li>
-                                        <li class="border-bottom">
-                                            <a class="dropdown-item text-center" href="/Home/IndexEng" data-lang="ENG">
-                                                English
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item text-center" href="/Home/IndexRu" data-lang="RU">
-                                                Русский
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuAvatar">
+                            <li class="border-bottom">
+                                <a class="dropdown-item text-center" href="javascript:void(0);" onclick="navigateLink('tr')" data-lang="TR">
+                                    Türkçe
+                                </a>
+                            </li>
+                            <li class="border-bottom">
+                                <a class="dropdown-item text-center" href="javascript:void(0);" onclick="navigateLink('en')" data-lang="ENG">
+                                    English
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item text-center" href="javascript:void(0);" onclick="navigateLink('ru')" data-lang="Рус.">
+                                    Русский
+                                </a>
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid custom-navbar-fluid mb-lg-5">
+            <div class="container">
+                <nav class="navbar navbar-expand-xl d-lg-block">
+                    <div class="row align-items-center">
+                        <div class="col-lg-3 col-sm-12">
+                            <a class="navbar-brand" href="/ru/HomepageRu">
+                                <img src="~/assets/img/Logo/Logo.png" alt="Logo" height="80" class="img-brand">
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="col-lg-9 col-sm-12">
+                            <!-- Menu Tabs -->
+                            <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/ru/HomePageRu">Главная</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/ru/CorporateRu">Корпоративные</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/ru/OurTeamRu">Наша команда</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/ru/PracticeAreasRu">Области практики</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/ru/ArticlesRu">Статьи</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/ru/ContactRu">Контакты</a>
+                                    </li>
+                                    <li class="d-flex justify-content-center" id="langMobile">
+                                        <a role="menuitem" tabindex="-1" class="nav-link p-2" href="/Anasayfa">
+                                            <i class="bi bi-translate me-2"></i>
+                                            Türkçe
+                                        </a>
+                                        <a role="menuitem" tabindex="-1" class="nav-link p-2" href="/en/HomePage">
+                                            English
+                                        </a>
+                                        <a role="menuitem" tabindex="-1" class="nav-link p-2" href="/ru/HomePageRu">
+                                            Русский
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <!-- Меню вкладок -->
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Home/IndexRu">Главная</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Home/CorporateRu">Корпоративные</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Home/OurTeamRu">Наша команда</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Home/PracticeAreasRu">Области практики</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Home/ArticlesRu">Статьи</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/Home/ContactRu">Контакты</a>
-                                </li>
-                                <li class="d-flex justify-content-center" id="langMobile">
-                                    <a role="menuitem" tabindex="-1" class="nav-link p-2" href="/Home/Index">
-                                        <i class="bi bi-translate me-2"></i>
-                                        Türkçe
-                                    </a>
-                                    <a role="menuitem" tabindex="-1" class="nav-link p-2" href="/Home/IndexEng">
-                                        English
-                                    </a>
-                                    <a role="menuitem" tabindex="-1" class="nav-link p-2" href="/Home/IndexRu">
-                                        Русский
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
         </div>
     </div>
     <button class="mobile-chat-button" id="mobileChatButton">
@@ -127,36 +137,34 @@
     @RenderBody()
     <!-- ПОДВАЛ -->
     <div class="container-fluid">
-        <footer class="text-center text-lg-start text-black bg-white">
+        <footer class="text-center text-lg-start text-black">
             <div class="container page-border mt-lg-0"></div>
-            <section class="d-flex justify-content-center p-2 bg-white">
+            <section class="d-flex justify-content-center p-2">
                 <div class="sosyal me-lg-2">
-                    <span>Подписывайтесь на нас в социальных сетях: </span>
+                    <span>Подпишитесь на нас в LinkedIn: </span>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <a href="https://www.linkedin.com/company/oz-partners/" class="me-4" style="background-color: #093a33; color: white; text-decoration: none; display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 4px;" target="_blank">
+                    <a href="https://www.linkedin.com/company/oz-partners/" class="me-2" style="background-color: #093a33; color: white; text-decoration: none; display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 4px;" target="_blank">
                         <i class="fab fa-linkedin" style="font-size: 16px; margin-right: 8px;"></i>
                         <span style="font-size: 12px;">Подписаться</span>
                     </a>
                 </div>
             </section>
             <div class="container page-border"></div>
-            <!-- Авторские права -->
+            <!-- Copyright -->
             <div class="text-center mt-5" style="font-size:12px; background-color: #ffffff">
                 ©
-                <a class="sosyal" href="">1974-2024 Юридическая фирма Öz&Partners; - Все права защищены</a>
+                <a class="sosyal1" href="">1974-2024 Офис адвокатов Öz & Partners - Все права защищены</a>
             </div>
         </footer>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="~/js/scripts.js" asp-append-version="true"></script>
     <script src="~/js/language.js" asp-append-version="true"></script>
     <script>
-        document.getElementById("mailGonderButton").addEventListener("click", function () {
-            window.location.href = "/Home/ContactRu#name";
-        });
         document.getElementById("mobileChatButton").addEventListener("click", function () {
-            window.location.href = "/Home/ContactRu#contactForm";
+            window.location.href = "/ru/ContactRu#contactForm";
         });
     </script>
 </body>

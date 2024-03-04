@@ -1,0 +1,170 @@
+﻿@{
+    ViewData["Title"] = "Practice Areas - ";
+    Layout = "~/Views/Shared/_LayoutEng.cshtml";
+}
+<style>
+    .c_icon {
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .c_icon:hover {
+            transform: scale(1.05);
+        }
+</style>
+<body>
+    <!-- Practice Areas Section -->
+    <section class="ftco-section">
+        <div class="container p-lg-0">
+            <div class="custom-img1 mb-5 shadow">
+                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/banner1000.png" />
+                <span>Practice Areas</span>
+            </div>
+        </div>
+        <div class="container p-0" style="margin-top:100px">
+            <ol class="breadcrumb border-1 border-bottom">
+                <li class="breadcrumb-item"><a href="/en/HomePage">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Practice Areas</li>
+            </ol>
+        </div>
+    </section>
+    <div class="container-fluid">
+        <div class="container calisma">
+            <div class="row justify-content-center">
+                <!-- Compensation Law -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="col-md-12">
+                        <div class="c_icon shadow" onclick="toggleText('compensation')">
+                            <div class="c_icon_img">
+                                <img src="~/assets/img/CalismaAlanlarimiz/profit.png" alt="Compensation Law" class="">
+                            </div>
+                            <h4>Compensation Law</h4>
+                        </div>
+                        <div class="c_icon_text" style="text-align:justify; display:none;" id="compensationText">
+                            <p>
+                                Compensation law, one of the fundamental and most frequently invoked branches of current legal regulations, is also one of the most litigated areas of law. It encompasses compensation for medical malpractice, traffic accidents, damages caused by the fault of the administration, as well as compensation for acts constituting crimes and many other situations. Compensation law regulates the legal processes related to the compensation of damages suffered by individuals or organizations. Compensation claims are usually made for the purpose of compensating for material or moral damages.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Commercial and Corporate Law -->
+                    <div class="col-md-12">
+                        <div class="c_icon shadow" onclick="toggleText('commercial')">
+                            <div class="c_icon_img">
+                                <img src="~/assets/img/CalismaAlanlarimiz/briefcase.png" alt="Commercial and Corporate Law">
+                            </div>
+                            <h4>Commercial and Corporate Law</h4>
+                        </div>
+                        <div class="c_icon_text" style="text-align:justify; display:none;" id="commercialText">
+                            <p>
+                                Mersin, being both a port city and an important location for land transportation, stands out as a trade city and hosts a wide range of commercial disputes. Commercial and corporate law constitutes one of the main areas of expertise of Öz & Partners Law Office. The office, with its founder Attorney Emin Öz's legal identity and knowledge gained from personal commercial activities, has the capacity to provide all legal support that a commercial company may need.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Criminal Law -->
+                    <div class="col-md-12">
+                        <div class="c_icon shadow" onclick="toggleText('criminal')">
+                            <div class="c_icon_img">
+                                <img src="~/assets/img/CalismaAlanlarimiz/handcuffs.png" alt="Criminal Law">
+                            </div>
+                            <h4>Criminal Law</h4>
+                        </div>
+                        <div class="c_icon_text" style="text-align:justify; display:none;" id="criminalText">
+                            <p>
+                                Criminal law, one of the main branches of law, is a special field that requires meticulous work as it involves the restriction of individuals' freedoms. Additionally, victim representation, also known as complainant representation, forms another aspect of criminal proceedings. It is worth noting that some crimes defined by law are subject to reconciliation before filing a lawsuit. Representation during the reconciliation stage benefits both parties.
+                            </p>
+                            <p>
+                                Moreover, in many cases, compensation lawsuits related to the same incident accompany criminal cases.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Administrative, Tax, and Customs Law -->
+                    <div class="col-md-12">
+                        <div class="c_icon shadow" onclick="toggleText('tax')">
+                            <div class="c_icon_img">
+                                <img src="~/assets/img/CalismaAlanlarimiz/tax (1).png" alt="Administrative, Tax, and Customs Law">
+                            </div>
+                            <h4>Administrative, Tax, and Customs Law</h4>
+                        </div>
+                        <div class="c_icon_text" style="text-align:justify; display:none;" id="taxText">
+                            <p>
+                                In areas where citizens' relationship with the state is concerned, and where the counterparty is the state, it is crucial for the client to receive effective legal support to avoid any loss of rights against strong public authorities. These branches represent areas that require specialized knowledge, separate from other areas of law, and can only be successfully handled by competent practitioners.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <!-- Family and Divorce Law -->
+                    <div class="col-md-12">
+                        <div class="c_icon shadow" onclick="toggleText('family')">
+                            <div class="c_icon_img">
+                                <img src="~/assets/img/CalismaAlanlarimiz/broken.png" alt="Family and Divorce Law">
+                            </div>
+                            <h4>Family and Divorce Law</h4>
+                        </div>
+                        <div class="c_icon_text" style="text-align:justify; display:none;" id="familyText">
+                            <p>
+                                Processes in this area of law, which involves clients' personal and private lives, should be conducted with confidentiality and in high cooperation. Divorce law, a subset of family law, is the most significant part of this broad field. Divorce cases can be contested or take the form of uncontested divorce. Custody, alimony, marital property regime, material compensation, and moral damages, also known as compensation for suffering, are other main topics of disputes.
+                            </p>
+                            <p>
+                                Applying for preventive and protective measures under Law No. 6284, known as the "Law on the Protection of Family and Prevention of Violence Against Women," especially in cases of domestic violence, through a lawyer and following the process with legal representation, provides advantages for preventing violence or unjust and disproportionate measures against the other party in the dispute.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Employment Law -->
+                    <div class="col-md-12">
+                        <div class="c_icon shadow" onclick="toggleText('employment')">
+                            <div class="c_icon_img">
+                                <img src="~/assets/img/CalismaAlanlarimiz/handshake.png" alt="Employment Law">
+                            </div>
+                            <h4>Employment Law</h4>
+                        </div>
+                        <div class="c_icon_text" style="text-align:justify; display:none;" id="employmentText">
+                            <p>
+                                Compensation items such as severance pay, notice pay, and overtime pay, which are the rightful rewards for workers' hard work, give life to numerous disputes before the courts. For the employee, the collection of these compensations is of vital importance, while from the employer's perspective, preventing overpayment of labor receivables with proper legal support is a critical legal service.
+                            </p>
+                            <p>
+                                It is important to note that, in labor receivables, the mandatory mediation stage defined by law must be completed before the lawsuit stage, and not only the lawsuit stage but also the entire process, including the mediation stage, provides significant advantages when followed with a lawyer.
+                            </p>
+                            <p>Compensation lawsuits arising from work accidents and occupational diseases are also another crucial aspect of employment law.</p>
+                        </div>
+                    </div>
+                    <!-- Execution Law -->
+                    <div class="col-md-12">
+                        <div class="c_icon shadow" onclick="toggleText('execution')">
+                            <div class="c_icon_img">
+                                <img src="~/assets/img/CalismaAlanlarimiz/regulations.png" alt="Execution Law">
+                            </div>
+                            <h4>Execution Law</h4>
+                        </div>
+                        <div class="c_icon_text" style="text-align:justify; display:none;" id="executionText">
+                            <p>
+                                Execution law, which plays a crucial role in the realization of favorable court decisions and the debtor's escape from unjust and unfounded pursuit and seizure threats, is of great importance for all branches of law. Our law office, with years of experience in debt collection and enforcement, and expertise in handling debtor objections and defenses, provides clients with a well-equipped service.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Inheritance Law -->
+                    <div class="col-md-12">
+                        <div class="c_icon shadow" onclick="toggleText('inheritance')">
+                            <div class="c_icon_img">
+                                <img src="~/assets/img/CalismaAlanlarimiz/MirasHukuku.png" alt="Inheritance Law">
+                            </div>
+                            <h4>Inheritance Law</h4>
+                        </div>
+                        <div class="c_icon_text" style="text-align:justify; display:none;" id="inheritanceText">
+                            <p>
+                                The inevitable end of human life, death, has various legal consequences for the deceased's relatives. In regulating these legal consequences, the Law of Inheritance, a separate book of the Turkish Civil Code, is taken as a basis. Our office provides services to clients in matters such as the arrangement of testamentary dispositions, their cancellation, obtaining a certificate of inheritance, keeping an estate book, waiving inheritance, and removing from inheritance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleText(id) {
+            var textElement = document.getElementById(id + 'Text');
+            textElement.style.display = (textElement.style.display === 'none' || textElement.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+</body>

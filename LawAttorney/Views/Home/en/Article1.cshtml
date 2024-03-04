@@ -1,0 +1,236 @@
+﻿@{
+    ViewData["Title"] = "Article - ";
+    Layout = "~/Views/Shared/_LayoutEng.cshtml";
+}
+
+<style>
+    .article-header {
+        font-size: 21px;
+        margin: 10px 0;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
+
+    .article-content-header {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.1;
+        color: #111111;
+        text-decoration: none !important;
+    }
+
+    .article-content p {
+        color: #111111;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.65;
+        margin: 0 0 10px;
+        text-align: justify;
+    }
+
+    .article-content a {
+        color: #093a33;
+    }
+    /* Custom Styles */
+    .ekip {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        /*         transition: transform 0.3s ease;
+             */ border: 1px solid #ccc;
+        margin-bottom: 20px;
+    }
+
+        .ekip img {
+            object-fit: cover;
+            position: relative;
+            width: 100%;
+            min-height: 220px;
+            max-height: 220px;
+        }
+
+
+        .ekip .card-body {
+            position: relative;
+            margin-top: 0;
+            padding: 1rem;
+            flex: 1;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,.05), 0 1px 3px 0 rgba(0,0,0,.1);
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .ekip .card-body a {
+                text-decoration: none;
+            }
+
+        /* .ekip:hover {
+                        transform: scale(1.05);
+                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+                    } */
+
+        .ekip .card-title {
+            width: 100%;
+            margin-top: 0 !important;
+            color: #000;
+            margin: 0px 0px 30px;
+            padding: 0px 0px 4px;
+            display: block;
+            font-size: 1.17em;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+
+        .ekip .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff !important;
+            text-transform: none !important;
+            font-size: 1em !important;
+            font-weight: 600 !important;
+            margin-top: 0 !important;
+            padding: 10px 0 0 0 !important;
+            letter-spacing: .5px;
+            border-top: 2px solid #ccc !important;
+        }
+
+        .ekip .read-more-btn {
+            color: #000;
+            text-decoration: underline;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative; /* Önemli: position değeri ekleyin */
+            font-size: 12px;
+            text-align: left;
+        }
+
+
+            .ekip .read-more-btn i {
+                margin-left: 5px; /* Ok ikonu ile metin arasında boşluk bırakmak için */
+            }
+
+            .ekip .read-more-btn:hover {
+                color: #093a33;
+            }
+
+        .ekip .social-icons {
+            display: flex;
+            gap: 10px; /* İkonlar arasında boşluk bırakmak için */
+        }
+
+        .ekip .social-icon {
+            color: #093a33;
+            font-size: 20px;
+        }
+</style>
+
+<body>
+    <section class="ftco-section">
+        <div class="container p-lg-0">
+            <div class="custom-img1 mb-5 shadow">
+                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/banner1000.png" />
+                <span>Corporate</span>
+            </div>
+        </div>
+        <div class="container p-0" style="margin-top:100px">
+            <ol class="breadcrumb border-1 border-bottom" style="border-color:#093a33 !important;">
+                <li class="breadcrumb-item"><a href="/en/HomePage">Home</a></li>
+                <li class="breadcrumb-item"><a href="/en/Articles">Articles</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    A Personal and Legal Perspective on the Rising Animal Sensitivity
+                </li>
+            </ol>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3">
+                <div class="card ekip">
+                    <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" alt="Person 2 Photo">
+                    <div class="card-body">
+                        <div>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
+                                <h3 class="card-title ms-1 mb-5">Att. Yunus Emre Öz</h3>
+                            </a>
+                        </div>
+                        <div class="card-footer d-flex justify-content-center">
+                            <div class="social-icons d-flex">
+                                <a href="mailto:yunusemreoz@ozpartnershukuk.com" class="social-icon">
+                                    <i class="fas fa-envelope" style="font-size:20px;"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank" class="social-icon">
+                                    <i class="fab fa-linkedin" style="font-size:20px;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-9 article">
+                <h1 class="article-header" style="color: #093a33; font-weight: bold;">Rising Animal Sensitivity: A Personal and Legal Perspective</h1>
+                <hr />
+                <p class="article-date" style="color: black; font-size: 13px;">Date: 01/12/2022</p>
+                <div class="article-content">
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;">
+                        <li><strong>Introduction</strong></li>
+                    </ol>
+                    <p>
+                        The severe injury of 4-year-old Asiye Ateş due to an attack by 2 pitbull dogs has rekindled the long-standing discomfort towards stray animals. This incident provided an opportunity for me to make subjective and personal evaluations from the perspective of other social sciences, in addition to legal perspectives. Topics such as the noticeable increase in societal love for animals in recent years and the innovations introduced in animal rights with the law enacted in July 2021 have been on my mind for quite some time.
+                    </p>
+
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;" start="2">
+                        <li><strong>Historical Socio-Economics</strong></li>
+                    </ol>
+                    <p>
+                        While not personally endorsing the entirety of philosopher and economist Karl Marx's famous view, it is impossible to ignore: <strong>"The base determines the superstructure."</strong> In other words, values such as beliefs, lifestyle, culture, politics, and law, referred to as the superstructure, are a result of the economic relationships that make up the base. However, agriculture, defined as the economic activity of concentrating plants and animals in specific areas to obtain economic value through various methods, was not always the case. It became a widespread practice approximately 10-12 thousand years ago with the so-called "agricultural revolution," which marked the end of the hunter-gatherer lifestyle.
+                        This historical development turned plants and animals into economic inputs and means of production for humans. Particularly focusing on animals, they were systematically bred to increase their numbers, their milk and meat were multiplied using specific methods, and they became energy sources for running mills or used as transport and transportation means, as well as being an agricultural element. In other words, the relationship between humans and animals became a matter of using these creatures as an economic commodity to survive.
+                        Until recently, we lived in agrarian societies. The emergence of inventions such as the steam engine in the 17th and 18th centuries created a new economic model beyond agriculture, ushering in the "industrial revolution." This revolution brought rapid urbanization. The rural/urban population ratio, which had been predominantly in favor of rural areas for a long time, began to change radically in favor of urban populations. Over time, professions diversified, and while the majority of societies were mostly engaged in agriculture, this balance shifted in favor of those working in the service sector.
+                        Looking at it from the perspective of animals, the changes in their lives were as revolutionary as those for humans. In this new order, humans no longer had to endure the hardships and hardships of caring for small/large livestock, horses or donkeys, or protecting herds of dogs; instead, they relied on factories, machinery, trucks, computers, and algorithms. The economic role of animals for humans weakened considerably, but it did not disappear; it transformed and gained strength in a completely different way. The industrial society we still live in shaped its own family and human type. The rural environment, with large families, extended families, distant and close relatives, and everyone knowing each other in the village, gave way to individuals moving away from rural areas to study in large cities, just like ants gathering around a drop of honey to feed themselves. In this new society, people lived alone, away from their families, either in student houses as students, as singles who had not yet considered having children despite reaching the age of marriage, or as individuals who had already left their children's nest and established an independent life. (You will realize when you stop and think for a moment that examples like these are present around you and in your life.)
+                        ;To meet the loneliness within this industrial society, especially in recent years, pets, especially cats, dogs, and birds, have become companions, life partners, close friends, relatives, or even family members for many people.
+                    </p>
+
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;" start="3">
+                        <li><strong>Intersection with Law</strong></li>
+                    </ol>
+                    <p>
+                        The science of law, whose subject is humans and whose purpose and method are to regulate society through rules, cannot be thought of and dealt with without excluding sociology, which is aptly called "sociology," and economics.<a href="#_ftn3" name="_ftnref3" title="">[3]</a>
+                        As individual and societal experiences, values, and important things change and evolve, the value, scope, and consequences attributed by law to these also change.
+                        As society's perception of animals shifted from being an economic value for survival to being a companion, life partner, close friend, relative, or family member, law had to treat them accordingly. Otherwise, it would have wounded the conscience of society.<a href="#_ftn4" name="_ftnref4" title="">[4]</a>
+                        For these reasons, animal rights have gradually reached the level of a value protected by legal rules worldwide. In our country, the Animal Protection Law No. 5199 in 2004 and, more recently, the changes made in the law with No. 7332 have been concrete steps taken in this regard.
+                        ;
+                    </p>
+
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;" start="4">
+                        <li><strong>Implications of the New Law</strong></li>
+                    </ol>
+                    <p>
+                        The expansion of the scope of animal rights and the increase in penalties to more deterrent levels, which had been loudly voiced by the public and civil society for many years, have finally been addressed. However, due to Turkey's status as a non-welfare state (and moving further away from this standard every day) and the serious instability it has experienced in recent years, the voices were often ignored by the ruling authorities, as there were always more urgent and critical issues. Finally, on July 14, 2021, the amendment law No. 7332, which came into effect, made significant changes to the Animal Rights Protection Law No. 5199. These changes include:
+                        <strong>D.1.</strong> As an extremely significant achievement, prison sentences are now introduced for the first time for acts of "torturing or treating animals cruelly and ruthlessly" and for acts of "sexual assault or rape" of animals. Until the amendment, these acts were treated not as crimes but as misdemeanors, and violators were subject to simple administrative fines without appearing before a judge. With the amendment, individuals will now be tried and sentenced to imprisonment for up to three years without the conditions of ownership, financial/bodily harm being met. In cases of sexual assault or rape, imprisonment will be accompanied by a fine.
+                        ;
+                        <strong>D.2.</strong> The act of abandoning a pet, a situation often encountered by veterinarians, where the animal is given as a gift or purchased and left for treatment by former owners but not taken back, is now punishable but not considered a crime. Therefore, it is penalized with an administrative fine, not imprisonment.
+                        <strong>D.3. </strong>No new circus and dolphin parks can be opened after the law's effective date. However, in accordance with the legal security, a requirement of the rule of law, existing circus and dolphin parks are granted an additional 10 years of operating permission to protect the acquired rights of operators. Despite this right, it is prohibited to replace the decreasing animals with new ones during the 10 years until their closure.
+                        <strong>D.4.</strong> The scope of the existing provision stating that the debt of the owner of a pet cannot be seized due to the pet's debt has been expanded to increase its application.
+                        ;
+                    </p>
+
+                    <ol class="article-content-header" style="list-style-type: upper-alpha;" start="5">
+                        <li><strong>Conclusion and Evaluation</strong></li>
+                    </ol>
+                    <p>
+                        In essence, the legislation left behind with the changes listed in the previous subtitle was a clear manifestation in the legal field of how animals were treated as a commercial product in agrarian societies, closely aligned with the ideas explained throughout the article. The new regulations, on the other hand, have abandoned the understanding that views animals as objects and treats them accordingly. It has brought animals closer to a status where they are considered companions, life partners, and family members. In other words, economic balances first changed lifestyle and subsequently legal rules. In other words, the base determined the new superstructure.
+                    </p>
+                </div>
+
+                <hr />
+                <p class="article-author">Att. Yunus Emre Öz</p>
+                <p class="article-date">01/12/2022</p>
+            </div>
+        </div>
+    </div>
+</body>

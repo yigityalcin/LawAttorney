@@ -13,17 +13,17 @@ namespace LawAttorney.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Anasayfa()
         {
             return View();
         }
-        public IActionResult IndexEng()
+        public IActionResult HomePage()
         {
-            return View("HomeEng/IndexEng");
+            return View("en/HomePage");
         }
-        public IActionResult IndexRu()
+        public IActionResult HomePageRu()
         {
-            return View("HomeRu/IndexRu");
+            return View("ru/HomePageRu");
         }
         public IActionResult Kurumsal()
         {
@@ -33,7 +33,7 @@ namespace LawAttorney.Controllers
         {
             return View();
         }
-        public IActionResult CalismaAlanlari()
+        public IActionResult CalismaAlanlarimiz()
         {
             return View();
         }
@@ -77,122 +77,122 @@ namespace LawAttorney.Controllers
         {
             return View();
         }
-        public IActionResult Ýletisim()
+        public IActionResult iletisim()
         {
             return View();
         }     
         public IActionResult Corporate()
         {
-            return View("HomeEng/Corporate");
+            return View("en/Corporate");
         }
         public IActionResult OurTeam()
         {
-            return View("HomeEng/OurTeam");
+            return View("en/OurTeam");
         }
         public IActionResult PracticeAreas()
         {
-            return View("HomeEng/PracticeAreas");
+            return View("en/PracticeAreas");
         }
         public IActionResult Articles()
         {
-            return View("HomeEng/Articles");
+            return View("en/Articles");
         }
         public IActionResult Article1()
         {
-            return View("HomeEng/Article1");
+            return View("en/Article1");
         }
         public IActionResult Article2()
         {
-            return View("HomeEng/Article2");
+            return View("en/Article2");
         }
         public IActionResult Article3()
         {
-            return View("HomeEng/Article3");
+            return View("en/Article3");
         }
         public IActionResult Article4()
         {
-            return View("HomeEng/Article4");
+            return View("en/Article4");
         }
         public IActionResult Article5()
         {
-            return View("HomeEng/Article5");
+            return View("en/Article5");
         }
         public IActionResult Article6()
         {
-            return View("HomeEng/Article6");
+            return View("en/Article6");
         }
         public IActionResult Article7()
         {
-            return View("HomeEng/Article7");
+            return View("en/Article7");
         }
         public IActionResult Article8()
         {
-            return View("HomeEng/Article8");
+            return View("en/Article8");
         }
         public IActionResult Article9()
         {
-            return View("HomeEng/Article9");
+            return View("en/Article9");
         }
         public IActionResult Contact()
         {
-            return View("HomeEng/Contact");
+            return View("en/Contact");
         }
 
         public IActionResult CorporateRu()
         {
-            return View("HomeRu/CorporateRu");
+            return View("ru/CorporateRu");
         }
         public IActionResult OurTeamRu()
         {
-            return View("HomeRu/OurTeamRu");
+            return View("ru/OurTeamRu");
         }
         public IActionResult PracticeAreasRu()
         {
-            return View("HomeRu/PracticeAreasRu");
+            return View("ru/PracticeAreasRu");
         }
         public IActionResult ArticlesRu()
         {
-            return View("HomeRu/ArticlesRu");
+            return View("ru/ArticlesRu");
         }
         public IActionResult Article1Ru()
         {
-            return View("HomeRu/Article1Ru");
+            return View("ru/Article1Ru");
         }
         public IActionResult Article2Ru()
         {
-            return View("HomeRu/Article2Ru");
+            return View("ru/Article2Ru");
         }
         public IActionResult Article3Ru()
         {
-            return View("HomeRu/Article3Ru");
+            return View("ru/Article3Ru");
         }
         public IActionResult Article4Ru()
         {
-            return View("HomeRu/Article4Ru");
+            return View("ru/Article4Ru");
         }
         public IActionResult Article5Ru()
         {
-            return View("HomeRu/Article5Ru");
+            return View("ru/Article5Ru");
         }
         public IActionResult Article6Ru()
         {
-            return View("HomeRu/Article6Ru");
+            return View("ru/Article6Ru");
         }
         public IActionResult Article7Ru()
         {
-            return View("HomeRu/Article7Ru");
+            return View("ru/Article7Ru");
         }
         public IActionResult Article8Ru()
         {
-            return View("HomeRu/Article8Ru");
+            return View("ru/Article8Ru");
         }
         public IActionResult Article9Ru()
         {
-            return View("HomeRu/Article9Ru");
+            return View("ru/Article9Ru");
         }
         public IActionResult ContactRu()
         {
-            return View("HomeRu/ContactRu");
+            return View("ru/ContactRu");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

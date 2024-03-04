@@ -1,6 +1,6 @@
 ﻿@{
-    ViewData["Title"] = "Kurumsal - ";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Corporate - ";
+    Layout = "~/Views/Shared/_LayoutEng.cshtml";
 }
 <style>
     .logo-container {
@@ -13,16 +13,19 @@
             max-height: 50px;
             object-fit: contain;
         }
+
     .info {
         padding: 1rem;
         display: flex;
         flex-direction: column;
     }
+
     .border-bottom1 {
         border-bottom: 1px solid #ccc;
         padding-bottom: 15px;
         margin-bottom: 15px;
     }
+
     .firm-name {
         color: #093a33; /* Koyu yeşil renk */
         margin: 0;
@@ -31,20 +34,24 @@
         text-align: center; /* Metni ortala */
         padding: 10px 0; /* Kenar boşluğu ekledim */
     }
+
     .social-icons {
         display: flex;
         gap: 10px;
     }
+
     .social-icon {
         color: #093a33;
         font-size: 20px;
     }
+
     .phone-number {
         color: #000;
         margin: 0;
         font-size: 1em;
         font-weight: 600;
     }
+
     .contact-btn {
         background-color: #093a33;
         color: #fff;
@@ -54,18 +61,19 @@
         font-size: 1em;
         font-weight: 600;
         text-transform: uppercase;
-        text-decoration:none;
+        text-decoration: none;
     }
+
         .contact-btn:hover {
             background-color: #10665a;
-            color:#fff;
+            color: #fff;
         }
 
-    .corporateCard{
-        border-right:none;
+    .corporateCard {
+        border-right: none;
         border-top: none;
         border-bottom: none;
-        border-radius:0px;
+        border-radius: 0px;
     }
 </style>
 <body>
@@ -73,13 +81,13 @@
         <div class="container p-lg-0">
             <div class="custom-img1 mb-5 shadow">
                 <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/banner1000.png" />
-                <span class="shadow-lg">Kurumsal</span>
+                <span class="shadow-lg">Corporate</span>
             </div>
         </div>
         <div class="container p-0" style="margin-top:100px">
             <ol class="breadcrumb border-1 border-bottom">
-                <li class="breadcrumb-item"><a href="/Anasayfa">Anasayfa</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Kurumsal</li>
+                <li class="breadcrumb-item"><a href="/en/HomePage">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Corporate</li>
             </ol>
         </div>
     </section>
@@ -87,12 +95,12 @@
         <div class="container">
             <div class="row shadow">
                 <div class="col-lg-3">
-                    <div class="">                      
+                    <div class="">
                         <div class="info">
                             <div class="d-flex justify-content-center border-bottom1">
                                 <!-- Firma İsmi -->
                                 <h3 class="firm-name">
-                                    Öz & Partners Avukatlık <i class="fas fa-balance-scale"></i>
+                                    Öz & Partners Legal Consultancy <i class="fas fa-balance-scale"></i>
                                 </h3>
                             </div>
                             <div class="">
@@ -105,30 +113,28 @@
                                         <i class="fab fa-linkedin"></i>
                                     </a>
                                 </div>
-                            </div>                                                 
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-sm-12 col-lg-9 article">
                     <div class="card corporateCard">
                         <div class="card-body">
                             <p class="card-text" style="text-align:justify;">
-                                1974 yılında Av. Emin Öz tarafından kurulan avukatlık ofisi 50 yıla yakın süredir faaliyet göstermekte olup bu süre zarfında başta Mersin’in önde gelen gerçek ve tüzel kişileri olmak üzere binlerle ölçülen bir müvekkil portföyünün vekilliğini üstlenmiştir.
+                                Established in 1974 by Attorney Emin Öz, the law office has been operating for nearly 50 years, representing a diverse portfolio of clients, including prominent individuals and entities in Mersin.
                             </p>
                             <p class="card-text" style="text-align:justify;">
-                                2018 yılında Av. Yunus Emre Öz ve 2019 yılında Av. Kaan Karataş ekibe katılmış olup yarım asırdır oluşturulan bilgi ve tecrübe 2. kuşağa aktarılmıştır. Böylece; sadece Mersin’in değil, bölgenin en uzun süredir hizmet vermekte olan, tanınmış ve saygın hukuk bürolarından Öz & Partners Avukatlık Ofisi bu konumunu daha da sağlamlaştırmıştır.
+                                In 2018, Attorney Yunus Emre Öz and in 2019, Attorney Kaan Karataş joined the team, inheriting the knowledge and experience accumulated over half a century. As a result, Öz & Partners Law Office, one of the longest-serving, well-known, and respected law firms in the region, has further solidified its position.
                             </p>
                             <p class="card-text" style="text-align:justify;">
-                                Müvekkile karşı şeffaflık, kamu idareleriyle güçlü iletişim, disiplinli ve bilimsel çalışma ile kısa sürede etkili sonuç alma prensiplerini odağına alan Öz & Partners Avukatlık Ofisi; müvekkillerinin hukuki sorunlarını mümkün olan en lehe şekilde çözümlemeyi hedeflemektedir.
+                                Öz & Partners Law Office focuses on transparency towards clients, strong communication with public authorities, disciplined and scientific work to achieve effective results in the shortest possible time for the legal issues of its clients.
                             </p>
                             <p class="card-text" style="text-align:justify;">
-                                Mersin merkezli olan <b><i>Öz & Partners Avukatlık Ofisi;</i></b> Türkiye’nin pek çok yerindeki müvekkiline, hukukun pek çok alanındaki sorunlarının çözümünde profesyonel hizmet sağlamaktadır.
+                                Based in Mersin, <b><i>Öz & Partners Law Office;</i></b> provides professional services in resolving legal issues across various fields of law to its clients in many parts of Turkey.
                             </p>
                             <div class="logo-container">
                                 <img src="~/assets/img/Logo/MainLogo.png" alt="Firma Logosu">
                             </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -138,5 +144,4 @@
     <script>
         // Vanilla JavaScript ile yapılan değişiklikler buraya eklenecek
     </script>
-
 </body>

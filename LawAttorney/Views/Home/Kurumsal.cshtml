@@ -13,16 +13,19 @@
             max-height: 50px;
             object-fit: contain;
         }
+
     .info {
         padding: 1rem;
         display: flex;
         flex-direction: column;
     }
+
     .border-bottom1 {
         border-bottom: 1px solid #ccc;
         padding-bottom: 15px;
         margin-bottom: 15px;
     }
+
     .firm-name {
         color: #093a33; /* Koyu yeşil renk */
         margin: 0;
@@ -31,20 +34,24 @@
         text-align: center; /* Metni ortala */
         padding: 10px 0; /* Kenar boşluğu ekledim */
     }
+
     .social-icons {
         display: flex;
         gap: 10px;
     }
+
     .social-icon {
         color: #093a33;
         font-size: 20px;
     }
+
     .phone-number {
         color: #000;
         margin: 0;
         font-size: 1em;
         font-weight: 600;
     }
+
     .contact-btn {
         background-color: #093a33;
         color: #fff;
@@ -54,18 +61,19 @@
         font-size: 1em;
         font-weight: 600;
         text-transform: uppercase;
-        text-decoration:none;
+        text-decoration: none;
     }
+
         .contact-btn:hover {
             background-color: #10665a;
-            color:#fff;
+            color: #fff;
         }
 
-    .corporateCard{
-        border-right:none;
+    .corporateCard {
+        border-right: none;
         border-top: none;
         border-bottom: none;
-        border-radius:0px;
+        border-radius: 0px;
     }
 </style>
 <body>
@@ -87,12 +95,12 @@
         <div class="container">
             <div class="row shadow">
                 <div class="col-lg-3">
-                    <div class="">                      
+                    <div class="">
                         <div class="info">
                             <div class="d-flex justify-content-center border-bottom1">
                                 <!-- Firma İsmi -->
                                 <h3 class="firm-name">
-                                    Öz & Partners Avukatlık <i class="fas fa-balance-scale"></i>
+                                    Öz <span class="caviar-dreams-font">&</span> Partners Avukatlık <i class="fas fa-balance-scale"></i>
                                 </h3>
                             </div>
                             <div class="">
@@ -105,11 +113,10 @@
                                         <i class="fab fa-linkedin"></i>
                                     </a>
                                 </div>
-                            </div>                                                 
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-sm-12 col-lg-9 article">
                     <div class="card corporateCard">
                         <div class="card-body">
@@ -128,7 +135,7 @@
                             <div class="logo-container">
                                 <img src="~/assets/img/Logo/MainLogo.png" alt="Firma Logosu">
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -138,5 +145,4 @@
     <script>
         // Vanilla JavaScript ile yapılan değişiklikler buraya eklenecek
     </script>
-
 </body>

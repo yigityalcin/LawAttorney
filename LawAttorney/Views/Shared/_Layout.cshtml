@@ -47,13 +47,16 @@
     <div class="mobileNavbar">
         <div class="row">
             <div class="info-bar">
-                <div class="col-lg-12 d-flex justify-content-center align-items-center">
-                    <span class="span-phone"><i class="fas fa-phone"></i> Telefon: (532) 499 1974</span>
-                    <span class="span-mail"><i class="fas fa-envelope"></i> Email: <a class="span-mail1" href="mailto:info@ozpartnershukuk.com">info@ozpartnershukuk.com</a></span>
-                    <span class="span-hours"><i class="fas fa-clock"></i> Çalışma Saatleri: Pazartesi - Cuma, 09:00 - 17:00</span>
-                    <span class="dropdown lang-select py-1">
+                <div class="col-lg-12 d-flex justify-content-center align-items-center ms-5">
+                    <span class="span-phone ms-5"><i class="fas fa-phone"></i> Telefon: (532) 499 1974</span>
+                    <span class="span-mail ms-5"><i class="fas fa-envelope"></i> Email: <a class="span-mail1" href="mailto:info@ozpartnershukuk.com">info@ozpartnershukuk.com</a></span>
+                    <span class="span-hours ms-5"><i class="fas fa-clock"></i> Çalışma Saatleri: Pazartesi - Cuma, 09:00 - 17:00</span>
+                    <span class="dropdown lang-select py-1" style="left:70px;">
                         <button class="btn dropdown-toggle" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span id="languageText">Türkçe</span>
+                            <span id="languageText">
+                                <i class="bi bi-translate"></i>
+                                Türkçe
+                            </span>
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuAvatar">
                             <li class="border-bottom">
@@ -78,19 +81,19 @@
         </div>
         <div class="container-fluid custom-navbar-fluid mb-lg-5">
             <div class="container">
-                <nav class="navbar navbar-expand-xl d-lg-block">
+                <nav class="navbar navbar-expand-md d-lg-block">
                     <div class="row align-items-center">
-                        <div class="col-lg-3 col-sm-12">
+                        <div class="col-lg-2 col-sm-12">
                             <a class="navbar-brand" href="/Anasayfa">
-                                <img src="~/assets/img/Logo/Logo.png" alt="Logo" height="80" class="img-brand">
+                                <img src="~/assets/img/Logo/Logo.png" alt="Logo" height="80" class="img-brand ms-lg-3">
                             </a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
                         </div>
-                        <div class="col-lg-9 col-sm-12">
+                        <div class="col-lg-10 col-sm-12" style="margin-top : 3%">
                             <!-- Menu Tabs -->
-                            <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                            <div class="collapse navbar-collapse justify-content-center ms-lg-5" id="navbarSupportedContent">
                                 <ul class="navbar-nav">
                                     <li class="nav-item">
                                         <a class="nav-link" href="/Anasayfa">Ana Sayfa</a>
@@ -141,13 +144,13 @@
         <footer class="text-center text-lg-start text-black">
             <div class="container page-border mt-lg-0"></div>
             <section class="d-flex justify-content-center p-2">
-                <div class="sosyal me-lg-2">
+                <div class="sosyal me-2 pt-1">
                     <span>Bizi LinkedIn üzerinden takip edin : </span>
                 </div>
-                <div class="d-flex justify-content-center">
+                <div class="">
                     <a href="https://www.linkedin.com/company/oz-partners/" class="me-2" style="background-color: #093a33; color: white; text-decoration: none; display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 4px;" target="_blank">
                         <i class="fab fa-linkedin" style="font-size: 16px; margin-right: 8px;"></i>
-                        <span style="font-size: 12px;">Takip Et</span>
+                        <span style="font-size: 11px;">Takip Et</span>
                     </a>
                 </div>
             </section>
@@ -155,7 +158,7 @@
             <!-- Copyright -->
             <div class="text-center mt-5" style="font-size:12px; background-color: #ffffff">
                 ©
-                <a class="sosyal1" href="">1974-2024 Öz & Partners Avukatlık Ofisi - Tüm Hakları Saklıdır</a>
+                <a class="sosyal1" href="">1974-2024 Öz <span class="caviar-dreams-font">&</span> Partners Avukatlık Ofisi - Tüm Hakları Saklıdır</a>
             </div>
         </footer>
     </div>
@@ -170,7 +173,7 @@
         window.onload = function () {
             const pathName = window.location.pathname;
             var currentLang = "";
-            
+
             if (pathName.includes("/")) {
                 currentLang = "Türkçe";
             };

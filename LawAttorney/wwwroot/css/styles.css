@@ -6738,14 +6738,14 @@ textarea.form-control-lg {
     text-align: center;
     font-size: 14px;
     z-index: 2;
-    font-weight:bold;
+    font-weight: bold;
 }
 /* Daha küçük ekranlarda (mobil) için stil */
 @media (max-width: 767px) {
     .carousel-caption,
     .carousel-caption span {
         position: absolute;
-        bottom: 0%;
+        bottom: 3%;
         left: 55%;
         padding: 5px;
         color: white;
@@ -6768,26 +6768,29 @@ textarea.form-control-lg {
     opacity: 0;
     animation: fadeIn 1s forwards;
 }
+
+    .carousel-captionWelcome h3 {
+        font-size: 27px; /* Daha küçük bir font boyutu */
+    }
 /* Mobile uyumlu stiller */
 @media (max-width: 767px) {
     .carousel-captionWelcome {
-        position: static;
+        position: absolute;
         z-index: 1;
         color: #fff;
-        background: #093a33; /* Geçişli renkler ve opacity */
-        padding: 7px; /* Daha küçük bir padding değeri */
+        background: linear-gradient(to right, rgb(9 58 51), rgb(0 92 83 / 0%));
         opacity: 0; /* Sayfa yüklendiğinde görünmez olacak */
         animation: fadeIn 1s forwards; /* 1 saniyelik fade-in animasyonu */
-        text-align:center;
-        height:50px;
-        border-radius:0;
+        border-radius: 0;
+        left:0px;
+        bottom:5px;
     }
-
         .carousel-captionWelcome h3 {
             font-size: 16px; /* Daha küçük bir font boyutu */
         }
-    .carousel-indicators{
-        top:70%;
+
+    .carousel-indicators {
+        top: 85%;
     }
 }
 
@@ -12604,7 +12607,6 @@ footer.footer {
     text-align: center;
     border-radius: 0;
     padding: 50px 0;
-    font-size: 30px !important;
     margin-bottom: 10px;
     -webkit-transition: all .2s ease;
     -moz-transition: all .2s ease;
@@ -12612,6 +12614,10 @@ footer.footer {
     -ms-transition: all .2s ease;
     transition: all .2s ease;
 }
+
+    .features-icons-item h3 {
+        font-size:30px;
+    }
 
     /*.features-icons-item:hover {
         transform: scale(1.05);
@@ -12669,15 +12675,15 @@ footer.footer {
 }
 
 #CalismaAlanlarimiz:hover {
-    background-color: #0c5046;
+    background-color: #013a33;
 }
 
 #Ekibimiz:hover {
-    background-color: #0c5046;
+    background-color: #013a33;
 }
 
 #iletisim:hover {
-    background-color: #0c5046;
+    background-color: #013a33;
 }
 
 .d-grid button:hover {
@@ -12727,7 +12733,6 @@ footer.footer {
 .container {
     max-width: 1000px;
     margin: 0 auto; /* Sayfayı ortalar */
-
 }
 
 .container-fluid {
@@ -12870,8 +12875,8 @@ footer {
     /* Dropdown menüsündeki dil seçenekleri için hover stil */
     .dropdown-menu .dropdown-item:hover {
         background-color: #f8f9fa !important; /* Hover efekti için arka plan rengi */
-        color: #000 !important; /* Hover efekti için yazı rengi */
-        font-weight: 700;
+        color: #093a33 !important; /* Hover efekti için yazı rengi */
+        font-weight: bold;
     }
 
 @media (max-width: 575.98px) {
@@ -13088,7 +13093,7 @@ footer {
             margin-right: 0px; /* İstenen margin değerini ayarlayabilirsiniz */
         }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
     /* Eğer ekran genişliği 991 pikselden küçükse, info-bar'ı gizle */
     .info-bar {
         display: none;
@@ -13111,11 +13116,13 @@ footer {
 }
 
 .sosyal {
-    font-weight: 700;
-    color: #555;
+    font-weight: 500;
+    color: #111111;
     text-decoration: none;
-    font-size:15px;
+    font-size: 13px;
+    font-style: italic;
 }
+
 .sosyal1 {
     font-weight: 700;
     color: #555;
@@ -13142,6 +13149,7 @@ footer {
         background-color: #00bcd4;
         transition: background-color 0.3s ease;
     }
+
     .mobile-chat-button i {
         color: #edd8b9; /* İkonun rengi */
     }
@@ -13211,14 +13219,18 @@ ul {
 }
 
 @media only screen and (min-width: 11in) and (max-width: 17in) {
-    /* Bu alana istediğiniz stil ve düzen ayarlamalarını ekleyebilirsiniz */
+    .container {
+        max-width: 950px;
+    }
     .carousel-img {
-        height: 419px;
+        height: 439px;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1366px) {
-    /* Buraya istediğiniz stil ve düzen ayarlamalarını ekleyebilirsiniz */
+    .container{
+        max-width:900px;
+    }
     .carousel-img {
         height: 419px;
     }
@@ -13230,15 +13242,16 @@ ul {
 
 .lang-select .btn {
     background: #fff;
-    border-radius: 0;
+    border-radius: 200px;
     border: 1px solid #ccc;
     height: 24px;
     line-height: 24px;
     min-width: 89px;
     padding: 0;
     font-size: 13px;
-    color: #898989;
-    left:75px;
+    font-weight: bold;
+    color: #093a33;
+    left: 75px;
     margin-right: -1px;
 }
 
@@ -13254,7 +13267,7 @@ ul {
     text-align: center;
     margin: 0;
     font-size: 13px;
-    border-radius: 0;
+    border-radius: 10px;
     border: 1px solid #707070;
     box-shadow: none;
     right: -1px;
@@ -13267,6 +13280,7 @@ ul {
 
 .lang-select .btn:hover {
     background: #fafafa;
+    color: #093a33;
 }
 
 .dropdown-menu > li > a {
@@ -13289,7 +13303,7 @@ ul {
     }
 
     .navbar-nav li {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #777;
         width: 100%;
     }
 
@@ -13395,6 +13409,7 @@ ul {
             outline: none; /* Odak durumundaki border'ı kaldırır */
             box-shadow: none; /* Gölge efektini kaldırır (eğer varsa) */
         }
+
     .ftco-section span {
         position: static;
         top: auto;
@@ -13405,4 +13420,16 @@ ul {
         line-height: normal;
         padding: 20px 10px;
     }
+
+    .corporateCard {
+        border-left:none;
+        border-right: none;
+        border-top: none;
+        border-bottom: none;
+        border-radius: 0px;
+    }
+}
+
+.caviar-dreams-font {
+    font-family: 'Caviar Dreams Bold' !important;
 }

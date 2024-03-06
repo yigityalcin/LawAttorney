@@ -45,22 +45,22 @@ function navigateLink(targetLangValue) {
 
     if (targetLangValue == "tr") {
         if (index == -1) {
-            window.location.href = "https://localhost:44332/" + targetLangValue + "/Anasayfa";
+            window.location.href = "https://ozpartnerlerhukuk.azurewebsites.net/" + targetLangValue + "/Anasayfa";
             return;
         }
-        window.location.href = "https://localhost:44332/" + targetPage;
+        window.location.href = "https://ozpartnerlerhukuk.azurewebsites.net/" + targetPage;
     }
     if (targetLangValue == "en") {
         if (index == -1) {
-            window.location.href = "https://localhost:44332/" + targetLangValue + "/HomePage";
+            window.location.href = "https://ozpartnerlerhukuk.azurewebsites.net/" + targetLangValue + "/HomePage";
         }
-        window.location.href = "https://localhost:44332/" + "en/" + targetPage;
+        window.location.href = "https://ozpartnerlerhukuk.azurewebsites.net/" + "en/" + targetPage;
     }
     if (targetLangValue == "ru") {
         if (index == -1) {
-            window.location.href = "https://localhost:44332/" + targetLangValue + "/HomePageRu";
+            window.location.href = "https://ozpartnerlerhukuk.azurewebsites.net/" + targetLangValue + "/HomePageRu";
         }
-        window.location.href = "https://localhost:44332/"+"ru/" + targetPage;
+        window.location.href = "https://ozpartnerlerhukuk.azurewebsites.net/"+"ru/" + targetPage;
     }
 
     

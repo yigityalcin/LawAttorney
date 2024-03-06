@@ -13122,6 +13122,9 @@ footer {
     font-size: 13px;
     font-style: italic;
 }
+.sosyal-takip {
+    font-size:11px;
+}
 
 .sosyal1 {
     font-weight: 700;
@@ -13228,11 +13231,92 @@ ul {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1366px) {
-    .container{
-        max-width:900px;
-    }
     .carousel-img {
         height: 419px;
+    }
+    .container {
+        max-width: 840px;
+    }
+    .nav-link{
+        font-size:10px;
+    }
+    .img-brand{
+        height:64px;
+    }
+    .info-bar{
+        font-size:9px;
+    }
+    .lang-select .btn {
+        
+        font-size: 10px !important;
+        margin-left:0px !important;
+    }
+    .navbar {
+        min-height:84px;
+    }
+    .carousel-captionWelcome h3 {
+        font-size: 21px;
+    }
+    .carousel-caption,
+    .carousel-caption span {
+        font-size: 11px;
+    }
+    .features-icons-item h3 {
+        font-size: 24px;
+    }
+    .sosyal {
+        font-size:10px;
+    }
+    .sosyal-takip{
+        font-size:9px !important;
+    }
+    .sosyal1 {
+        font-size:9px !important;
+    }
+    .custom-img1 h1, .custom-img1 span {
+        font-size: 24px;    
+    }
+    .breadcrumb{
+        font-size:10px;
+    }
+    .dbox a, p {
+        font-size:13px;
+    }
+    .firm-name {
+        font-size:1.2em !important;
+    }
+    .social-icon {
+        font-size: 16px !important;
+    }
+    .ekip .card-title {
+        font-size:15px;
+    }
+    .card-subtitle {
+        font-size: 10px;
+    }
+    .c_icon h4 {
+        font-size: 15px;
+    }
+    .oz-grid-item .grid-item-date {
+        font-size: 11px;
+    }
+    .grid-item-heading {
+        font-size: 15px !important;
+    }
+    .sub-content p {
+        font-size:11px;
+    }
+    .grid-item-category {
+        font-size: 9px !important;
+    }
+    .dbox span,a,p {
+        font-size: 11px !important;
+    }
+    .contact-wrap{
+        font-size:12px;
+    }
+    iframe{
+        height:585px;
     }
 }
 
@@ -13433,3 +13517,4 @@ ul {
 .caviar-dreams-font {
     font-family: 'Caviar Dreams Bold' !important;
 }
+

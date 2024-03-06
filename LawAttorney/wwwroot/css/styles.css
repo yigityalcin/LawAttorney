@@ -13318,6 +13318,9 @@ ul {
     iframe{
         height:585px;
     }
+    .rulink{
+        font-size:9px !important;
+    }
 }
 
 .custom-navbar-fluid {

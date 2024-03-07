@@ -14,15 +14,6 @@
         margin-bottom: 20px;
     }
 
-        .ekip img {
-            object-fit: cover;
-            position: relative;
-            width: 100%;
-            min-height: 220px;
-            max-height: 220px;
-        }
-
-
         .ekip .card-body {
             position: relative;
             margin-top: 0;
@@ -170,9 +161,15 @@
     }
 
     .ekip img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        overflow-clip-margin: unset;
+        overflow: visible;
         filter: grayscale(100%);
-        transition: filter 0.3s ease;
+        transition: opacity 0.3s ease;
     }
+
 
     .ekip:hover img {
         filter: grayscale(0%);
@@ -289,7 +286,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="~/assets/img/avukat-emin-oz.jpg" class="modal-bio-img img-fluid" alt="Фото Личности 1">
+                    <img src="~/assets/img/avukat-emin-oz-modal.jpg" class="modal-bio-img img-fluid" alt="Фото Личности 1">
                     <p class="bio-content">
                         Известный адвокат Emin Öz, основатель Öz & Partners, родился в 1950 году в Силифке, Мерсин. Окончив Факультет права Университета Стамбула в 1973 году, он основал свою собственную контору в Мерсине в 1974 году, начав свою карьеру адвоката.
                         Emin Öz, который принимал участие в роли адвоката во многих политических делах до и после военного переворота 12 сентября 1980 года, был одним из адвокатов, защищавших Алпарслана Тюркеша после переворота.
@@ -322,7 +319,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="modal-bio-img img-fluid" alt="Фото Личности 2">
+                    <img src="~/assets/img/avukat-yunus-emre-oz-modal.jpg" class="modal-bio-img img-fluid" alt="Фото Личности 2">
                     <p class="bio-content">
                         Родившийся в Мерсине в 1994 году, адвокат Yunus Emre Öz окончил колледж Gelişim в 2009 году и анатолийскую среднюю школу Ичель в 2013 году. Он успешно закончил бакалавриат с отличием на факультете права университета Чаг в 2018 году. В 2018 году он прошел стажировку по правовой практике и стал одним из партнеров в Öz & Partners.
                     </p>
@@ -351,7 +348,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="~/assets/img/avukat-kaan-karatas.jpg" class="modal-bio-img img-fluid" alt="Фото Личности 3">
+                    <img src="~/assets/img/avukat-kaan-karatas-modal.jpg" class="modal-bio-img img-fluid" alt="Фото Личности 3">
                     <p class="bio-content">
                         Родившийся в Адане в 1991 году, адвокат Kaan Karataş окончил анатолийскую среднюю школу Адана в 2009 году. Он занял место среди тысячи лучших студентов по всей стране в 2009 году. В 2014 году он окончил с отличием юридический факультет университета Йедитепе и начал свою карьеру адвоката в своем родном городе Мерсин.
                     </p>

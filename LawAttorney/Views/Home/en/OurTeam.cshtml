@@ -82,6 +82,9 @@
             display: flex;
             gap: 10px; /* İkonlar arasında boşluk bırakmak için */
         }
+
+
+
     /* Social Icons */
     .social-icon {
         color: #093a33; /* İstenen renk */
@@ -170,10 +173,98 @@
         transition: opacity 0.3s ease;
     }
 
-
     .ekip:hover img {
         filter: grayscale(0%);
     }
+
+    .ekip1 img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        overflow-clip-margin: unset;
+        overflow: visible;
+        filter: grayscale(100%);
+        transition: opacity 0.3s ease;
+    }
+
+    .ekip1:hover img {
+        filter: grayscale(0%);
+    }
+
+    .ekip1 {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+        .ekip1 .card-body {
+            position: relative;
+            margin-top: 0;
+            padding: 1rem;
+            flex: 1;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,.05), 0 1px 3px 0 rgba(0,0,0,.1);
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .ekip1 .card-body a {
+                text-decoration: none;
+            }
+
+        .ekip1:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .ekip1 .card-title {
+            display: block;
+            color: #000;
+            font-size: 18px;
+            line-height: 28px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .ekip1 .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff !important;
+            text-transform: none !important;
+            font-size: 1em !important;
+            font-weight: 600 !important;
+            margin-top: 0 !important;
+            padding: 0 !important;
+            letter-spacing: .5px;
+            border-top: 2px solid #ccc !important;
+        }
+
+        .ekip1 .read-more-btn {
+            color: #000;
+            text-decoration: underline;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative; /* Önemli: position değeri ekleyin */
+            font-size: 12px;
+            text-align: left;
+        }
+
+
+            .ekip1 .read-more-btn i {
+                margin-left: 5px; /* Ok ikonu ile metin arasında boşluk bırakmak için */
+            }
+
+            .ekip1 .read-more-btn:hover {
+                color: #093a33;
+            }
+
+        .ekip1 .social-icons {
+            display: flex;
+            gap: 10px; /* İkonlar arasında boşluk bırakmak için */
+        }
 </style>
 
 <body>
@@ -320,7 +411,7 @@
                                 He also taught law courses at Mersin Vocational School of Maritime and Commerce for a period. Approaching his 50th year in professional life, Lawyer Emin Öz is fluent in English and French.
                             </p>
                             <div class="d-flex justify-content-end">
-                                <a href="https://www.facebook.com/aveminoz/" target="_blank" class="social-icon">
+                                <a href="https://www.facebook.com/aveminoz/" target="_blank" class="ikon-modal social-icon">
                                     <i class="fab fa-facebook" style="font-size:20px;"></i>
                                 </a>
                             </div>
@@ -343,17 +434,20 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="card ekip1">
-                                <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" style="filter:none;" alt="Person 2 Photo">
+                                <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" style="filter:none;" alt="Kişi 2 Fotoğrafı">
                                 <div class="card-body">
                                     <div>
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
-                                            <h3 class="card-title ms-1 mb-3">Att. Emin Öz</h3>
+                                            <h3 class="card-title ms-1 mb-3">Att. Yunus Emre Öz</h3>
                                         </a>
                                     </div>
                                     <div class="card-footer d-flex justify-content-center">
-                                        <div class="social-icons d-flex">
-                                            <a href="https://www.facebook.com/aveminoz/" target="_blank" class="social-icon">
-                                                <i class="fab fa-facebook" style="font-size:20px;"></i>
+                                        <div class="d-flex justify-content-end">
+                                            <a href="mailto:yunusemreoz@ozpartnershukuk.com" target="_blank" class="me-3 social-icon">
+                                                <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                            </a>
+                                            <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank" class="social-icon">
+                                                <i class="fab fa-linkedin" style="font-size: 20px;"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -369,10 +463,10 @@
                                 In 2020, he received acceptance for a master's degree from King's College London, one of the world's leading universities. Registered as a Mediator with the Ministry of Justice with registration number 38270, he has been providing legal consultancy to the Turkish Red Crescent orally and in writing since 2022. Öz served as the President of the Youth Branch of a political party in Mersin for a period and is proficient in advanced English.
                             </p>
                             <div class="d-flex justify-content-end">
-                                <a href="mailto:yunusemreoz@ozpartnershukuk.com" target="_blank" class="me-3 social-icon">
+                                <a href="mailto:yunusemreoz@ozpartnershukuk.com" target="_blank" class="ikon-modal me-3 social-icon">
                                     <i class="fas fa-envelope" style="font-size: 20px;"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank" class="social-icon">
+                                <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank" class="ikon-modal social-icon">
                                     <i class="fab fa-linkedin" style="font-size: 20px;"></i>
                                 </a>
                             </div>
@@ -396,17 +490,20 @@
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="card ekip1">
-                                <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" style="filter:none;" alt="Person 2 Photo">
+                                <img src="~/assets/img/avukat-kaan-karatas.jpg" class="card-img-top img-fluid" style="filter:none;" alt="Kişi 3 Fotoğrafı">
                                 <div class="card-body">
                                     <div>
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
-                                            <h3 class="card-title ms-1 mb-3">Att. Emin Öz</h3>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal3">
+                                            <h3 class="card-title ms-1 mb-3">Att. Kaan Karataş</h3>
                                         </a>
                                     </div>
                                     <div class="card-footer d-flex justify-content-center">
-                                        <div class="social-icons d-flex">
-                                            <a href="https://www.facebook.com/aveminoz/" target="_blank" class="social-icon">
-                                                <i class="fab fa-facebook" style="font-size:20px;"></i>
+                                        <div class="d-flex justify-content-end">
+                                            <a href="mailto:kaankaratas@ozpartnershukuk.com" target="_blank" class="me-3 social-icon">
+                                                <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                            </a>
+                                            <a href="https://www.linkedin.com/in/kaankarata%C5%9F" target="_blank" class="social-icon">
+                                                <i class="fab fa-linkedin" style="font-size: 20px;"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -421,10 +518,10 @@
                                 Proficient in advanced English and intermediate-level German, Attorney Kaan Karataş became one of the partner attorneys at Öz & Partners in 2019.
                             </p>
                             <div class="d-flex justify-content-end">
-                                <a href="mailto:kaankaratas@ozpartnershukuk.com" target="_blank" class="me-3 social-icon">
+                                <a href="mailto:kaankaratas@ozpartnershukuk.com" target="_blank" class="ikon-modal me-3 social-icon">
                                     <i class="fas fa-envelope" style="font-size: 20px;"></i>
                                 </a>
-                                <a href="https://www.linkedin.com/in/kaankarata%C5%9F" target="_blank" class="social-icon">
+                                <a href="https://www.linkedin.com/in/kaankarata%C5%9F" target="_blank" class="ikon-modal social-icon">
                                     <i class="fab fa-linkedin" style="font-size: 20px;"></i>
                                 </a>
                             </div>

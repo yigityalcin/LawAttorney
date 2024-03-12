@@ -6763,11 +6763,11 @@ textarea.form-control-lg {
     z-index: 5;
     padding: 23px;
     color: #fff;
-    background-color: rgba(9, 58, 51, 0.7);
-    left: 0px;
-    right: 10px;
-    bottom: 25px;
-    width: 100%;
+    background-color: rgba(9, 58, 51, 0.6);
+    left: 15px;
+    right: 15px;
+    bottom: 35px;
+    border-radius:10px;
 }
 
     .carousel-captionWelcome h3 {
@@ -6780,12 +6780,14 @@ textarea.form-control-lg {
         position: absolute;
         z-index: 1;
         color: #fff;
-        background-color: rgba(9, 58, 51, 0.6);
+        padding:15px;
+        background-color: rgba(9, 58, 51, 0.7);
         opacity: 0; /* Sayfa yüklendiğinde görünmez olacak */
         animation: fadeIn 1s forwards; /* 1 saniyelik fade-in animasyonu */
-        border-radius: 0;
-        left: 0px;
-        bottom: 23px;
+        border-radius: 10px;
+        left:5px;
+        right:5px;
+        bottom: 27px;
     }
         .carousel-captionWelcome h3 {
             font-size: 14px; /* Daha küçük bir font boyutu */
@@ -12641,23 +12643,17 @@ footer.footer {
 }
 
 #CalismaAlanlarimiz {
-    border: 1px solid;
-    border-image: linear-gradient(to right, #093a33, #10665a);
-    border-image-slice: 1;
+    border: 1px solid #10665a;
     color: #10665a;
 }
 
 #Ekibimiz {
-    border: 1px solid;
-    border-image: linear-gradient(to right, #093a33, #10665a);
-    border-image-slice: 1;
+    border: 1px solid #10665a;
     color: #10665a;
 }
 
 #iletisim {
-    border: 1px solid;
-    border-image: linear-gradient(to right, #093a33, #10665a);
-    border-image-slice: 1;
+    border: 1px solid #10665a;
     color: #10665a;
 }
 
@@ -13540,3 +13536,8 @@ ul {
     font-family: 'Caviar Dreams Bold' !important;
 }
 
+@media(min-width:768px) {
+    .ikon-modal {
+        display: none;
+    }
+}

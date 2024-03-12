@@ -6767,7 +6767,7 @@ textarea.form-control-lg {
     left: 15px;
     right: 15px;
     bottom: 35px;
-    border-radius:10px;
+    border-radius:5px;
 }
 
     .carousel-captionWelcome h3 {
@@ -6784,7 +6784,7 @@ textarea.form-control-lg {
         background-color: rgba(9, 58, 51, 0.7);
         opacity: 0; /* Sayfa yüklendiğinde görünmez olacak */
         animation: fadeIn 1s forwards; /* 1 saniyelik fade-in animasyonu */
-        border-radius: 10px;
+        border-radius: 5px;
         left:5px;
         right:5px;
         bottom: 27px;

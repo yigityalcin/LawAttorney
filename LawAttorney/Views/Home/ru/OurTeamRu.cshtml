@@ -82,6 +82,9 @@
             display: flex;
             gap: 10px; /* İkonlar arasında boşluk bırakmak için */
         }
+
+
+
     /* Social Icons */
     .social-icon {
         color: #093a33; /* İstenen renk */
@@ -170,10 +173,98 @@
         transition: opacity 0.3s ease;
     }
 
-
     .ekip:hover img {
         filter: grayscale(0%);
     }
+
+    .ekip1 img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        overflow-clip-margin: unset;
+        overflow: visible;
+        filter: grayscale(100%);
+        transition: opacity 0.3s ease;
+    }
+
+    .ekip1:hover img {
+        filter: grayscale(0%);
+    }
+
+    .ekip1 {
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+
+        .ekip1 .card-body {
+            position: relative;
+            margin-top: 0;
+            padding: 1rem;
+            flex: 1;
+            box-shadow: 0 1px 2px 0 rgba(0,0,0,.05), 0 1px 3px 0 rgba(0,0,0,.1);
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .ekip1 .card-body a {
+                text-decoration: none;
+            }
+
+        .ekip1:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .ekip1 .card-title {
+            display: block;
+            color: #000;
+            font-size: 18px;
+            line-height: 28px;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .ekip1 .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff !important;
+            text-transform: none !important;
+            font-size: 1em !important;
+            font-weight: 600 !important;
+            margin-top: 0 !important;
+            padding: 0 !important;
+            letter-spacing: .5px;
+            border-top: 2px solid #ccc !important;
+        }
+
+        .ekip1 .read-more-btn {
+            color: #000;
+            text-decoration: underline;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            position: relative; /* Önemli: position değeri ekleyin */
+            font-size: 12px;
+            text-align: left;
+        }
+
+
+            .ekip1 .read-more-btn i {
+                margin-left: 5px; /* Ok ikonu ile metin arasında boşluk bırakmak için */
+            }
+
+            .ekip1 .read-more-btn:hover {
+                color: #093a33;
+            }
+
+        .ekip1 .social-icons {
+            display: flex;
+            gap: 10px; /* İkonlar arasında boşluk bırakmak için */
+        }
 </style>
 
 <body>
@@ -206,7 +297,7 @@
                                 <div>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal1">
                                         <h3 class="card-title ms-1">юр. Emin Öz</h3>
-                                        <p class="card-subtitle mb-5">учредитель-партнер</p>
+                                        <p class="card-subtitle mb-5">Учредитель Адвокат</p>
                                     </a>
                                 </div>
                                 <div class="card-footer d-flex justify-content-end border-4">
@@ -229,7 +320,7 @@
                                 <div>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
                                         <h3 class="card-title ms-1">юр. Yunus Emre Öz</h3>
-                                        <p class="card-subtitle mb-5">партнёр</p>
+                                        <p class="card-subtitle mb-5">Партнер Адвокат</p>
                                     </a>
                                 </div>
                                 <div class="card-footer d-flex justify-content-end">
@@ -255,7 +346,7 @@
                                 <div>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal3">
                                         <h3 class="card-title ms-1">юр. Kaan Karataş</h3>
-                                        <p class="card-subtitle mb-5">партнёр</p>
+                                        <p class="card-subtitle mb-5">Партнер Адвокат</p>
 
                                     </a>
                                 </div>
@@ -277,91 +368,152 @@
             </div>
         </section>
     </div>
-    <!-- Модальное окно 1 -->
     <div class="modal fade" id="bioModal1" tabindex="-1" aria-labelledby="bioModal1Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="bioModal1Label">юр. Emin Öz</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="~/assets/img/avukat-emin-oz-modal.jpg" class="modal-bio-img img-fluid" alt="Фото Личности 1">
-                    <p class="bio-content">
-                        Известный адвокат Emin Öz, основатель Öz & Partners, родился в 1950 году в Силифке, Мерсин. Окончив Факультет права Университета Стамбула в 1973 году, он основал свою собственную контору в Мерсине в 1974 году, начав свою карьеру адвоката.
-                        Emin Öz, который принимал участие в роли адвоката во многих политических делах до и после военного переворота 12 сентября 1980 года, был одним из адвокатов, защищавших Алпарслана Тюркеша после переворота.
-                    </p>
-                    <p class="bio-content">
-                        В 1989 году он был избран членом Общего собрания провинции Мерсин. Занимая этот пост, он был избран председателем провинции Мерсин Партии Родины в 1993 году и служил 3 срока до 1999 года. На парламентских выборах 1999 года он выступил в качестве независимого кандидата от Мерсина и продемонстрировал значительное политическое влияние, получив большое количество голосов.
-                    </p>
-                    <p>
-                        В последующие годы Emin Öz служил в Центральном решающем и административном совете (МКУК) Партии Родины в течение 2 сроков. Уже с начала своей профессиональной деятельности он был заместителем председателя правления многих влиятельных компаний, в том числе MESBAŞ (компания, управляющая Мерсинской свободной зоной) и MERTAŞ (компания, совместно созданная профессиональными палатами и НПО, такими как MTSO, MESİAD и Торгово-промышленная палата Мерсина), формируя экономическую и коммерческую жизнь Мерсина. Он был заместителем председателя совещательного совета MESİAD (Ассоциация мерсинских промышленников и бизнесменов). Также он был членом правления Адвокатской палаты Мерсина.
-                    </p>
-                    <p class="bio-content">
-                        Emin Öz также преподавал курсы права на факультете мореплавания и торговли университета Мерсина. Подходя к 50-летию своей профессиональной карьеры, адвокат Emin Öz владеет английским и французским языками.
-                    </p>
-                    <div class="d-flex justify-content-end">
-                        <a href="https://www.facebook.com/aveminoz/" target="_blank" class="social-icon">
-                            <i class="fab fa-facebook" style="font-size:20px;"></i>
-                        </a>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card ekip1">
+                                <img src="~/assets/img/avukat-emin-oz.jpg" class="card-img-top img-fluid" style="filter:none;" alt="Person 2 Photo">
+                                <div class="card-body">
+                                    <div>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
+                                            <h3 class="card-title ms-1 mb-3">Att. Emin Öz</h3>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-center">
+                                        <div class="social-icons d-flex">
+                                            <a href="https://www.facebook.com/aveminoz/" target="_blank" class="social-icon">
+                                                <i class="fab fa-facebook" style="font-size:20px;"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <p class="bio-content">
+                                Известный адвокат Emin Öz, основатель Öz & Partners, родился в 1950 году в Силифке, Мерсин. Окончив Факультет права Университета Стамбула в 1973 году, он основал свою собственную контору в Мерсине в 1974 году, начав свою карьеру адвоката.
+                                Emin Öz, который принимал участие в роли адвоката во многих политических делах до и после военного переворота 12 сентября 1980 года, был одним из адвокатов, защищавших Алпарслана Тюркеша после переворота.
+                            </p>
+                            <p class="bio-content">
+                                В 1989 году он был избран членом Общего собрания провинции Мерсин. Занимая этот пост, он был избран председателем провинции Мерсин Партии Родины в 1993 году и служил 3 срока до 1999 года. На парламентских выборах 1999 года он выступил в качестве независимого кандидата от Мерсина и продемонстрировал значительное политическое влияние, получив большое количество голосов.
+                            </p>
+                            <p>
+                                В последующие годы Emin Öz служил в Центральном решающем и административном совете (МКУК) Партии Родины в течение 2 сроков. Уже с начала своей профессиональной деятельности он был заместителем председателя правления многих влиятельных компаний, в том числе MESBAŞ (компания, управляющая Мерсинской свободной зоной) и MERTAŞ (компания, совместно созданная профессиональными палатами и НПО, такими как MTSO, MESİAD и Торгово-промышленная палата Мерсина), формируя экономическую и коммерческую жизнь Мерсина. Он был заместителем председателя совещательного совета MESİAD (Ассоциация мерсинских промышленников и бизнесменов). Также он был членом правления Адвокатской палаты Мерсина.
+                            </p>
+                            <p class="bio-content">
+                                Emin Öz также преподавал курсы права на факультете мореплавания и торговли университета Мерсина. Подходя к 50-летию своей профессиональной карьеры, адвокат Emin Öz владеет английским и французским языками.
+                            </p>
+                            <div class="d-flex justify-content-end">
+                                <a href="https://www.facebook.com/aveminoz/" target="_blank" class="social-icon">
+                                    <i class="fab fa-facebook" style="font-size:20px;"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Модальное окно 2 -->
     <div class="modal fade" id="bioModal2" tabindex="-1" aria-labelledby="bioModal2Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="bioModal2Label">юр. Yunus Emre Öz</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="~/assets/img/avukat-yunus-emre-oz-modal.jpg" class="modal-bio-img img-fluid" alt="Фото Личности 2">
-                    <p class="bio-content">
-                        Родившийся в Мерсине в 1994 году, адвокат Yunus Emre Öz окончил колледж Gelişim в 2009 году и анатолийскую среднюю школу Ичель в 2013 году. Он успешно закончил бакалавриат с отличием на факультете права университета Чаг в 2018 году. В 2018 году он прошел стажировку по правовой практике и стал одним из партнеров в Öz & Partners.
-                    </p>
-                    <p class="bio-content">
-                        В 2020 году ему было предоставлено место для магистратуры в Кингс Колледж Лондона, одного из ведущих университетов мира. Зарегистрированный как посредник в Министерстве юстиции с регистрационным номером 38270, он предоставляет юридические консультации Турецкому Красному Полумесяцу устно и письменно с 2022 года. Оз занимал должность председателя молодежного филиала политической партии в Мерсине на протяжении какого-то периода и в совершенстве владеет английским языком.
-                    </p>
-                    <div class="d-flex justify-content-end">
-                        <a href="mailto:yunusemreoz@ozpartnershukuk.com" target="_blank" class="me-3 social-icon">
-                            <i class="fas fa-envelope" style="font-size: 20px;"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank" class="social-icon">
-                            <i class="fab fa-linkedin" style="font-size: 20px;"></i>
-                        </a>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card ekip1">
+                                <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" style="filter:none;" alt="Person 2 Photo">
+                                <div class="card-body">
+                                    <div>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
+                                            <h3 class="card-title ms-1 mb-3">юр. Yunus Emre Öz</h3>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-center">
+                                        <div class="social-icons d-flex">
+                                            <a href="https://www.facebook.com/aveminoz/" target="_blank" class="social-icon">
+                                                <i class="fab fa-facebook" style="font-size:20px;"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <p class="bio-content">
+                                Родившийся в Мерсине в 1994 году, адвокат Yunus Emre Öz окончил колледж Gelişim в 2009 году и анатолийскую среднюю школу Ичель в 2013 году. Он успешно закончил бакалавриат с отличием на факультете права университета Чаг в 2018 году. В 2018 году он прошел стажировку по правовой практике и стал одним из партнеров в Öz & Partners.
+                            </p>
+                            <p class="bio-content">
+                                В 2020 году ему было предоставлено место для магистратуры в Кингс Колледж Лондона, одного из ведущих университетов мира. Зарегистрированный как посредник в Министерстве юстиции с регистрационным номером 38270, он предоставляет юридические консультации Турецкому Красному Полумесяцу устно и письменно с 2022 года. Оз занимал должность председателя молодежного филиала политической партии в Мерсине на протяжении какого-то периода и в совершенстве владеет английским языком.
+                            </p>
+                            <div class="d-flex justify-content-end">
+                                <a href="mailto:yunusemreoz@ozpartnershukuk.com" target="_blank" class="me-3 social-icon">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/yunusemre%C3%B6z" target="_blank" class="social-icon">
+                                    <i class="fab fa-linkedin" style="font-size: 20px;"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Модальное окно 3 -->
     <div class="modal fade" id="bioModal3" tabindex="-1" aria-labelledby="bioModal3Label" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="bioModal3Label">юр. Kaan Karataş</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <img src="~/assets/img/avukat-kaan-karatas-modal.jpg" class="modal-bio-img img-fluid" alt="Фото Личности 3">
-                    <p class="bio-content">
-                        Родившийся в Адане в 1991 году, адвокат Kaan Karataş окончил анатолийскую среднюю школу Адана в 2009 году. Он занял место среди тысячи лучших студентов по всей стране в 2009 году. В 2014 году он окончил с отличием юридический факультет университета Йедитепе и начал свою карьеру адвоката в своем родном городе Мерсин.
-                    </p>
-                    <p class="bio-content">
-                        Владея английским на продвинутом уровне и немецким на среднем уровне, адвокат Kaan Karataş стал одним из партнеров в Öz & Partners в 2019 году.
-                    </p>
-                    <div class="d-flex justify-content-end">
-                        <a href="mailto:kaankaratas@ozpartnershukuk.com" target="_blank" class="me-3 social-icon">
-                            <i class="fas fa-envelope" style="font-size: 20px;"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/kaankarata%C5%9F" target="_blank" class="social-icon">
-                            <i class="fab fa-linkedin" style="font-size: 20px;"></i>
-                        </a>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card ekip1">
+                                <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" style="filter:none;" alt="Person 2 Photo">
+                                <div class="card-body">
+                                    <div>
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
+                                            <h3 class="card-title ms-1 mb-3">юр. Kaan Karataş</h3>
+                                        </a>
+                                    </div>
+                                    <div class="card-footer d-flex justify-content-center">
+                                        <div class="social-icons d-flex">
+                                            <a href="https://www.facebook.com/aveminoz/" target="_blank" class="social-icon">
+                                                <i class="fab fa-facebook" style="font-size:20px;"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <p class="bio-content">
+                                Родившийся в Адане в 1991 году, адвокат Kaan Karataş окончил анатолийскую среднюю школу Адана в 2009 году. Он занял место среди тысячи лучших студентов по всей стране в 2009 году. В 2014 году он окончил с отличием юридический факультет университета Йедитепе и начал свою карьеру адвоката в своем родном городе Мерсин.
+                            </p>
+                            <p class="bio-content">
+                                Владея английским на продвинутом уровне и немецким на среднем уровне, адвокат Kaan Karataş стал одним из партнеров в Öz & Partners в 2019 году.
+                            </p>
+                            <div class="d-flex justify-content-end">
+                                <a href="mailto:kaankaratas@ozpartnershukuk.com" target="_blank" class="me-3 social-icon">
+                                    <i class="fas fa-envelope" style="font-size: 20px;"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/kaankarata%C5%9F" target="_blank" class="social-icon">
+                                    <i class="fab fa-linkedin" style="font-size: 20px;"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

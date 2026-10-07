@@ -1,0 +1,36 @@
+@model bool
+<div class="modal fade" id="bioModal4" tabindex="-1" aria-labelledby="bioModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bioModal4Label">@(Model ? "Att. Berfin Mert" : "Av. Berfin Mert")</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="@(Model ? "Close" : "Kapat")"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card ekip1">
+                            <partial name="_BerfinPhoto" model="Model" />
+                            <div class="card-body"><h3 class="card-title">@(Model ? "Att. Berfin Mert" : "Av. Berfin Mert")</h3></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        @if (Model)
+                        {
+                            <p class="bio-content">Attorney Berfin Mert was born in Mersin in 1998. She graduated from İçel Anadolu High School (İAL) in 2016 and completed her undergraduate studies at Dokuz Eylül University Faculty of Law in 2020.</p>
+                            <p class="bio-content">After completing her legal internship with the Mersin Bar Association, she worked at various law offices in Aydın/Kuşadası between 2021 and 2024, gaining experience in different areas of law.</p>
+                            <p class="bio-content">She resumed her professional practice with the Mersin Bar Association in 2024 and has been working at Öz &amp; Partners since 2026.</p>
+                        }
+                        else
+                        {
+                            <p class="bio-content">Av. Berfin Mert, 1998 yılında Mersin'de doğmuştur. 2016 yılında İçel Anadolu Lisesi'nden (İAL) mezun olmuş, lisans eğitimini ise Dokuz Eylül Üniversitesi Hukuk Fakültesi'nde 2020 yılında tamamlamıştır.</p>
+                            <p class="bio-content">Avukatlık stajını Mersin Barosu bünyesinde gerçekleştirmesinin ardından 2021–2024 yılları arasında Aydın/Kuşadası'nda çeşitli hukuk bürolarında görev alarak hukukun farklı alanlarında deneyim kazanmıştır.</p>
+                            <p class="bio-content">2024 yılı itibarıyla mesleki faaliyetlerine Mersin Barosu'nda devam eden Av. Berfin Mert, 2026’dan bu yana Öz &amp; Partners bünyesinde çalışmalarına devam etmektedir.</p>
+                        }
+                        <a href="mailto:berfinmert@@ozpartnershukuk.com" class="modal-bio-mail">berfinmert@@ozpartnershukuk.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+/* Keep memorial portraits monochrome on touch screens and during hover. */
+.memorial-card img, .memorial-card:hover img { filter: grayscale(100%) !important; }
+.memorial-dates { margin: 0 0 .4rem .25rem; color: #666; font-size: .9rem; line-height: 1.4; }
+.card-section .row > .col-12 { display: flex; }
+.card-section .ekip { width: 100%; }
+.card-section .ekip > a { text-decoration: none; }
+.info-bar > .col-lg-12 { width: auto; margin-left: 0 !important; }
+.card-section .ekip .card-title { height: auto; min-height: 38px; }
+.card-section .ekip .card-footer { margin-top: auto !important; min-height: 34px; }
+.team-photo-placeholder {
+    position: relative;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 50% 30%, #eeeeee 0%, #cccccc 100%);
+    color: #929292;
+}
+.team-placeholder-portrait {
+    width: 100%;
+    height: 100%;
+    max-width: 260px;
+    fill: currentColor;
+}
+@media (max-width: 991.98px) {
+    .card-section .ekip:hover { transform: none; }
+}
+
+/* Responsive navigation, portraits and keyboard feedback. */
+.mobileNavbar > .row { margin-inline: 0; }
+.info-bar > .col-lg-12 { width: 100%; gap: 1.25rem; flex-wrap: wrap; padding: .25rem .75rem; }
+.info-bar .col-lg-12 > span { margin: 0 !important; }
+.info-bar a { color: inherit; }
+.article { min-width: 0; overflow-wrap: anywhere; }
+.features-icons-item { text-decoration: none; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible,
+.navbar-toggler:focus-visible { outline: 3px solid #b58539 !important; outline-offset: 3px; }
+.navbar-nav .nav-link[aria-current] { font-weight: 700; text-decoration: underline; text-underline-offset: .4rem; }
+#form-result { margin-top: .75rem; }
+#form-result.notice--warning, #form-result.notice--danger { color: #9d2424; }
+#form-result.notice--success { color: #093a33; }
+@media (max-width: 1199.98px) {
+    .info-bar { display: none; }
+    #langMobile .nav-link { display: block; }
+    .navbar .row { width: 100%; }
+    .navbar .row > div { width: 100%; margin-top: 0 !important; }
+    .navbar-collapse { margin-left: 0 !important; }
+    .navbar-toggler { top: 22px; right: 12px; }
+    .navbar-nav { align-items: center; }
+}
+@media (min-width: 1200px) { #langMobile { display: none !important; } }
+@media (max-width: 991.98px) {
+    .card-section .row > .col-12 { justify-content: center; }
+    .card-section .ekip { max-width: 380px; }
+    .card-section .ekip img { object-position: center 20%; }
+}
+
+.features-icons > .row { margin-inline: 0; }

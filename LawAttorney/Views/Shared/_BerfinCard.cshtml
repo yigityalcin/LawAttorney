@@ -1,0 +1,19 @@
+@model bool
+<div class="col-12 col-lg-3">
+    <div class="card ekip shadow-lg">
+        <a href="#bioModal4" data-bs-toggle="modal" data-bs-target="#bioModal4" aria-label="@(Model ? "Read Berfin Mert's biography" : "Berfin Mert'in özgeçmişini oku")">
+            <partial name="_BerfinPhoto" model="Model" />
+        </a>
+        <div class="card-body">
+            <a href="#bioModal4" data-bs-toggle="modal" data-bs-target="#bioModal4">
+                <h3 class="card-title ms-1">@(Model ? "Att. Berfin Mert" : "Av. Berfin Mert")</h3>
+                <p class="card-subtitle mb-5">@(Model ? "Attorney" : "Avukat")</p>
+            </a>
+            <div class="card-footer d-flex justify-content-end">
+                <div class="social-icons d-flex">
+                    <a href="mailto:berfinmert@@ozpartnershukuk.com" class="social-icon" aria-label="@(Model ? "Email Berfin Mert" : "Berfin Mert'e e-posta gönder")"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

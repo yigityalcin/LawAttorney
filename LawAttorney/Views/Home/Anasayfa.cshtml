@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "";
 }
 <body>
@@ -6,9 +6,9 @@
         <div class="mb-5">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -49,24 +49,24 @@
         <div class="features-icons text-center">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
-                    <div class="features-icons-item mx-auto mb-lg-5 mb-lg-0 mb-lg-3 d-flex align-items-center shadow justify-content-center" id="CalismaAlanlarimiz">
+                    <a href="/CalismaAlanlarimiz" class="features-icons-item mx-auto mb-lg-5 mb-lg-0 mb-lg-3 d-flex align-items-center shadow justify-content-center" id="CalismaAlanlarimiz">
                         <h3>Çalışma Alanlarımız</h3>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
-                    <div class="features-icons-item mx-auto mb-lg-5 mb-lg-0 mb-lg-3 d-flex align-items-center shadow justify-content-center" id="Ekibimiz">
+                    <a href="/Ekibimiz" class="features-icons-item mx-auto mb-lg-5 mb-lg-0 mb-lg-3 d-flex align-items-center shadow justify-content-center" id="Ekibimiz">
                         <h3>Ekibimiz</h3>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 mb-4">
-                    <div class="features-icons-item mx-auto mb-lg-0 mb-lg-3 d-flex align-items-center shadow justify-content-center" id="iletisim">
+                    <a href="/iletisim" class="features-icons-item mx-auto mb-lg-0 mb-lg-3 d-flex align-items-center shadow justify-content-center" id="iletisim">
                         <h3>İletişim</h3>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <script src="~/js/scripts.js" asp-append-version="true"></script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var carouselElement = document.getElementById('carouselExampleFade');
@@ -85,18 +85,6 @@
             } else {
                 console.error('Carousel element not found.');
             }
-        });
-        // Vanilla JavaScript ile sayfa yönlendirme
-        document.getElementById('CalismaAlanlarimiz').addEventListener('click', function () {
-            window.location.href = '/CalismaAlanlarimiz'; // Hizmetlerimiz sayfa URL'i
-        });
-
-        document.getElementById('Ekibimiz').addEventListener('click', function () {
-            window.location.href = '/Ekibimiz'; // Ekibimiz sayfa URL'i
-        });
-
-        document.getElementById('iletisim').addEventListener('click', function () {
-            window.location.href = '/iletisim'; // İletişim sayfa URL'i
         });
     </script>
 </body>

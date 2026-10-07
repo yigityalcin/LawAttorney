@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "Contact - ";
     Layout = "~/Views/Shared/_LayoutEng.cshtml";
 }
@@ -6,7 +6,7 @@
     <section class="ftco-section">
         <div class="container p-lg-0">
             <div class="custom-img1 mb-5 shadow">
-                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/banner1000.png" />
+                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/contact-v2.jpg" />
                 <span>Contact</span>
             </div>
         </div>
@@ -64,7 +64,7 @@
                                                 </div>
                                                 <div class="col-sm-12">
                                                     <div class="form-group">
-                                                        <label class="label" for="#">Message</label>
+                                                        <label class="label" for="message">Message</label>
                                                         <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Your Message" required></textarea>
                                                     </div>
                                                 </div>
@@ -75,7 +75,7 @@
                                                         <div class="submitting"></div>
                                                     </div>
                                                 </div>
-                                                <div id="form-result"></div>
+                                                <div id="form-result" role="status" aria-live="polite" aria-atomic="true"></div>
                                             </div>
                                         </form>
                                     </div>
@@ -84,14 +84,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mb-0 shadow mb-4">
+                <div class="row mb-0 mb-4 contact-details">
                     <div class="col-sm-3 col-lg-3">
                         <div class="dbox w-100 text-center mt-lg-3">
                             <div class="icon d-flex align-items-center justify-content-center shadow-lg">
                                 <span class="fa fa-phone"></span>
                             </div>
                             <div class="text">
-                                <p><span>Phone Number:</span>0532 499 1974</p>
+                                <p><span>Phone Number:</span> <a href="tel:+905324991974">0532 499 1974</a></p>
                             </div>
                         </div>
                     </div>
@@ -138,20 +138,7 @@
             </div>
         </section>
     </div>
-    <script type="text/javascript" src="~/js/contact-us.js"></script>
+    <script type="text/javascript" src="~/js/contact-us.js" asp-append-version="true"></script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
-    <script>
-        const form = document.getElementById('contactForm');
 
-        form.addEventListener('submit', function (e) {
-
-            const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
-
-            if (!hCaptcha) {
-                e.preventDefault();
-                alert("Please fill out captcha field")
-                return
-            }
-        });
-    </script>
 </body>

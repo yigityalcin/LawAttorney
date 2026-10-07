@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "Ekibimiz - ";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -272,7 +272,7 @@
     <section class="ftco-section">
         <div class="container p-lg-0">
             <div class="custom-img1 mb-5 shadow">
-                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/banner1000.png" />
+                <img class="custom-img1 mb-4 shadow" src="~/assets/img/Banners/team-v2.jpg" />
                 <span>Ekibimiz</span>
             </div>
         </div>
@@ -289,8 +289,8 @@
                 <!-- Kişisel Kartlar -->
                 <div class="row">
                     <!-- Kart 1 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card ekip shadow-lg">
+                    <div class="col-12 col-lg-3">
+                        <div class="card ekip shadow-lg memorial-card">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal1">
                                 <img src="~/assets/img/avukat-emin-oz.jpg" class="card-img-top img-fluid" alt="Kişi 1 Fotoğrafı">
                             </a>
@@ -298,6 +298,7 @@
                                 <div>
                                     <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal1">
                                         <h3 class="card-title ms-1">Av. Emin Öz</h3>
+                                        <p class="memorial-dates">(1950-2024)</p>
                                         <p class="card-subtitle mb-5">Kurucu Avukat</p>
                                     </a>
                                 </div>
@@ -312,7 +313,7 @@
                         </div>
                     </div>
                     <!-- Kart 1 -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-12 col-lg-3">
                         <div class="card ekip shadow-lg">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
 
@@ -339,7 +340,7 @@
                         </div>
                     </div>
                     <!-- Kart 1 -->
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-12 col-lg-3">
                         <div class="card ekip shadow-lg">
                             <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal3">
 
@@ -366,7 +367,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Kart 4, 5, ... -->
+                    <partial name="_BerfinCard" model="false" />
                 </div>
             </div>
         </section>
@@ -382,13 +383,12 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-lg-4">
-                            <div class="card ekip1">
+                            <div class="card ekip1 memorial-card">
                                 <img src="~/assets/img/avukat-emin-oz.jpg" class="card-img-top img-fluid" style="filter:none;" alt="Kişi 2 Fotoğrafı">
                                 <div class="card-body">
                                     <div>
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
-                                            <h3 class="card-title ms-1 mb-3">Av. Emin Öz</h3>
-                                        </a>
+                                        <h3 class="card-title ms-1 mb-3">Av. Emin Öz</h3>
+                                        <p class="memorial-dates">(1950-2024)</p>
                                     </div>
                                     <div class="card-footer d-flex justify-content-center">
                                         <div class="social-icons d-flex">
@@ -412,7 +412,7 @@
                                 Takip eden yıllarda, 2 dönem Anavatan Partisi MKYK’sında (Merkez Karar Yönetim Kurulu) görev almıştır. Profesyonel çalışma yaşamının ilk yıllarından itibaren ekonomi ve ticaret dünyasının içinde yer alan Av. Emin Öz, şahsi ticari faaliyetlerinin dışında; başta MESBAŞ (Mersin Serbest Bölgesi’ni işleten şirket) ve MERTAŞ (MTSO, MESİAD ve Mersin Deniz Ticaret Odası gibi meslek odası ve STK’ların ortaklaşa kurdukları şirket) gibi Mersin’in ekonomik ve ticari hayatına yön veren etkili şirketler olmak üzere, birçok ticari şirketin yönetim kurulu başkanlığını yapmıştır. MESİAD (Mersin Sanayici İş Adamları Derneği) istişare kurulu başkan yardımcılığı görevinde bulunmuştur. Mersin Barosu yönetim kurulunda yer almıştır.
                             </p>
                             <p class="bio-content">
-                                Ayrıca bir dönem Mersin Deniz ve Ticaret Meslek Yüksekokulu’nda hukuk dersleri vermiştir. Meslek hayatının 50. yılına yaklaşan Av. Emin Öz, İngilizce ve Fransızca bilmektedir.
+                                Ayrıca bir dönem Mersin Deniz ve Ticaret Meslek Yüksekokulu’nda hukuk dersleri vermiştir. Av. Emin Öz, İngilizce ve Fransızca bilmekteydi. 2024 yılında vefat etmiştir.
                             </p>
                             <div class="d-flex justify-content-end">
                                 <a href="https://www.facebook.com/aveminoz/" target="_blank" class="ikon-modal social-icon">
@@ -441,9 +441,7 @@
                                 <img src="~/assets/img/avukat-yunus-emre-oz.jpg" class="card-img-top img-fluid" style="filter:none;" alt="Kişi 2 Fotoğrafı">
                                 <div class="card-body">
                                     <div>
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal2">
-                                            <h3 class="card-title ms-1 mb-3">Av. Yunus Emre Öz</h3>
-                                        </a>
+                                        <h3 class="card-title ms-1 mb-3">Av. Yunus Emre Öz</h3>
                                     </div>
                                     <div class="card-footer d-flex justify-content-center">
                                         <div class="d-flex justify-content-end">
@@ -495,9 +493,7 @@
                                 <img src="~/assets/img/avukat-kaan-karatas.jpg" class="card-img-top img-fluid" style="filter:none;" alt="Kişi 3 Fotoğrafı">
                                 <div class="card-body">
                                     <div>
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#bioModal3">
-                                            <h3 class="card-title ms-1 mb-3">Av. Kaan Karataş</h3>
-                                        </a>
+                                        <h3 class="card-title ms-1 mb-3">Av. Kaan Karataş</h3>
                                     </div>
                                     <div class="card-footer d-flex justify-content-center">
                                         <div class="d-flex justify-content-end">
@@ -533,5 +529,5 @@
             </div>
         </div>
     </div>
+<partial name="_BerfinBio" model="false" />
 </body>
-

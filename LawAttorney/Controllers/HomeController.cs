@@ -21,10 +21,6 @@ namespace LawAttorney.Controllers
         {
             return View("en/HomePage");
         }
-        public IActionResult HomePageRu()
-        {
-            return View("ru/HomePageRu");
-        }
         public IActionResult Kurumsal()
         {
             return View();
@@ -136,63 +132,6 @@ namespace LawAttorney.Controllers
         public IActionResult Contact()
         {
             return View("en/Contact");
-        }
-
-        public IActionResult CorporateRu()
-        {
-            return View("ru/CorporateRu");
-        }
-        public IActionResult OurTeamRu()
-        {
-            return View("ru/OurTeamRu");
-        }
-        public IActionResult PracticeAreasRu()
-        {
-            return View("ru/PracticeAreasRu");
-        }
-        public IActionResult ArticlesRu()
-        {
-            return View("ru/ArticlesRu");
-        }
-        public IActionResult Article1Ru()
-        {
-            return View("ru/Article1Ru");
-        }
-        public IActionResult Article2Ru()
-        {
-            return View("ru/Article2Ru");
-        }
-        public IActionResult Article3Ru()
-        {
-            return View("ru/Article3Ru");
-        }
-        public IActionResult Article4Ru()
-        {
-            return View("ru/Article4Ru");
-        }
-        public IActionResult Article5Ru()
-        {
-            return View("ru/Article5Ru");
-        }
-        public IActionResult Article6Ru()
-        {
-            return View("ru/Article6Ru");
-        }
-        public IActionResult Article7Ru()
-        {
-            return View("ru/Article7Ru");
-        }
-        public IActionResult Article8Ru()
-        {
-            return View("ru/Article8Ru");
-        }
-        public IActionResult Article9Ru()
-        {
-            return View("ru/Article9Ru");
-        }
-        public IActionResult ContactRu()
-        {
-            return View("ru/ContactRu");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

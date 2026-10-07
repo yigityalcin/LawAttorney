@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] Öz & Partners Law Office | Legal Consultancy and Litigation Services</title>
+    <title>Öz &amp; Partners Avukatlık Ofisi</title>
     <link rel="apple-touch-icon" sizes="180x180" href="~/assets/img/BrowserIcons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="~/assets/img/BrowserIcons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="~/assets/img/BrowserIcons/favicon-16x16.png">
@@ -14,7 +14,7 @@
     <meta name="keywords" content="Law, Lawyer, Legal Services, Litigation, Criminal Lawyer, Compensation Law" />
     <meta name="robots" content="index, follow" />
     <meta name="description" content="Öz & Partners Law Office specializes in legal consultancy, litigation services, and compensation law. Contact us for professional solutions." />
-    <meta property="og:title" content="@ViewData["Title"] Öz & Partners Law Office | Legal Consultancy and Litigation Services" />
+    <meta property="og:title" content="Öz &amp; Partners Avukatlık Ofisi" />
     <meta property="og:description" content="Öz & Partners Law Office specializes in legal consultancy, litigation services, and compensation law. Contact us for professional solutions." />
     <meta property="og:url" content="https://www.ozpartnershukuk.com" />
     <meta property="og:type" content="website" />
@@ -22,8 +22,6 @@
     <link rel="alternate" hreflang="tr" href="/Anasayfa">
     <!-- İngilizce sayfa -->
     <link rel="alternate" hreflang="en" href="/en/HomePage">
-    <!-- Rusça sayfa -->
-    <link rel="alternate" hreflang="ru" href="/ru/HomePageRu">
     <!-- Varsayılan sayfa (diğer diller dışında bir dilde görüntülenirse) -->
     <link rel="alternate" hreflang="x-default" href="/en/HomePage">
 
@@ -41,6 +39,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="~/assets/flaticon.css">
     <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/site-updates.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/premium.css" asp-append-version="true" />
 </head>
 
 <body>
@@ -48,10 +48,10 @@
         <div class="row">
             <div class="info-bar">
                 <div class="col-lg-12 d-flex justify-content-center align-items-center ms-5">
-                    <span class="span-phone ms-5"><i class="fas fa-phone"></i> Phone: (532) 499 1974</span>
+                    <span class="span-phone ms-5"><i class="fas fa-phone"></i> Phone: <a href="tel:+905324991974">(532) 499 1974</a></span>
                     <span class="span-mail ms-5"><i class="fas fa-envelope"></i> Email: <a class="span-mail1" href="mailto:info@ozpartnershukuk.com">info@ozpartnershukuk.com</a></span>
                     <span class="span-hours ms-5"><i class="fas fa-clock"></i> Working Hours: Monday - Friday, 09:00 - 17:00</span>
-                    <span class="dropdown lang-select py-1" style="left:70px;">
+                    <span class="dropdown lang-select py-1">
                         <button class="btn dropdown-toggle" href="#" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span id="languageText">
                                 English
@@ -59,18 +59,13 @@
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuAvatar">
                             <li class="border-bottom">
-                                <a class="dropdown-item text-center" href="javascript:void(0);" onclick="navigateLink('tr')" data-lang="TR">
+                                <a class="dropdown-item text-center" href="/Anasayfa" onclick="event.preventDefault(); navigateLink('tr')" data-lang="TR">
                                     Türkçe
                                 </a>
                             </li>
                             <li class="border-bottom">
-                                <a class="dropdown-item text-center" href="javascript:void(0);" onclick="navigateLink('en')" data-lang="ENG">
+                                <a class="dropdown-item text-center" href="/en/HomePage" onclick="event.preventDefault(); navigateLink('en')" data-lang="ENG">
                                     English
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item text-center" href="javascript:void(0);" onclick="navigateLink('ru')" data-lang="Рус.">
-                                    Русский
                                 </a>
                             </li>
                         </ul>
@@ -113,14 +108,11 @@
                                         <a class="nav-link" href="/en/Contact">Contact</a>
                                     </li>
                                     <li class="d-flex justify-content-center" id="langMobile">
-                                        <a role="menuitem" tabindex="-1" class="nav-link p-2" href="javascript:void(0);" onclick="navigateLink('tr')">
+                                        <a class="nav-link p-2" href="/Anasayfa" onclick="event.preventDefault(); navigateLink('tr')">
                                             Türkçe
                                         </a>
-                                        <a role="menuitem" tabindex="-1" class="nav-link p-2" href="javascript:void(0);" onclick="navigateLink('en')">
+                                        <a class="nav-link p-2" href="/en/HomePage" onclick="event.preventDefault(); navigateLink('en')">
                                             English
-                                        </a>
-                                        <a role="menuitem" tabindex="-1" class="nav-link p-2" href="javascript:void(0);" onclick="navigateLink('ru')">
-                                            Русский
                                         </a>
                                     </li>
                                 </ul>
@@ -131,9 +123,6 @@
             </div>
         </div>
     </div>
-    <button class="mobile-chat-button" id="mobileChatButton">
-        <i class="fas fa-comments"></i>
-    </button>
     @RenderBody()
     <!-- FOOTER -->
     <div class="container-fluid">
@@ -154,7 +143,7 @@
             <!-- Copyright -->
             <div class="text-center mt-5" style="font-size:12px; background-color: #ffffff">
                 ©
-                <a class="sosyal1" href="">1974-2024 Öz <span class="caviar-dreams-font">&</span> Partners Law Office - All Rights Reserved</a>
+                <a class="sosyal1" href="">1974-@(TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTimeOffset.UtcNow, "Turkey Standard Time").Year) Öz <span class="caviar-dreams-font">&</span> Partners Law Office - All Rights Reserved</a>
             </div>
         </footer>
     </div>
@@ -163,9 +152,6 @@
     <script src="~/js/scripts.js" asp-append-version="true"></script>
     <script src="~/js/language.js" asp-append-version="true"></script>
     <script>
-        document.getElementById("mobileChatButton").addEventListener("click", function () {
-            window.location.href = "/en/Contact#contactForm";
-        });
     </script>
 </body>
 

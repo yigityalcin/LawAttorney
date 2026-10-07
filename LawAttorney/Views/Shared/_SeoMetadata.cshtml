@@ -1,0 +1,16 @@
+@{
+    var metadata = SeoPages.Resolve(ViewContext.RouteData.Values["action"]?.ToString());
+}
+@if (metadata is not null)
+{
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="@metadata.CanonicalUrl" />
+    <meta property="og:url" content="@metadata.CanonicalUrl" />
+    <link rel="alternate" hreflang="tr" href="@metadata.TurkishUrl" />
+    <link rel="alternate" hreflang="en" href="@metadata.EnglishUrl" />
+    <link rel="alternate" hreflang="x-default" href="@metadata.TurkishUrl" />
+}
+else
+{
+    <meta name="robots" content="noindex, follow" />
+}

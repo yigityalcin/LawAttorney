@@ -62,4 +62,7 @@ app.MapControllerRoute(
     pattern: "{action=Anasayfa}",
     defaults: new { controller = "Home" });
 
+app.MapGet("/sitemap.xml", () => Results.Text(LawAttorney.Models.SeoPages.Sitemap(), "application/xml; charset=utf-8"));
+
 app.Run();
+
